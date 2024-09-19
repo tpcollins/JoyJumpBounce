@@ -14,6 +14,7 @@ import {
   Shop,
   Teacher,
 } from "./Menus";
+import Navbar from "../../R Components/navbar";
 
 const Header = () => {
   useEffect(() => {
@@ -32,7 +33,7 @@ const Header = () => {
           </p>
         </div>
       </div>
-      
+
       <div id="site-header" className="">
         <div className="container-fluid">
           <div className="row">
@@ -48,7 +49,9 @@ const Header = () => {
                 <div className="btn-menu">
                   <span />
                 </div>
-                <div className="nav-wrap">
+
+                
+                {/* <div className="nav-wrap">
                   <nav id="mainnav" className="mainnav st-2">
                     <ul className="menu">
                       <li className="menu-item-has-children">
@@ -106,9 +109,8 @@ const Header = () => {
                         <Contact />
                       </li>
                     </ul>
-                    {/* /.menu */}
                   </nav>
-                </div>
+                </div> */}
                 <div className="header-right fx">
                   <div id="header-search">
                     <a

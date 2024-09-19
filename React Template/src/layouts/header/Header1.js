@@ -13,6 +13,7 @@ import {
   Shop,
   Teacher,
 } from "./Menus";
+import Navbar from "../../R Components/navbar";
 
 const Header1 = () => {
   const [sidebarToggle, setSidebarToggle] = useState(false);
@@ -53,8 +54,8 @@ const Header1 = () => {
                     </g>
                   </svg>
                   <ul>
-                    <li className="clr-pri-4">School Location</li>
-                    <li className="clr-pri-2">55 Main Street, New York</li>
+                    <li className="clr-pri-4">Located In</li>
+                    <li className="clr-pri-2">Tuscaloosa, AL</li>
                   </ul>
                 </div>
                 <div className="inner-contact fx">
@@ -75,7 +76,7 @@ const Header1 = () => {
                     </g>
                   </svg>
                   <ul>
-                    <li className="clr-pri-4">Hotline</li>
+                    <li className="clr-pri-4">Call Now!</li>
                     <li className="clr-pri-2">+012 (345) 678</li>
                   </ul>
                 </div>
@@ -123,67 +124,7 @@ const Header1 = () => {
               <div className="btn-menu">
                 <span />
               </div>
-              <div className="nav-wrap">
-                <nav id="mainnav" className="mainnav st-2">
-                  <ul className="menu">
-                    <li className="menu-item-has-children current-menu-item">
-                      <a href="#">HOME</a>
-                      <ul className="sub-menu">
-                        <Home />
-                      </ul>
-                    </li>
-                    <li className="menu-item">
-                      <About />
-                    </li>
-                    <li className="menu-item-has-children">
-                      <a>PAGES</a>
-                      <ul className="sub-menu">
-                        <li className="inner-menu-item">
-                          <a href="#">Teachers</a>
-                          <ul className="sub-menu">
-                            <Teacher />
-                          </ul>
-                        </li>
-                        <li className="inner-menu-item">
-                          <a href="#">Classes</a>
-                          <ul className="sub-menu">
-                            <Classes />
-                          </ul>
-                        </li>
-                        <li className="inner-menu-item">
-                          <a href="#">Events</a>
-                          <ul className="sub-menu">
-                            <Event />
-                          </ul>
-                        </li>
-                        <Pages />
-                      </ul>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <a>Programs</a>
-                      <ul className="sub-menu">
-                        <Program />
-                      </ul>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <a>BLOG</a>
-                      <ul className="sub-menu">
-                        <Blog />
-                      </ul>
-                    </li>
-                    <li className="menu-item-has-children">
-                      <a>SHOP</a>
-                      <ul className="sub-menu">
-                        <Shop />
-                      </ul>
-                    </li>
-                    <li className="inner">
-                      <Contact />
-                    </li>
-                  </ul>
-                  {/* /.menu */}
-                </nav>
-              </div>
+              <Navbar />
             </div>
           </div>
         </div>
