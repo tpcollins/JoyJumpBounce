@@ -2202,10 +2202,11 @@
 }
 
 .tf-discovery-2 {
-  background-image: url(../images/background/bg-tf-discovery.png);
+  height: 1000px;
+  background-image: url('../images/background/BigLogoNew.png');
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .sc-discovery-2 {
