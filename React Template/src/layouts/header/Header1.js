@@ -1,18 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Sidebar from "../../components/Sidebar";
-import {
-  About,
-  Blog,
-  Classes,
-  Contact,
-  Event,
-  Home,
-  Pages,
-  Program,
-  Shop,
-  Teacher,
-} from "./Menus";
 import Navbar from "../../R Components/navbar";
 
 const Header1 = () => {
@@ -29,8 +17,18 @@ const Header1 = () => {
             <div className="top-bar-2 fx">
               <div id="site-logo" className="clearfix">
                 <Link href="/">
+                  {/* <a className="logo st-2">
+                    <img  
+                    alt="Kinco" 
+                    src="assets/images/logo/JJLogo.png"
+                    style={{width: '230px', height: '230px'}}
+                    />
+                  </a> */}
                   <a className="logo st-2">
-                    <img src="assets/images/logo/logodark-2.png" alt="Kinco" />
+                    <img  
+                    alt="Kinco" 
+                    src="assets/images/logo/logolight.png"
+                    />
                   </a>
                 </Link>
               </div>
@@ -76,8 +74,8 @@ const Header1 = () => {
                     </g>
                   </svg>
                   <ul>
-                    <li className="clr-pri-4">Call Now!</li>
-                    <li className="clr-pri-2">+012 (345) 678</li>
+                    <li className="clr-pri-4">Call Now or Book Below!</li>
+                    <li className="clr-pri-2">+(205) 861-4553</li>
                   </ul>
                 </div>
                 <a

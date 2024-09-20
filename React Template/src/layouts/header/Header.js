@@ -24,7 +24,7 @@ const Header = () => {
   const [form, setForm] = useState(false);
   const [sidebarToggle, setSidebarToggle] = useState(false);
 
-  return (
+  return ( 
     <header id="header" className="d-none d-xl-block">
       <div className="top-bar">
         <div className="inner jus-ct">
