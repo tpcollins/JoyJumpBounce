@@ -28,6 +28,7 @@
     * shop
     * shop-details
     * price-range 
+    * Inventory
 */
 /* button 
 --------------------------------------------------*/
@@ -6750,4 +6751,49 @@
 
 .slider-2 .swiper .owl-stage-outer {
   overflow: visible;
+}
+
+/* Inventory 
+--------------------------------------------------*/
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+} 
+
+.gallery-item:nth-child(odd) .image {
+  order: 1;
+}
+
+.gallery-item:nth-child(odd) .description {
+  order: 2;
+}
+
+.gallery-item:nth-child(even) .image {
+  order: 2;
+}
+
+.gallery-item:nth-child(even) .description {
+  order: 1;
+}
+
+.image, .description {
+  flex: 1; /* Allocates equal space initially */
+  padding: 10px; /* Adds some padding */
+}
+
+.image {
+  flex: 1.5; /* Gives more space to the image */
+}
+
+.image img {
+  width: 100%; /* Fills the available space in the .image container */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: contain; /* Ensures the image is contained within its element, not stretched */
 }
