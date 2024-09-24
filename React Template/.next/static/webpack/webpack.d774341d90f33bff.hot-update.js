@@ -9,6 +9,7 @@
  */
 self["webpackHotUpdate_N_E"]("webpack",{},
 /******/ function(__webpack_require__) { // webpackRuntimeModules
+<<<<<<< HEAD
 /******/ /* webpack/runtime/ensure chunk */
 /******/ !function() {
 /******/ 	__webpack_require__.f = {};
@@ -33,21 +34,12 @@ self["webpackHotUpdate_N_E"]("webpack",{},
 /******/ 
 /******/ /* webpack/runtime/getFullHash */
 /******/ !function() {
+<<<<<<<< HEAD:React Template/.next/static/webpack/webpack.d774341d90f33bff.hot-update.js
 /******/ 	__webpack_require__.h = function() { return "68ca6270e1de5401"; }
+========
+/******/ 	__webpack_require__.h = function() { return "1bb926bec534c2dc"; }
+>>>>>>>> homepg-remodel:React Template/.next/static/webpack/webpack.aed0ef557946ea2e.hot-update.js
 /******/ }();
-/******/ 
-/******/ /* webpack/runtime/compat */
-/******/ 
-/******/ 
-/******/ // noop fns to prevent runtime errors during initialization
-/******/ if (typeof self !== "undefined") {
-/******/ 	self.$RefreshReg$ = function () {};
-/******/ 	self.$RefreshSig$ = function () {
-/******/ 		return function (type) {
-/******/ 			return type;
-/******/ 		};
-/******/ 	};
-/******/ }
 /******/ 
 /******/ /* webpack/runtime/jsonp chunk loading */
 /******/ !function() {
@@ -627,6 +619,25 @@ self["webpackHotUpdate_N_E"]("webpack",{},
 /******/ 	chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 	chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ }();
+=======
+/******/ /* webpack/runtime/getFullHash */
+/******/ !function() {
+/******/ 	__webpack_require__.h = function() { return "aed0ef557946ea2e"; }
+/******/ }();
+/******/ 
+/******/ /* webpack/runtime/compat */
+/******/ 
+/******/ 
+/******/ // noop fns to prevent runtime errors during initialization
+/******/ if (typeof self !== "undefined") {
+/******/ 	self.$RefreshReg$ = function () {};
+/******/ 	self.$RefreshSig$ = function () {
+/******/ 		return function (type) {
+/******/ 			return type;
+/******/ 		};
+/******/ 	};
+/******/ }
+>>>>>>> homepg-remodel
 /******/ 
 /******/ }
 );
