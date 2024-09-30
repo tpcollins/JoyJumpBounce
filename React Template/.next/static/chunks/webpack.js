@@ -150,11 +150,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = function() { return "68ca6270e1de5401"; }
-=======
-/******/ 		__webpack_require__.h = function() { return "123c4c0b2f2621b8"; }
->>>>>>> homepg-remodel
+/******/ 		__webpack_require__.h = function() { return "2c551151ec0197ee"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
