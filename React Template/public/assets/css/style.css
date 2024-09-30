@@ -1751,7 +1751,7 @@ a:focus {
 #footer.st-2 {
     background: url(../images/inflatables/Footer2.png) center center no-repeat;
     background-repeat: no-repeat;
-    padding-top: 0px;
+    padding-top: 10px;
     background-size: cover; /* Ensure the image fits within the container */
 }
 
