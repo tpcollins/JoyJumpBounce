@@ -1,45 +1,10 @@
 import Link from "next/link";
+import JJBanner from "../components/JJBanner";
 const Footer2 = () => {
   return (
     <footer id="footer" className="st-2">
-      <section className="tf-subcribe-2">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div
-                className="fl-subcribe wow fadeIn   animated"
-                data-wow-delay="0.3ms"
-                data-wow-duration="1200ms"
-              >
-                <div className="subcribe-wp">
-                  <h2 className="title clr-pri-5">Subscribe Our Newsletter</h2>
-                  <p className="sub f-mulish clr-pri-2">
-                    Amet consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua suspendisse
-                    ultrices gravida. Risus commodo
-                  </p>
-                </div>
-                <div className="subcribe-form fx">
-                  <form
-                    onSubmit={(e) => e.preventDefault()}
-                    action="#"
-                    id="subscribe-form"
-                  >
-                    <input
-                      type="email"
-                      id="subscribe-email"
-                      placeholder="Email Address"
-                    />
-                    <button className="fl-btn st-7" id="subscribe-button">
-                      <span className="inner">Subscribe</span>
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <JJBanner />
+
       <div className="footer-inner st-2">
         <div className="container">
           <div className="row">

@@ -2205,15 +2205,11 @@
 .tf-discovery-2 {
   height: 1000px;
   width: auto;
-  background-image: url('../images/inflatables/IFBgImg.png');
-  /* background-color: #9D1FFE; */
-  border-radius: 20px;
+  /* background-image: url('../images/inflatables/IFBgImg.png'); */
   background-repeat: no-repeat;
   background-position: center center;
   padding-left: 50px; 
   background-size: contain; 
-  align-items: center;
-  position: relative;
 }
 
 .sc-discovery-2 {
