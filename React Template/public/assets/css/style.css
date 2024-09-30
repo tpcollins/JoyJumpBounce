@@ -153,7 +153,7 @@ html {
 
 body {
     font-family: 'Salsa', cursive;
-    background : var(--primary-color1);
+    background : white;
     line-height: 2;
 }
 

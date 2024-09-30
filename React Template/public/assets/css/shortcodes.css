@@ -1545,7 +1545,7 @@
 /* slider-1 */
 .tf-slider-1 {
   position: relative;
-  padding: 265px 0 82px 0;
+  padding: 265px 0 0px 0;
 }
 
 .tf-slider-1 .overlay {
@@ -2204,10 +2204,16 @@
 
 .tf-discovery-2 {
   height: 1000px;
-  background-image: url('../images/background/BigLogoNew.png');
+  width: auto;
+  background-image: url('../images/inflatables/IFBgImg.png');
+  /* background-color: #9D1FFE; */
+  border-radius: 20px;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: contain;
+  padding-left: 50px; 
+  background-size: contain; 
+  align-items: center;
+  position: relative;
 }
 
 .sc-discovery-2 {
