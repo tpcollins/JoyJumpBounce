@@ -20,8 +20,8 @@ export const navbarData = {
     buttons: [
         { btnText: "Home", comp: <Home />},
         { btnText: "Inventory", comp: <Inventory />},
-        { btnText: "About Us", comp: <About />},
         { btnText: "How It Works", comp: <Home />},
+        { btnText: "About Us", comp: <About />},
         { btnText: "Contact Us", comp: <Contact />},
         { btnText: "Booking", comp: <Contact />}
     ]
@@ -52,7 +52,7 @@ export const invSwiperData = {
             {href: "#", text: "Booking", className: "fl-btn st-1"},
         ],
         imgs: [
-            {src: "assets/images/inflatables/ComboWetSlide.png"}
+            {src: "assets/images/inflatables/ComboWetSlideNoShadow.png"}
         ]},
     ]
 }
