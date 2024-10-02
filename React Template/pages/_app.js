@@ -13,7 +13,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <Fragment>
       <Head>
-        <title>Kinco - Kindergarten React NextJs Template</title>
+        <title>Joy Jump Bounce</title>
         <link rel="shortcut icon" href="assets/images/Favicon.png" />
         <link
           rel="apple-touch-icon-precomposed"

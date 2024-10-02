@@ -4,7 +4,6 @@ import Header1 from "../src/layouts/header/Header1";
 import Layout from "../src/layouts/Layout";
 import { activeNavMenu } from "../src/utils";
 import Slider from "../src/components/slider";
-import JJBanner from "../src/components/JJBanner";
 
 const Index = () => {
   useEffect(() => {
