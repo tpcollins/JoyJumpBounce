@@ -11,7 +11,7 @@ const Footer2 = () => {
             <div className="col-12">
               <div className="widget-footer">
                 <div className="widget widget-logo">
-                  <div className="logo-bottom" id="logo-footer">
+                  {/* <div className="logo-bottom" id="logo-footer">
                     <Link href="/">
                       <a>
                         <img
@@ -20,7 +20,7 @@ const Footer2 = () => {
                         />
                       </a>
                     </Link>
-                  </div>
+                  </div> */}
                   <p className="wrap f-mulish">
                     Sit amet consectetur adipiscing elit sed do eiusmod teminci
                     idunt ut labore et dolore magna
@@ -29,18 +29,17 @@ const Footer2 = () => {
                     <ul>
                       <li className="fx">
                         <span>
-                          <i className="far fa-map-marker-alt" /> 55 Main
-                          Street, New York
+                          <i className="far fa-map-marker-alt" /> 2308 2nd Ave NE Tuscaloosa, AL
                         </span>
                       </li>
                       <li className="fx">
                         <a href="mailto:hotline@gmail.com">
-                          <i className="far fa-envelope" /> hotline@gmail.com
+                          <i className="far fa-envelope" /> JoyJumpInflatables@gmail.com
                         </a>
                       </li>
                       <li className="fx">
                         <a href="tel:012345678">
-                          <i className="fal fa-phone" /> +012 (345) 678
+                          <i className="fal fa-phone" /> +(205) 861-4553
                         </a>
                       </li>
                     </ul>
@@ -52,7 +51,7 @@ const Footer2 = () => {
                       <h4 className="title-widget">opening hours</h4>
                       <ul>
                         <li>
-                          <span className="f-mulish">Sunday - Friday</span>
+                          <span className="f-mulish">Monday - Friday</span>
                         </li>
                         <li>
                           <span className="f-mulish">08 am - 05 pm</span>
@@ -65,48 +64,8 @@ const Footer2 = () => {
                     </div>
                   </div>
                 </div>
-                <div className="widget widget-link">
-                  <h4 className="title-widget">Our Program</h4>
-                  <ul className="list-link">
-                    <li className="fx">
-                      <Link href="/program">
-                        <a className="wd-ctm f-mulish">Arts &amp; Drawing</a>
-                      </Link>
-                    </li>
-                    <li className="fx">
-                      <Link href="/program">
-                        <a className="wd-ctm f-mulish">Computer Engineering </a>
-                      </Link>
-                    </li>
-                    <li className="fx">
-                      <Link href="/program">
-                        <a className="wd-ctm f-mulish">Digital Mathematics</a>
-                      </Link>
-                    </li>
-                    <li className="fx">
-                      <Link href="/program">
-                        <a className="wd-ctm f-mulish">Physical Exercise</a>
-                      </Link>
-                    </li>
-                    <li className="fx">
-                      <Link href="/program">
-                        <a className="wd-ctm f-mulish">General Science</a>
-                      </Link>
-                    </li>
-                    <li className="fx">
-                      <Link href="/program">
-                        <a className="wd-ctm f-mulish">English Basic</a>
-                      </Link>
-                    </li>
-                    <li className="fx">
-                      <Link href="/program">
-                        <a className="wd-ctm f-mulish">Social Science</a>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
                 <div className="widget widget-news st-3">
-                  <h4 className="title-widget">recent news</h4>
+                  <h4 className="title-widget">Recent Events</h4>
                   <ul className="list-news">
                     <li className="fx">
                       <img
@@ -118,7 +77,7 @@ const Footer2 = () => {
                         <li>
                           <h6 className="title">
                             <Link href="/blog-grid">
-                              <a>Useful Code Extened End Developers</a>
+                              <a>Event 1</a>
                             </Link>
                           </h6>
                         </li>
@@ -126,7 +85,7 @@ const Footer2 = () => {
                           <Link href="/blog-grid">
                             <a className="fx meta-news clr-pri-6">
                               <i className="far fa-calendar-alt" />
-                              25 dec 2021
+                              09/27/2024
                             </a>
                           </Link>
                         </li>
@@ -142,7 +101,7 @@ const Footer2 = () => {
                         <li>
                           <h6 className="title">
                             <Link href="/blog-grid">
-                              <a>Useful Code Extened End Developers</a>
+                              <a>Event 2</a>
                             </Link>
                           </h6>
                         </li>
@@ -150,7 +109,7 @@ const Footer2 = () => {
                           <Link href="/blog-grid">
                             <a className="fx meta-news clr-pri-6">
                               <i className="far fa-calendar-alt" />
-                              25 dec 2021
+                              09/28/2024
                             </a>
                           </Link>
                         </li>
@@ -163,11 +122,7 @@ const Footer2 = () => {
             <div className="col-12">
               <div className="footer-bottom jus-ct">
                 <p className="copy-right">
-                  Copyright © {new Date().getFullYear()}, Kinco - Kindergarten
-                  HTML Template. Designed by{" "}
-                  <a href="https://themeforest.net/user/webtend/portfolio">
-                    Webtend
-                  </a>
+                  Copyright © {new Date().getFullYear()}, Collins Web Design LLC
                 </p>
               </div>
             </div>

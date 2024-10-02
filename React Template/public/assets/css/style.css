@@ -1749,9 +1749,9 @@ a:focus {
 }
 
 #footer.st-2 {
-    background: url(../images/inflatables/Footer2.png) center center no-repeat;
+    background: url(../images/inflatables/FooterBlurred.png) center center no-repeat;
     background-repeat: no-repeat;
-    padding-top: 10px;
+    padding-top: 15px;
     background-size: cover; /* Ensure the image fits within the container */
 }
 
@@ -1795,8 +1795,9 @@ a:focus {
 }
 
 .footer-bottom {
-    background-color: var(--primary-color2);
+    background-color: #1AB9FF;
     padding: 16px 0;
+    border-radius: 10px;
 }
 
 .copy-right {
