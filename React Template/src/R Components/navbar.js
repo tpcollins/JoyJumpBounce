@@ -1,7 +1,6 @@
 import { navbarData } from "../Data/data";
 
 const Navbar = () => {
-
     return(
         <div className="nav-wrap">
             <nav id="mainnav" className="mainnav st-2">

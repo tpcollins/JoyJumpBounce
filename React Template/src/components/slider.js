@@ -24,7 +24,10 @@ const Slider = () => {
                       key={sdIdx}
                       >
                         <div className="box-content">
-                          <div className="sub clr-pri-2">
+                          <div 
+                          className="sub clr-pri-2"
+                          style={{color: 'white!important;'}}
+                          >
                             {item.sub}
                           </div>
                           <div className="title clr-pri-2">
@@ -57,7 +60,7 @@ const Slider = () => {
                             >
                               <i className="fas fa-check" />
                               <p 
-                              className="clr-pri-2"
+                              className="li-clr-pri-2"
                               >{li}</p>
                             </li>
                           ))}

@@ -29,7 +29,7 @@ const Footer2 = () => {
                     <ul>
                       <li className="fx">
                         <span>
-                          <i className="far fa-map-marker-alt" /> 2308 2nd Ave NE Tuscaloosa, AL
+                          <i className="far fa-map-marker-alt" /> Tuscaloosa, AL
                         </span>
                       </li>
                       <li className="fx">
