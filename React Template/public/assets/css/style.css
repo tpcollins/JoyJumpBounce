@@ -153,7 +153,7 @@ html {
 
 body {
     font-family: 'Salsa', cursive;
-    background : white;
+    background : lightblue;
     line-height: 2;
 }
 
@@ -852,6 +852,24 @@ h6 {
     color: var(--primary-color2);
 }
 
+.sub.clr-pri-2{
+    color: #FFFFFF; /* or any other color you choose */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds subtle shadow for visibility */
+    font-weight: bold;
+}
+
+.title.clr-pri-2{
+    color: #FFFFFF; /* or any other color you choose */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds subtle shadow for visibility */
+    font-weight: bold;
+}
+
+.li-clr-pri-2{
+    color: var(--primary-color2);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds subtle shadow for visibility */
+    font-weight: bold;
+}
+
 .clr-pri-3 {
     color: var(--primary-color3);
 }
@@ -1117,7 +1135,7 @@ a:focus {
 
 #site-header .site-header-inner.st-2 {
     padding: 1px 0 10px;
-    background-image   : url(../images/background/bg-menu.png);
+    /* background-image   : url(../images/background/bg-menu.png); */
     background-repeat  : no-repeat;
     background-position: center center;
     justify-content: center;
@@ -2404,4 +2422,84 @@ a:focus {
 .social a.active i,
 .social a:hover i {
     color: #1ab9ff;
+}
+
+
+
+/* Container wrapping the navbar */
+.nav-wrap {
+    background: linear-gradient(to right, #0066ff, #00ccff); /* A bright blue gradient background */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+/* Main navigation bar */
+.mainnav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Menu list styling */
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Menu item styling */
+.menu-item {
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    position: relative; /* For underline hover effect */
+}
+
+/* Menu item link styling */
+.menu-item a {
+    color: #ffffff; /* White text color */
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for menu items */
+.menu-item:hover a {
+    color: #ffcc00; /* Highlight the link with a yellow color */
+}
+
+/* Underline hover effect */
+.menu-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 3px;
+    background-color: #ffcc00; /* Yellow underline */
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-wrap {
+        padding: 10px 15px;
+    }
+
+    .menu-item {
+        margin: 0 10px;
+    }
 }

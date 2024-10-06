@@ -1549,15 +1549,17 @@
 }
 
 .tf-slider-1 .overlay {
-  background-image: url(../images/background/bg-slider-1.png);
+  background-image: url(../images/background/bg-slider-naturenewsize.png);
   background-repeat: no-repeat;
   background-position: center center;
   animation: move2 10s infinite linear;
   position: absolute;
-  top: 0;
+  top: 100px;
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 10px !important;
+  padding-bottom: 5px;
 }
 
 .tf-slider-1 .swiper .swiper-slide img {

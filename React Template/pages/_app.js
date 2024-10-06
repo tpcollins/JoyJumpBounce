@@ -13,7 +13,7 @@ const App = ({ Component, pageProps }) => {
   return (
     <Fragment>
       <Head>
-        <title>Joy Jump Bounce</title>
+        <title>Joy Jump Inflatables</title>
         <link rel="shortcut icon" href="assets/images/Favicon.png" />
         <link
           rel="apple-touch-icon-precomposed"
