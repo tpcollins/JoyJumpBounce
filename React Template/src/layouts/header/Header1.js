@@ -1,7 +1,16 @@
+/*
+
+TODO:
+1. get logo properly on top of navbar
+2. center all elements on top of navbar
+3. start inventory page
+
+*/
+
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import Sidebar from "../../components/Sidebar";
-import Navbar from "../../R Components/navbar";
+import Navbar from "../../R Components/navbar";  
 
 const Header1 = () => {
   const [sidebarToggle, setSidebarToggle] = useState(false);
