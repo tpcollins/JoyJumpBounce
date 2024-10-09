@@ -1222,11 +1222,13 @@ a:focus {
 
 .header-contact {
     align-items: center;
-    margin-left: 120px;
+    /* margin-left: 120px; */
+    
 }
 
 .inner-contact {
-    margin-left: 40px;
+    /* margin-left: -40px; */
+    padding-right: 80px;
 }
 
 /* Search Form */

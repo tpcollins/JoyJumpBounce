@@ -1,9 +1,7 @@
 /*
 
 TODO:
-1. get logo properly on top of navbar
-2. center all elements on top of navbar
-3. start inventory page
+1. start inventory page
 
 */
 
@@ -24,19 +22,20 @@ const Header1 = () => {
         <div className="row">
           <div className="col-xl-12 col-lg-12 col-md-6 col-sm-6 col-6">
             <div className="top-bar-2 fx">
-              <div id="site-logo" className="clearfix">
+              <div id="site-logo" className="clearfix"> 
                 <Link href="/">
                   {/* <a className="logo st-2">
                     <img  
                     alt="Kinco" 
                     src="assets/images/logo/JJLogo.png"
-                    style={{width: '230px', height: '230px'}}
+                    // style={{width: '150px', height: '150px'}}
                     />
                   </a> */}
                   <a className="logo st-2">
                     <img  
                     alt="Kinco" 
-                    src="assets/images/logo/logolight.png"
+                    src="assets/images/logo/Navlogo2.png"
+                    // style={{height: '100px', width: '200px'}}
                     />
                   </a>
                 </Link>

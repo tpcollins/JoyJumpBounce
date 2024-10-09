@@ -26,7 +26,7 @@ const Slider = () => {
                         <div className="box-content">
                           <div 
                           className="sub clr-pri-2"
-                          style={{color: 'white!important;'}}
+                          style={{color: 'white !important'}}
                           >
                             {item.sub}
                           </div>

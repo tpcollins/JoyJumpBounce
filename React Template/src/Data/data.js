@@ -41,7 +41,7 @@ export const invSwiperData = {
     swiperItems: [
         {sub:"Book Today!", 
         title: "View All of our Inventory Below!", 
-        wrap:"Joy Jump Bounce", 
+        wrap:"Joy Jump Inflatables", 
         listItems: [
             "Birthdays!",
             "Get Togethers!",
