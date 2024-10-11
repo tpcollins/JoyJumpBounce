@@ -9457,6 +9457,16 @@ readers do not read off random characters that represent icons */
     url("../font/fa-duotone-900.svg#fontawesome") format("svg");
 }
 
+@font-face {
+  font-family: "WaveRider";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  /* src: url("../font/fa-duotone-900.eot"); */
+  src: 
+    url("../font/SuperFortrees-MAL4p.ttf") format("truetype")
+}
+
 .fad {
   position: relative;
   font-family: "Font Awesome 5 Duotone";

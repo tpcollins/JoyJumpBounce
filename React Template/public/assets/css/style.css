@@ -153,8 +153,17 @@ html {
 
 body {
     font-family: 'Salsa', cursive;
-    background : lightblue;
     line-height: 2;
+}
+
+
+.homepage-body {
+    background: linear-gradient(to bottom right, #ffd700 30%, #ffa500 70%);
+}
+
+.inventory-body {
+    /* background-color: #F4A460; */
+    background: linear-gradient(to bottom right, #F4A460, #FFDAB9);
 }
 
 article,

@@ -1,13 +1,15 @@
 import InventoryComp from "../src/components/InventoryComp";
-import PageBanner from "../src/components/PageBanner";
-import Layout from "../src/layouts/Layout";
+import Footer from "../src/layouts/Footer";
+import Header1 from "../src/layouts/header/Header1";
 
 const Inventory = () => {
   return (
-    <Layout bodyClass={"gallery"}>
-      <PageBanner pageName={"Gallery"} />
-        <InventoryComp />
-    </Layout>
+
+    <>
+      <Header1 />
+      <InventoryComp />
+      <Footer />
+    </>
   );
 };
 export default Inventory;

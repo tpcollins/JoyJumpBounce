@@ -44,6 +44,10 @@
   position: relative;
 }
 
+.fl-btn.st-12.inv{
+  width: 200px !important;
+}
+
 .fl-btn .inner {
   position: relative;
 }
@@ -1950,8 +1954,7 @@
 
 /* style 2*/
 .tf-section.tf-gallery {
-  margin-top: -145px;
-  padding: 273px 0 0;
+  padding: 273px 0 0; 
 }
 
 .tf-section.tf-service-2 {
@@ -1965,7 +1968,7 @@
 }
 
 .tf-gallery {
-  background-image: url(../images/background/bg-gallery.png);
+  /* background-image: url(../images/background/bg-gallery.png); */
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -6789,15 +6792,10 @@
 
 .image, .description {
   flex: 1; /* Allocates equal space initially */
-  padding: 10px; /* Adds some padding */
-}
-
-.image {
-  flex: 1.5; /* Gives more space to the image */
+  padding: 0px;
 }
 
 .image img {
-  width: 100%; /* Fills the available space in the .image container */
-  height: auto; /* Maintains aspect ratio */
-  object-fit: contain; /* Ensures the image is contained within its element, not stretched */
+  object-fit: contain; 
+  margin-right: 5px;
 }

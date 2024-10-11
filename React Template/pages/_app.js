@@ -2,19 +2,24 @@ import Head from "next/head";
 import { Fragment, useEffect, useState } from "react";
 import PreLoader from "../src/layouts/PreLoader";
 import "../styles/globals.css";
+import Header1 from "../src/layouts/header/Header1";
 
 const App = ({ Component, pageProps }) => {
   const [loader, setLoader] = useState(true);
+
   useEffect(() => {
     setTimeout(() => {
       setLoader(false);
     }, 2000);
   }, []);
+
   return (
     <Fragment>
       <Head>
         <title>Joy Jump Inflatables</title>
-        <link rel="shortcut icon" href="assets/images/Favicon.png" />
+        <link 
+          rel="shortcut icon"
+          href="assets/images/Favicon.png" />
         <link
           rel="apple-touch-icon-precomposed"
           href="assets/images/Favicon.png"
@@ -25,6 +30,7 @@ const App = ({ Component, pageProps }) => {
         />
       </Head>
       {loader && <PreLoader />}
+      {/* <Header1 /> */}
       <Component {...pageProps} />
     </Fragment>
   );

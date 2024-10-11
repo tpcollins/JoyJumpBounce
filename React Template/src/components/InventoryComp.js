@@ -1,7 +1,24 @@
+/*
+
+TODO:
+1. Fix image sizes
+2. Start styling for each individual float
+
+*/
+
 import { LeftArrow, RightArrow } from "../Icons";
 import { inventoryData } from "../Data/data";
+import { useEffect } from "react";
 
 const InventoryComp = () => {
+
+    useEffect(() => {
+        document.body.classList.add('inventory-body');
+        
+        return () => {
+          document.body.classList.remove('inventory-body');
+        };
+      }, []);
 
     return (
         <section className="tf-section tf-gallery">
@@ -21,8 +38,28 @@ const InventoryComp = () => {
                     {inventoryData.inventoryItems.map((item, index) => (
                         <div key={index} className="gallery-item">
                             <div className="description">
-                                <h5>{item.title}</h5>
-                                <p>{item.description}</p>
+
+                                <h5
+                                style={{
+                                    fontFamily: item.font,
+                                    fontSize: '65px'
+                                }}
+                                >
+                                    <img 
+                                    src={item.textImg}
+                                    alt="textImg"
+                                    />
+                                </h5>
+
+                                <div className="box-btn">
+                                    <a 
+                                    className="fl-btn st-12 inv"
+                                    href="#"
+                                    >
+                                        <span className="inner">Book Now!</span>
+                                    </a>
+                                </div>
+
                             </div>
                             <div className="image">
                                 <img src={item.src} alt="Image"/>

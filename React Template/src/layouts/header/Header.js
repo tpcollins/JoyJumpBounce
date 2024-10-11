@@ -2,19 +2,6 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import HeaderSearchForm from "../../components/HeaderSearchForm";
 import Sidebar from "../../components/Sidebar";
-import {
-  About,
-  Blog,
-  Classes,
-  Contact,
-  Event,
-  Home,
-  Pages,
-  Program,
-  Shop,
-  Teacher,
-} from "./Menus";
-import Navbar from "../../R Components/navbar";
 
 const Header = () => {
   useEffect(() => {
@@ -51,66 +38,7 @@ const Header = () => {
                 </div>
 
                 
-                {/* <div className="nav-wrap">
-                  <nav id="mainnav" className="mainnav st-2">
-                    <ul className="menu">
-                      <li className="menu-item-has-children">
-                        <a href="#">HOME</a>
-                        <ul className="sub-menu">
-                          <Home />
-                        </ul>
-                      </li>
-                      <li className="menu-item">
-                        <About />
-                      </li>
-                      <li className="menu-item-has-children">
-                        <a>PAGES</a>
-                        <ul className="sub-menu">
-                          <li className="inner-menu-item">
-                            <a href="#">Teachers</a>
-                            <ul className="sub-menu">
-                              <Teacher />
-                            </ul>
-                          </li>
-                          <li className="inner-menu-item ">
-                            <a href="#">Classes</a>
-                            <ul className="sub-menu">
-                              <Classes />
-                            </ul>
-                          </li>
-                          <li className="inner-menu-item">
-                            <a href="#">Events</a>
-                            <ul className="sub-menu">
-                              <Event />
-                            </ul>
-                          </li>
-                          <Pages />
-                        </ul>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <a>Programs</a>
-                        <ul className="sub-menu">
-                          <Program />
-                        </ul>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <a>BLOG</a>
-                        <ul className="sub-menu">
-                          <Blog />
-                        </ul>
-                      </li>
-                      <li className="menu-item-has-children">
-                        <a>SHOP</a>
-                        <ul className="sub-menu">
-                          <Shop />
-                        </ul>
-                      </li>
-                      <li className="inner">
-                        <Contact />
-                      </li>
-                    </ul>
-                  </nav>
-                </div> */}
+                
                 <div className="header-right fx">
                   <div id="header-search">
                     <a

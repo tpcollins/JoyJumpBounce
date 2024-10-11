@@ -24,18 +24,10 @@ const Header1 = () => {
             <div className="top-bar-2 fx">
               <div id="site-logo" className="clearfix"> 
                 <Link href="/">
-                  {/* <a className="logo st-2">
-                    <img  
-                    alt="Kinco" 
-                    src="assets/images/logo/JJLogo.png"
-                    // style={{width: '150px', height: '150px'}}
-                    />
-                  </a> */}
                   <a className="logo st-2">
                     <img  
                     alt="Kinco" 
                     src="assets/images/logo/Navlogo2.png"
-                    // style={{height: '100px', width: '200px'}}
                     />
                   </a>
                 </Link>

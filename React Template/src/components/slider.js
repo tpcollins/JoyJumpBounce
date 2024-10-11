@@ -1,6 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { heroSlider } from "../SliderProps";
-import Link from "next/link";
 import { invSwiperData } from "../Data/data";
 
 const Slider = () => {

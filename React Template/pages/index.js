@@ -10,6 +10,14 @@ const Index = () => {
     activeNavMenu();
   }, []);
 
+  useEffect(() => {
+    document.body.classList.add('homepage-body');
+    
+    return () => {
+      document.body.classList.remove('homepage-body');
+    };
+  }, []);
+
   return (
     <Layout noFooter noHeader bodyClass={"main"}>
       <Header1 />
