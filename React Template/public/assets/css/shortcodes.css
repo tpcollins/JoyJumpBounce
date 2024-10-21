@@ -46,6 +46,7 @@
 
 .fl-btn.st-12.inv{
   width: 200px !important;
+  align-self: flex-end;
 }
 
 .fl-btn .inner {
@@ -6772,7 +6773,17 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+  position: relative;
+
+  height: 100%;
 } 
+
+.box-btn {
+  position: absolute;  /* Anchor the button to the bottom */
+  bottom: 0;           /* Aligns the button with the bottom of the gallery item */
+  /* left: 0; */
+  padding-bottom: 30px; 
+}
 
 .gallery-item:nth-child(odd) .image {
   order: 1;
@@ -6790,12 +6801,31 @@
   order: 1;
 }
 
+.gallery-item:nth-child(even) .box-btn {
+  padding-left: 100px;
+  padding-bottom: 62px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .image, .description {
-  flex: 1; /* Allocates equal space initially */
-  padding: 0px;
+  /* flex: 0.5; 
+  padding: 0px; */
+  flex: 1; /* Ensures both take up equal space */
+  padding: 0;
+  display: flex;
+  /* justify-content: flex-end; */
 }
 
 .image img {
   object-fit: contain; 
   margin-right: 5px;
-}
+  max-height: 100%;
+  /* display: flex;
+  justify-content: center;
+  align-items: flex-end; */
+} 
