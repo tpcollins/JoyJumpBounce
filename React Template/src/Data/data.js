@@ -31,7 +31,7 @@ export const navbarData = {
 export const inventoryData = {
     inventoryItems: [
         { src: "assets/images/inflatables/WaveRiderWBG2.png", title: "Wave Rider Waterslide", price: "$285 Single Day",description: "kindergarten", font: "'WaveRider', sans-serif", textImg: "assets/images/InvTextImages/waverider.png" },
-        { src: "assets/images/inflatables/ComboWetSlideWBG.png", title: "17' Dry Slide", price: "$200 Single Day", description: "kindergarten", font: "", textImg: ""},
+        { src: "assets/images/inflatables/ComboWetSlideWBG.png", title: "17' Dry Slide", price: "$200 Single Day", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/Tropical Combo.png"},
         { src: "assets/images/common/sc-gallery-3.jpg", title: "Tropical Combo", price: "$255 Single Day Wet, $175 Single Day Dry", description: "kindergarten", font: "", textImg: "" }
     ]
 }

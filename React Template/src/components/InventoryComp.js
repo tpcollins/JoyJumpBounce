@@ -48,6 +48,10 @@ const InventoryComp = () => {
                                     <img 
                                     src={item.textImg}
                                     alt="textImg"
+
+                                    style={{
+                                        paddingBottom: '25px'
+                                    }}
                                     />
                                 </h5>
 
