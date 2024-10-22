@@ -32,7 +32,11 @@ const InventoryComp = () => {
                     <h2 className="title clr-pri-2">
                         Explore Our Inventory & Book Below!
                     </h2>
-                    <h5>Have questions before booking? Click here to get in contact!</h5>
+                    <h5>Have questions before booking? 
+                        <a href="/contact"
+                        className="clr-pri-2"
+                        > <u> Click here to get in contact!</u></a>
+                    </h5>
                 </div>
                 <div className="gallery-container">
                     {inventoryData.inventoryItems.map((item, index) => (
