@@ -20,14 +20,13 @@ const Index = () => {
 
   return (
     <Layout noFooter noHeader bodyClass={"main"}>
+      
       <Header1 />
       
       <Slider />
-
       
       <Footer2 />
 
-      {/* <JJBanner /> */}
     </Layout>
   );
 };

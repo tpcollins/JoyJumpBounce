@@ -90,7 +90,7 @@ export const Shop = () => (
   </Fragment>
 );
 
-export const Home = () => <Link href="/index">Home</Link>;
-export const About = () => <Link href="/about">About</Link>;
+export const Home = () => <Link href="/">Home</Link>;
+export const About = () => <Link href="/about">About Us</Link>;
 export const Contact = () => <Link href="/contact">Contact Us</Link>;
 export const Inventory = () => <Link href="/inventory">Inventory</Link>;

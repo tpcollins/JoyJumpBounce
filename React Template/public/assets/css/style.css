@@ -166,6 +166,10 @@ body {
     background: linear-gradient(to bottom right, #F4A460, #FFDAB9);
 }
 
+.abus-body {
+    background: linear-gradient(to bottom right, #F4A460, #FFDAB9);
+}
+
 article,
 aside,
 details,
@@ -1775,6 +1779,39 @@ a:focus {
     background-size: cover;
     position: relative;
     z-index: 99;
+}
+
+body #footer-1 {
+    background-color: #6A0DAD !important; /* Your preferred color */
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 50px 0 !important;
+    margin-top: 50px;
+}
+  
+body #footer-1::before {
+    content: '';
+    position: absolute;
+    top: -80px;
+    left: 0;
+    right: 0;
+    height: 160px; 
+    background-color: #6A0DAD; /* Same as footer color */
+    border-radius: 0 0 50% 50%;
+    z-index: -1;
+}
+  
+body #footer-1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #6A0DAD;
+    border-radius: 50% 50% 0 0;
+    z-index: -1;
 }
 
 #footer.st-2 {

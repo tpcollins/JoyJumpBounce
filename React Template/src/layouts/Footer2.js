@@ -11,16 +11,6 @@ const Footer2 = () => {
             <div className="col-12">
               <div className="widget-footer">
                 <div className="widget widget-logo">
-                  {/* <div className="logo-bottom" id="logo-footer">
-                    <Link href="/">
-                      <a>
-                        <img
-                          src="assets/images/logo/logofootert.png"
-                          alt="kinco"
-                        />
-                      </a>
-                    </Link>
-                  </div> */}
                   <p className="wrap f-mulish">
                     Sit amet consectetur adipiscing elit sed do eiusmod teminci
                     idunt ut labore et dolore magna

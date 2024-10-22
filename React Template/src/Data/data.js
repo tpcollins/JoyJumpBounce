@@ -20,8 +20,8 @@ export const navbarData = {
     buttons: [
         { btnText: "Home", comp: <Home />},
         { btnText: "Inventory", comp: <Inventory />},
-        { btnText: "How It Works", comp: <Home />},
         { btnText: "About Us", comp: <About />},
+        { btnText: "How It Works", comp: <Home />},
         { btnText: "Contact Us", comp: <Contact />},
         { btnText: "Booking", comp: <Contact />}
     ]
