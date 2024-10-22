@@ -6874,13 +6874,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* height: 500px; */
+  height: 850px;
 }
 
 .about-section-inner {
   background-color: rgba(0, 0, 0, 0.1);
   width: 60%;
-  height: 119%;
+  height: 110.5%;
   padding: 20px;
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
 }

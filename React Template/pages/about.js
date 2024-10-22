@@ -1,3 +1,13 @@
+// TODO:
+
+/*
+
+1. Figure out color scheme for about us section
+2. Move footer 1 closer (not home page footer)
+3. Start Contact Us Page
+
+*/
+
 import Header1 from "../src/layouts/header/Header1";
 import Footer from "../src/layouts/Footer";
 import { useEffect } from "react";
@@ -41,9 +51,14 @@ const About = () => {
             </section>
           </section>
         </div>
+        
       </div>
 
-      <Footer />
+      <div className="container-lg">
+        <Footer />
+      </div>
+
+      
     </>
   );
 };

@@ -1781,38 +1781,29 @@ a:focus {
     z-index: 99;
 }
 
-body #footer-1 {
-    background-color: #6A0DAD !important; /* Your preferred color */
+#footer-1 {
+    background-color: #B250FE;
     position: relative;
     color: white;
     text-align: center;
-    padding: 50px 0 !important;
-    margin-top: 50px;
-}
+    padding: 90px 0;
+    margin-top: 100px;
+    /* height: 800px; */
+    overflow: hidden; /* Ensure nothing overflows */
   
-body #footer-1::before {
-    content: '';
-    position: absolute;
-    top: -80px;
-    left: 0;
-    right: 0;
-    height: 160px; 
-    background-color: #6A0DAD; /* Same as footer color */
-    border-radius: 0 0 50% 50%;
-    z-index: -1;
-}
+    /* Add the footer topper image */
+    background: url(../images/logo/FooterTopper.png) center center no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1; /* Ensure it's above other elements */
+  }
   
-body #footer-1::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background-color: #6A0DAD;
-    border-radius: 50% 50% 0 0;
-    z-index: -1;
-}
+  /* To force the footer content below the topper */
+  .footer-content {
+    position: relative;
+    z-index: 2; /* Ensure content appears on top of the footer */
+    padding-top: 300px; /* Adjust based on the size of your topper image */
+  }
 
 #footer.st-2 {
     background: url(../images/inflatables/FooterBlurred.png) center center no-repeat;
