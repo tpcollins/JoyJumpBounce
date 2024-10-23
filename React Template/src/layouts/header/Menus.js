@@ -91,6 +91,6 @@ export const Shop = () => (
 );
 
 export const Home = () => <Link href="/">Home</Link>;
-export const About = () => <Link href="/about">About Us</Link>;
+export const About = () => <Link href="/aboutus">About Us</Link>;
 export const Contact = () => <Link href="/contact">Contact Us</Link>;
 export const Inventory = () => <Link href="/inventory">Inventory</Link>;

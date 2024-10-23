@@ -6843,6 +6843,10 @@
 --------------------------------------------------*/
 
 /* Container for the About Section */
+.container .about-container{
+  overflow: visible !important;
+}
+
 .about-container {
   display: flex;
   justify-content: center;
@@ -6864,7 +6868,7 @@
 
 /* About Section Styling */
 .about-section {
-  background-color:#FFD400;
+  background-color:#FFA64D;
   padding: 40px;
   width: 80%;
   border-radius: 15px;
@@ -6881,7 +6885,7 @@
   background-color: #F1E9DA;
   width: 60%;
   height: 110.5%;
-  padding: 20px;
+  padding: 10px;
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
