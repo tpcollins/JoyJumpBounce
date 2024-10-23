@@ -1785,25 +1785,20 @@ a:focus {
     background-color: #B250FE;
     position: relative;
     color: white;
-    text-align: center;
     padding: 90px 0;
     margin-top: 100px;
-    /* height: 800px; */
-    overflow: hidden; /* Ensure nothing overflows */
-  
-    /* Add the footer topper image */
+    overflow: hidden;
     background: url(../images/logo/FooterTopper.png) center center no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 1; /* Ensure it's above other elements */
-  }
-  
-  /* To force the footer content below the topper */
-  .footer-content {
+    z-index: 1;
+}
+
+.footer-content {
     position: relative;
-    z-index: 2; /* Ensure content appears on top of the footer */
-    padding-top: 300px; /* Adjust based on the size of your topper image */
-  }
+    z-index: 2;
+    padding-top: 300px;
+}
 
 #footer.st-2 {
     background: url(../images/inflatables/FooterBlurred.png) center center no-repeat;
@@ -1820,11 +1815,21 @@ a:focus {
 #footer h4,
 #footer h5,
 #footer h6,
-#footer span {
+#footer span,
+#footer-1 a,
+#footer-1 p,
+#footer-1 h1,
+#footer-1 h2,
+#footer-1 h3,
+#footer-1 h4,
+#footer-1 h5,
+#footer-1 h6,
+#footer-1 span {
     color: var(--primary-color1);
 }
 
-#footer a:hover {
+#footer a:hover,
+#footer-1 a:hover {
     color: var(--primary-color8);
 }
 

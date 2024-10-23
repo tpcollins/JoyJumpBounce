@@ -6864,7 +6864,7 @@
 
 /* About Section Styling */
 .about-section {
-  background-color: #f7f7f7;
+  background-color:#FFD400;
   padding: 40px;
   width: 80%;
   border-radius: 15px;
@@ -6878,7 +6878,7 @@
 }
 
 .about-section-inner {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: #F1E9DA;
   width: 60%;
   height: 110.5%;
   padding: 20px;
