@@ -1,14 +1,3 @@
-// TODO:
-
-/*
-
-2. Move footer 1 closer (not home page footer)
-3. Start Contact Us Page
-
-*/
-
-
-
 const About = () => {
 
   return (

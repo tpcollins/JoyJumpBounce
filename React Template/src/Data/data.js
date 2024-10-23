@@ -11,6 +11,7 @@ TABLE OF CONTENTS:
 1. navbar section
 2. inventory section
 3. swiper slider section (for slider component)
+4. contact form section
 
 */
 
@@ -54,5 +55,16 @@ export const invSwiperData = {
         imgs: [
             {src: "assets/images/inflatables/ComboWetSlideNoShadow.png"}
         ]},
+    ]
+}
+
+// 4. contact form section
+export const subjectData = {
+    subjects: [
+        {subject: "General Information"},
+        {subject: "Bouncy House Rental"},
+        {subject: "Accessories Rental"},
+        {subject: "Pricing"},
+        {subject: "Other"}
     ]
 }

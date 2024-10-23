@@ -33,8 +33,10 @@ const InventoryComp = () => {
                         Explore Our Inventory & Book Below!
                     </h2>
                     <h5>Have questions before booking? 
-                        <a href="/contact"
+                        <a 
                         className="clr-pri-2"
+                        href="/contactus"
+                        target="_blank"
                         > <u> Click here to get in contact!</u></a>
                     </h5>
                 </div>
