@@ -158,12 +158,16 @@ body {
 
 
 .homepage-body {
-    background: linear-gradient(to bottom right, #ffd700 30%, #ffa500 70%);
+    /* background: linear-gradient(to bottom right, #ffa500 40%, #ffffff 60%); */
+    background: linear-gradient(to bottom right, #F4A460, #FFDAB9);
 }
 
 .inventory-body {
     /* background-color: #F4A460; */
+    /* background: linear-gradient(to bottom right, #F4A460, #FFDAB9); */
+    /* background: linear-gradient(to bottom right, #ffa500 40%, #ffffff 60%); */
     background: linear-gradient(to bottom right, #F4A460, #FFDAB9);
+
 }
 
 .abus-body {

@@ -2,7 +2,8 @@ import {
     Home,
     About,
     Contact,
-    Inventory
+    Inventory,
+    Booking
  } from "../layouts/header/Menus"
 
 /*
@@ -24,7 +25,7 @@ export const navbarData = {
         { btnText: "About Us", comp: <About />},
         { btnText: "How It Works", comp: <Home />},
         { btnText: "Contact Us", comp: <Contact />},
-        { btnText: "Booking", comp: <Contact />}
+        { btnText: "Booking", comp: <Booking />}
     ]
 }
 
