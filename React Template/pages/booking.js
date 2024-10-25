@@ -16,12 +16,21 @@ const Booking = () => {
 
   return(
     <>
+        <Header1 />
 
-      <Header1 />
-      
-      <Calendar />
-      
-      <Footer />
+        <div className="container">
+
+            <div className="contact-container">
+                <div className="row">
+                    <div className="col-12">
+                        <Calendar />
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+
+        <Footer />
 
     </>
   );
