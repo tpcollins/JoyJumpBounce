@@ -13,6 +13,7 @@ TABLE OF CONTENTS:
 2. inventory section
 3. swiper slider section (for slider component)
 4. contact form section
+5. stock grid
 
 */
 
@@ -67,5 +68,14 @@ export const subjectData = {
         {subject: "Accessories Rental"},
         {subject: "Pricing"},
         {subject: "Other"}
+    ]
+}
+
+// 5. stock grid
+export const bcyHseStockData = {
+    data: [
+        {imgSrc: "assets/images/inflatables/WaveRiderResized.png", title: "Wave Rider", price: "$285"},
+        {imgSrc: "assets/images/inflatables/ComboWetSlideNoShadow.png", title: "Tropical Combo Slide", price: "$225 - Wet $175 Dry"},
+        {imgSrc: "assets/images/inflatables/DrySlide.png", title: "Dry Slide", price: "$200"},
     ]
 }
