@@ -1,8 +1,8 @@
+import Layout from "../src/layouts/Layout";
 import Header1 from "../src/layouts/header/Header1";
 import Footer from "../src/layouts/Footer";
 import { useEffect } from "react";
-import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import ReactCalendar from "./calendar";
 
 const Booking = () => {
 
@@ -16,23 +16,16 @@ const Booking = () => {
 
   return(
     <>
+      <Layout noFooter noHeader bodyClass={"main"}>
+
         <Header1 />
 
-        <div className="container">
-
-            <div className="contact-container">
-                <div className="row">
-                    <div className="col-12">
-                        <Calendar />
-                    </div>
-                </div>
-            </div>
-        
-        </div>
+        <ReactCalendar />
 
         <Footer />
-
-    </>
+        
+      </Layout>
+  </>
   );
 };
 
