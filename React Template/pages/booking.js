@@ -64,7 +64,9 @@ const Booking = () => {
 
           {isDateClicked && (
             <div>
-              <h3>Available Stock for: {selectedDate.toLocaleDateString()}</h3>
+              <h3
+              className="text-center"
+              >Available Stock For: {selectedDate.toLocaleDateString()}</h3>
               {/* Render StockGrid and pass image URLs */}
               <StockGrid stockData={bcyHseStockData} />
             </div>

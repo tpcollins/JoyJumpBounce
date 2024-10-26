@@ -14,6 +14,7 @@ TABLE OF CONTENTS:
 3. swiper slider section (for slider component)
 4. contact form section
 5. stock grid
+6. accessories
 
 */
 
@@ -33,9 +34,9 @@ export const navbarData = {
 // 2. inventory section
 export const inventoryData = {
     inventoryItems: [
-        { src: "assets/images/inflatables/WaveRiderWBG2.png", title: "Wave Rider Waterslide", price: "$285 Single Day",description: "kindergarten", font: "'WaveRider', sans-serif", textImg: "assets/images/InvTextImages/waverider.png" },
-        { src: "assets/images/inflatables/ComboWetSlideWBG.png", title: "Combo Wet Slide", price: "$200 Single Day", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/Tropical Combo.png"},
-        { src: "assets/images/inflatables/DrySlideWBG.png", title: "17' Dry Slide", price: "$255 Single Day Wet, $175 Single Day Dry", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/DrySlide.png" }
+        { src: "assets/images/inflatables/WaveRiderWBG2.png", title: "Wave Rider Waterslide", price: "$285 Single Day",description: "kindergarten", font: "'WaveRider', sans-serif", textImg: "assets/images/InvTextImages/waverider.png", pgSection: 'waverider' },
+        { src: "assets/images/inflatables/ComboWetSlideWBG.png", title: "Combo Wet Slide", price: "$200 Single Day", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/Tropical Combo.png", pgSection: 'tropcombo'},
+        { src: "assets/images/inflatables/DrySlideWBG.png", title: "17' Dry Slide", price: "$255 Single Day Wet, $175 Single Day Dry", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/DrySlide.png", pgSection: 'dryslide' }
     ]
 }
 
@@ -74,8 +75,30 @@ export const subjectData = {
 // 5. stock grid
 export const bcyHseStockData = {
     data: [
-        {imgSrc: "assets/images/inflatables/WaveRiderResized.png", title: "Wave Rider", price: "$285"},
-        {imgSrc: "assets/images/inflatables/ComboWetSlideNoShadow.png", title: "Tropical Combo Slide", price: "$225 - Wet $175 Dry"},
-        {imgSrc: "assets/images/inflatables/DrySlide.png", title: "Dry Slide", price: "$200"},
+        {imgSrc: "assets/images/inflatables/WaveRiderResized.png", title: "Wave Rider", price: "$285", pgSection: 'waverider'},
+        {imgSrc: "assets/images/inflatables/ComboWetSlideNoShadow.png", title: "Tropical Combo Slide", price: "$225 - Wet $175 Dry", pgSection: 'tropcombo'},
+        {imgSrc: "assets/images/inflatables/DrySlide.png", title: "Dry Slide", price: "$200", pgSection: 'dryslide'},
+    ]
+}
+
+export const accessoryData = {
+    accessories: [
+        {
+          imgSrc: 'assets/images/accessories/generator.png',
+          title: 'Generator',
+          price: '$75',
+        },
+        {
+          imgSrc: 'assets/images/accessories/table.png',
+          title: 'Table',
+          description: 'Another useful accessory with many features.',
+          price: '$10/Table',
+        },
+        {
+          imgSrc: 'assets/images/accessories/chair.png',
+          title: 'Chair',
+          description: 'Perfect for outdoor events and parties.',
+          price: '$2/Chair',
+        }
     ]
 }

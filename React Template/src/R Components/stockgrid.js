@@ -18,10 +18,13 @@ const StockGrid = ({ stockData }) => {
                             <div className="stock-info">
                                 <h3 className="stock-title">{item.title}</h3>
                                 <p className="stock-price">{item.price}</p>
+                                <p>
+                                    <a href={'/inventory#' + item.pgSection}>View on Inventory Page</a>
+                                </p>
 
                                 <div>
                                     <a 
-                                    className="fl-btn st-12 inv"
+                                    className="fl-btn st-12 stkgrd"
                                     href="#"
                                     >
                                         <span className="inner">Add to Cart</span>

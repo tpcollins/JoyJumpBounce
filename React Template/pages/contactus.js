@@ -2,6 +2,7 @@ import Header1 from "../src/layouts/header/Header1";
 import Footer from "../src/layouts/Footer";
 import Contact from "./contact";
 import { useEffect } from "react";
+import Layout from "../src/layouts/Layout";
 
 const ContactUs = () => {
 
@@ -15,13 +16,13 @@ const ContactUs = () => {
 
   return(
     <>
-
-      <Header1 />
-      
-      <Contact />
-      
-      <Footer />
-
+      <Layout noFooter noHeader bodyClass={"main"}>
+        <Header1 />
+        
+        <Contact />
+        
+        <Footer />
+      </Layout>
     </>
   );
 };
