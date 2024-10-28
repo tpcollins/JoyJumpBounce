@@ -76,7 +76,7 @@ export const subjectData = {
 export const bcyHseStockData = {
     data: [
         {imgSrc: "assets/images/inflatables/WaveRiderResized.png", title: "Wave Rider", price: "$285", pgSection: 'waverider'},
-        {imgSrc: "assets/images/inflatables/ComboWetSlideNoShadow.png", title: "Tropical Combo Slide", price: "$225 - Wet $175 Dry", pgSection: 'tropcombo'},
+        {imgSrc: "assets/images/inflatables/ComboWetSlideNoShadow.png", title: "Tropical Combo Slide", price: "$225 - Wet $175 - Dry", pgSection: 'tropcombo'},
         {imgSrc: "assets/images/inflatables/DrySlide.png", title: "Dry Slide", price: "$200", pgSection: 'dryslide'},
     ]
 }

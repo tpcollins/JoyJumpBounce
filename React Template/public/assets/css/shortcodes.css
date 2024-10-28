@@ -34,6 +34,8 @@
     * Stock Grid
     * Inventory
     * Inventory Landing Page
+    * Shopping Cart
+
 */
 /* button 
 --------------------------------------------------*/
@@ -7336,5 +7338,26 @@
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   z-index: 1;
   pointer-events: none; /* Prevent overlay from interfering with hover */
+}
+
+/* Inventory Landing Page
+--------------------------------------------------*/
+.cart-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 200px;
+  z-index: 500;
+  width: 150px; /* Match icon size */
+  height: 150px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-icon-img {
+  width: 70%; /* Slightly smaller to fit nicely within the circle */
+  height: 70%;
 }
 

@@ -6,6 +6,7 @@ import ReactCalendar from "./calendar";
 import { LeftArrow, RightArrow } from "../src/Icons";
 import StockGrid from "../src/R Components/StockGrid";
 import { bcyHseStockData } from "../src/Data/data";
+import ShoppingCart from "../src/R Components/shoppingcart";
 
 const Booking = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -17,6 +18,11 @@ const Booking = () => {
     setIsDateClicked(true);
   };
 
+  const onCartClick = (event) => {
+    event.preventDefault();
+    setSelectedFloat(true);
+  }
+
   useEffect(() => {
     document.body.classList.add('abus-body');
     
@@ -25,14 +31,11 @@ const Booking = () => {
     };
   }, []);
 
-  useEffect(() => {
-    console.log("selected date: ", selectedDate);
-    console.log("isDateClicked: ", isDateClicked);
-  }, [selectedDate, isDateClicked]);
-
   return(
     <>
       <Layout noFooter noHeader bodyClass={"main"}>
+
+        
 
         <Header1 />
 
@@ -68,11 +71,15 @@ const Booking = () => {
               className="text-center"
               >Available Stock For: {selectedDate.toLocaleDateString()}</h3>
               {/* Render StockGrid and pass image URLs */}
-              <StockGrid stockData={bcyHseStockData} />
+              <StockGrid 
+              stockData={bcyHseStockData}
+              />
             </div>
           )}
 
         </div>
+
+        <ShoppingCart />
 
         <Footer />
         

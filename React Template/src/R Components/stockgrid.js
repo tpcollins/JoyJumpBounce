@@ -1,6 +1,8 @@
 import React from 'react';
 
-const StockGrid = ({ stockData }) => {
+const StockGrid = ({ 
+    stockData
+}) => {
 
     return (
         <>
@@ -23,12 +25,13 @@ const StockGrid = ({ stockData }) => {
                                 </p>
 
                                 <div>
-                                    <a 
+                                    {/* <a 
                                     className="fl-btn st-12 stkgrd"
-                                    href="#"
-                                    >
-                                        <span className="inner">Add to Cart</span>
-                                    </a>
+                                    onClick={addToCart}
+                                    > */}
+                                        <span 
+                                        className="inner">Add to Cart</span>
+                                    {/* </a> */}
                                 </div>
                             </div>
                         </div>
