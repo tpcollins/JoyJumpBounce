@@ -1,7 +1,10 @@
 import React from 'react';
 
 const StockGrid = ({ 
-    stockData
+    stockData,
+    handleAddToCart,
+    isAnimating,
+    clickedIndex
 }) => {
 
     return (
@@ -25,13 +28,16 @@ const StockGrid = ({
                                 </p>
 
                                 <div>
-                                    {/* <a 
+                                    <a 
                                     className="fl-btn st-12 stkgrd"
-                                    onClick={addToCart}
-                                    > */}
-                                        <span 
-                                        className="inner">Add to Cart</span>
-                                    {/* </a> */}
+                                    >
+                                         <span 
+                                        className={`inner add-to-cart-button ${isAnimating && clickedIndex === index ? 'animate' : ''}`}
+                                        onClick={() => handleAddToCart(index)}
+                                        >
+                                            Add to Cart
+                                        </span>
+                                    </a>
                                 </div>
                             </div>
                         </div>

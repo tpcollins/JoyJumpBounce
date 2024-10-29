@@ -1,6 +1,6 @@
 import Calendar from 'react-calendar';
 
-const ReactCalendar = ({onDateClick}) => {
+const ReactCalendar = ({handleDateClick}) => {
     
     return(
     <>
@@ -8,7 +8,7 @@ const ReactCalendar = ({onDateClick}) => {
             <div className="calendar-container">
                 <div className="row justify-content-center">
                     <div className="col-12">
-                        <Calendar onClickDay={onDateClick} />
+                        <Calendar onClickDay={handleDateClick} />
                     </div>
                 </div>
             </div>

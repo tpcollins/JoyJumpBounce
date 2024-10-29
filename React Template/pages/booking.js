@@ -9,19 +9,28 @@ import { bcyHseStockData } from "../src/Data/data";
 import ShoppingCart from "../src/R Components/shoppingcart";
 
 const Booking = () => {
+  // Date Variables
   const [selectedDate, setSelectedDate] = useState(null);
   const [isDateClicked, setIsDateClicked] = useState(false);
 
+  // Cart Variables
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [clickedIndex, setClickedIndex] = useState(null);
+
   // Function to handle date click from react-calendar
-  const onDateClick = (date) => {
+  const handleDateClick = (date) => {
     setSelectedDate(date); // Update the selected date
     setIsDateClicked(true);
   };
 
-  const onCartClick = (event) => {
-    event.preventDefault();
-    setSelectedFloat(true);
-  }
+  const handleAddToCart = (index) => {
+    setClickedIndex(index); // Set the specific item index that was clicked
+    setIsAnimating(true);
+    setTimeout(() => {
+        setIsAnimating(false);
+        setClickedIndex(null); // Reset after animation
+    }, 1000); // Adjust duration as needed
+  };
 
   useEffect(() => {
     document.body.classList.add('abus-body');
@@ -63,7 +72,7 @@ const Booking = () => {
               </h5>
           </div>
 
-          <ReactCalendar onDateClick={onDateClick}/>
+          <ReactCalendar handleDateClick={handleDateClick}/>
 
           {isDateClicked && (
             <div>
@@ -72,7 +81,10 @@ const Booking = () => {
               >Available Stock For: {selectedDate.toLocaleDateString()}</h3>
               {/* Render StockGrid and pass image URLs */}
               <StockGrid 
+              handleAddToCart={handleAddToCart}
+              isAnimating={isAnimating} 
               stockData={bcyHseStockData}
+              clickedIndex={clickedIndex}
               />
             </div>
           )}
