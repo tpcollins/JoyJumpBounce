@@ -1,7 +1,15 @@
-const ShoppingCart = () => {
+const ShoppingCart = ({onClick}) => {
     return(
-        <div id="cart-icon" className="cart-icon">
-            <img src="/assets/icon/shopping-cart.svg" alt="Cart Icon" className="cart-icon-img" />
+        <div 
+        className="cart-icon"
+        id="cart-icon"
+        onClick={onClick}
+        style={{cursor: 'pointer'}}
+        >
+            <img 
+            alt="Cart Icon"
+            className="cart-icon-img"
+            src="/assets/icon/shopping-cart.svg"/>
         </div>
     );
 };

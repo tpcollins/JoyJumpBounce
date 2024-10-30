@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import ReactCalendar from "./calendar";
 import { LeftArrow, RightArrow } from "../src/Icons";
 import StockGrid from "../src/R Components/StockGrid";
-import { bcyHseStockData } from "../src/Data/data";
+import { bcyHseStockData, checkoutModalData } from "../src/Data/data";
 import ShoppingCart from "../src/R Components/shoppingcart";
 import CheckoutModal from "../src/R Components/checkoutmodal";
 
@@ -13,6 +13,9 @@ const Booking = () => {
   // Date Variables
   const [selectedDate, setSelectedDate] = useState(null);
   const [isDateClicked, setIsDateClicked] = useState(false);
+
+  // Modal Variables
+  const [isOpen, setIsOpen] = useState(false);
 
   // Function to handle date click from react-calendar
   const handleDateClick = (date) => {
@@ -55,8 +58,14 @@ const Booking = () => {
 
   // Function to open modal
   const handleModalOpen = () =>{
-    setShow(true);
-  }
+    console.log("handleModalOpen clicked");
+    setIsOpen(true);
+    console.log("show on booking: ", isOpen)
+  };
+
+  useEffect(() => {
+    console.log("show on booking useEffect: ", isOpen)
+  }, [isOpen]);
 
   useEffect(() => {
     document.body.classList.add('abus-body');
@@ -115,11 +124,17 @@ const Booking = () => {
 
         </div>
 
-        <ShoppingCart />
+        <ShoppingCart 
+        onClick={handleModalOpen}
+        />
 
         <Footer />
 
-        {/* <CheckoutModal /> */}
+        <CheckoutModal 
+        openVar={isOpen}
+        setOpenVar={setIsOpen}
+        data={checkoutModalData}
+        />
         
       </Layout>
   </>

@@ -35,6 +35,7 @@
     * Inventory
     * Inventory Landing Page
     * Shopping Cart
+    * Cart Modal
 
 */
 /* button 
@@ -7371,4 +7372,14 @@
 .add-to-cart-button.animate {
   position: relative;
   z-index: 1000;
+}
+
+/* Cart Modal
+--------------------------------------------------*/
+.modal-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0; /* Remove any default margin that might interfere */
 }
