@@ -4,7 +4,8 @@ const StockGrid = ({
     stockData,
     handleAddToCart,
     isAnimating,
-    clickedIndex
+    clickedIndex,
+    targetPosition
 }) => {
 
     return (
@@ -30,10 +31,12 @@ const StockGrid = ({
                                 <div>
                                     <a 
                                     className="fl-btn st-12 stkgrd"
+                                    onClick={() => handleAddToCart(index)}
                                     >
-                                         <span 
-                                        className={`inner add-to-cart-button ${isAnimating && clickedIndex === index ? 'animate' : ''}`}
-                                        onClick={() => handleAddToCart(index)}
+                                        <span
+                                            id={`add-to-cart-${index}`} // Unique ID for each button
+                                            className="inner add-to-cart-button"
+                                            onClick={() => handleAddToCart(index)}
                                         >
                                             Add to Cart
                                         </span>

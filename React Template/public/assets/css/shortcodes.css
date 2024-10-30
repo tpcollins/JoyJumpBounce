@@ -7363,24 +7363,32 @@
   height: 70%;
 }
 
-.add-to-cart-button {
+/* .add-to-cart-button {
   position: relative;
   cursor: pointer;
+  transition: transform 1s ease;
+} */
+
+.add-to-cart-button {
+  cursor: pointer;
+  /* Basic styling, no fixed position needed here */
 }
+
 
 .add-to-cart-button.animate {
-  animation: jumpToCart 1s ease-in-out forwards;
-  overflow: visible;
+  position: relative;
+  z-index: 1000;
 }
 
-@keyframes jumpToCart {
+
+/* @keyframes jumpToCart {
   0% {
       transform: translate(0, 0);
   }
   50% {
-      transform: translate(50px, -50px) scale(2); /* Adjust for the effect */
+      transform: translate(50px, -50px) scale(2);
   }
   100% {
-      transform: translate(700px, 20px) scale(1); /* Final destination */
+      transform: translate(700px, 20px) scale(1);
   }
-}
+} */

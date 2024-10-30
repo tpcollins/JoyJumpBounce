@@ -16,6 +16,7 @@ const Booking = () => {
   // Cart Variables
   const [isAnimating, setIsAnimating] = useState(false);
   const [clickedIndex, setClickedIndex] = useState(null);
+  const [targetPosition, setTargetPosition] = useState();
 
   // Function to handle date click from react-calendar
   const handleDateClick = (date) => {
@@ -24,13 +25,38 @@ const Booking = () => {
   };
 
   const handleAddToCart = (index) => {
-    setClickedIndex(index); // Set the specific item index that was clicked
-    setIsAnimating(true);
-    setTimeout(() => {
-        setIsAnimating(false);
-        setClickedIndex(null); // Reset after animation
-    }, 1000); // Adjust duration as needed
+    const cartIcon = document.getElementById("cart-icon");
+    const button = document.querySelector(`#add-to-cart-${index}`); // Select specific button
+
+    if (cartIcon && button) {
+      const cartRect = cartIcon.getBoundingClientRect();
+      const buttonRect = button.getBoundingClientRect();
+
+      // Create a clone of the button
+      const clone = button.cloneNode(true);
+      clone.style.position = "fixed";
+      clone.style.left = `${buttonRect.left}px`;
+      clone.style.top = `${buttonRect.top}px`;
+      clone.style.transition = "transform 1s ease, opacity 1s ease";
+      clone.style.zIndex = 1000;
+
+      // Add the clone to the document
+      document.body.appendChild(clone);
+
+      // Start animation to the cart
+      requestAnimationFrame(() => {
+          clone.style.transform = `translate(${cartRect.left - buttonRect.left}px, ${cartRect.top - buttonRect.top}px) scale(3)`;
+          clone.style.opacity = "0"; // Fade out as it reaches the cart
+      });
+
+      // Remove the clone after the animation completes
+      setTimeout(() => {
+          clone.remove();
+      }, 1000); // Match the transition duration
+    }
   };
+
+
 
   useEffect(() => {
     document.body.classList.add('abus-body');
@@ -44,13 +70,10 @@ const Booking = () => {
     <>
       <Layout noFooter noHeader bodyClass={"main"}>
 
-        
-
         <Header1 />
 
         <div className="container">
           
-
           <div 
           className="title-heading st-4"
           style={{paddingTop: '250px'}}
@@ -85,6 +108,7 @@ const Booking = () => {
               isAnimating={isAnimating} 
               stockData={bcyHseStockData}
               clickedIndex={clickedIndex}
+              targetPosition={targetPosition}
               />
             </div>
           )}
