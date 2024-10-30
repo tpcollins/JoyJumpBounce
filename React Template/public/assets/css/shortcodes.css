@@ -7363,15 +7363,8 @@
   height: 70%;
 }
 
-/* .add-to-cart-button {
-  position: relative;
-  cursor: pointer;
-  transition: transform 1s ease;
-} */
-
 .add-to-cart-button {
   cursor: pointer;
-  /* Basic styling, no fixed position needed here */
 }
 
 
@@ -7379,16 +7372,3 @@
   position: relative;
   z-index: 1000;
 }
-
-
-/* @keyframes jumpToCart {
-  0% {
-      transform: translate(0, 0);
-  }
-  50% {
-      transform: translate(50px, -50px) scale(2);
-  }
-  100% {
-      transform: translate(700px, 20px) scale(1);
-  }
-} */

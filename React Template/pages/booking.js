@@ -7,16 +7,12 @@ import { LeftArrow, RightArrow } from "../src/Icons";
 import StockGrid from "../src/R Components/StockGrid";
 import { bcyHseStockData } from "../src/Data/data";
 import ShoppingCart from "../src/R Components/shoppingcart";
+import CheckoutModal from "../src/R Components/checkoutmodal";
 
 const Booking = () => {
   // Date Variables
   const [selectedDate, setSelectedDate] = useState(null);
   const [isDateClicked, setIsDateClicked] = useState(false);
-
-  // Cart Variables
-  const [isAnimating, setIsAnimating] = useState(false);
-  const [clickedIndex, setClickedIndex] = useState(null);
-  const [targetPosition, setTargetPosition] = useState();
 
   // Function to handle date click from react-calendar
   const handleDateClick = (date) => {
@@ -24,6 +20,7 @@ const Booking = () => {
     setIsDateClicked(true);
   };
 
+  // Function to add items to cart
   const handleAddToCart = (index) => {
     const cartIcon = document.getElementById("cart-icon");
     const button = document.querySelector(`#add-to-cart-${index}`); // Select specific button
@@ -56,7 +53,10 @@ const Booking = () => {
     }
   };
 
-
+  // Function to open modal
+  const handleModalOpen = () =>{
+    setShow(true);
+  }
 
   useEffect(() => {
     document.body.classList.add('abus-body');
@@ -105,10 +105,10 @@ const Booking = () => {
               {/* Render StockGrid and pass image URLs */}
               <StockGrid 
               handleAddToCart={handleAddToCart}
-              isAnimating={isAnimating} 
+              // isAnimating={isAnimating} 
               stockData={bcyHseStockData}
-              clickedIndex={clickedIndex}
-              targetPosition={targetPosition}
+              // clickedIndex={clickedIndex}
+              // targetPosition={targetPosition}
               />
             </div>
           )}
@@ -118,6 +118,8 @@ const Booking = () => {
         <ShoppingCart />
 
         <Footer />
+
+        {/* <CheckoutModal /> */}
         
       </Layout>
   </>

@@ -2,10 +2,7 @@ import React from 'react';
 
 const StockGrid = ({ 
     stockData,
-    handleAddToCart,
-    isAnimating,
-    clickedIndex,
-    targetPosition
+    handleAddToCart
 }) => {
 
     return (
