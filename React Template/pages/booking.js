@@ -122,11 +122,12 @@ const Booking = () => {
             </div>
           )}
 
+          <ShoppingCart 
+            onClick={handleModalOpen}
+          />
         </div>
 
-        <ShoppingCart 
-        onClick={handleModalOpen}
-        />
+        
 
         <Footer />
 

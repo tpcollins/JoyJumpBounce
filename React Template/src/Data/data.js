@@ -107,14 +107,14 @@ export const accessoryData = {
 // 7. checkout modal
 export const checkoutModalData = {
     fields: [
-        {title: "Set up Time", type: "date input", message: ""},
-        {title: "Grass or Concrete", type: "radio buttons", message: ""},
-        {title: "Water Hook up Within 100 Feet?", type: "radio buttons", message: ""},
-        {title: "Power Hook up Within 100 Feet?", type: "dropdown", message: "You will need to rent a generator from Accessories or provide a generator"},
-        {title: "Phone Number", type: "input", message: ""},
-        {title: "Street Address", type: "input", message: ""},
-        {title: "City", type: "dropdown/input", message: ""},
-        {title: "State", type: "dropdown/input", message: ""},
-        {title: "Zip Code", type: "input", message: ""},
+        {title: "Set up Time", type: "time"},
+        {title: "Grass or Concrete", type: "radio", options: [ {label: "Grass", value: "Grass"}, {label: "Concrete", value: "Concrete"}]},
+        {title: "Water Hook up Within 100 Feet?", type: "radio", options: [ {label: "Yes", value: "Yes"}, {label: "No", value: "No"}]},
+        {title: "Power Hook up Within 100 Feet?", type: "radio", options: [ {label: "Yes", value: "Yes"}, {label: "No", value: "No"}], message: "You will need to rent a generator from Accessories or provide a generator"},
+        {title: "Phone Number", type: "text", placeholder: "Phone Number ...."},
+        {title: "Street Address", type: "text", placeholder: "Street Address ...."},
+        {title: "City", type: "text", placeholder:"City ...."}, 
+        {title: "State", type: "text", placeholder: "State ...."},
+        {title: "Zip Code", type: "text", placeholder: "Zip Code ...."},
     ]
 }
