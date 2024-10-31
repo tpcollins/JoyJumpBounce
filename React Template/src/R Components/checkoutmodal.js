@@ -17,7 +17,6 @@ const CheckoutModal = ({
 
     useEffect(() => {
         setShow(openVar);
-        console.log("show checkout modal", show);
     }, [openVar]);
 
     return(
@@ -31,7 +30,9 @@ const CheckoutModal = ({
         size="lg"
         >
             <Modal.Header closeButton>
-                <Modal.Title>Your Cart</Modal.Title>
+                <Modal.Title
+                style={{fontSize: '25px'}}
+                >Your Cart</Modal.Title>
             </Modal.Header>
 
             <Modal.Body>
@@ -61,31 +62,6 @@ const CheckoutModal = ({
                                 </div>
                             );
                             break;
-
-                        // case "dropdown":
-                        //     inputElement = (
-                        //         <select className="form-control">
-                        //             <option value="">Select an option</option>
-                        //             {item.options && item.options.map((option, index) => (
-                        //                 <option key={index} value={option}>{option}</option>
-                        //             ))}
-                        //         </select>
-                        //     );
-                        //     break;
-
-                        // case "dropdown/input":
-                        //     inputElement = (
-                        //         <>
-                        //             <select className="form-control">
-                        //                 <option value="">Select an option</option>
-                        //                 {item.options && item.options.map((option, index) => (
-                        //                     <option key={index} value={option}>{option}</option>
-                        //                 ))}
-                        //             </select>
-                        //             <input type="text" className="form-control mt-2" placeholder="Or type here..." />
-                        //         </>
-                        //     );
-                        //     break;
 
                         case "text":
                             inputElement = (

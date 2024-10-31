@@ -7381,3 +7381,13 @@
   top: 20%;
   margin: 0 auto;
 }
+
+.form-group{
+  font-size: 20px;
+}
+
+.form-control::placeholder {
+  color: rgba(0, 0, 0, 0.5) !important;
+
+  /* color: #999999 !important; */
+}

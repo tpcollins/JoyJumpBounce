@@ -5369,15 +5369,15 @@ button.list-group-item-danger.active {
   padding-top: 100%;
 }
 
-.close {
+/* .close {
   float: right;
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
   line-height: 1;
-  color: #000;
-  text-shadow: 0 1px 0 #fff;
+  color: #fff;
+  text-shadow: 0 1px 0 #000;
   opacity: .5;
-}
+} */
 
 .close:focus, .close:hover {
   color: #000;
@@ -5387,11 +5387,14 @@ button.list-group-item-danger.active {
 }
 
 button.close {
-  padding: 0;
+  padding: 10px 15px;
   cursor: pointer;
-  background: transparent;
+  background: red;
   border: 0;
+  border-radius: 10px;
   -webkit-appearance: none;
+  font-size: 3rem;
+  /* line-height: 1; */
 }
 
 .modal-open {
