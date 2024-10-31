@@ -3,7 +3,8 @@ import { Modal, Button } from 'react-bootstrap';
 // React State Variables
 import { useState, useEffect } from 'react';
 // Redux Variables
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch  } from 'react-redux';
+import { clearCart, removeItemFromCart } from '../redux/slices/cartslice';
 
 const CheckoutModal = ({
     openVar,
@@ -13,8 +14,14 @@ const CheckoutModal = ({
     // Cart Items from Redux
     const cartItems = useSelector((state) => state.cart.items);
 
+    // Calculate total price
+    const totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price), 0);
+
     // Show Modal Variables
     const [show, setShow] = useState(false);
+
+    // Use Dispatch for Redux
+    const dispatch = useDispatch();
 
     const handleModalClose = () =>{
         setShow(false);
@@ -42,16 +49,25 @@ const CheckoutModal = ({
             </Modal.Header>
 
             <Modal.Body>
-                {cartItems.map((item, index) => (
-                    <div key={index}>
-                        <p>{item.title}</p>
-                        <p>{item.price}</p>
+            {cartItems.map((item, index) => (
+                <div key={index} className="cart-item">
+                    <img src={item.imgSrc} alt={item.title} className="cart-item-image" />
+                    <div className="cart-item-info">
+                        <p className="cart-item-title">{index + 1}. {item.title}</p>
+                        <p className="cart-item-price">{item.showPrice}</p>
+                        <Button onClick={() => dispatch(removeItemFromCart(item))}>Remove From Cart</Button>
                     </div>
-                ))}
+                </div>
+            ))}
+            {/* <hr className="separator-line" /> */}
+            <div className="cart-total">
+                <p><strong>Total Price:</strong> ${totalPrice.toFixed(2)}</p>
+            </div>
             </Modal.Body>
 
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleModalClose}>Close</Button>
+                <Button variant="secondary" onClick={() => dispatch(clearCart())}>Clear Cart</Button>
                 <Button variant="primary">Checkout</Button>
             </Modal.Footer>
         </Modal>

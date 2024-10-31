@@ -9,11 +9,11 @@ const cartSlice = createSlice({
     reducers: {
         addItemToCart: (state, action) => {
             const itemInCart = state.items.find(item => item.id === action.payload.id);
-            // if (itemInCart) {
-            //     itemInCart.quantity += 1; // If item exists, increase quantity
-            // } else {
-            //     state.items.push({ ...action.payload, quantity: 1 });
-            // }
+            if (itemInCart) {
+                itemInCart.quantity += 1; // If item exists, increase quantity
+            } else {
+                state.items.push({ ...action.payload, quantity: 1 });
+            }
         },
         removeItemFromCart: (state, action) => {
             state.items = state.items.filter(item => item.id !== action.payload.id);

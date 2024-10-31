@@ -11,7 +11,7 @@ import StockGrid from "../src/R Components/StockGrid";
 import ShoppingCart from "../src/R Components/shoppingcart";
 import CheckoutModal from "../src/R Components/checkoutmodal";
 // Data
-import { bcyHseStockData, checkoutModalData } from "../src/Data/data";
+import { bcyHseStockData } from "../src/Data/data";
 // Redux Variables
 import { useDispatch } from 'react-redux';
 import { addItemToCart } from "../src/redux/slices/cartslice";
@@ -132,21 +132,17 @@ const Booking = () => {
           )}
 
           <ShoppingCart 
-            onClick={handleModalOpen}
+          onClick={handleModalOpen}
           />
+          
 
           <CheckoutModal 
           openVar={isOpen}
           setOpenVar={setIsOpen}
-          data={checkoutModalData}
           />
         </div>
 
-        
-
         <Footer />
-
-        
         
       </Layout>
   </>
