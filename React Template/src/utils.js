@@ -28,7 +28,7 @@ export const animation = () => {
   if (typeof window !== "undefined") {
     window.WOW = require("wowjs");
   }
-  new WOW.WOW().init();
+  // new WOW.WOW().init();
 };
 const stickyNav_ = () => {
   let offset = window.scrollY;

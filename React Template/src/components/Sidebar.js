@@ -101,18 +101,18 @@ const Sidebar = ({ show, close }) => {
                 <ul className="box-content">
                   <li>
                     <h6 className="title">
-                      <Link href="/blog-single">
+                      {/* <Link href="/blog-single">
                         <a>Bake Layers Accesilit Testing Supporte</a>
-                      </Link>
+                      </Link> */}
                     </h6>
                   </li>
                   <li>
-                    <Link href="/blog-single">
+                    {/* <Link href="/blog-single">
                       <a className="fx meta-news clr-pri-4">
                         <i className="far fa-calendar-alt" />
                         <span className="f-rubik">25 nov 2021</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </li>
                 </ul>
               </li>
@@ -125,18 +125,18 @@ const Sidebar = ({ show, close }) => {
                 <ul className="box-content">
                   <li>
                     <h6 className="title">
-                      <Link href="/blog-single">
+                      {/* <Link href="/blog-single">
                         <a>Bake Layers Accesilit Testin Supporte</a>
-                      </Link>
+                      </Link> */}
                     </h6>
                   </li>
                   <li>
-                    <Link href="/blog-single">
+                    {/* <Link href="/blog-single">
                       <a className="fx meta-news clr-pri-4">
                         <i className="far fa-calendar-alt" />
                         <span className="f-rubik">25 nov 2021</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </li>
                 </ul>
               </li>
@@ -149,18 +149,18 @@ const Sidebar = ({ show, close }) => {
                 <ul className="box-content">
                   <li>
                     <h6 className="title">
-                      <Link href="/blog-single">
+                      {/* <Link href="/blog-single">
                         <a>Bake Layers Accesilit Testin Supporte</a>
-                      </Link>
+                      </Link> */}
                     </h6>
                   </li>
                   <li>
-                    <Link href="/blog-single">
+                    {/* <Link href="/blog-single">
                       <a className="fx meta-news clr-pri-4">
                         <i className="far fa-calendar-alt" />
                         <span className="f-rubik">25 nov 2021</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </li>
                 </ul>
               </li>
@@ -173,18 +173,18 @@ const Sidebar = ({ show, close }) => {
                 <ul className="box-content">
                   <li>
                     <h6 className="title">
-                      <Link href="/blog-single">
+                      {/* <Link href="/blog-single">
                         <a>Bake Layers Accesilit Testin Supporte</a>
-                      </Link>
+                      </Link> */}
                     </h6>
                   </li>
                   <li>
-                    <Link href="/blog-single">
+                    {/* <Link href="/blog-single">
                       <a className="fx meta-news clr-pri-4">
                         <i className="far fa-calendar-alt" />
                         <span className="f-rubik">25 nov 2021</span>
                       </a>
-                    </Link>
+                    </Link> */}
                   </li>
                 </ul>
               </li>
@@ -197,39 +197,39 @@ const Sidebar = ({ show, close }) => {
             </h4>
             <ul className="list-tag">
               <li>
-                <Link href="/shop-details">
+                {/* <Link href="/shop-details">
                   <a className="f-rubik active">Technology</a>
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link href="/shop-details">
+                {/* <Link href="/shop-details">
                   <a className="f-rubik active">service</a>
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link href="/shop-details">
+                {/* <Link href="/shop-details">
                   <a className="f-rubik active">team</a>
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link href="/shop-details">
+                {/* <Link href="/shop-details">
                   <a className="f-rubik active">solutions</a>
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link href="/shop-details">
+                {/* <Link href="/shop-details">
                   <a className="f-rubik active">consultancy</a>
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link href="/shop-details">
+                {/* <Link href="/shop-details">
                   <a className="f-rubik active">It Company</a>
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link href="/shop-details">
+                {/* <Link href="/shop-details">
                   <a className="f-rubik active">agency</a>
-                </Link>
+                </Link> */}
               </li>
             </ul>
           </div>

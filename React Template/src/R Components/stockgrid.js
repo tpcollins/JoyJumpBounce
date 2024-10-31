@@ -28,12 +28,12 @@ const StockGrid = ({
                                 <div>
                                     <a 
                                     className="fl-btn st-12 stkgrd"
-                                    onClick={() => handleAddToCart(index)}
+                                    onClick={() => handleAddToCart(item, index)}
                                     >
                                         <span
-                                            id={`add-to-cart-${index}`} // Unique ID for each button
+                                            id={`add-to-cart-${index}`}
                                             className="inner add-to-cart-button"
-                                            onClick={() => handleAddToCart(index)}
+                                            // onClick={() => handleAddToCart(index)}
                                         >
                                             Add to Cart
                                         </span>

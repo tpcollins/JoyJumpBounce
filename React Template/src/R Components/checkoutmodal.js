@@ -1,13 +1,19 @@
+// Bootstrap Modal Variables
 import { Modal, Button } from 'react-bootstrap';
+// React State Variables
 import { useState, useEffect } from 'react';
+// Redux Variables
+import { useSelector } from 'react-redux';
 
 const CheckoutModal = ({
-    cartItems,
     openVar,
-    setOpenVar,
-    data
+    setOpenVar
 }) => {
 
+    // Cart Items from Redux
+    const cartItems = useSelector((state) => state.cart.items);
+
+    // Show Modal Variables
     const [show, setShow] = useState(false);
 
     const handleModalClose = () =>{
@@ -36,59 +42,12 @@ const CheckoutModal = ({
             </Modal.Header>
 
             <Modal.Body>
-                {data.fields.map((item, idx) => {
-                    // Define input elements based on the type
-                    let inputElement;
-                    switch (item.type) {
-                        case "time":
-                            inputElement = <input type="time" className="form-control" />;
-                            break;
-
-                        case "radio":
-                            inputElement = (
-                                <div>
-                                    {item.options.map((option, idx) => (
-                                        <label 
-                                        key={idx}
-                                        style={{paddingRight: "20px"}}>
-                                            <input
-                                                name={item.title}  // Use the `title` as the name to group the radio buttons
-                                                type={item.type}   // Dynamic type from `item.type`
-                                                value={option.value} // Set the value from each option
-                                            />
-                                            {option.label}
-                                        </label>
-                                    ))}
-                                </div>
-                            );
-                            break;
-
-                        case "text":
-                            inputElement = (
-                                <input 
-                                className="form-control"
-                                onBlur={(e) => e.target.placeholder = item.placeholder}
-                                onFocus={(e) => e.target.placeholder = ""}
-                                placeholder={item.placeholder}
-                                type="text"
-                                />
-                            );
-                            break;
-
-                        default:
-                            inputElement = <p>Unknown input type</p>;
-                    }
-
-                    return (
-                        <div 
-                        className="form-group"
-                        key={idx}>
-                            <label>{item.title}</label>
-                            {inputElement}
-                            {item.message && <small className="form-text text-muted">{item.message}</small>}
-                        </div>
-                    );
-                })}
+                {cartItems.map((item, index) => (
+                    <div key={index}>
+                        <p>{item.title}</p>
+                        <p>{item.price}</p>
+                    </div>
+                ))}
             </Modal.Body>
 
             <Modal.Footer>

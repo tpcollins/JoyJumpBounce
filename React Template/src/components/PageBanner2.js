@@ -26,9 +26,9 @@ const PageBanner2 = ({ pageName, pageTitle }) => {
               <div className="breadcrumbs">
                 <ul className="jus-ct">
                   <li>
-                    <Link href="/">
+                    {/* <Link href="/">
                       <a className="f-rubik">Home</a>
-                    </Link>
+                    </Link> */}
                   </li>
                   <li>
                     <p className="breadcrumbs-inner f-rubik">{pageName}</p>

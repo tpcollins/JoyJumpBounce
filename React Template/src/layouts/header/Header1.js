@@ -23,13 +23,13 @@ const Header1 = () => {
           <div className="col-xl-12 col-lg-12 col-md-6 col-sm-6 col-6">
             <div className="top-bar-2 fx">
               <div id="site-logo" className="clearfix"> 
-                <Link href="/">
-                  <a className="logo st-2">
+                <Link 
+                className="logo st-2"
+                href="/">
                     <img  
                     alt="Kinco" 
                     src="assets/images/logo/Navlogo2.png"
                     />
-                  </a>
                 </Link>
               </div>
               <div className="header-contact fx">

@@ -66,18 +66,18 @@ const Footer2 = () => {
                       <ul className="box-content">
                         <li>
                           <h6 className="title">
-                            <Link href="/blog-grid">
+                            {/* <Link href="/blog-grid">
                               <a>Event 1</a>
-                            </Link>
+                            </Link> */}
                           </h6>
                         </li>
                         <li>
-                          <Link href="/blog-grid">
+                          {/* <Link href="/blog-grid">
                             <a className="fx meta-news clr-pri-6">
                               <i className="far fa-calendar-alt" />
                               09/27/2024
                             </a>
-                          </Link>
+                          </Link> */}
                         </li>
                       </ul>
                     </li>
@@ -90,18 +90,18 @@ const Footer2 = () => {
                       <ul className="box-content">
                         <li>
                           <h6 className="title">
-                            <Link href="/blog-grid">
+                            {/* <Link href="/blog-grid">
                               <a>Event 2</a>
-                            </Link>
+                            </Link> */}
                           </h6>
                         </li>
                         <li>
-                          <Link href="/blog-grid">
+                          {/* <Link href="/blog-grid">
                             <a className="fx meta-news clr-pri-6">
                               <i className="far fa-calendar-alt" />
                               09/28/2024
                             </a>
-                          </Link>
+                          </Link> */}
                         </li>
                       </ul>
                     </li>

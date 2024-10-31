@@ -1,13 +1,20 @@
+// Template Components
 import Layout from "../src/layouts/Layout";
 import Header1 from "../src/layouts/header/Header1";
 import Footer from "../src/layouts/Footer";
-import { useEffect, useState } from "react";
-import ReactCalendar from "./calendar";
 import { LeftArrow, RightArrow } from "../src/Icons";
+// React State Variables
+import { useEffect, useState } from "react";
+// Non-Template Components
+import ReactCalendar from "./calendar";
 import StockGrid from "../src/R Components/StockGrid";
-import { bcyHseStockData, checkoutModalData } from "../src/Data/data";
 import ShoppingCart from "../src/R Components/shoppingcart";
 import CheckoutModal from "../src/R Components/checkoutmodal";
+// Data
+import { bcyHseStockData, checkoutModalData } from "../src/Data/data";
+// Redux Variables
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from "../src/redux/slices/cartslice";
 
 const Booking = () => {
   // Date Variables
@@ -17,6 +24,9 @@ const Booking = () => {
   // Modal Variables
   const [isOpen, setIsOpen] = useState(false);
 
+  // Cart Variables
+  const dispatch = useDispatch();
+
   // Function to handle date click from react-calendar
   const handleDateClick = (date) => {
     setSelectedDate(date); // Update the selected date
@@ -24,7 +34,7 @@ const Booking = () => {
   };
 
   // Function to add items to cart
-  const handleAddToCart = (index) => {
+  const handleAddToCart = (item, index) => {
     const cartIcon = document.getElementById("cart-icon");
     const button = document.querySelector(`#add-to-cart-${index}`); // Select specific button
 
@@ -53,6 +63,8 @@ const Booking = () => {
       setTimeout(() => {
           clone.remove();
       }, 1000); // Match the transition duration
+      
+      dispatch(addItemToCart(item));
     }
   };
 
@@ -111,13 +123,10 @@ const Booking = () => {
               <h3
               className="text-center"
               >Available Stock For: {selectedDate.toLocaleDateString()}</h3>
-              {/* Render StockGrid and pass image URLs */}
+
               <StockGrid 
               handleAddToCart={handleAddToCart}
-              // isAnimating={isAnimating} 
               stockData={bcyHseStockData}
-              // clickedIndex={clickedIndex}
-              // targetPosition={targetPosition}
               />
             </div>
           )}
@@ -125,17 +134,19 @@ const Booking = () => {
           <ShoppingCart 
             onClick={handleModalOpen}
           />
+
+          <CheckoutModal 
+          openVar={isOpen}
+          setOpenVar={setIsOpen}
+          data={checkoutModalData}
+          />
         </div>
 
         
 
         <Footer />
 
-        <CheckoutModal 
-        openVar={isOpen}
-        setOpenVar={setIsOpen}
-        data={checkoutModalData}
-        />
+        
         
       </Layout>
   </>

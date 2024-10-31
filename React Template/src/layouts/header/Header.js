@@ -27,11 +27,11 @@ const Header = () => {
             <div className="col-md-12">
               <div className="site-header-inner fx">
                 <div id="site-logo" className="clearfix">
-                  <Link href="/">
+                  {/* <Link href="/">
                     <a className="logo">
                       <img src="assets/images/logo/logodark.png" alt="Kinco" />
                     </a>
-                  </Link>
+                  </Link> */}
                 </div>
                 <div className="btn-menu">
                   <span />
