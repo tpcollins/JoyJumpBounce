@@ -30,6 +30,7 @@
     * price-range 
     * Inventory
     * About Us
+    * Contact Us 
     * Calender
     * Stock Grid
     * Inventory
@@ -6923,6 +6924,17 @@
   padding: 20px 40px 0 40px;
   margin-bottom: -100px;
 }
+
+.thank-you-message {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  font-weight: bold;
+}
+
 
 /* Calendar
 --------------------------------------------------*/

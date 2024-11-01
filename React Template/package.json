@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
+    "emailjs-com": "^3.2.0",
     "framer-motion": "^11.11.10",
     "next": "^15.0.2",
     "nouislider-react": "^3.4.1",
@@ -19,6 +20,7 @@
     "react-calendar": "^5.1.0",
     "react-countup": "^6.1.1",
     "react-dom": "^18.3.1",
+    "react-loader-spinner": "^6.1.6",
     "react-redux": "^9.1.2",
     "react-visibility-sensor": "^5.1.1",
     "redux": "^5.0.1",
