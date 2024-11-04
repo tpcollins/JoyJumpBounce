@@ -5,6 +5,7 @@ import Layout from "../src/layouts/Layout";
 import { activeNavMenu } from "../src/utils";
 import CheckoutPage from "../src/R Components/checkoutpage";
 import { checkoutData } from "../src/Data/data";
+import About from "./about";
 
 const ContactUs = () => {
   useEffect(() => {

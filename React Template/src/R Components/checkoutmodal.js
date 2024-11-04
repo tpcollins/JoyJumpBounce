@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 // Redux Variables
 import { useSelector, useDispatch  } from 'react-redux';
 import { clearCart, removeItemFromCart } from '../redux/slices/cartslice';
+// Link
+import Link from 'next/link';
 
 const CheckoutModal = ({
     openVar,
@@ -82,8 +84,6 @@ const CheckoutModal = ({
         }
     };
       
-      
-
     useEffect(() => {
         setShow(openVar);
     }, [openVar]);
@@ -124,7 +124,12 @@ const CheckoutModal = ({
             <Modal.Footer>
                 <Button variant="secondary" onClick={handleModalClose}>Close</Button>
                 <Button variant="secondary" onClick={() => dispatch(clearCart())}>Clear Cart</Button>
-                <Button onClick={handleCheckout} variant="primary">Checkout</Button>
+                
+                <Link href="/checkout">
+                    <Button className="checkout-button">
+                        Checkout
+                    </Button>
+                </Link>
             </Modal.Footer>
         </Modal>
     );

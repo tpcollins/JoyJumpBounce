@@ -32,12 +32,6 @@ const Booking = () => {
   const dispatch = useDispatch();
 
   // Function to handle date click from react-calendar
-  // const handleDateClick = (date) => {
-  //   setSelectedDate(date); // Update the selected date
-  //   setIsDateClicked(true);
-  // };
-
-  // Function to handle date click from react-calendar
   const handleDateClick = async (date) => {
     setSelectedDate(date); // Update the selected date
     setIsDateClicked(true);
