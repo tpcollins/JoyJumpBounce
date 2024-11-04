@@ -106,7 +106,7 @@ export const accessoryData = {
 }
 
 // 7. checkout modal
-export const checkoutModalData = {
+export const checkoutData = {
     fields: [
         // {title: "Set up Time", type: "time"},
         {title: "Grass or Concrete", type: "radio", options: [ {label: "Grass", value: "Grass"}, {label: "Concrete", value: "Concrete"}]},
