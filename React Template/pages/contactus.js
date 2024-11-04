@@ -3,14 +3,18 @@ import Footer from "../src/layouts/Footer";
 import Contact from "./contact";
 import { useEffect } from "react";
 import Layout from "../src/layouts/Layout";
+import { activeNavMenu } from "../src/utils";
 
 const ContactUs = () => {
+  useEffect(() => {
+    activeNavMenu();
+  }, []);
 
   useEffect(() => {
-    document.body.classList.add('abus-body');
+    document.body.classList.add('homepage-body');
     
     return () => {
-      document.body.classList.remove('abus-body');
+      document.body.classList.remove('homepage-body');
     };
   }, []);
 

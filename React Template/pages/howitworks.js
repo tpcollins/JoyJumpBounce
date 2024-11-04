@@ -1,16 +1,20 @@
 import Layout from "../src/layouts/Layout";
 import Header1 from "../src/layouts/header/Header1";
 import Footer from "../src/layouts/Footer";
-import About from "./about";
 import { useEffect } from "react";
+import { activeNavMenu } from "../src/utils";
 
 const HowItWorks = () => {
 
   useEffect(() => {
-    document.body.classList.add('abus-body');
+    activeNavMenu();
+  }, []);
+
+  useEffect(() => {
+    document.body.classList.add('homepage-body');
     
     return () => {
-      document.body.classList.remove('abus-body');
+      document.body.classList.remove('homepage-body');
     };
   }, []);
 
@@ -23,7 +27,7 @@ const HowItWorks = () => {
             <div className="about-container">
                 <section className="about-section">
                     <section className="about-section-inner">
-                        <h1>How It Works:
+                        <h1>How It Works
                             <img 
                                 src="assets/images/logo/JJLogoAbUs.png"
                                 alt="textImg"

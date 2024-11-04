@@ -15,11 +15,15 @@ import { bcyHseStockData } from "../src/Data/data";
 // Redux Variables
 import { useDispatch } from 'react-redux';
 import { addItemToCart } from "../src/redux/slices/cartslice";
+// Active Nav Menu
+import { activeNavMenu } from "../src/utils";
 
 const Booking = () => {
+
   // Date Variables
   const [selectedDate, setSelectedDate] = useState(null);
   const [isDateClicked, setIsDateClicked] = useState(false);
+  const [stockData, setStockData] = useState(bcyHseStockData);
 
   // Modal Variables
   const [isOpen, setIsOpen] = useState(false);
@@ -28,10 +32,24 @@ const Booking = () => {
   const dispatch = useDispatch();
 
   // Function to handle date click from react-calendar
-  const handleDateClick = (date) => {
+  // const handleDateClick = (date) => {
+  //   setSelectedDate(date); // Update the selected date
+  //   setIsDateClicked(true);
+  // };
+
+  // Function to handle date click from react-calendar
+  const handleDateClick = async (date) => {
     setSelectedDate(date); // Update the selected date
     setIsDateClicked(true);
+
+    // Call the function to fetch booked floats from Airtable
+    try {
+        await fetchBookedFloats(date);
+    } catch (error) {
+        console.error('Error fetching booked floats:', error);
+    }
   };
+
 
   // Function to add items to cart
   const handleAddToCart = (item, index) => {
@@ -76,14 +94,42 @@ const Booking = () => {
   };
 
   useEffect(() => {
+    activeNavMenu();
+  }, []);
+
+  const fetchBookedFloats = async (selectedDate) => {
+    try {
+      const response = await fetch('/api/getBookedFloats', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ selectedDate }),
+      });
+  
+      const result = await response.json();
+      if (response.ok) {
+        const filteredStockData = bcyHseStockData.data.filter(
+          item => !result.bookedFloats.includes(item.title)
+        );
+        setStockData({ data: filteredStockData });
+      } else {
+        console.error('Failed to retrieve booked floats:', result.message);
+      }
+    } catch (error) {
+      console.error('Error during fetch:', error);
+    }
+  };
+  
+  useEffect(() => {
     console.log("show on booking useEffect: ", isOpen)
   }, [isOpen]);
 
   useEffect(() => {
-    document.body.classList.add('abus-body');
+    document.body.classList.add('homepage-body');
     
     return () => {
-      document.body.classList.remove('abus-body');
+      document.body.classList.remove('homepage-body');
     };
   }, []);
 
@@ -126,7 +172,7 @@ const Booking = () => {
 
               <StockGrid 
               handleAddToCart={handleAddToCart}
-              stockData={bcyHseStockData}
+              stockData={stockData}
               />
             </div>
           )}

@@ -28,34 +28,60 @@ const CheckoutModal = ({
         setOpenVar(false);
     }
 
+    // const handleCheckout = async () => {
+    //     try {
+    //         const response = await fetch('/api/checkout', {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify({
+    //             cartItems,
+    //             totalPrice,
+    //         }),
+    //         });
+        
+    //         const result = await response.json();
+    //         if (response.ok) {
+    //         console.log(result.message);
+    //         // Optionally clear the cart after checkout
+    //         dispatch(clearCart());
+    //         alert('Checkout successful! Data added to Google Sheets.');
+    //         } else {
+    //         console.error(result.message);
+    //         alert('Failed to complete checkout.');
+    //         }
+    //     } catch (error) {
+    //         console.error('Checkout error:', error);
+    //         alert('An error occurred during checkout.');
+    //     }
+    // };
+
     const handleCheckout = async () => {
+        console.log(cartItems);
         try {
-            const response = await fetch('/api/checkout', {
+          const response = await fetch('/api/checkout', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+              'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                cartItems,
-                totalPrice,
+                cartItems
             }),
-            });
-        
-            const result = await response.json();
-            if (response.ok) {
-            console.log(result.message);
-            // Optionally clear the cart after checkout
-            dispatch(clearCart());
-            alert('Checkout successful! Data added to Google Sheets.');
-            } else {
-            console.error(result.message);
-            alert('Failed to complete checkout.');
-            }
+        });
+      
+          const result = await response.json();
+          if (response.ok) {
+            alert('Data sent to Airtable successfully!');
+          } else {
+            alert(`Failed to send data: ${result.message}`);
+          }
         } catch (error) {
-            console.error('Checkout error:', error);
-            alert('An error occurred during checkout.');
+          console.error('Error during checkout:', error);
+          alert('An error occurred while sending data.');
         }
     };
+      
       
 
     useEffect(() => {

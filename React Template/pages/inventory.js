@@ -2,15 +2,20 @@ import Footer from "../src/layouts/Footer";
 import Header1 from "../src/layouts/header/Header1";
 import Layout from "../src/layouts/Layout";
 import { accessoryData } from "../src/Data/data";
+import { activeNavMenu } from "../src/utils";
 import { useEffect } from "react";
 import InvLandingPage from "./invlandingpage";
 
 const Inventory = () => {
   useEffect(() => {
-    document.body.classList.add('inventory-body');
+    activeNavMenu();
+  }, []);
+  
+  useEffect(() => {
+    document.body.classList.add('homepage-body');
     
     return () => {
-      document.body.classList.remove('inventory-body');
+      document.body.classList.remove('homepage-body');
     };
   }, []);
 
