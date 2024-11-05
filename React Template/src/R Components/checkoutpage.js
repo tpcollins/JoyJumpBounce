@@ -1,125 +1,84 @@
-// const CheckoutPage = ({data}) => {
-//     return(
-//         {data.fields.map((item, idx) => {
-//             // Define input elements based on the type
-//             let inputElement;
-//             switch (item.type) {
-//                 case "time":
-//                     inputElement = <input type="time" className="form-control" />;
-//                     break;
-        
-//                 case "radio":
-//                     inputElement = (
-//                         <div>
-//                             {item.options.map((option, idx) => (
-//                                 <label 
-//                                 key={idx}
-//                                 style={{paddingRight: "20px"}}>
-//                                     <input
-//                                         name={item.title}  // Use the `title` as the name to group the radio buttons
-//                                         type={item.type}   // Dynamic type from `item.type`
-//                                         value={option.value} // Set the value from each option
-//                                     />
-//                                     {option.label}
-//                                 </label>
-//                             ))}
-//                         </div>
-//                     );
-//                     break;
-        
-//                 case "text":
-//                     inputElement = (
-//                         <input 
-//                         className="form-control"
-//                         onBlur={(e) => e.target.placeholder = item.placeholder}
-//                         onFocus={(e) => e.target.placeholder = ""}
-//                         placeholder={item.placeholder}
-//                         type="text"
-//                         />
-//                     );
-//                     break;
-        
-//                 default:
-//                     inputElement = <p>Unknown input type</p>;
-//             }
-        
-//             return (
-//                 <div className="container">
-//                     <div 
-//                     className="form-group"
-//                     key={idx}>
-//                         <label>{item.title}</label>
-//                         {inputElement}
-//                         {item.message && <small className="form-text text-muted">{item.message}</small>}
-//                     </div>
-//                 </div>
-//             );
-//         })}
+// Bootstrap Button Variable
+import { Button } from 'react-bootstrap';
 
-//     )
-// };
+const CheckoutPage = ({ 
+    data,
+    action }) => {
 
-// export default CheckoutPage;
-
-const CheckoutPage = ({ data }) => {
     return (
         <div className="container">
-            {data.fields.map((item, idx) => {
-                // Define input elements based on the type
-                let inputElement;
-                switch (item.type) {
-                    case "time":
-                        inputElement = <input type="time" className="form-control" />;
-                        break;
+            <div className="checkout-container">
+                <div className="container checkout-inner">
+                    
+                {data.fields.map((item, idx) => {
+                    let inputElement;
+                    switch (item.type) {
+                        case "time":
+                            inputElement = <input type="time" className="form-control" />;
+                            break;
 
-                    case "radio":
-                        inputElement = (
-                            <div>
-                                {item.options.map((option, optionIdx) => (
-                                    <label 
-                                        key={optionIdx}
-                                        style={{ paddingRight: "20px" }}
-                                    >
-                                        <input
-                                            name={item.title}  // Use the `title` as the name to group the radio buttons
-                                            type={item.type}   // Dynamic type from `item.type`
-                                            value={option.value} // Set the value from each option
-                                        />
-                                        {option.label}
-                                    </label>
-                                ))}
-                            </div>
-                        );
-                        break;
+                        case "radio":
+                            inputElement = (
+                                <div>
+                                    {item.options.map((option, optionIdx) => (
+                                        <label 
+                                            key={optionIdx}
+                                            style={{ paddingRight: "20px" }}
+                                        >
+                                            <input
+                                                name={item.title}
+                                                type={item.type}
+                                                value={option.value}
+                                            />
+                                            {option.label}
+                                        </label>
+                                    ))}
+                                </div>
+                            );
+                            break;
 
-                    case "text":
-                        inputElement = (
-                            <input 
-                                className="form-control"
-                                onBlur={(e) => e.target.placeholder = item.placeholder}
-                                onFocus={(e) => e.target.placeholder = ""}
-                                placeholder={item.placeholder}
-                                type="text"
-                            />
-                        );
-                        break;
+                        case "text":
+                            inputElement = (
+                                <input 
+                                    className="form-control"
+                                    onBlur={(e) => e.target.placeholder = item.placeholder}
+                                    onFocus={(e) => e.target.placeholder = ""}
+                                    placeholder={item.placeholder}
+                                    type="text"
+                                />
+                            );
+                            break;
 
-                    default:
-                        inputElement = <p>Unknown input type</p>;
-                }
+                        default:
+                            inputElement = <p>Unknown input type</p>;
+                    }
 
-                return (
-                    <div 
-                        className="form-group"
-                        key={idx}
+                    return (
+                        <div 
+                            className="form-group"
+                            key={idx}
+                        >
+                            <label>{item.title}</label>
+                            {inputElement}
+                            {item.message && <small className="form-text text-muted">{item.message}</small>}
+                        </div>
+                    );
+                })}
+
+                <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}>
+                    <Button
+                        className="checkout-button"
+                        style={{
+                        fontSize: '2em',
+                        }}
                     >
-                        <label>{item.title}</label>
-                        {inputElement}
-                        {item.message && <small className="form-text text-muted">{item.message}</small>}
-                    </div>
-                );
-            })}
+                        Complete Checkout
+                    </Button>
+                </div>
+                
+            </div>
         </div>
+    </div>
     );
 };
 

@@ -10,7 +10,7 @@ const Contact = () => {
           <section className="tf-section tf-faq">
             <div className="container contact-inner">
               <div className="row">
-                <div className="col-12">
+                <div className="col-12"> 
                   <div className="title-heading st-2">
                     <div className="sub-heading clr-pri-3 f-mulish">
                       <LeftArrow />

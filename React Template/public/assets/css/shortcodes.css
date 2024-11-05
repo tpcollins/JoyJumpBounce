@@ -37,6 +37,7 @@
     * Inventory Landing Page
     * Shopping Cart
     * Cart Modal
+    * Checkout Page
 
 */
 /* button 
@@ -7450,4 +7451,20 @@
   padding: 8px 16px; /* Adjust to control size */
   width: 150px; /* Set fixed width to maintain consistency */
   text-align: center;
+}
+
+
+/* Checkout Page
+--------------------------------------------------*/
+
+.checkout-container {
+  padding-top: 260px;
+  margin-bottom: 70px;
+}
+
+.container .checkout-inner{
+  background-color: 	#FDF1B8;
+  border-radius: 10px;
+  padding: 20px 40px 20px 40px;
+  margin-bottom: -100px;
 }
