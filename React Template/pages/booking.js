@@ -19,113 +19,121 @@ import { addItemToCart } from "../src/redux/slices/cartslice";
 import { activeNavMenu } from "../src/utils";
 
 const Booking = () => {
+  // Variables
+    // Date Variables
+    const [selectedDate, setSelectedDate] = useState(null);
+    const [isDateClicked, setIsDateClicked] = useState(false);
+    const [stockData, setStockData] = useState(bcyHseStockData);
 
-  // Date Variables
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [isDateClicked, setIsDateClicked] = useState(false);
-  const [stockData, setStockData] = useState(bcyHseStockData);
+    // Modal Variables
+    const [isOpen, setIsOpen] = useState(false);
 
-  // Modal Variables
-  const [isOpen, setIsOpen] = useState(false);
+    // Cart Variables
+    const dispatch = useDispatch();
 
-  // Cart Variables
-  const dispatch = useDispatch();
-
-  // Function to handle date click from react-calendar
-  const handleDateClick = async (date) => {
-    setSelectedDate(date); // Update the selected date
-    setIsDateClicked(true);
-
-    // Call the function to fetch booked floats from Airtable
-    try {
-        await fetchBookedFloats(date);
-    } catch (error) {
-        console.error('Error fetching booked floats:', error);
-    }
-  };
-
-
-  // Function to add items to cart
-  const handleAddToCart = (item, index) => {
-    const cartIcon = document.getElementById("cart-icon");
-    const button = document.querySelector(`#add-to-cart-${index}`); // Select specific button
-
-    if (cartIcon && button) {
-      const cartRect = cartIcon.getBoundingClientRect();
-      const buttonRect = button.getBoundingClientRect();
-
-      // Create a clone of the button
-      const clone = button.cloneNode(true);
-      clone.style.position = "fixed";
-      clone.style.left = `${buttonRect.left}px`;
-      clone.style.top = `${buttonRect.top}px`;
-      clone.style.transition = "transform 1s ease, opacity 1s ease";
-      clone.style.zIndex = 1000;
-
-      // Add the clone to the document
-      document.body.appendChild(clone);
-
-      // Start animation to the cart
-      requestAnimationFrame(() => {
-          clone.style.transform = `translate(${cartRect.left - buttonRect.left}px, ${cartRect.top - buttonRect.top}px) scale(3)`;
-          clone.style.opacity = "0"; // Fade out as it reaches the cart
-      });
-
-      // Remove the clone after the animation completes
-      setTimeout(() => {
-          clone.remove();
-      }, 1000); // Match the transition duration
-      
-      dispatch(addItemToCart(item));
-    }
-  };
-
-  // Function to open modal
-  const handleModalOpen = () =>{
-    console.log("handleModalOpen clicked");
-    setIsOpen(true);
-    console.log("show on booking: ", isOpen)
-  };
-
-  useEffect(() => {
-    activeNavMenu();
-  }, []);
-
-  const fetchBookedFloats = async (selectedDate) => {
-    try {
-      const response = await fetch('/api/getBookedFloats', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ selectedDate }),
-      });
-  
-      const result = await response.json();
-      if (response.ok) {
-        const filteredStockData = bcyHseStockData.data.filter(
-          item => !result.bookedFloats.includes(item.title)
-        );
-        setStockData({ data: filteredStockData });
-      } else {
-        console.error('Failed to retrieve booked floats:', result.message);
-      }
-    } catch (error) {
-      console.error('Error during fetch:', error);
-    }
-  };
-  
-  useEffect(() => {
-    console.log("show on booking useEffect: ", isOpen)
-  }, [isOpen]);
-
-  useEffect(() => {
-    document.body.classList.add('homepage-body');
-    
-    return () => {
-      document.body.classList.remove('homepage-body');
+    // Additional Data variables for cartItems
+    const additionalData = {
+      date: selectedDate
     };
-  }, []);
+
+  // Event Handlers
+    // Handler to handle date click from react-calendar
+    const handleDateClick = async (date) => {
+      setSelectedDate(date); // Update the selected date
+      setIsDateClicked(true);
+
+      // Call the function to fetch booked floats from Airtable
+      try {
+          await fetchBookedFloats(date);
+      } catch (error) {
+          console.error('Error fetching booked floats:', error);
+      }
+    };
+
+    // Handler to add items to cart
+    const handleAddToCart = (item, index) => {
+      const cartIcon = document.getElementById("cart-icon");
+      const button = document.querySelector(`#add-to-cart-${index}`); // Select specific button
+
+      if (cartIcon && button) {
+        const cartRect = cartIcon.getBoundingClientRect();
+        const buttonRect = button.getBoundingClientRect();
+
+        // Create a clone of the button
+        const clone = button.cloneNode(true);
+        clone.style.position = "fixed";
+        clone.style.left = `${buttonRect.left}px`;
+        clone.style.top = `${buttonRect.top}px`;
+        clone.style.transition = "transform 1s ease, opacity 1s ease";
+        clone.style.zIndex = 1000;
+
+        // Add the clone to the document
+        document.body.appendChild(clone);
+
+        // Start animation to the cart
+        requestAnimationFrame(() => {
+            clone.style.transform = `translate(${cartRect.left - buttonRect.left}px, ${cartRect.top - buttonRect.top}px) scale(3)`;
+            clone.style.opacity = "0"; // Fade out as it reaches the cart
+        });
+
+        // Remove the clone after the animation completes
+        setTimeout(() => {
+            clone.remove();
+        }, 1000); // Match the transition duration
+        
+        dispatch(addItemToCart(item));
+      }
+    };
+
+    // Handler to open modal
+    const handleModalOpen = () =>{
+      console.log("handleModalOpen clicked");
+      setIsOpen(true);
+      console.log("show on booking: ", isOpen)
+    };
+
+  // useEffect
+    useEffect(() => {
+      activeNavMenu();
+    }, []);
+    
+    useEffect(() => {
+      console.log("show on booking useEffect: ", isOpen)
+    }, [isOpen]);
+
+    useEffect(() => {
+      document.body.classList.add('homepage-body');
+      
+      return () => {
+        document.body.classList.remove('homepage-body');
+      };
+    }, []);
+
+  // Functions
+    // Function to fetch date filtered floats array
+    const fetchBookedFloats = async (selectedDate) => {
+      try {
+        const response = await fetch('/api/getBookedFloats', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ selectedDate }),
+        });
+    
+        const result = await response.json();
+        if (response.ok) {
+          const filteredStockData = bcyHseStockData.data.filter(
+            item => !result.bookedFloats.includes(item.title)
+          );
+          setStockData({ data: filteredStockData });
+        } else {
+          console.error('Failed to retrieve booked floats:', result.message);
+        }
+      } catch (error) {
+        console.error('Error during fetch:', error);
+      }
+    };
 
   return(
     <>
@@ -164,7 +172,8 @@ const Booking = () => {
               className="text-center"
               >Available Stock For: {selectedDate.toLocaleDateString()}</h3>
 
-              <StockGrid 
+              <StockGrid
+              additionalData={additionalData}
               handleAddToCart={handleAddToCart}
               stockData={stockData}
               />

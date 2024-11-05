@@ -1,8 +1,9 @@
 import React from 'react';
 
-const StockGrid = ({ 
-    stockData,
-    handleAddToCart
+const StockGrid = ({
+    additionalData,
+    handleAddToCart,
+    stockData
 }) => {
 
     return (
@@ -28,7 +29,7 @@ const StockGrid = ({
                                 <div>
                                     <a 
                                     className="fl-btn st-12 stkgrd"
-                                    onClick={() => handleAddToCart(item, index)}
+                                    onClick={() => handleAddToCart({ ...item, ...additionalData }, index)}
                                     >
                                         <span
                                             id={`add-to-cart-${index}`}
