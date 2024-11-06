@@ -22,9 +22,15 @@ const CheckoutPage = ({ data }) => {
     }, [formValues]);
 
     const handleCheckout = async () => {
-        // Add the form data to each cart item
-        const updatedCartItems = cartItems.map(item => ({
+        // Generate a unique order ID for this checkout session
+        const orderId = `Order-${Date.now()}`;
+
+        // Add the form data and order ID to each cart item
+        const updatedCartItems = cartItems.map((item, index) => ({
             ...item,
+            orderId: orderId,
+            firstName: formValues['First Name'],
+            lastName: formValues['Last Name'],
             setupTime: formValues['Setup Time'],
             turf: formValues['Grass or Concrete'],
             waterHookup: formValues['Water Hook up Within 100 Feet?'],
@@ -35,6 +41,11 @@ const CheckoutPage = ({ data }) => {
             state: formValues['State'],
             zipCode: formValues['Zip Code']
         }));
+
+        // Add an empty row for separation
+        updatedCartItems.push({
+            isSeparator: true, // Flag to indicate this is a separator row
+        });
     
         try {
             const response = await fetch(apiRoute, {

@@ -109,7 +109,9 @@ export const accessoryData = {
 export const checkoutData = {
     apiRoute: '/api/checkout',
     fields: [
-        { title: "Setup Time", type: "time" },
+        {title: "Setup Time", type: "time"},
+        {title: "First Name", type: "text"},
+        {title: "Last Name", type: "text"},
         {title: "Grass or Concrete", type: "radio", options: [ {label: "Grass", value: "Grass"}, {label: "Concrete", value: "Concrete"}]},
         {title: "Water Hook up Within 100 Feet?", type: "radio", options: [ {label: "Yes", value: "Yes"}, {label: "No", value: "No"}]},
         {title: "Power Hook up Within 100 Feet?*", type: "radio", options: [ {label: "Yes", value: "Yes"}, {label: "No", value: "No"}], message: "You will need to rent a generator from Accessories or provide a generator if there is no power hookup within 100 feet*"},

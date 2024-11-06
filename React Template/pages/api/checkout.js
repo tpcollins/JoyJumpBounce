@@ -8,27 +8,30 @@ export default async function handler(req, res) {
 
   const { cartItems } = req.body;
 
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', {
-        month: '2-digit',
-        day: '2-digit',
-        year: 'numeric',
-    });
-  }; 
+  const formatDate = (date) => {
+    if (!date) return ''; // Return empty string if date is invalid
+    const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
+    return new Date(date).toLocaleDateString('en-US', options);
+  };
 
   const formatTime = (time) => {
-    const [hour, minute] = time.split(':');
-    let hourInt = parseInt(hour, 10);
-    const ampm = hourInt >= 12 ? 'PM' : 'AM';
-    hourInt = hourInt % 12 || 12; // Convert '0' hour to '12'
-    return `${hourInt}:${minute} ${ampm}`;
-  }
+      if (!time || typeof time !== 'string' || !time.includes(':')) {
+          return ''; // Return empty string if time is invalid
+      }
+      const [hour, minute] = time.split(':');
+      let hourInt = parseInt(hour, 10);
+      const ampm = hourInt >= 12 ? 'PM' : 'AM';
+      hourInt = hourInt % 12 || 12;
+      return `${hourInt}:${minute} ${ampm}`;
+  };
 
   try {
     base('Booking').create(
       cartItems.map((item) => ({
         fields: {
+          'Order ID': item.orderId,
+          'First Name': item.firstName,
+          'Last Name': item.lastName,
           'Inflatable': item.title,  // The title of the item
           'Price': Number(item.price),       // The price of the item
           'Booking Date': formatDate(item.date),
