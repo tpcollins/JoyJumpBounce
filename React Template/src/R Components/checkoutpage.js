@@ -1,12 +1,22 @@
 import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+// Redux Variables
+import { removeItemFromCart } from '../redux/slices/cartslice';
 
 const CheckoutPage = ({ data }) => {
     // State to hold form values
     const [formValues, setFormValues] = useState({});
     const apiRoute = data.apiRoute;
+    
+    // Cart Items from Redux
     const cartItems = useSelector((state) => state.cart.items);
+
+    // Use Dispatch for Redux
+    const dispatch = useDispatch();
+
+    // Calculate total price
+    const totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price), 0);
 
     // Function to handle form input changes
     const handleInputChange = (e) => {
@@ -26,7 +36,7 @@ const CheckoutPage = ({ data }) => {
         const orderId = `Order-${Date.now()}`;
 
         // Add the form data and order ID to each cart item
-        const updatedCartItems = cartItems.map((item, index) => ({
+        const updatedCartItems = cartItems.map((item) => ({
             ...item,
             orderId: orderId,
             firstName: formValues['First Name'],
@@ -140,6 +150,23 @@ const CheckoutPage = ({ data }) => {
                             </div>
                         );
                     })}
+
+                    <div className='items'>
+                        {cartItems.map((item, index) => (
+                            <div key={index} className="cart-item">
+                                <img src={item.imgSrc} alt={item.title} className="cart-item-image" />
+                                <div className="cart-item-info">
+                                    <p className="cart-item-title">{index + 1}. {item.title}</p>
+                                    <p className="cart-item-price">{item.showPrice}</p>
+                                    <Button onClick={() => dispatch(removeItemFromCart(item))}>Remove From Cart</Button>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="cart-total">
+                        <p><strong>Total Price:</strong> ${totalPrice.toFixed(2)}</p>
+                    </div>
 
                     <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}>
                         <Button
