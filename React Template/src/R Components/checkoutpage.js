@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
-import { useSelector, useDispatch } from 'react-redux';
 // Redux Variables
 import { removeItemFromCart } from '../redux/slices/cartslice';
+import { useSelector, useDispatch } from 'react-redux';
+// Proximity Meter
+import ProximityMeter from '../components/proximitymeter';
 
 const CheckoutPage = ({ data }) => {
     // State to hold form values
@@ -15,8 +17,18 @@ const CheckoutPage = ({ data }) => {
     // Use Dispatch for Redux
     const dispatch = useDispatch();
 
+    // Delivery Charge Variable
+    const [deliveryCharge, setDeliveryCharge] = useState(null);
+
     // Calculate total price
-    const totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price), 0);
+    let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price), 0);
+    totalPrice += deliveryCharge;
+    
+    // Joy Jump Address
+    // const clientCoordinates = [-87.532720, 33.239110];
+
+    // Concatenate address components into one string
+    const fullAddress = `${formValues['Street Address']}, ${formValues['City']}, ${formValues['State']} ${formValues['Zip Code']}`;
 
     // Function to handle form input changes
     const handleInputChange = (e) => {
@@ -27,11 +39,17 @@ const CheckoutPage = ({ data }) => {
         });
     };
 
+    // Callback function to update delivery charge in CheckoutPage
+    const handleDeliveryChargeUpdate = (charge) => {
+        setDeliveryCharge(charge);
+    };
+
     useEffect(() => {
         console.log(formValues)
     }, [formValues]);
 
     const handleCheckout = async () => {
+        console.log(process.env.MAPBOX_ACCESS_TOKEN)
         // Generate a unique order ID for this checkout session
         const orderId = `Order-${Date.now()}`;
 
@@ -150,6 +168,11 @@ const CheckoutPage = ({ data }) => {
                             </div>
                         );
                     })}
+
+                    <ProximityMeter
+                        address={fullAddress}
+                        onUpdateCharge={handleDeliveryChargeUpdate}
+                    />
 
                     <div className='items'>
                         {cartItems.map((item, index) => (
