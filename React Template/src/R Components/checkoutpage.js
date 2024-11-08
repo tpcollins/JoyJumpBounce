@@ -23,9 +23,6 @@ const CheckoutPage = ({ data }) => {
     // Calculate total price
     let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price), 0);
     totalPrice += deliveryCharge;
-    
-    // Joy Jump Address
-    // const clientCoordinates = [-87.532720, 33.239110];
 
     // Concatenate address components into one string
     const fullAddress = `${formValues['Street Address']}, ${formValues['City']}, ${formValues['State']} ${formValues['Zip Code']}`;
