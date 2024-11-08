@@ -5,6 +5,10 @@ import { removeItemFromCart } from '../redux/slices/cartslice';
 import { useSelector, useDispatch } from 'react-redux';
 // Proximity Meter
 import ProximityMeter from '../components/proximitymeter';
+import Accessories from '../../pages/accessories';
+// Accessories
+import AccessoriesGrid from '../components/accessoriesgrid-checkout';
+import { accessoryData } from '../Data/data';
 
 const CheckoutPage = ({ data }) => {
     // State to hold form values
@@ -169,6 +173,10 @@ const CheckoutPage = ({ data }) => {
                     <ProximityMeter
                         address={fullAddress}
                         onUpdateCharge={handleDeliveryChargeUpdate}
+                    />
+                    
+                    <AccessoriesGrid 
+                    accessoryData={accessoryData}
                     />
 
                     <div className='items'>

@@ -54,8 +54,6 @@ const Accessories = () => {
 
                         {index < accessoryData.length - 1 && <hr className="separator-line" />}
                     </div>
-
-                    
                     ))}
                 </div>
                 
