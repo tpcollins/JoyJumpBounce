@@ -1,11 +1,3 @@
-/* TODO
-
-4. Add in tent
-5. Get data with accessories shooting to air table
-6. Get total price going to airtable
-
-*/
-
 import React, { useState } from 'react';
 // Redux Variables
 import { useDispatch } from 'react-redux';
