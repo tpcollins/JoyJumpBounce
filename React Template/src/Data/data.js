@@ -89,18 +89,19 @@ export const accessoryData = {
           imgSrc: 'assets/images/accessories/generator.png',
           title: 'Generator',
           price: '$75',
+          type: 'radio'
         },
         {
           imgSrc: 'assets/images/accessories/table.png',
           title: 'Table',
-          description: 'Another useful accessory with many features.',
           price: '$10/Table',
+          type: 'dropdown'
         },
         {
           imgSrc: 'assets/images/accessories/chair.png',
           title: 'Chair',
-          description: 'Perfect for outdoor events and parties.',
           price: '$2/Chair',
+          type: 'dropdown'
         }
     ]
 }
