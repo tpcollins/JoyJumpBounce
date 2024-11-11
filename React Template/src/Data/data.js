@@ -15,7 +15,7 @@ TABLE OF CONTENTS:
 3. swiper slider section (for slider component)
 4. contact form section
 5. stock grid
-6. accessories
+6. checkout accessories 
 7. checkout modal
 
 */
@@ -83,24 +83,28 @@ export const bcyHseStockData = {
     ]
 }
 
+// 6. checkout accessories 
 export const accessoryData = {
     accessories: [
         {
           imgSrc: 'assets/images/accessories/generator.png',
           title: 'Generator',
-          price: '$75',
+          price: 75,
+          showPrice: '$75',
           type: 'radio'
         },
         {
           imgSrc: 'assets/images/accessories/table.png',
           title: 'Table',
-          price: '$10/Table',
+          price: 10,
+          showPrice: '$10/Table',
           type: 'dropdown'
         },
         {
           imgSrc: 'assets/images/accessories/chair.png',
           title: 'Chair',
-          price: '$2/Chair',
+          price: 2,
+          showPrice: '$2/Chair',
           type: 'dropdown'
         }
     ]

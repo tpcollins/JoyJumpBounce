@@ -102,7 +102,7 @@
 
 // export default ProximityMeter;
 
-
+// **** DELETING THE COMMENTED OUT CODE ABOVE CAUSES THE PROXIMITY METER TO BREAK FOR SOME REASON. DO NOT DELETE IT ****
 import { useState, useEffect } from "react";
 import { getCoordinates } from "../../pages/api/getCoordinates";
 

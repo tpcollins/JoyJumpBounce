@@ -49,7 +49,7 @@ const Accessories = () => {
                         <img src={item.imgSrc} alt={item.title} className="accessories-image" />
                         <div className="accessories-info">
                         <h2 className="accessories-title">{item.title}</h2>
-                        <p className="accessories-price">{item.price}</p>
+                        <p className="accessories-price">{item.showPrice}</p>
                         </div>
 
                         {index < accessoryData.length - 1 && <hr className="separator-line" />}

@@ -24,10 +24,11 @@ const CheckoutPage = ({ data }) => {
     const [deliveryCharge, setDeliveryCharge] = useState(null);
 
     // Calculate total price
-    let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price), 0);
+    let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
     totalPrice += deliveryCharge;
 
     // Concatenate address components into one string
+    //  **** DELETING THE FULLADDRESS VARIABLE CAUSES THE PROXIMITY METER TO BREAK FOR SOME REASON. DO NOT DELETE IT ****
     const fullAddress = `${formValues['Street Address']}, ${formValues['City']}, ${formValues['State']} ${formValues['Zip Code']}`;
 
     // Function to handle form input changes
@@ -186,7 +187,12 @@ const CheckoutPage = ({ data }) => {
                             <div key={index} className="cart-item">
                                 <img src={item.imgSrc} alt={item.title} className="cart-item-image" />
                                 <div className="cart-item-info">
-                                    <p className="cart-item-title">{index + 1}. {item.title}</p>
+
+                                    {item.quantity > 1 ? 
+                                        <p className="cart-item-title">{index + 1}. {item.quantity} {item.title}s</p> 
+                                        : 
+                                        <p className="cart-item-title">{index + 1}. {item.title}</p>
+                                    }
                                     <p className="cart-item-price">{item.showPrice}</p>
                                     <Button onClick={() => dispatch(removeItemFromCart(item))}>Remove From Cart</Button>
                                 </div>

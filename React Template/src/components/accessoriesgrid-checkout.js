@@ -4,25 +4,47 @@
 3. Add remove from cart button for accessories
 4. Add in tent
 5. Get data with accessories shooting to air table
+6. Get total price going to airtable
 
 */
 
-import React from 'react';
+import React, { useState } from 'react';
 // Redux Variables
 import { useDispatch } from 'react-redux';
 import { addItemToCart } from '../redux/slices/cartslice';
 
 const AccessoriesGrid = ({ accessoryData }) => {
-
-  // Cart Variables
   const dispatch = useDispatch();
+  
+  // Local state for selected quantities
+  const [selectedQuantities, setSelectedQuantities] = useState({});
 
-  const handleAddAccessory = (item) => {
-    dispatch(addItemToCart(item));
-  }
+  // Function to handle quantity selection
+  const handleQuantityChange = (item, quantity) => {
+    const totalPrice = quantity * item.price;
+    const itemWithQuantity = { ...item, quantity, totalPrice };
+    
+    setSelectedQuantities(prev => ({
+      ...prev,
+      [item.title]: quantity
+    }));
+
+    // Dispatch the item with quantity and total price to Redux
+    dispatch(addItemToCart(itemWithQuantity));
+  };
 
   return (
     <div className="accessories-grid">
+
+      <hr className="separator-line" />
+
+      <h1
+      className='text-center'
+      style={{
+        fontSize: '2.5em'
+      }}
+      >Add Accessories?</h1>
+
       {accessoryData.accessories.map((item, index) => {
         let inputElement;
 
@@ -30,39 +52,36 @@ const AccessoriesGrid = ({ accessoryData }) => {
           case 'radio':
             inputElement = (
               <label className='acc-selector'>
-                <input
-                name="selectedAccessory"
-                // onClick={handleAddAccessory(item)}
-                type="radio"
-                value={item.title}
-                />
-                Add {item.title}
+                <a 
+                className="fl-btn st-12 stkgrd"
+                >
+                  <span
+                      id={`add-to-cart-${index}`}
+                      className="inner add-to-cart-button"
+                      onClick={() => dispatch(addItemToCart(item))}
+                  >
+                      Add to Cart
+                  </span>
+                </a>
               </label>
             );
             break;
 
           case 'dropdown':
             inputElement = (
-                <div
-                style={{
-                    paddingTop: '10px'
-                }}
+              <div style={{ paddingTop: '10px' }}>
+                <select
+                  className="arrow-only-dropdown"
+                  name="quantity"
+                  value={selectedQuantities[item.title] || ""}
+                  onChange={(e) => handleQuantityChange(item, Number(e.target.value))}
                 >
-                    <select
-                    className="arrow-only-dropdown"
-                    name="quantity"
-                    // onClick={handleAddAccessory(item)}
-                    >
-                        <option value="" disabled hidden>
-                        Select Quantity
-                        </option>
-                        {Array.from({ length: 10 }, (_, i) => (
-                        <option key={i + 1} value={i + 1}>
-                            {i + 1}
-                        </option>
-                        ))}
-                    </select>              
-                </div>
+                  <option value="" disabled hidden>Select Quantity</option>
+                  {Array.from({ length: 10 }, (_, i) => (
+                    <option key={i + 1} value={i + 1}>{i + 1}</option>
+                  ))}
+                </select>              
+              </div>
             );
             break;
 
@@ -71,6 +90,7 @@ const AccessoriesGrid = ({ accessoryData }) => {
         }
 
         return (
+
           <div key={index} className="accessories-item">
             <img
               src={item.imgSrc}
@@ -79,7 +99,7 @@ const AccessoriesGrid = ({ accessoryData }) => {
             />
             <div className="accessories-info">
               <h2 className="accessories-title">{item.title}</h2>
-              <p className="accessories-price">{item.price}</p>
+              <p className="accessories-price">{item.showPrice}</p>
               <div className="accessory-option">
                 {inputElement}
               </div>
@@ -87,6 +107,7 @@ const AccessoriesGrid = ({ accessoryData }) => {
           </div>
         );
       })}
+      <hr className="separator-line" />
     </div>
   );
 };
