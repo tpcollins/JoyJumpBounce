@@ -20,11 +20,11 @@ const AccessoriesGrid = ({ accessoryData }) => {
         switch (item.type) {
           case 'radio':
             inputElement = (
-              <label>
+              <label className='acc-selector'>
                 <input
-                  type="radio"
-                  name="selectedAccessory"
-                  value={item.title}
+                name="selectedAccessory"
+                type="radio"
+                value={item.title}
                 />
                 Add {item.title}
               </label>
@@ -33,12 +33,25 @@ const AccessoriesGrid = ({ accessoryData }) => {
 
           case 'dropdown':
             inputElement = (
-              <select name="selectedAccessory">
-                <option value="">Select {item.title}</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-              </select>
+                <div
+                style={{
+                    paddingTop: '10px'
+                }}
+                >
+                    <select
+                    className="arrow-only-dropdown"
+                    name="quantity"
+                    >
+                        <option value="" disabled hidden>
+                        Select Quantity
+                        </option>
+                        {Array.from({ length: 10 }, (_, i) => (
+                        <option key={i + 1} value={i + 1}>
+                            {i + 1}
+                        </option>
+                        ))}
+                    </select>              
+                </div>
             );
             break;
 

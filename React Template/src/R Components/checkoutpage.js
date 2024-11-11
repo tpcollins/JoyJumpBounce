@@ -176,7 +176,7 @@ const CheckoutPage = ({ data }) => {
                     />
                     
                     <AccessoriesGrid 
-                    accessoryData={accessoryData}
+                        accessoryData={accessoryData}
                     />
 
                     <div className='items'>
