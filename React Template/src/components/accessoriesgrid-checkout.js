@@ -1,7 +1,5 @@
 /* TODO
 
-1. Update accessory data to include a type field so we can have a counter for tables and chairs but radio button for -
-- generator
 2. Make accessories go into area with slides
 3. Add remove from cart button for accessories
 4. Add in tent
