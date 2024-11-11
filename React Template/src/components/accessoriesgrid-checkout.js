@@ -8,8 +8,19 @@
 */
 
 import React from 'react';
+// Redux Variables
+import { useDispatch } from 'react-redux';
+import { addItemToCart } from '../redux/slices/cartslice';
 
 const AccessoriesGrid = ({ accessoryData }) => {
+
+  // Cart Variables
+  const dispatch = useDispatch();
+
+  const handleAddAccessory = (item) => {
+    dispatch(addItemToCart(item));
+  }
+
   return (
     <div className="accessories-grid">
       {accessoryData.accessories.map((item, index) => {
@@ -21,6 +32,7 @@ const AccessoriesGrid = ({ accessoryData }) => {
               <label className='acc-selector'>
                 <input
                 name="selectedAccessory"
+                // onClick={handleAddAccessory(item)}
                 type="radio"
                 value={item.title}
                 />
@@ -39,6 +51,7 @@ const AccessoriesGrid = ({ accessoryData }) => {
                     <select
                     className="arrow-only-dropdown"
                     name="quantity"
+                    // onClick={handleAddAccessory(item)}
                     >
                         <option value="" disabled hidden>
                         Select Quantity
