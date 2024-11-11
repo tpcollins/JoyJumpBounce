@@ -1,7 +1,5 @@
 /* TODO
 
-2. Make accessories go into area with slides
-3. Add remove from cart button for accessories
 4. Add in tent
 5. Get data with accessories shooting to air table
 6. Get total price going to airtable
