@@ -11,18 +11,31 @@ const About = () => {
                 alt="textImg"
               />
             </h1>
-            
+          
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales, orci pellentesque eleifend congue, nisi libero placerat magna, fermentum congue ex elit eu tortor. 
+              Joyjump is owned by two friends, Noah Marler and Johnathan May. With a shared passion for bringing joy to communities and making every event memorable, we set out on this exciting journey to provide 
+              top-notch inflatable rentals. 
             </p>
+
             <br/>
+
             <p>
-            Morbi lorem ante, accumsan nec consequat eget, tincidunt sed lorem. Fusce auctor lectus eget est aliquam laoreet. Nunc luctus blandit pharetra. Etiam et lobortis sapien. Sed interdum fringilla sollicitudin. Donec sollicitudin finibus sem, a iaculis neque interdum maximus. Etiam neque orci, bibendum vel libero in, lobortis pretium est.
+              Our goal is simple: to make your celebrations unforgettable. Whether it's a birthday 
+              party, school event, or family reunion, we pride ourselves on delivering high-quality, clean, and safe inflatables.
             </p>
+
             <br/>
+
             <p>
-            Morbi placerat lobortis odio. Nunc non efficitur diam. Sed a maximus lacus. Suspendisse vel sagittis libero. Aliquam non luctus velit. Integer quis justo velit. Fusce vitae nisl nibh. Etiam varius nunc at pretium tempus.
+              As a small business, we are dedicated to providing personal and reliable service to each of our customers, ensuring that every event is filled with laughter and excitement.
             </p>
+
+            <br/>
+
+            <p>
+              Thank you for choosing Joyjump – we can’t wait to be part of your next celebration! Roll Tide!
+            </p>
+
           </section>
         </section>
       </div>
