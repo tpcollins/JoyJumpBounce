@@ -7532,6 +7532,24 @@
   z-index: 1000;
 }
 
+.cart-badge {
+  position: absolute; /* Position relative to the .cart-icon container */
+  top: -5px; /* Adjust based on the size of the badge and cart icon */
+  right: -5px; /* Adjust to align the badge */
+  background-color: red; /* Red background for the badge */
+  color: white; /* White text for contrast */
+  font-size: 2em; /* Adjust text size */
+  font-weight: bold; /* Make the text bold */
+  border-radius: 50%; /* Circular badge */
+  padding: 20px 20px; /* Adjust padding for size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 20px; /* Ensure the badge has a minimum width */
+  height: 20px; /* Ensure the badge is a perfect circle */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3); /* Optional: Add some shadow for depth */
+}
+
 /* Cart Modal
 --------------------------------------------------*/
 .modal-dialog {

@@ -22,7 +22,7 @@ export default async function handler(req, res) {
       let hourInt = parseInt(hour, 10);
       const ampm = hourInt >= 12 ? 'PM' : 'AM';
       hourInt = hourInt % 12 || 12;
-      return `${hourInt}:${minute} ${ampm}`;
+      return `${hourInt}:${minute} ${ampm}`; 
   };
 
   try {
