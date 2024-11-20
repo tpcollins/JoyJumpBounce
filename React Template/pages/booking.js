@@ -32,8 +32,10 @@ const Booking = () => {
     const dispatch = useDispatch();
 
     // Additional Data variables for cartItems
+    let formattedDate = "";
+    if (selectedDate) formattedDate = selectedDate.toISOString();// Convert Date to ISO string
     const additionalData = {
-      date: selectedDate
+      date: formattedDate,
     };
 
   // Event Handlers

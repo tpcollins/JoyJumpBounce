@@ -50,7 +50,6 @@ const CheckoutPage = ({ data }) => {
     }, [formValues]);
 
     const handleCheckout = async () => {
-        console.log(process.env.MAPBOX_ACCESS_TOKEN)
         // Generate a unique order ID for this checkout session
         const orderId = `Order-${Date.now()}`;
 
