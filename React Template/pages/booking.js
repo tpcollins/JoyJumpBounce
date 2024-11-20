@@ -60,43 +60,48 @@ const Booking = () => {
 
     // Handler to add items to cart
     const handleAddToCart = (item, index) => {
-      if (cartItemsLength === 0){
+      const cartIcon = document.getElementById("cart-icon");
+      const button = document.querySelector(`#add-to-cart-${index}`); // Select specific button
+    
+      // Proceed with the animation even if the cart icon is hidden
+      if (cartIcon && button) {
+        const cartRect = cartIcon.getBoundingClientRect();
+        const buttonRect = button.getBoundingClientRect();
+    
+        // Create a clone of the button
+        const clone = button.cloneNode(true);
+        clone.style.position = "fixed";
+        clone.style.left = `${buttonRect.left}px`;
+        clone.style.top = `${buttonRect.top}px`;
+        clone.style.transition = "transform 1s ease, opacity 1s ease";
+        clone.style.zIndex = 1000;
+    
+        // Add the clone to the document
+        document.body.appendChild(clone);
+    
+        // Start animation to the cart
+        requestAnimationFrame(() => {
+          clone.style.transform = `translate(${cartRect.left - buttonRect.left}px, ${cartRect.top - buttonRect.top}px) scale(3)`;
+          clone.style.opacity = "0"; // Fade out as it reaches the cart
+        });
+    
+        // Remove the clone after the animation completes
+        setTimeout(() => {
+          clone.remove();
+        }, 1000); // Match the transition duration
+      }
+    
+      // Add item to cart and ensure cart icon appears
+      if (cartItemsLength === 0) {
+        setTimeout(() => {
+          dispatch(addItemToCart(item)); // Dispatch after animation
+        }, 1000); // Slight delay to synchronize with animation
+      } else {
         dispatch(addItemToCart(item));
-      }else{
-
-        const cartIcon = document.getElementById("cart-icon");
-        const button = document.querySelector(`#add-to-cart-${index}`); // Select specific button
-  
-        if (cartIcon && button) {
-          const cartRect = cartIcon.getBoundingClientRect();
-          const buttonRect = button.getBoundingClientRect();
-  
-          // Create a clone of the button
-          const clone = button.cloneNode(true);
-          clone.style.position = "fixed";
-          clone.style.left = `${buttonRect.left}px`;
-          clone.style.top = `${buttonRect.top}px`;
-          clone.style.transition = "transform 1s ease, opacity 1s ease";
-          clone.style.zIndex = 1000;
-  
-          // Add the clone to the document
-          document.body.appendChild(clone);
-  
-          // Start animation to the cart
-          requestAnimationFrame(() => {
-              clone.style.transform = `translate(${cartRect.left - buttonRect.left}px, ${cartRect.top - buttonRect.top}px) scale(3)`;
-              clone.style.opacity = "0"; // Fade out as it reaches the cart
-          });
-  
-          // Remove the clone after the animation completes
-          setTimeout(() => {
-              clone.remove();
-          }, 1000); // Match the transition duration
-          
-          dispatch(addItemToCart(item));
-        }
       }
     };
+    
+    
 
     // Handler to open modal
     const handleModalOpen = () =>{
