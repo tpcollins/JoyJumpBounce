@@ -6907,7 +6907,7 @@
   box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.about-section-inner p {
+.about-section-inner p, button {
   animation: fadeIn 2s ease;
 }
 @keyframes fadeIn {

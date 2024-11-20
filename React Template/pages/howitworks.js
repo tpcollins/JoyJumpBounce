@@ -35,16 +35,43 @@ const HowItWorks = () => {
                         </h1>
                         
                         <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales, orci pellentesque eleifend congue, nisi libero placerat magna, fermentum congue ex elit eu tortor. 
+                          At JoyJump, we make renting a bounce house easy and stress-free. Whether you're hosting a birthday party, a school event, 
+                          or a corporate gathering, we have a variety of bounce houses, slides, and obstacle courses to make your occasion memorable. 
                         </p>
+
                         <br/>
+
                         <p>
-                        Morbi lorem ante, accumsan nec consequat eget, tincidunt sed lorem. Fusce auctor lectus eget est aliquam laoreet. Nunc luctus blandit pharetra. Etiam et lobortis sapien. Sed interdum fringilla sollicitudin. Donec sollicitudin finibus sem, a iaculis neque interdum maximus. Etiam neque orci, bibendum vel libero in, lobortis pretium est.
+                          You can either book online or contact us for assistance with availability and 
+                          recommendations. Our staff will deliver and set up your bounce house at the agreed-upon location, 
+                          ensuring it’s securely installed and ready for fun.  
                         </p>
+
                         <br/>
+
                         <p>
-                        Morbi placerat lobortis odio. Nunc non efficitur diam. Sed a maximus lacus. Suspendisse vel sagittis libero. Aliquam non luctus velit. Integer quis justo velit. Fusce vitae nisl nibh. Etiam varius nunc at pretium tempus.
+                          We handle everything from setup to takedown, provide safety instructions, and
+                          we’ll return to pick up the bounce house, leaving your venue clean and free of any hassle.  
                         </p>
+
+                        <p>
+                          With our reliable service and top-quality inflatables, we guarantee a stress-free and exciting experience every time!
+                        </p>
+
+                        <br/>
+
+                        <button
+                        className="text-center w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-large text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
+                        >
+                            <a
+                            href="/inventory"
+                            style={{color: "white"}}
+                            target="_blank"
+                            >
+                              View Our Inventory Now!
+                            </a>
+                        </button>
+
                     </section>
                 </section>
             </div>

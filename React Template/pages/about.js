@@ -32,9 +32,25 @@ const About = () => {
 
             <br/>
 
-            <p>
+            <p
+            style={{
+              paddingBottom: '10px'
+            }}
+            >
               Thank you for choosing Joyjump – we can’t wait to be part of your next celebration! Roll Tide!
             </p>
+
+            <button
+            className="text-center w-max rounded-full border-2 border-orange-600 bg-stone-900 px-4 py-2 text-sm font-large text-white shadow-md outline-none hover:bg-stone-800 focus:ring-2 focus:ring-orange-600 focus:ring-offset-2 focus:ring-offset-stone-800"
+            >
+                <a
+                href="/contactus"
+                style={{color: "white"}}
+                target="_blank"
+                >
+                  Contact Us Today!
+                </a>
+            </button>
 
           </section>
         </section>
