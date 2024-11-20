@@ -13,7 +13,7 @@ import CheckoutModal from "../src/R Components/checkoutmodal";
 // Data
 import { bcyHseStockData } from "../src/Data/data";
 // Redux Variables
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { addItemToCart } from "../src/redux/slices/cartslice";
 // Active Nav Menu
 import { activeNavMenu } from "../src/utils";
@@ -30,6 +30,12 @@ const Booking = () => {
 
     // Cart Variables
     const dispatch = useDispatch();
+
+    // Cart Items from Redux
+    const cartItems = useSelector((state) => state.cart.items);
+
+    // Cart Items Length
+    let cartItemsLength = cartItems.length;
 
     // Additional Data variables for cartItems
     let formattedDate = "";
@@ -54,36 +60,41 @@ const Booking = () => {
 
     // Handler to add items to cart
     const handleAddToCart = (item, index) => {
-      const cartIcon = document.getElementById("cart-icon");
-      const button = document.querySelector(`#add-to-cart-${index}`); // Select specific button
-
-      if (cartIcon && button) {
-        const cartRect = cartIcon.getBoundingClientRect();
-        const buttonRect = button.getBoundingClientRect();
-
-        // Create a clone of the button
-        const clone = button.cloneNode(true);
-        clone.style.position = "fixed";
-        clone.style.left = `${buttonRect.left}px`;
-        clone.style.top = `${buttonRect.top}px`;
-        clone.style.transition = "transform 1s ease, opacity 1s ease";
-        clone.style.zIndex = 1000;
-
-        // Add the clone to the document
-        document.body.appendChild(clone);
-
-        // Start animation to the cart
-        requestAnimationFrame(() => {
-            clone.style.transform = `translate(${cartRect.left - buttonRect.left}px, ${cartRect.top - buttonRect.top}px) scale(3)`;
-            clone.style.opacity = "0"; // Fade out as it reaches the cart
-        });
-
-        // Remove the clone after the animation completes
-        setTimeout(() => {
-            clone.remove();
-        }, 1000); // Match the transition duration
-        
+      if (cartItemsLength === 0){
         dispatch(addItemToCart(item));
+      }else{
+
+        const cartIcon = document.getElementById("cart-icon");
+        const button = document.querySelector(`#add-to-cart-${index}`); // Select specific button
+  
+        if (cartIcon && button) {
+          const cartRect = cartIcon.getBoundingClientRect();
+          const buttonRect = button.getBoundingClientRect();
+  
+          // Create a clone of the button
+          const clone = button.cloneNode(true);
+          clone.style.position = "fixed";
+          clone.style.left = `${buttonRect.left}px`;
+          clone.style.top = `${buttonRect.top}px`;
+          clone.style.transition = "transform 1s ease, opacity 1s ease";
+          clone.style.zIndex = 1000;
+  
+          // Add the clone to the document
+          document.body.appendChild(clone);
+  
+          // Start animation to the cart
+          requestAnimationFrame(() => {
+              clone.style.transform = `translate(${cartRect.left - buttonRect.left}px, ${cartRect.top - buttonRect.top}px) scale(3)`;
+              clone.style.opacity = "0"; // Fade out as it reaches the cart
+          });
+  
+          // Remove the clone after the animation completes
+          setTimeout(() => {
+              clone.remove();
+          }, 1000); // Match the transition duration
+          
+          dispatch(addItemToCart(item));
+        }
       }
     };
 
@@ -110,6 +121,10 @@ const Booking = () => {
         document.body.classList.remove('homepage-body');
       };
     }, []);
+
+    useEffect(() => {
+      console.log('Cart Items Length: ', cartItemsLength)
+    }, [cartItemsLength]);
 
   // Functions
     // Function to fetch date filtered floats array
@@ -182,9 +197,11 @@ const Booking = () => {
             </div>
           )}
 
-          <ShoppingCart 
-          onClick={handleModalOpen}
-          />
+          {cartItemsLength > 0 && (
+            <ShoppingCart 
+            onClick={handleModalOpen}
+            />
+          )}
           
 
           <CheckoutModal 
