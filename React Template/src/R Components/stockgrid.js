@@ -5,7 +5,6 @@ const StockGrid = ({
     handleAddToCart,
     stockData
 }) => {
-
     return (
         <>
             <hr className="separator-line" />
@@ -22,6 +21,7 @@ const StockGrid = ({
                             <div className="stock-info">
                                 <h3 className="stock-title">{item.title}</h3>
                                 <p className="stock-price">{item.showPrice}</p>
+                                <p>{new Date(additionalData.date).toLocaleDateString()}</p>
                                 <p>
                                     <a href={'/inventory#' + item.pgSection}>View on Inventory Page</a>
                                 </p>

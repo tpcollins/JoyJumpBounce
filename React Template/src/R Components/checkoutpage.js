@@ -192,6 +192,7 @@ const CheckoutPage = ({ data }) => {
                                         : 
                                         <p className="cart-item-title">{index + 1}. {item.title}</p>
                                     }
+                                    <p className="cart-item-title">Selected Date: {new Date(item.date).toLocaleDateString()}</p>
                                     <p className="cart-item-price">{item.showPrice}</p>
                                     <Button onClick={() => dispatch(removeItemFromCart(item))}>Remove From Cart</Button>
                                 </div>
