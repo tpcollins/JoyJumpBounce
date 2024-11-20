@@ -6973,15 +6973,18 @@
 }
 
 .react-calendar {
+  width: 900px; /* Fixed width for the entire calendar */
+  max-width: 100%; /* Allows it to be responsive if needed */
+  height: 700px;
   font-family: inherit;
   font-size: 2em;
-  line-height: 2.5em;
-  width: 100%;
-  /* max-width: 1200px; */
-  height: 600px; /* Adjust the height as needed */
   background: #FDF1B8;
   border: 1px solid white;
   border-radius: 5px;
+}
+
+.react-calendar__viewContainer {
+  flex-grow: 1;
 }
 
 .react-calendar--doubleView {
@@ -7019,6 +7022,8 @@
 
 .react-calendar__navigation {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 1em;
   margin-top: 1em;
 }
@@ -7045,6 +7050,34 @@
 .react-calendar__navigation button:enabled:focus {
   background-color: rgba(16, 135, 255, 1); /* Slightly less transparent on hover */
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Enhances the shadow on hover */
+}
+
+.react-calendar__month-view__days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr); /* Always 7 columns for days */
+  min-height: 450px; /* Ensure consistent height */
+  padding: 10px; /* Adds inner spacing to the grid */
+}
+
+.react-calendar__tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1em;
+  background-color: rgba(16, 135, 255, 0.8); /* Default background color */
+  color: white;
+  border-radius: 8px; /* Rounded corners */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.react-calendar__tile--now {
+  background-color: rgba(255, 220, 80, 0.8);
+  color: black;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  visibility: hidden; /* Hide extra days from neighboring months if present */
 }
 
 .react-calendar__month-view__weekdays {
@@ -7084,20 +7117,20 @@
   padding: 2em 0.5em;
 }
 
-.react-calendar__tile {
+/* .react-calendar__tile {
   margin: 1px;
-  padding: 5px 4px; /* Adjust padding for internal content */
+  padding: 5px 4px;
   text-align: center;
   font: inherit;
   font-size: 1em;
-  background-color: rgba(16, 135, 255, 0.8); /* Blue background with transparency */
+  background-color: rgba(16, 135, 255, 0.8);
   color: white;
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds shadow */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   gap: 4px;
-}
+} */
 
 .react-calendar__tile:disabled {
   background-color: #f0f0f0;
@@ -7114,11 +7147,6 @@
 .react-calendar__tile:enabled:focus {
   background-color: rgba(16, 135, 255, 1); /* Less transparent on hover */
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* More pronounced shadow on hover */
-}
-
-.react-calendar__tile--now {
-  background-color: rgba(255, 220, 80, 0.8); /* Yellowish for today */
-  color: black; /* Black text on highlighted date */
 }
 
 .react-calendar__tile--now:enabled:hover,
@@ -7153,6 +7181,25 @@
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* Dark shadow for the text */
   font-weight: bold; /* Bold the text for better readability */
 }
+
+.react-calendar__tile:disabled {
+  background-color: #d3d3d3; /* Softer gray for disabled background */
+  color: #8c8c8c; /* Darker gray for text */
+  cursor: not-allowed;
+  opacity: 0.8; /* Slight transparency for a softer appearance */
+  border: 1px solid #cccccc; /* Light gray border to add structure */
+  border-radius: 6px; /* Rounded corners for a modern look */
+  box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.2); /* Subtle inset shadow for depth */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Light shadow for the text */
+}
+
+.react-calendar__tile:disabled:hover {
+  background-color: #e0e0e0; /* Slightly lighter gray on hover */
+  border: 1px solid #bfbfbf; /* Darker border for hover effect */
+  box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+
 
 /* Stock Grid
 --------------------------------------------------*/
