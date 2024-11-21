@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
 import ReactCalendar from "./calendar";
 import StockGrid from "../src/R Components/StockGrid";
 import ShoppingCart from "../src/R Components/shoppingcart";
-import CheckoutModal from "../src/R Components/checkoutmodal";
+// import CheckoutModal from "../src/R Components/checkoutmodal";
 // Data
 import { bcyHseStockData } from "../src/Data/data";
 // Redux Variables
@@ -26,7 +26,7 @@ const Booking = () => {
     const [stockData, setStockData] = useState(bcyHseStockData);
 
     // Modal Variables
-    const [isOpen, setIsOpen] = useState(false);
+    // const [isOpen, setIsOpen] = useState(false);
 
     // Cart Variables
     const dispatch = useDispatch();
@@ -104,20 +104,20 @@ const Booking = () => {
     
 
     // Handler to open modal
-    const handleModalOpen = () =>{
-      console.log("handleModalOpen clicked");
-      setIsOpen(true);
-      console.log("show on booking: ", isOpen)
-    };
+    // const handleModalOpen = () =>{
+    //   console.log("handleModalOpen clicked");
+    //   setIsOpen(true);
+    //   console.log("show on booking: ", isOpen)
+    // };
 
   // useEffect
     useEffect(() => {
       activeNavMenu();
     }, []);
     
-    useEffect(() => {
-      console.log("show on booking useEffect: ", isOpen)
-    }, [isOpen]);
+    // useEffect(() => {
+    //   console.log("show on booking useEffect: ", isOpen)
+    // }, [isOpen]);
 
     useEffect(() => {
       document.body.classList.add('homepage-body');
@@ -202,7 +202,7 @@ const Booking = () => {
             </div>
           )}
 
-          {cartItemsLength > 0 && (
+          {/* {cartItemsLength > 0 && (
             <ShoppingCart 
             onClick={handleModalOpen}
             />
@@ -212,7 +212,7 @@ const Booking = () => {
           <CheckoutModal 
           openVar={isOpen}
           setOpenVar={setIsOpen}
-          />
+          /> */}
         </div>
 
         <Footer />

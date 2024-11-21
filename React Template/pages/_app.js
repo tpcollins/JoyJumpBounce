@@ -7,6 +7,8 @@ import "../styles/globals.css";
 import { Provider } from "react-redux";
 import store, {persistor} from "../src/redux/store/store";
 import { PersistGate } from "redux-persist/integration/react";
+// Cart Wrapper
+import CartWrapper from "./cartwrapper";
 
 const App = ({ Component, pageProps }) => {
     const [loader, setLoader] = useState(true);
@@ -34,6 +36,9 @@ const App = ({ Component, pageProps }) => {
             <Provider store={store}>
                 <PersistGate loading={null} persistor={persistor}>
                     {loader && <Preloader />}
+
+                    <CartWrapper />
+
                     <Component {...pageProps} />
                 </PersistGate>
             </Provider>
@@ -61,7 +66,7 @@ export default App;
 //             rel="apple-touch-icon-precomposed"
 //           />
 //           <link
-//             href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+//             href="https://fonts.googleapis.com/css2?family=Salsa&display=sw ap"
 //             rel="stylesheet"
 //           />
 //         </Head>
