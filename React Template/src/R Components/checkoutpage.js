@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 // Redux Variables
-import { removeItemFromCart } from '../redux/slices/cartslice';
+import { removeItemFromCart, clearCart } from '../redux/slices/cartslice';
 import { useSelector, useDispatch } from 'react-redux';
 // Proximity Meter
 import ProximityMeter from '../components/proximitymeter';
@@ -97,6 +97,7 @@ const CheckoutPage = ({ data }) => {
             console.error('Error during checkout:', error);
             alert('An error occurred while sending data.');
         }
+        dispatch(clearCart());
     };
     
 
