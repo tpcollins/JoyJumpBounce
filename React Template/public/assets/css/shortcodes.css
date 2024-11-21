@@ -7616,6 +7616,11 @@
   text-align: center;
 }
 
+.checkout-button.disabled {
+  background-color: #cccccc;
+  color: #666666; 
+}
+
 
 /* Checkout Page
 --------------------------------------------------*/

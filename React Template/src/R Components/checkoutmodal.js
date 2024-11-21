@@ -16,6 +16,8 @@ const CheckoutModal = ({
     // Cart Items from Redux
     const cartItems = useSelector((state) => state.cart.items);
 
+    const isDisabled = cartItems.length === 0;
+
     // Calculate total price
     const totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price), 0);
 
@@ -28,10 +30,6 @@ const CheckoutModal = ({
     const handleModalClose = () =>{
         setShow(false);
         setOpenVar(false);
-    }
-      
-    const showCartItems = () => {
-        console.log("Cart Items: ", cartItems);
     }
 
     useEffect(() => {
@@ -76,11 +74,26 @@ const CheckoutModal = ({
                 <Button variant="secondary" onClick={handleModalClose}>Close</Button>
                 <Button variant="secondary" onClick={() => dispatch(clearCart())}>Clear Cart</Button>
                 
-                <Link href="/checkout">
+                {/* <Link href="/checkout">
                     <Button className="checkout-button">
                         Checkout
                     </Button>
+                </Link> */}
+
+                <Link href={isDisabled ? "#" : "/checkout"}>
+                    <Button 
+                        className={`checkout-button ${isDisabled ? "disabled" : ""}`} 
+                        disabled={isDisabled}
+                        onClick={(e) => {
+                            if (isDisabled) {
+                                e.preventDefault(); // Prevents navigation
+                            }
+                        }}
+                    >
+                        Checkout
+                    </Button>
                 </Link>
+
             </Modal.Footer>
         </Modal>
     );
