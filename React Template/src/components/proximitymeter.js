@@ -156,22 +156,6 @@ const ProximityMeter = ({ street, city, state, zip, onUpdateCharge }) => {
         return null; // Error handling for coordinates not found
     }; 
 
-    // useEffect to recalculate delivery charge when address is complete
-    // useEffect(() => {
-    //     if (isFullAddress()) {
-    //         (async () => {
-    //             setClientCoordinates([-87.532720, 33.239110]); // Set your client coordinates
-    //             const charge = await calculateDeliveryCharge(`${street}, ${city}, ${state} ${zip}`, clientCoordinates);
-    //             setDeliveryCharge(charge);
-    //             onUpdateCharge(charge); // Pass the charge back to the parent component
-    //         })();
-    //     } else {
-    //         // Reset the delivery charge and milesOver state if the address is incomplete
-    //         setDeliveryCharge(null);
-    //         setMilesOver(false);
-    //     }
-    // }, [street, city, state, zip]); // Only re-run when any part of the address changes
-
     useEffect(() => {
         const handleDeliveryCalculation = async () => {
             if (isFullAddress()) {

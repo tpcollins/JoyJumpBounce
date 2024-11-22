@@ -12,6 +12,8 @@ import { accessoryData } from '../Data/data';
 const CheckoutPage = ({ data }) => {
     // State to hold form values
     const [formValues, setFormValues] = useState({});
+    // State to require form values
+    const [isFormValid, setIsFormValid] = useState(false);
     const apiRoute = data.apiRoute;
     
     // Cart Items from Redux
@@ -31,7 +33,12 @@ const CheckoutPage = ({ data }) => {
     //  **** DELETING THE FULLADDRESS VARIABLE CAUSES THE PROXIMITY METER TO BREAK FOR SOME REASON. DO NOT DELETE IT ****
     const fullAddress = `${formValues['Street Address']}, ${formValues['City']}, ${formValues['State']} ${formValues['Zip Code']}`;
 
-    // Function to handle form input changes
+    // Use Effect for making sure all fields in form are filled in
+    useEffect(() => {
+        setIsFormValid(handleValidateForm());
+    }, [formValues]); // Re-validate when formValues change
+
+    // Function to handle form input change
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormValues({
@@ -45,9 +52,15 @@ const CheckoutPage = ({ data }) => {
         setDeliveryCharge(charge);
     };
 
-    useEffect(() => {
-        console.log(formValues)
-    }, [formValues]);
+    const handleValidateForm = () => {
+        const requiredFields = ["First Name", "Last Name", "Street Address", "City", "State", "Zip Code"];
+        for (let field of requiredFields) {
+            if (!formValues[field] || formValues[field].trim() === "") {
+                return false;
+            }
+        }
+        return true;
+    };
 
     const handleCheckout = async () => {
         // Generate a unique order ID for this checkout session
@@ -208,6 +221,7 @@ const CheckoutPage = ({ data }) => {
                     <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}>
                         <Button
                             className="checkout-button"
+                            disabled={!isFormValid || cartItems.length === 0}
                             onClick={handleCheckout}
                             style={{
                                 fontSize: '2em',
