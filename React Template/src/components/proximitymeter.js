@@ -130,6 +130,8 @@ const ProximityMeter = ({ street, city, state, zip, onUpdateCharge }) => {
     // Simplified function to check if the full address is entered
     const isFullAddress = () => {
         console.log("Checking isFullAddress with values:", { street, city, state, zip });
+        console.log("Miles Over: ", milesOver);
+        console.log("Delivery Charge: ", deliveryCharge);
         return street && city && state && zip;
     };
 
@@ -152,23 +154,46 @@ const ProximityMeter = ({ street, city, state, zip, onUpdateCharge }) => {
             return 0; // No extra charge within 15 miles
         }
         return null; // Error handling for coordinates not found
-    };
+    }; 
 
     // useEffect to recalculate delivery charge when address is complete
+    // useEffect(() => {
+    //     if (isFullAddress()) {
+    //         (async () => {
+    //             setClientCoordinates([-87.532720, 33.239110]); // Set your client coordinates
+    //             const charge = await calculateDeliveryCharge(`${street}, ${city}, ${state} ${zip}`, clientCoordinates);
+    //             setDeliveryCharge(charge);
+    //             onUpdateCharge(charge); // Pass the charge back to the parent component
+    //         })();
+    //     } else {
+    //         // Reset the delivery charge and milesOver state if the address is incomplete
+    //         setDeliveryCharge(null);
+    //         setMilesOver(false);
+    //     }
+    // }, [street, city, state, zip]); // Only re-run when any part of the address changes
+
     useEffect(() => {
-        if (isFullAddress()) {
-            (async () => {
+        const handleDeliveryCalculation = async () => {
+            if (isFullAddress()) {
                 setClientCoordinates([-87.532720, 33.239110]); // Set your client coordinates
                 const charge = await calculateDeliveryCharge(`${street}, ${city}, ${state} ${zip}`, clientCoordinates);
                 setDeliveryCharge(charge);
                 onUpdateCharge(charge); // Pass the charge back to the parent component
-            })();
-        } else {
-            // Reset the delivery charge and milesOver state if the address is incomplete
-            setDeliveryCharge(null);
-            setMilesOver(false);
-        }
-    }, [street, city, state, zip]); // Only re-run when any part of the address changes
+                console.log("Delivery Charge:", charge);
+                console.log("Miles Over:", charge > 0); // Assuming charge > 0 means it's over the limit
+            } else if (street || city || state || zip) {
+                // Partial address entered - wait for autofill to complete before resetting
+                console.log("Partial address detected, waiting for autofill...");
+            } else {
+                // No address fields are populated, reset delivery charge and milesOver
+                setDeliveryCharge(null);
+                setMilesOver(false);
+                console.log("Resetting delivery charge and milesOver.");
+            }
+        };
+    
+        handleDeliveryCalculation();
+    }, [street, city, state, zip, deliveryCharge, milesOver]); // Only re-run when any part of the address changes
 
     return (
         <div>
