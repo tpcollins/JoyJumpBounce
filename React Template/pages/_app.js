@@ -9,6 +9,8 @@ import store, {persistor} from "../src/redux/store/store";
 import { PersistGate } from "redux-persist/integration/react";
 // Cart Wrapper
 import CartWrapper from "./cartwrapper";
+// Book Now Button
+import BookNowButton from "../src/components/booknow-button";
 
 const App = ({ Component, pageProps }) => {
     const [loader, setLoader] = useState(true);
@@ -38,6 +40,8 @@ const App = ({ Component, pageProps }) => {
                     {loader && <Preloader />}
 
                     <CartWrapper />
+
+                    <BookNowButton />
 
                     <Component {...pageProps} />
                 </PersistGate>
