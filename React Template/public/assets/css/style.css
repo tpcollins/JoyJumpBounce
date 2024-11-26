@@ -881,11 +881,20 @@ h6 {
     font-weight: bold;
 }
 
-.li-clr-pri-2{
+/* .li-clr-pri-2{
     color: var(--primary-color2);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds subtle shadow for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     font-weight: bold;
-}
+} */
+
+.text-with-shadow {
+    color: #4A4A4A; /* Adjust the main text color */
+    text-shadow: 
+      1px 1px 0px #ffffff, /* White shadow to create an undertone */
+      -1px -1px 0px #ffffff, 
+      2px 2px 3px rgba(0, 0, 0, 0.3); /* Optional dark shadow for depth */
+    font-weight: bold; /* Makes the text stand out even more */
+}  
 
 .clr-pri-3 {
     color: var(--primary-color3);
