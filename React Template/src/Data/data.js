@@ -58,7 +58,7 @@ export const invSwiperData = {
             {href: "#", text: "Booking", className: "fl-btn st-1"},
         ],
         imgs: [
-            {src: "assets/images/inflatables/ComboWetSlideNoShadow.png"}
+            {src: "assets/images/inflatables/DrySlide.png"}
         ]},
     ]
 }

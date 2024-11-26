@@ -1615,7 +1615,7 @@
   padding-left: 108px;
 }
 
-.item-slider-1 .box-custom {
+/* .item-slider-1 .box-custom {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -1631,11 +1631,33 @@
   letter-spacing: -1.3px;
   font-size: 50px;
   line-height: 1;
-  background-image: url(../images/background/bg-sub-slider.png);
+  background-image: url(../images/background/new-ribbon.png);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+} */
+
+.item-slider-1 .box-custom {
+  display: flex; /* Already fine */
+  margin-bottom: 45px; /* No change needed unless spacing needs adjustment */
 }
+
+.item-slider-1 .wrap {
+  margin-top: 13px;
+  margin-right: 35px;
+  padding: 100px 200px; /* Increase padding to make the container larger */
+  letter-spacing: -1.3px;
+  font-size: 70px; /* Reduce font size */
+  line-height: 1.2; /* Increase spacing between lines */
+  text-align: center; /* Center-align text on the ribbon */
+  background-image: url(../images/background/new-ribbon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain; /* Ensure the ribbon scales proportionally */
+  word-wrap: break-word; /* Ensure text wraps to a new line */
+}
+
+
 
 .item-slider-1 .sub {
   font-size: 45px;
