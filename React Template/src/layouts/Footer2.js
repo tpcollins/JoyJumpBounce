@@ -43,13 +43,13 @@ const Footer2 = () => {
                           <span className="f-mulish">Monday - Friday</span>
                         </li>
                         <li>
-                          <span className="f-mulish">08 am - 05 pm</span>
+                          <span className="f-mulish">8:00am - 5:00pm</span>
                         </li>
                       </ul>
                     </div>
                     <div className="cls-time">
-                      <p>Every Satarday and Govt Holiday</p>
-                      <h4 className="title-widget">closed</h4>
+                      <p>We can accomadate holidays.<br/>Just reach out and let us know!</p>
+                      {/* <h4 className="title-widget">closed</h4> */}
                     </div>
                   </div>
                 </div>
