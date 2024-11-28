@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Layout from "../src/layouts/Layout";
 import { activeNavMenu } from "../src/utils";
 import CheckoutPage from "../src/R Components/checkoutpage";
-import { checkoutData } from "../src/Data/data";
+import { checkoutData, footerData } from "../src/Data/data";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -26,7 +26,7 @@ const ContactUs = () => {
         
         <CheckoutPage data={checkoutData}/>
         
-        <Footer />
+        <Footer footerData={footerData}/>
       </Layout>
     </>
   );
