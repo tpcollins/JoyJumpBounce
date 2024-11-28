@@ -12,8 +12,7 @@ const Footer2 = () => {
               <div className="widget-footer">
                 <div className="widget widget-logo">
                   <p className="wrap f-mulish">
-                    Sit amet consectetur adipiscing elit sed do eiusmod teminci
-                    idunt ut labore et dolore magna
+                    Let the Fun Begin. Book with us Below!
                   </p>
                   <div className="list-contact">
                     <ul>

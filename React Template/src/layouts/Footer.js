@@ -10,8 +10,7 @@ const Footer = () => {
                   <div className="widget-footer">
                     <div className="widget widget-logo">
                       <p className="wrap f-mulish">
-                        Sit amet consectetur adipiscing elit sed do eiusmod teminci
-                        idunt ut labore et dolore magna
+                        Joy Jump Bounce LLC
                       </p>
                       <div className="list-contact">
                         <ul>
