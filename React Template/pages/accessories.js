@@ -1,6 +1,6 @@
 import React from 'react';
 import { LeftArrow, RightArrow } from "../src/Icons";
-import { accessoryData } from '../src/Data/data';
+import { accessoryData, footerData } from '../src/Data/data';
 import Footer from '../src/layouts/Footer';
 import { useEffect } from 'react';
 import Header1 from "../src/layouts/header/Header1"; 
@@ -62,7 +62,7 @@ const Accessories = () => {
             </div>
         </div>
 
-        <Footer />
+        <Footer footerData={footerData}/>
     </>
     );
 };

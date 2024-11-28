@@ -4,6 +4,7 @@ import Contact from "./contact";
 import { useEffect } from "react";
 import Layout from "../src/layouts/Layout";
 import { activeNavMenu } from "../src/utils";
+import { footerData } from "../src/Data/data";
 
 const ContactUs = () => {
   useEffect(() => {
@@ -25,7 +26,7 @@ const ContactUs = () => {
         
         <Contact />
         
-        <Footer />
+        <Footer footerData={footerData}/>
       </Layout>
     </>
   );

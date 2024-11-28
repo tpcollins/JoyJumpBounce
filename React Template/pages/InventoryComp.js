@@ -1,5 +1,5 @@
 import { LeftArrow, RightArrow } from "../src/Icons";
-import { inventoryData } from "../src/Data/data";
+import { inventoryData, footerData } from "../src/Data/data";
 import Header1 from "../src/layouts/header/Header1";
 import { useEffect } from "react";
 import Footer from "../src/layouts/Footer";
@@ -78,7 +78,7 @@ const InventoryComp = () => {
                 </div>
             </section>
 
-            <Footer />
+            <Footer footerData={footerData}/>
         </>
     );
 };

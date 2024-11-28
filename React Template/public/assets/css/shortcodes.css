@@ -68,6 +68,12 @@
   font-size: 17px;
 }
 
+.fl-btn.st-12.footer{
+  /* width: 200px !important;
+  align-self: flex-end; */
+  font-size: 1.71em;
+}
+
 .fl-btn .inner {
   position: relative;
 }

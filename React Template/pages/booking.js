@@ -11,7 +11,7 @@ import StockGrid from "../src/R Components/StockGrid";
 import ShoppingCart from "../src/R Components/shoppingcart";
 // import CheckoutModal from "../src/R Components/checkoutmodal";
 // Data
-import { bcyHseStockData } from "../src/Data/data";
+import { bcyHseStockData, footerData } from "../src/Data/data";
 // Redux Variables
 import { useDispatch, useSelector } from 'react-redux';
 import { addItemToCart } from "../src/redux/slices/cartslice";
@@ -215,7 +215,7 @@ const Booking = () => {
           /> */}
         </div>
 
-        <Footer />
+        <Footer footerData={footerData}/>
         
       </Layout>
   </>

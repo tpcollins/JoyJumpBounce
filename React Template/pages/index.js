@@ -4,6 +4,7 @@ import Header1 from "../src/layouts/header/Header1";
 import Layout from "../src/layouts/Layout";
 import { activeNavMenu } from "../src/utils";
 import Slider from "../src/components/slider";
+import { footerData } from "../src/Data/data";
 
 const Index = () => {
   useEffect(() => {
@@ -25,7 +26,7 @@ const Index = () => {
       
       <Slider />
       
-      <Footer2 />
+      <Footer2 footerData={footerData}/>
 
     </Layout>
   );

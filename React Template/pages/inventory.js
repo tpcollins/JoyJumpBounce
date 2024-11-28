@@ -1,10 +1,10 @@
 import Footer from "../src/layouts/Footer";
 import Header1 from "../src/layouts/header/Header1";
 import Layout from "../src/layouts/Layout";
-import { accessoryData } from "../src/Data/data";
 import { activeNavMenu } from "../src/utils";
 import { useEffect } from "react";
 import InvLandingPage from "./invlandingpage";
+import { footerData } from "../src/Data/data";
 
 const Inventory = () => {
   useEffect(() => {
@@ -27,7 +27,7 @@ const Inventory = () => {
 
         <InvLandingPage />
 
-        <Footer />
+        <Footer footerData={footerData}/>
       </Layout>
     </>
   );

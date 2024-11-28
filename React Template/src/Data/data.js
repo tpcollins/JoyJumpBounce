@@ -17,6 +17,7 @@ TABLE OF CONTENTS:
 5. stock grid
 6. checkout accessories 
 7. checkout modal
+8. footer
 
 */
 
@@ -132,5 +133,15 @@ export const checkoutData = {
         {title: "City", type: "text", placeholder:"City ........"}, 
         {title: "State", type: "text", placeholder: "State ........"},
         {title: "Zip Code", type: "text", placeholder: "Zip Code ........"},
+    ]
+}
+
+// 8. footer
+export const footerData = {
+    shortBio: "Joy Jump Bounce LLC. Let us Make Your Experience Unforgettable!",
+    contactSection: [
+        {title: "Tuscaloosa, AL", className: "far fa-map-marker-alt", type: "location"},
+        {title: "JoyJumpInflatables@gmail.com", className: "far fa-envelope", type: "email"},
+        {title: "+1 (205) 861-4553", className: "fal fa-phone", type: "phoneNumber", href: "tel:2058614553"}
     ]
 }

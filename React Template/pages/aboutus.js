@@ -4,6 +4,7 @@ import Footer from "../src/layouts/Footer";
 import About from "./about";
 import { useEffect } from "react";
 import { activeNavMenu } from "../src/utils";
+import { footerData } from "../src/Data/data";
 
 const AboutUs = () => {
 
@@ -26,7 +27,7 @@ const AboutUs = () => {
       
       <About />
       
-      <Footer />
+      <Footer footerData={footerData}/>
 
     </Layout>
   );

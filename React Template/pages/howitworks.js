@@ -3,6 +3,7 @@ import Header1 from "../src/layouts/header/Header1";
 import Footer from "../src/layouts/Footer";
 import { useEffect } from "react";
 import { activeNavMenu } from "../src/utils";
+import { footerData } from "../src/Data/data";
 
 const HowItWorks = () => {
 
@@ -77,7 +78,7 @@ const HowItWorks = () => {
             </div>
         </div>
 
-        <Footer />
+        <Footer footerData={footerData}/>
 
     </Layout>
   );
