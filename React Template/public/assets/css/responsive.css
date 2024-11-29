@@ -1214,12 +1214,14 @@
 
 @media (min-width: 769px) and (max-width: 1650px) {
     .tf-discovery-2{
-        height: 100px;
+        height: 50px;
+        overflow: visible;
     }
 
     #footer.st-2{
         background-size: cover; /* Ensure it spans the full width */
         width: 100vw;
+        overflow: visible;
     }
 
     .widget.f2-widget{
