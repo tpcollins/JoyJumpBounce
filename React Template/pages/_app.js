@@ -21,6 +21,15 @@ const App = ({ Component, pageProps }) => {
         }, 2000);
     }, []);
 
+    useEffect(() => {
+        if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+            document.body.classList.add('safari-browser');
+            console.log('Safari detected');
+        } else {
+            console.log('Not Safari');
+        }
+    }, []);
+
     return (
         <Fragment>
             <Head>

@@ -12,6 +12,31 @@ const Index = () => {
     activeNavMenu();
   }, []);
 
+  // Safari Detection
+  useEffect(() => {
+    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+        document.body.classList.add('safari-browser');
+        console.log('Safari detected');
+    } else {
+        console.log('Not Safari');
+    }
+  }, []);
+
+  // Chrome Detection
+  useEffect(() => {
+    const isChrome =
+        /Chrome/.test(navigator.userAgent) &&
+        /Google Inc/.test(navigator.vendor) &&
+        !/OPR|Opera/.test(navigator.userAgent);
+
+    if (isChrome) {
+        document.body.classList.add('chrome-browser');
+        console.log('Chrome detected');
+    }
+  }, []);
+
+
+  
   useEffect(() => {
     document.body.classList.add('homepage-body');
     

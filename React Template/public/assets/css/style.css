@@ -1811,12 +1811,12 @@ a:focus {
 }
   
 
-.f2-bg-img {
+/* .f2-bg-img {
     position: relative;
     z-index: 2;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 0; /* Remove negative margin */
+    margin-bottom: 0;
     transform: translateY(50px);
 }
 
@@ -1824,36 +1824,74 @@ a:focus {
     position: relative;
     background-color: #9D1FFE;
     overflow: visible;
-    margin-top: -500px; /* Adjust footer positioning to match the overlap */
+    margin-top: -500px; 
     padding-top: 150px;
 }
 
 .footer-content {
     position: relative;
-    z-index: 3; /* Ensure content is above the image */
+    z-index: 3;
     margin-top: 0;
-    /* padding-top: 50px;  */
 }
 
 .additional-questions{
-    z-index: 3; /* Ensure it remains above everything else */
+    z-index: 3; 
     position: relative;
     overflow: visible;
     padding-top: 10px;
 }
 
 .widget {
-    z-index: 3; /* Ensure it remains above everything else */
+    z-index: 3;
     position: relative;
     overflow: visible;
     top: 50px;
 }
 
 .box-btn .fl-btn.st-12.footer {
-    z-index: 4; /* Ensure button remains on top */
+    z-index: 4;
     position: relative;
-    pointer-events: auto; /* Ensure button is clickable */
+    pointer-events: auto;
+} */
+
+.f2-bg-img {
+    position: relative;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0;
+    transform: translateY(50px);
 }
+
+#footer.st-2 {
+    position: relative;
+    background-color: #9D1FFE;
+    overflow: visible;
+    margin-top: -350px; 
+    padding-top: 100px;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 3; /* Ensure content is above the image */
+    margin-top: 0;
+    padding-top: 0;
+    overflow: visible;
+}
+
+.widget {
+    z-index: 4; /* Ensure widgets are above the footer background */
+    position: relative;
+}
+
+.box-btn .fl-btn.st-12.footer {
+    z-index: 5; /* Ensure button is clickable */
+    position: relative;
+    pointer-events: auto; /* Allow interaction */
+}
+
+
+
 
 #footer a,
 #footer p,
