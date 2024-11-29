@@ -1,7 +1,6 @@
 const Footer = ({footerData}) => {
   return (
     <>
-    {/* <div className="footer-background"></div> */}
     <footer id="footer-1">
       <div className="footer-content">
         <div className="inner-content">
