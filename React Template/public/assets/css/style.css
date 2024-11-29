@@ -1798,15 +1798,17 @@ a:focus {
     background-color: #B250FE;
     position: relative;
     color: white;
-    padding: 20px 0;
-    /* margin-top: -100px; */
+    padding: 50px 0;
     overflow: visible;
-    /* background: url(../images/logo/FooterTopper.png) center center no-repeat; */
+    background: url(../images/logo/FooterTopper.png) center center no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
-    min-height: 1000px;
-}
+    z-index: 0; /* Keep normal stacking */
+    min-height: auto; /* Remove fixed minimum height */
+    height: auto; /* Allow dynamic sizing */
+    margin-top: -40px;
+  }
+  
 
 .footer-content {
     position: relative;
