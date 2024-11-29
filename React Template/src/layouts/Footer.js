@@ -77,7 +77,7 @@ const Footer = ({footerData}) => {
                 </div>
               </div>
               <div className="col-12">
-                <div className="footer-bottom jus-ct">
+                <div className="footer-bottom f1 jus-ct">
                   <p className="copy-right">
                     Copyright © {new Date().getFullYear()}, Collins Web Design LLC
                   </p>

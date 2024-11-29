@@ -1808,7 +1808,7 @@ a:focus {
     min-height: auto; /* Remove fixed minimum height */
     height: auto; /* Allow dynamic sizing */
     margin-top: -40px;
-  }
+}
   
 
 .f2-bg-img {

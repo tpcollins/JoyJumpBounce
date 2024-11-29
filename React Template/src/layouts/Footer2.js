@@ -13,7 +13,7 @@ const Footer2 = ({footerData}) => {
             <div className="row">
               <div className="col-12">
                 <div className="widget-footer">
-                  <div className="widget f2-widget widget-logo">
+                  <div className="widget f2 f2-widget widget-logo">
                   <p className="wrap f-mulish short-bio">
                     {footerData.shortBio}
                   </p>
@@ -40,7 +40,7 @@ const Footer2 = ({footerData}) => {
                   </div>
 
                   
-                  <div className="widget widget-business">
+                  <div className="widget f2 widget-business">
                     <div className="inner">
                       <div className="op-time">
                         <h4 className="title-widget">opening hours</h4>
@@ -59,7 +59,7 @@ const Footer2 = ({footerData}) => {
                       </div>
                     </div>
                   </div>
-                  <div className="widget widget-news st-3 additional-questions">
+                  <div className="widget widget-news st-3 additional-questions f2">
                     <h4 className="title-widget additional-title">
                       Additional Questions? Get in Contact with us Today!
                     </h4>
