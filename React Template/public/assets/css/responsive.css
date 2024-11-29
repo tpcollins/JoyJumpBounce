@@ -1210,19 +1210,25 @@
       padding-top: 300px; /* Adjust content placement */
       width: 100%; /* Ensure it matches the background width */
     }
-  
-    /* #footer-1 .widget.widget-logo {
-      margin-top: 70px;
-    }
-  
-    #footer-1 .widget.widget-news {
-      margin-top: 80px;
-    }
-  
-    #footer-1 .widget.widget-business {
-      margin-top: 40px;
-      padding-top: 15px;
-    } */
   }
+
+@media (min-width: 769px) and (max-width: 1650px) {
+    .tf-discovery-2{
+        height: 100px;
+    }
+
+    #footer.st-2{
+        background-size: cover; /* Ensure it spans the full width */
+        width: 100vw;
+    }
+
+    .widget.f2-widget{
+        position: relative;
+        /* padding-top: 300px; */
+    }
+
+    .footer-bottom.f2{
+    }
+}
   
   

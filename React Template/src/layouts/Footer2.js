@@ -9,7 +9,7 @@ const Footer2 = ({footerData}) => {
           <div className="row">
             <div className="col-12">
               <div className="widget-footer">
-                <div className="widget widget-logo">
+                <div className="widget f2-widget widget-logo">
                   <p className="wrap f-mulish">
                     {footerData.shortBio}
                   </p>
@@ -37,7 +37,7 @@ const Footer2 = ({footerData}) => {
                 </div>
 
                 
-                <div className="widget widget-business">
+                <div className="widget f2-widget widget-business">
                   <div className="inner">
                     <div className="op-time">
                       <h4 className="title-widget">opening hours</h4>
@@ -56,7 +56,7 @@ const Footer2 = ({footerData}) => {
                     </div>
                   </div>
                 </div>
-                <div className="widget widget-news st-3">
+                <div className="widget f2-widget widget-news st-3">
                   <h4 className="title-widget">Addtional Questions? Get in Contact with us Today!</h4>
                   
                   <div className="box-btn">
@@ -76,7 +76,7 @@ const Footer2 = ({footerData}) => {
               </div>
             </div>
             <div className="col-12">
-              <div className="footer-bottom jus-ct">
+              <div className="footer-bottom f2 jus-ct">
                 <p className="copy-right">
                   Copyright © {new Date().getFullYear()}, Collins Web Design LLC
                 </p>
