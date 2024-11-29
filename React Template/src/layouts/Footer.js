@@ -1,5 +1,7 @@
 const Footer = ({footerData}) => {
   return (
+    <>
+    {/* <div className="footer-background"></div> */}
     <footer id="footer-1">
       <div className="footer-content">
         <div className="inner-content">
@@ -7,25 +9,24 @@ const Footer = ({footerData}) => {
             <div className="row">
               <div className="col-12">
                 <div className="widget-footer">
-                  <div className="widget widget-logo">
-                    <p className="wrap f-mulish">
-                      {footerData.shortBio}
-                    </p>
+                <div className="widget widget-logo">
+                  <p className="wrap f-mulish short-bio">
+                    {footerData.shortBio}
+                  </p>
 
                     <div className="list-contact">
                       <ul>
                         {footerData.contactSection.map((item, idx) => (
-                          <li 
-                          className="fx"
-                          key={idx}
-                          >
+                          <li className="fx contact-item" key={idx}>
                             {item.type === "phoneNumber" ? (
                               <a href={item.href}>
-                                <i className={item.className} /> {item.title}
+                                <i className={item.className} /> 
+                                <span className="contact-title">{item.title}</span>
                               </a>
                             ) : (
                               <span>
-                                <i className={item.className} /> {item.title}
+                                <i className={item.className} /> 
+                                <span className="contact-title">{item.title}</span>
                               </span>
                             )}
                           </li>
@@ -34,7 +35,6 @@ const Footer = ({footerData}) => {
                     </div>
                   </div>
 
-                  
                   <div className="widget widget-business">
                     <div className="inner">
                       <div className="op-time">
@@ -54,20 +54,24 @@ const Footer = ({footerData}) => {
                       </div>
                     </div>
                   </div>
-                  <div className="widget widget-news st-3">
-                    <h4 className="title-widget">Addtional Questions? Get in Contact with us Today!</h4>
+                  <div className="widget widget-news st-3 additional-questions">
+                    <h4 className="title-widget additional-title">
+                      Additional Questions? Get in Contact with us Today!
+                    </h4>
                     
                     <div className="box-btn">
                       <a 
-                      className="fl-btn st-12 footer"
-                      href="/contactus"
+                        className="fl-btn st-12 footer"
+                        href="/contactus"
                       >
-                          <span 
+                        <span 
                           className="inner"
                           style={{
                             fontSize: '10px !important'
                           }}
-                          >Go to Contact Page</span>
+                        >
+                          Go to Contact Page
+                        </span>
                       </a>
                     </div>
                   </div>
@@ -85,6 +89,7 @@ const Footer = ({footerData}) => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 export default Footer;

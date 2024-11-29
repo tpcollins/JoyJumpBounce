@@ -1191,3 +1191,33 @@
             display: none;
         }
     }
+
+
+/* Table of Contents (everything above came with template 
+1. Footer 1
+*/
+
+@media (min-width: 769px) and (max-width: 1650px) {
+    #footer-1 {
+      /* background: url(../images/logo/FooterTopper.png) center bottom no-repeat;
+      background-size: contain;
+      min-height: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end; */
+    }
+
+
+    #footer-1 .widget.widget-logo{
+        margin-top: 30px;
+    }
+
+    #footer-1 .widget.widget-business{
+        margin-top: auto;
+        padding-right: 0px;
+    }
+
+    #footer-1 .widget.widget-news{
+        margin-top: 50px;
+    }
+}

@@ -41,6 +41,7 @@
     * Cart Modal
     * Checkout Page
     * Book Now Button
+    * Footer
 
 */
 /* button 
@@ -69,9 +70,8 @@
 }
 
 .fl-btn.st-12.footer{
-  /* width: 200px !important;
-  align-self: flex-end; */
   font-size: 1.71em;
+  z-index: 9999 !important;
 }
 
 .fl-btn .inner {
@@ -7709,4 +7709,52 @@
     font-size: 16px; /* Adjust font size for smaller screens */
     padding: 8px 15px;
   }
+}
+
+/* Footer
+--------------------------------------------------*/
+.short-bio, 
+.contact-title {
+  display: inline-block; /* Ensure the box wraps tightly around the text */
+  background-color: rgba(26, 185, 255, 0.9);
+  color: white; /* Text color */
+  padding: 10px 15px; /* Add space inside the box */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Add a shadow */
+  font-size: 16px; /* Adjust font size */
+}
+
+.short-bio {
+  display: block; /* Ensures it takes up full width if needed */
+  background-color: rgba(26, 185, 255, 0.9); /* Slightly darker background */
+  color: white; /* White text for readability */
+  padding: 0px 30px; /* Add more padding for better spacing */
+  padding-bottom: 15px;
+  border-radius: 10px; /* Slightly more rounded corners */
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4); /* Increase shadow intensity */
+  max-width: 400px; /* Limit the width to avoid stretching */
+  margin: 0 auto; /* Center the box horizontally */
+  text-align: center; /* Center-align text */
+  word-wrap: break-word; /* Ensure long words break properly */
+}
+
+.contact-title {
+  margin-left: 8px; /* Space between icon and text */
+}
+
+.additional-title {
+  display: inline-block;
+  background-color: rgba(26, 185, 255, 0.9) !important;
+  color: white;
+  padding: 15px 20px; 
+  border-radius: 10px; 
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3); 
+  font-size: 18px; 
+  margin-bottom: 15px; 
+}
+
+.additional-button {
+  position: relative;
+  z-index: 9999 !important;
+  pointer-events: auto;
 }
