@@ -1250,7 +1250,7 @@
 2. Footer 2
 */
     /* Footer 2 responsive design for desktop screens */
-    @media (min-width: 1700px) {
+    @media (min-width: 1650px) {
         #footer.st-2{
             margin-bottom: -300px;
         }
@@ -1315,46 +1315,46 @@
     }
 
     /* Footer 2 responsive design for laptop screens */
-    @media (min-width: 769px) and (max-width: 1700px) {
-        /* Safari */
-        body.safari-browser #footer.st-2 {
-            margin-top: -50px !important;
-            margin-bottom: -300px;
-        }
+    /* Footer 2 responsive design for laptop screens - Safari */
 
+    /* @media (min-width: 769px) and (max-width: 1649px){ */
+        body.safari-browser #footer.st-2 {
+            margin-top: -70px !important;
+            margin-bottom: -340px;
+        }
+    
         body.safari-browser .footer-bottom.f2{
             z-index: 3;
             position: relative;
             overflow: visible;
-            top: -300px;
+            top: -350px;
         }
-
-        /* Chrome */
+    
+        /* Footer 2 responsive design for laptop screens - Chrome */
         body.chrome-browser #footer.st-2 {
-            margin-top: -55px !important;
-            margin-bottom: -280px;
+            margin-top: -70px !important;
+            margin-bottom: -340px;
         }
-
+    
         body.chrome-browser .footer-bottom.f2{
             z-index: 3;
             position: relative;
             overflow: visible;
-            top: -280px;
+            top: -350px;
         }
-
-        /* Firefox */
+    
         @-moz-document url-prefix() {
             #footer.st-2 {
-                margin-top: -50px !important;
-                margin-bottom: -280px;
+                margin-top: -70px !important;
+                margin-bottom: -340px;
             }
         
             .footer-bottom.f2{
                 z-index: 3;
                 position: relative;
                 overflow: visible;
-                top: -280px;
+                top: -350px;
             }
         }
-    }
+    /* } */
     
