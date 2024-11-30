@@ -1249,10 +1249,10 @@
 /* 
 2. Footer 2
 */
-    /* Footer 2 responsive design for laptop screens */
+    /* Footer 2 responsive design for desktop screens */
     @media (min-width: 1650px) {
         #footer.st-2{
-            margin-bottom: -100px;
+            margin-bottom: -300px;
         }
 
         .f2-bg-img {
@@ -1284,7 +1284,7 @@
             z-index: 3;
             position: relative;
             overflow: visible;
-            top: -200px;
+            top: -350px;
         }
         
         .box-btn .fl-btn.st-12.footer {
@@ -1297,47 +1297,64 @@
             z-index: 3;
             position: relative;
             overflow: visible;
-            top: -125px;
+            top: -300px;
         }
-    }
 
-    /* Footer 2 responsive design for laptop screens - Safari */
-    body.safari-browser #footer.st-2 {
-        margin-top: -200px !important;
-        margin-bottom: -190px;
-    }
-
-    body.safari-browser .footer-bottom.f2{
-        z-index: 3;
-        position: relative;
-        overflow: visible;
-        top: -180px;
-    }
-
-    /* Footer 2 responsive design for laptop screens - Chrome */
-    body.chrome-browser #footer.st-2 {
-        margin-top: -200px !important;
-        margin-bottom: -190px;
-    }
-
-    body.chrome-browser .footer-bottom.f2{
-        z-index: 3;
-        position: relative;
-        overflow: visible;
-        top: -180px;
-    }
-
-    @-moz-document url-prefix() {
-        #footer.st-2 {
-            margin-top: -175px !important;
-            margin-bottom: -190px;
+        /* Chrome */
+        body.chrome-browser #footer.st-2 {
+            margin-top: -350px !important;
+            margin-bottom: -350px;
         }
     
-        .footer-bottom.f2{
+        body.chrome-browser .footer-bottom.f2{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            top: -350px;
+        }
+    }
+
+    /* Footer 2 responsive design for laptop screens */
+    @media (min-width: 769px) and (max-width: 1650px) {
+        /* Safari */
+        body.safari-browser #footer.st-2 {
+            margin-top: -200px !important;
+            margin-bottom: -190px;
+        }
+
+        body.safari-browser .footer-bottom.f2{
             z-index: 3;
             position: relative;
             overflow: visible;
             top: -180px;
+        }
+
+        /* Chrome */
+        body.chrome-browser #footer.st-2 {
+            margin-top: -200px !important;
+            margin-bottom: -190px;
+        }
+
+        body.chrome-browser .footer-bottom.f2{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            top: -180px;
+        }
+
+        /* Firefox */
+        @-moz-document url-prefix() {
+            #footer.st-2 {
+                margin-top: -175px !important;
+                margin-bottom: -190px;
+            }
+        
+            .footer-bottom.f2{
+                z-index: 3;
+                position: relative;
+                overflow: visible;
+                top: -180px;
+            }
         }
     }
     
