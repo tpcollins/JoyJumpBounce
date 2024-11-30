@@ -1315,46 +1315,46 @@
     }
 
     /* Footer 2 responsive design for laptop screens */
-    @media (min-width: 769px) and (max-width: 1650px) {
+    /* @media (min-width: 769px) and (max-width: 1650px) { */
         /* Safari */
         body.safari-browser #footer.st-2 {
-            margin-top: -200px !important;
-            margin-bottom: -190px;
+            margin-top: -50px !important;
+            margin-bottom: -300px;
         }
 
         body.safari-browser .footer-bottom.f2{
             z-index: 3;
             position: relative;
             overflow: visible;
-            top: -180px;
+            top: -300px;
         }
 
         /* Chrome */
         body.chrome-browser #footer.st-2 {
-            margin-top: -200px !important;
-            margin-bottom: -190px;
+            margin-top: -55px !important;
+            margin-bottom: -280px;
         }
 
         body.chrome-browser .footer-bottom.f2{
             z-index: 3;
             position: relative;
             overflow: visible;
-            top: -180px;
+            top: -280px;
         }
 
         /* Firefox */
         @-moz-document url-prefix() {
             #footer.st-2 {
-                margin-top: -175px !important;
-                margin-bottom: -190px;
+                margin-top: -50px !important;
+                margin-bottom: -280px;
             }
         
             .footer-bottom.f2{
                 z-index: 3;
                 position: relative;
                 overflow: visible;
-                top: -180px;
+                top: -280px;
             }
         }
-    }
+    /* } */
     
