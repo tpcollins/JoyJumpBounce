@@ -1302,7 +1302,7 @@
 
         /* Chrome */
         body.chrome-browser #footer.st-2 {
-            margin-top: -350px !important;
+            margin-top: -300px;
             margin-bottom: -350px;
         }
     
@@ -1319,7 +1319,7 @@
 
     /* @media (min-width: 769px) and (max-width: 1649px){ */
         body.safari-browser #footer.st-2 {
-            margin-top: -70px !important;
+            margin-top: -70px;
             margin-bottom: -340px;
         }
     
@@ -1332,7 +1332,7 @@
     
         /* Footer 2 responsive design for laptop screens - Chrome */
         body.chrome-browser #footer.st-2 {
-            margin-top: -70px !important;
+            margin-top: -70px;
             margin-bottom: -340px;
         }
     
@@ -1345,7 +1345,7 @@
     
         @-moz-document url-prefix() {
             #footer.st-2 {
-                margin-top: -70px !important;
+                margin-top: -70px;
                 margin-bottom: -340px;
             }
         
