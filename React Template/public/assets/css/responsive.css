@@ -1303,29 +1303,29 @@
 
     @media (min-width: 1650px) {
         body.chrome-browser #footer.st-2 {
-            margin-top: -350px !important;
-            margin-bottom: -325px !important;
+            margin-top: -350px;
+            margin-bottom: -325px;
         }
         
         body.chrome-browser .footer-bottom.f2 {
             z-index: 3;
             position: relative;
             overflow: visible;
-            top: -325px !important;
+            top: -325px;
         }
     }
 
     @media (min-width: 1650px) {
         body.firefox-browser #footer.st-2 {
-            margin-top: -350px !important;
-            margin-bottom: -325px !important;
+            margin-top: -350px;
+            margin-bottom: -325px;
         }
         
         body.firefox-browser .footer-bottom.f2 {
             z-index: 3;
             position: relative;
             overflow: visible;
-            top: -325px !important;
+            top: -325px;
         }
     }
     
