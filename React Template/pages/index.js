@@ -35,8 +35,18 @@ const Index = () => {
     }
   }, []);
 
+  // Firefox Detection
+  useEffect(() => {
+    const isFirefox = /Firefox\/\d+\.\d+/i.test(navigator.userAgent);
 
-  
+    if (isFirefox) {
+      document.body.classList.add('firefox-browser');
+      console.log('Firefox detected');
+    } else {
+      console.log('Not Firefox');
+    }
+  }, []);
+
   useEffect(() => {
     document.body.classList.add('homepage-body');
     
