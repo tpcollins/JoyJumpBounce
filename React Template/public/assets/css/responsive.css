@@ -1250,7 +1250,7 @@
 2. Footer 2
 */
     /* Footer 2 responsive design for desktop screens */
-    @media (min-width: 1650px) {
+    @media (min-width: 1700px) {
         #footer.st-2{
             margin-bottom: -300px;
         }
@@ -1315,7 +1315,7 @@
     }
 
     /* Footer 2 responsive design for laptop screens */
-    /* @media (min-width: 769px) and (max-width: 1650px) { */
+    @media (min-width: 769px) and (max-width: 1700px) {
         /* Safari */
         body.safari-browser #footer.st-2 {
             margin-top: -50px !important;
@@ -1356,5 +1356,5 @@
                 top: -280px;
             }
         }
-    /* } */
+    }
     
