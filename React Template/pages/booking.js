@@ -114,6 +114,41 @@ const Booking = () => {
     useEffect(() => {
       activeNavMenu();
     }, []);
+
+    // Chrome Detection
+  useEffect(() => {
+    const isChrome =
+        /Chrome/.test(navigator.userAgent) &&
+        /Google Inc/.test(navigator.vendor) &&
+        !/OPR|Opera/.test(navigator.userAgent);
+
+    if (isChrome) {
+        document.body.classList.add('chrome-browser');
+        console.log('Chrome detected');
+    }
+  }, []);
+
+  // Safari Detection
+  useEffect(() => {
+    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+        document.body.classList.add('safari-browser');
+        console.log('Safari detected');
+    } else {
+        console.log('Not Safari');
+    }
+  }, []);
+
+  // Firefox Detection
+  useEffect(() => {
+    const isFirefox = /Firefox\/\d+\.\d+/i.test(navigator.userAgent);
+
+    if (isFirefox) {
+      document.body.classList.add('firefox-browser');
+      console.log('Firefox detected');
+    } else {
+      console.log('Not Firefox');
+    }
+  }, []);
     
     // useEffect(() => {
     //   console.log("show on booking useEffect: ", isOpen)
