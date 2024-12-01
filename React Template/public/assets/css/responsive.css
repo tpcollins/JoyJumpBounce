@@ -1242,6 +1242,52 @@
             overflow: visible;
             padding-top: 20px;
         }
+
+        /* Safari */
+        body.safari-browser #footer-1{
+            background: url(../images/logo/FooterTopperLaptopChrome.png) center bottom no-repeat;
+            background-size: cover;
+            width: 100vw; 
+            padding: 40px 0; 
+            margin: -38px auto; 
+        }
+
+        body.safari-browser .footer-bottom.f1{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            top: -50px;
+        }
+
+        body.safari-browser .additional-questions.f1{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            padding-top: 20px;
+        }
+
+        /* Firefox */
+        body.firefox-browser #footer-1{
+            background: url(../images/logo/FooterTopperLaptopChrome.png) center bottom no-repeat;
+            background-size: cover;
+            width: 100vw; 
+            padding: 40px 0; 
+            margin: -38px auto; 
+        }
+
+        body.firefox-browser .footer-bottom.f1{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            top: -50px;
+        }
+
+        body.firefox-browser .additional-questions.f1{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            padding-top: 20px;
+        }
     }
 
     /* Footer 1 responsive design for desktop screens */
