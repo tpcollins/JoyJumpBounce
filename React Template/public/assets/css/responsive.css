@@ -1328,10 +1328,10 @@
             overflow: visible;
             top: -350px;
         }
-    
+
         /* Firefox */
         body.firefox-browser #footer.st-2 {
-            margin-top: -350px;
+            margin-top: -50px;
             margin-bottom: -325px;
         }
         
