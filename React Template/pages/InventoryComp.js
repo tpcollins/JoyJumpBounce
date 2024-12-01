@@ -14,6 +14,18 @@ const InventoryComp = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const isChrome =
+            /Chrome/.test(navigator.userAgent) &&
+            /Google Inc/.test(navigator.vendor) &&
+            !/OPR|Opera/.test(navigator.userAgent);
+    
+        if (isChrome) {
+            document.body.classList.add('chrome-browser');
+            console.log('Chrome detected');
+        }
+      }, []);
+
     return (
         <>
 
