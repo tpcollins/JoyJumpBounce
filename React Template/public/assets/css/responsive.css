@@ -1202,18 +1202,45 @@
 1. Footer 1
 */
     /* Footer 1 responsive design for laptop screens */
-    @media (min-width: 769px) and (max-width: 1650px) {
+    @media (min-width: 769px) and (max-width: 1700px) {
         #footer-1 {
-        background: url(../images/logo/FooterTopperLaptop.png) center bottom no-repeat;
-        background-size: cover;
-        width: 100vw; 
-        padding: 40px 0; 
-        margin: 0 auto; 
+            background: url(../images/logo/FooterTopperLaptop.png) center bottom no-repeat;
+            background-size: cover;
+            width: 100vw; 
+            padding: 40px 0; 
+            margin: 0 auto; 
         }
         
         .footer-content {
-        padding-top: 300px; 
-        width: 100%;
+            padding-top: 300px; 
+            width: 100%;
+        }
+
+        .additional-questions.f1{
+            padding-top: 20px;
+        }
+
+        /* Chrome */
+        body.chrome-browser #footer-1{
+            background: url(../images/logo/FooterTopperLaptopChrome.png) center bottom no-repeat;
+            background-size: cover;
+            width: 100vw; 
+            padding: 40px 0; 
+            margin: -38px auto; 
+        }
+
+        body.chrome-browser .footer-bottom.f1{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            top: -50px;
+        }
+
+        body.chrome-browser .additional-questions.f1{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            padding-top: 20px;
         }
     }
 

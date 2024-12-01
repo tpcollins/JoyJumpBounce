@@ -8,7 +8,7 @@ const Footer = ({footerData}) => {
             <div className="row">
               <div className="col-12">
                 <div className="widget-footer">
-                <div className="widget widget-logo">
+                  <div className="widget f1 widget-logo">
                   <p className="wrap f-mulish short-bio">
                     {footerData.shortBio}
                   </p>
@@ -34,7 +34,7 @@ const Footer = ({footerData}) => {
                     </div>
                   </div>
 
-                  <div className="widget widget-business">
+                  <div className="widget widget-business f1">
                     <div className="inner">
                       <div className="op-time">
                         <h4 className="title-widget">opening hours</h4>
@@ -53,7 +53,7 @@ const Footer = ({footerData}) => {
                       </div>
                     </div>
                   </div>
-                  <div className="widget widget-news st-3 additional-questions">
+                  <div className="widget widget-news st-3 additional-questions f1">
                     <h4 className="title-widget additional-title">
                       Additional Questions? Get in Contact with us Today!
                     </h4>

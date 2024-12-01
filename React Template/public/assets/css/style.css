@@ -1792,7 +1792,6 @@ a:focus {
     background-size: cover;
     position: relative;
     overflow: visible;
-    /* z-index: 99; */
 }
 
 #footer-1 {
@@ -1809,50 +1808,6 @@ a:focus {
     height: auto; /* Allow dynamic sizing */
     margin-top: -40px;
 }
-  
-
-/* .f2-bg-img {
-    position: relative;
-    z-index: 2;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-bottom: 0;
-    transform: translateY(50px);
-}
-
-#footer.st-2 {
-    position: relative;
-    background-color: #9D1FFE;
-    overflow: visible;
-    margin-top: -500px; 
-    padding-top: 150px;
-}
-
-.footer-content {
-    position: relative;
-    z-index: 3;
-    margin-top: 0;
-}
-
-.additional-questions{
-    z-index: 3; 
-    position: relative;
-    overflow: visible;
-    padding-top: 10px;
-}
-
-.widget {
-    z-index: 3;
-    position: relative;
-    overflow: visible;
-    top: 50px;
-}
-
-.box-btn .fl-btn.st-12.footer {
-    z-index: 4;
-    position: relative;
-    pointer-events: auto;
-} */
 
 .f2-bg-img {
     position: relative;
