@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import Footer2 from "../src/layouts/Footer2";
-import Footer from "../src/layouts/Footer";
 import Header1 from "../src/layouts/header/Header1";
 import Layout from "../src/layouts/Layout";
 import { activeNavMenu } from "../src/utils";
