@@ -15,6 +15,8 @@ const CheckoutPage = ({ data }) => {
     // State to require form values
     const [isFormValid, setIsFormValid] = useState(false);
     const apiRoute = data.apiRoute;
+    // State to handle already booked floats
+    const [alreadyBooked, setAlreadyBooked] = useState([]);
     
     // Cart Items from Redux
     const cartItems = useSelector((state) => state.cart.items);
@@ -62,20 +64,22 @@ const CheckoutPage = ({ data }) => {
         return true;
     };
 
-    let alreadyBooked = [];
-
     useEffect(() => {
         console.log("alreadyBooked: ", alreadyBooked);
     }, [alreadyBooked]);
 
+    useEffect(() => {
+        console.log("cartItems useEffect: ", cartItems);
+    }, [cartItems]);
+
     const fetchBookedFloats = async () => {
         try {
             const itemsToCheck = cartItems.map(item => ({
-                date: item.date,
+                date: new Date(item.date).toLocaleDateString('en-US'), // Convert to MM/DD/YYYY
                 title: item.title,
             }));
     
-            const response = await fetch('/api/getBookedFloats', {
+            const response = await fetch('/api/getBookedFloatsCheckout', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -86,28 +90,27 @@ const CheckoutPage = ({ data }) => {
             const result = await response.json();
     
             if (response.ok) {
-                // Create an empty array to track already booked floats
-                
+                let alreadyBooked = []; // Initialize the array to track booked items
     
                 // Compare itemsToCheck with the response from the database
                 itemsToCheck.forEach(item => {
-                    const isBooked = result.bookedFloats.some(
-                        booked => booked.title === item.title && booked.date === item.date
-                    );
+                    const isBooked = result.bookedFloats.some(booked => {
+                        return booked.title === item.title && booked.date === item.date;
+                    });
+    
                     if (isBooked) {
                         alreadyBooked.push({ title: item.title, date: item.date });
                     }
                 });
-
-                console.log("response.ok triggered");
-
-                console.log("alreadyBooked:", alreadyBooked);
-
+    
+                // Log to verify alreadyBooked contents
+                console.log("alreadyBooked: ", alreadyBooked);
+    
                 // Check if there are any booked items
                 if (alreadyBooked.length > 0) {
-                    alert('One or more of your items has already been booked. Please review your selection.');
+                    alert('One or more of your items has already been booked. Please review your selection. We apologize for the inconvenience.');
                     window.location.href = '/booking';
-                } else if (alreadyBooked.length <= 0){
+                } else {
                     // All items are available, proceed to checkout
                     handleCheckout();
                 }
@@ -117,7 +120,7 @@ const CheckoutPage = ({ data }) => {
         } catch (error) {
             console.error('Error during fetch:', error);
         }
-    };      
+    };              
 
     const handleCheckout = async () => {
         // Generate a unique order ID for this checkout session
