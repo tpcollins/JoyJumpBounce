@@ -127,7 +127,7 @@ export const checkoutData = {
         {title: "Last Name", type: "text"},
         {title: "Grass or Concrete", type: "radio", options: [ {label: "Grass", value: "Grass"}, {label: "Concrete", value: "Concrete"}]},
         {title: "Water Hook up Within 100 Feet?", type: "radio", options: [ {label: "Yes", value: "Yes"}, {label: "No", value: "No"}]},
-        {title: "Power Hook up Within 100 Feet?*", type: "radio", options: [ {label: "Yes", value: "Yes"}, {label: "No", value: "No"}], message: "You will need to rent a generator from Accessories or provide a generator if there is no power hookup within 100 feet*"},
+        {title: "Power Hook up Within 100 Feet?*", type: "radio", options: [ {label: "Yes", value: "Yes"}, {label: "No", value: "No"}], message: "You will need to rent a generator from Accessories if there is no power hookup within 100 feet*"},
         {title: "Phone Number", type: "text", placeholder: "Phone Number ........"},
         {title: "Street Address", type: "text", placeholder: "Street Address ........"},
         {title: "City", type: "text", placeholder:"City ........"}, 
