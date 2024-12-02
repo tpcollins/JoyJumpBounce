@@ -83,6 +83,25 @@ const CheckoutPage = ({ data }) => {
             zipCode: formValues['Zip Code']
         }));
 
+        updatedCartItems.push({
+            orderId: null, // Leave this null as it's not needed for this row
+            firstName: null,
+            lastName: null,
+            setupTime: null,
+            turf: null,
+            waterHookup: null,
+            powerHookup: null,
+            phoneNumber: null,
+            address: null,
+            city: null,
+            state: null,
+            zipCode: null,
+            inflatable: null,
+            price: null,
+            totalPrice: totalPrice,
+            deliveryCharge: deliveryCharge
+        });
+        
         // Add an empty row for separation
         updatedCartItems.push({
             isSeparator: true, // Flag to indicate this is a separator row

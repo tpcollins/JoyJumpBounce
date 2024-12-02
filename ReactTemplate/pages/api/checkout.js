@@ -43,7 +43,9 @@ export default async function handler(req, res) {
           'Address': item.address,  // Default value
           'City': item.city,
           'State': item.state,
-          'Zip Code': item.zipCode
+          'Zip Code': item.zipCode,
+          'Total Price': item.totalPrice,
+          'Delivery Charge': item.deliveryCharge
         },
       })),
       function (err, records) {
