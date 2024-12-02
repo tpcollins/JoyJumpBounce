@@ -2,3 +2,4 @@ node_modules
 .next/
 joy-jump-bounce-booking-365985620bd5.json
 .env.local
+.vercel
