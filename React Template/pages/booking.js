@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 // Non-Template Components
 import ReactCalendar from "./calendar";
 import StockGrid from "../src/R Components/StockGrid";
-import ShoppingCart from "../src/R Components/shoppingcart";
 // import CheckoutModal from "../src/R Components/checkoutmodal";
 // Data
 import { bcyHseStockData, footerData } from "../src/Data/data";
