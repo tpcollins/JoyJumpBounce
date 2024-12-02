@@ -181,7 +181,8 @@ const CheckoutPage = ({ data }) => {
             const result = await response.json();
     
             if (response.ok) {
-                alert('Data sent to Airtable successfully!');
+                dispatch(clearCart());
+                window.location.href = '/checkout-success';
             } else {
                 alert(`Failed to send data: ${result.message}`);
             }
@@ -189,7 +190,6 @@ const CheckoutPage = ({ data }) => {
             console.error('Error during checkout:', error);
             alert('An error occurred while sending data.');
         }
-        dispatch(clearCart());
     };
     
 

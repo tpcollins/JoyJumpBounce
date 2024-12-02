@@ -1,8 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { heroSlider } from "../SliderProps";
-import { invSwiperData } from "../Data/data";
 
-const Slider = () => {
+const Slider = ({data}) => {
 
     return(
     <section className="tf-slider-1">
@@ -17,7 +16,7 @@ const Slider = () => {
                     className="owl-carousel owl-theme none dots-none"
                   >
                     <SwiperSlide className="owl-item">
-                    {invSwiperData.swiperItems.map((item, sdIdx) => (
+                    {data.swiperItems.map((item, sdIdx) => (
                       <div 
                       className="item-slider-1"
                       key={sdIdx}

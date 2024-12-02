@@ -3,8 +3,9 @@ import Footer2 from "../src/layouts/Footer2";
 import Header1 from "../src/layouts/header/Header1";
 import Layout from "../src/layouts/Layout";
 import { activeNavMenu } from "../src/utils";
-import Slider from "../src/components/slider";
-import { footerData, invSwiperData } from "../src/Data/data";
+import CheckoutSlider from "../src/components/slider-checkout";
+import { footerData, checkoutSwiperData } from "../src/Data/data";
+import Footer from "../src/layouts/Footer";
 
 const Index = () => {
   useEffect(() => {
@@ -54,14 +55,14 @@ const Index = () => {
     };
   }, []);
 
-  return (
+  return (  
     <Layout noFooter noHeader bodyClass={"main"}>
       
       <Header1 />
       
-      <Slider data={invSwiperData}/>
+      <CheckoutSlider data={checkoutSwiperData}/>
       
-      <Footer2 footerData={footerData}/>
+      <Footer footerData={footerData}/>
 
     </Layout>
   );

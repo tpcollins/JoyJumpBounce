@@ -64,6 +64,23 @@ export const invSwiperData = {
     ]
 }
 
+export const checkoutSwiperData = {
+    swiperItems: [
+        {sub:"Thanks for Choosing Joy Jump Inflatables! You Will Recieve a Reciept Shortly.", 
+        title: "", 
+        wrap:"Joy Jump Inflatables", 
+        listItems: [
+            "If you feel there is an issue with your order, please reach out to JoyJumpInflatables@gmail.com so we can assist you."
+        ],
+        routeBtns: [
+            {href: "/", text: "Go Back Home", className: "fl-btn st-12"},
+        ],
+        imgs: [
+            {src: "assets/images/logo/chsuccess.png"}
+        ]},
+    ]
+}
+
 // 4. contact form section
 export const subjectData = {
     subjects: [
