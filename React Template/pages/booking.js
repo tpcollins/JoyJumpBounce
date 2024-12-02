@@ -7,7 +7,7 @@ import { LeftArrow, RightArrow } from "../src/Icons";
 import { useEffect, useState } from "react";
 // Non-Template Components
 import ReactCalendar from "./calendar";
-import StockGrid from "../src/R Components/StockGrid";
+import StockGrid from "../src/R Components/stockgrid";
 // import CheckoutModal from "../src/R Components/checkoutmodal";
 // Data
 import { bcyHseStockData, footerData } from "../src/Data/data";
