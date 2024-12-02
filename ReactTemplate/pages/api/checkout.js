@@ -35,7 +35,7 @@ export default async function handler(req, res) {
           'Inflatable': item.title,  // The title of the item
           'Price': Number(item.price),       // The price of the item
           'Booking Date': formatDate(item.date),
-          'Setup Time': formatTime(item.setupTime),   // Default value
+          'Event Start Time': formatTime(item.setupTime),   // Default value
           'Turf': item.turf,           // Default value
           'Water Hookup': item.waterHookup,      // Default value
           'Power Hookup': item.powerHookup,      // Default value

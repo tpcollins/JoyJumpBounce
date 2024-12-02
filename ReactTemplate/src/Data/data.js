@@ -122,7 +122,7 @@ export const accessoryData = {
 export const checkoutData = {
     apiRoute: '/api/checkout',
     fields: [
-        {title: "Setup Time", type: "time"},
+        {title: "What Time Does Your Event Start?*", type: "time", message: "*We will show up an hour before this time to set everything up"},
         {title: "First Name", type: "text"},
         {title: "Last Name", type: "text"},
         {title: "Grass or Concrete", type: "radio", options: [ {label: "Grass", value: "Grass"}, {label: "Concrete", value: "Concrete"}]},

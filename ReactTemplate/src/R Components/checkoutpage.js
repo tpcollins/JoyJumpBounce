@@ -72,7 +72,7 @@ const CheckoutPage = ({ data }) => {
             orderId: orderId,
             firstName: formValues['First Name'],
             lastName: formValues['Last Name'],
-            setupTime: formValues['Setup Time'],
+            setupTime: formValues['What Time Does Your Event Start?*'],
             turf: formValues['Grass or Concrete'],
             waterHookup: formValues['Water Hook up Within 100 Feet?'],
             powerHookup: formValues['Power Hook up Within 100 Feet?*'],
@@ -197,7 +197,7 @@ const CheckoutPage = ({ data }) => {
                             >
                                 <label>{item.title}</label>
                                 {inputElement}
-                                {item.message && <large style={{ color: 'red', textDecoration: 'underline', textDecoration: 'bold'}}>{item.message}</large>}
+                                {item.message && <large style={{ color: 'red', textDecoration: 'underline'}}>{item.message}</large>}
                             </div>
                         );
                     })}
