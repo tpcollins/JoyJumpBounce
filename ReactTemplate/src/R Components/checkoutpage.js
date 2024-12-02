@@ -197,7 +197,7 @@ const CheckoutPage = ({ data }) => {
                             >
                                 <label>{item.title}</label>
                                 {inputElement}
-                                {item.message && <small className="form-text text-muted">{item.message}</small>}
+                                {item.message && <large style={{ color: 'red', textDecoration: 'underline', textDecoration: 'bold'}}>{item.message}</large>}
                             </div>
                         );
                     })}
