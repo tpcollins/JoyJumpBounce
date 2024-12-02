@@ -62,6 +62,63 @@ const CheckoutPage = ({ data }) => {
         return true;
     };
 
+    let alreadyBooked = [];
+
+    useEffect(() => {
+        console.log("alreadyBooked: ", alreadyBooked);
+    }, [alreadyBooked]);
+
+    const fetchBookedFloats = async () => {
+        try {
+            const itemsToCheck = cartItems.map(item => ({
+                date: item.date,
+                title: item.title,
+            }));
+    
+            const response = await fetch('/api/getBookedFloats', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ itemsToCheck }),
+            });
+    
+            const result = await response.json();
+    
+            if (response.ok) {
+                // Create an empty array to track already booked floats
+                
+    
+                // Compare itemsToCheck with the response from the database
+                itemsToCheck.forEach(item => {
+                    const isBooked = result.bookedFloats.some(
+                        booked => booked.title === item.title && booked.date === item.date
+                    );
+                    if (isBooked) {
+                        alreadyBooked.push({ title: item.title, date: item.date });
+                    }
+                });
+
+                console.log("response.ok triggered");
+
+                console.log("alreadyBooked:", alreadyBooked);
+
+                // Check if there are any booked items
+                if (alreadyBooked.length > 0) {
+                    alert('One or more of your items has already been booked. Please review your selection.');
+                    window.location.href = '/booking';
+                } else if (alreadyBooked.length <= 0){
+                    // All items are available, proceed to checkout
+                    handleCheckout();
+                }
+            } else {
+                console.error('Failed to check booked floats:', result.message);
+            }
+        } catch (error) {
+            console.error('Error during fetch:', error);
+        }
+    };      
+
     const handleCheckout = async () => {
         // Generate a unique order ID for this checkout session
         const orderId = `Order-${Date.now()}`;
@@ -241,7 +298,7 @@ const CheckoutPage = ({ data }) => {
                         <Button
                             className="checkout-button"
                             disabled={!isFormValid || cartItems.length === 0}
-                            onClick={handleCheckout}
+                            onClick={fetchBookedFloats}
                             style={{
                                 fontSize: '2em',
                             }}
