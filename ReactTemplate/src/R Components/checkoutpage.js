@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
+import { Circles } from 'react-loader-spinner';
 // Redux Variables
 import { removeItemFromCart, clearCart } from '../redux/slices/cartslice';
 import { useSelector, useDispatch } from 'react-redux';
@@ -16,7 +17,9 @@ const CheckoutPage = ({ data }) => {
     const [isFormValid, setIsFormValid] = useState(false);
     const apiRoute = data.apiRoute;
     // State to handle already booked floats
-    const [alreadyBooked, setAlreadyBooked] = useState([]);
+    const [alreadyBooked] = useState([]);
+    // State to hold loading 
+    const [loading, setLoading] = useState(false);
     
     // Cart Items from Redux
     const cartItems = useSelector((state) => state.cart.items);
@@ -73,12 +76,13 @@ const CheckoutPage = ({ data }) => {
     }, [cartItems]);
 
     const fetchBookedFloats = async () => {
+        setLoading(true); // Start spinner
         try {
             const itemsToCheck = cartItems.map(item => ({
-                date: new Date(item.date).toLocaleDateString('en-US'), // Convert to MM/DD/YYYY
+                date: new Date(item.date).toLocaleDateString('en-US'),
                 title: item.title,
             }));
-    
+
             const response = await fetch('/api/getBookedFloatsCheckout', {
                 method: 'POST',
                 headers: {
@@ -86,41 +90,37 @@ const CheckoutPage = ({ data }) => {
                 },
                 body: JSON.stringify({ itemsToCheck }),
             });
-    
+
             const result = await response.json();
-    
+
             if (response.ok) {
-                let alreadyBooked = []; // Initialize the array to track booked items
-    
-                // Compare itemsToCheck with the response from the database
+                let alreadyBooked = [];
+
                 itemsToCheck.forEach(item => {
                     const isBooked = result.bookedFloats.some(booked => {
                         return booked.title === item.title && booked.date === item.date;
                     });
-    
+
                     if (isBooked) {
                         alreadyBooked.push({ title: item.title, date: item.date });
                     }
                 });
-    
-                // Log to verify alreadyBooked contents
-                console.log("alreadyBooked: ", alreadyBooked);
-    
-                // Check if there are any booked items
+
                 if (alreadyBooked.length > 0) {
                     alert('One or more of your items has already been booked. Please review your selection. We apologize for the inconvenience.');
                     window.location.href = '/booking';
                 } else {
-                    // All items are available, proceed to checkout
-                    handleCheckout();
+                    await handleCheckout(); // Proceed to checkout
                 }
             } else {
                 console.error('Failed to check booked floats:', result.message);
             }
         } catch (error) {
             console.error('Error during fetch:', error);
+        } finally {
+            setLoading(false); // Stop spinner
         }
-    };              
+    };
 
     const handleCheckout = async () => {
         // Generate a unique order ID for this checkout session
@@ -297,16 +297,18 @@ const CheckoutPage = ({ data }) => {
                         <p><strong>Total Price:</strong> ${totalPrice.toFixed(2)}</p>
                     </div>
 
-                    <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'flex-start' }}>
+                    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                         <Button
                             className="checkout-button"
-                            disabled={!isFormValid || cartItems.length === 0}
+                            disabled={!isFormValid || cartItems.length === 0 || loading}
                             onClick={fetchBookedFloats}
-                            style={{
-                                fontSize: '2em',
-                            }}
+                            style={{ fontSize: '2em' }}
                         >
-                            Complete Checkout
+                            {loading ? (
+                                <Circles ariaLabel="loading" color="#ffffff" height="24" width="24" />
+                            ) : (
+                                'Complete Checkout'
+                            )}
                         </Button>
                     </div>
                 </div>
