@@ -25,16 +25,21 @@ const App = ({ Component, pageProps }) => {
         <Fragment>
             <Head>
                 <title>Joy Jump Inflatables</title>
-                {/* Large favicon for modern browsers */}
-                <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/android-chrome-512x512.png" />
-                <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-chrome-192x192.png" />
-                {/* Standard favicon for legacy browsers */}
+                {/* Standard favicon */}
                 <link rel="icon" href="/favicon.ico" />
+                {/* Favicons for modern browsers */}
+                <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/android-chrome-512x512.png" />
+                {/* <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-chrome-192x192.png" /> */}
                 {/* Apple Touch Icon */}
                 <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
-                {/* Manifest for PWA */}
+                {/* Web App Manifest */}
                 <link rel="manifest" href="/site.webmanifest" />
+                {/* Meta for Web App */}
+                <meta name="theme-color" content="#ffffff" />
+                <meta name="apple-mobile-web-app-capable" content="yes" />
+                <meta name="mobile-web-app-capable" content="yes" />
             </Head>
+
 
 
 
