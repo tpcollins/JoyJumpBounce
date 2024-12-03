@@ -25,16 +25,45 @@ const App = ({ Component, pageProps }) => {
         <Fragment>
             <Head>
                 <title>Joy Jump Inflatables</title>
+                {/* Large favicon for modern browsers */}
+                <link rel="icon" type="image/png" sizes="512x512" href="/assets/images/android-chrome-512x512.png" />
+                <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/android-chrome-192x192.png" />
+                {/* Standard favicon for legacy browsers */}
+                <link rel="icon" href="/favicon.ico" />
+                {/* Apple Touch Icon */}
+                <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+                {/* Manifest for PWA */}
+                <link rel="manifest" href="/site.webmanifest" />
+            </Head>
+
+
+
+            {/* <Head>
+                <title>Joy Jump Inflatables</title>
                 <link 
-                href="assets/images/Favicon.png" 
+                href="assets/images/favicon.ico" 
                 rel="shortcut icon" />
                 <link 
-                href="assets/images/Favicon.png" 
+                href="assets/images/favicon.ico" 
                 rel="apple-touch-icon-precomposed"  />
                 <link 
                 href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
                 rel="stylesheet" />
-            </Head>
+
+                <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+                <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
+
+                <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+                <link rel="shortcut icon" href="/favicon.ico" />
+
+                <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+                <link rel="manifest" href="/site.webmanifest" />
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+                    rel="stylesheet"
+                />
+            </Head> */}
             <Provider store={store}>
                 <PersistGate loading={null} persistor={persistor}>
                     {loader && <Preloader />}
@@ -51,33 +80,3 @@ const App = ({ Component, pageProps }) => {
 };
 
 export default App;
-
-// _app.js
-// import Head from "next/head";
-// import React, { Fragment } from "react";
-// import AppWrapper from "./appwrapper";
-// import "../styles/globals.css";
-
-// const App = ({ Component, pageProps }) => {
-//   return (
-//     <AppWrapper>
-//       <Fragment>
-//         <Head>
-//           <title>Joy Jump Inflatables</title>
-//           <link href="assets/images/Favicon.png" rel="shortcut icon" />
-//           <link
-//             href="assets/images/Favicon.png"
-//             rel="apple-touch-icon-precomposed"
-//           />
-//           <link
-//             href="https://fonts.googleapis.com/css2?family=Salsa&display=sw ap"
-//             rel="stylesheet"
-//           />
-//         </Head>
-//         <Component {...pageProps} />
-//       </Fragment>
-//     </AppWrapper>
-//   );
-// };
-
-// export default App;
