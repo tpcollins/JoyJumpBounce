@@ -11,6 +11,7 @@
   "dependencies": {
     "@mapbox/mapbox-sdk": "^0.16.1",
     "@reduxjs/toolkit": "^2.3.0",
+    "@square/web-sdk": "^2.0.1",
     "airtable": "^0.12.2",
     "axios": "^1.7.7",
     "emailjs-com": "^3.2.0",
