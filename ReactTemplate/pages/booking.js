@@ -165,6 +165,10 @@ const Booking = () => {
       console.log('Cart Items Length: ', cartItemsLength)
     }, [cartItemsLength]);
 
+    
+    useEffect(() => {
+      console.log('Cart Items: ', cartItems)
+    }, [cartItems]);
   // Functions
     // Function to fetch date filtered floats array
     const fetchBookedFloats = async (selectedDate) => {
