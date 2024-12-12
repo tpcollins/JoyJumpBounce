@@ -36,6 +36,15 @@ const CheckoutModal = ({
         setShow(openVar);
     }, [openVar]);
 
+    useEffect(() => {
+        if (show) {
+            document.body.classList.add('modal-open');
+        } else {
+            document.body.classList.remove('modal-open');
+        }
+    }, [show]);
+    
+
     return(
         <Modal 
         centered

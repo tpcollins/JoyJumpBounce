@@ -7582,6 +7582,21 @@
 
 /* Cart Modal
 --------------------------------------------------*/
+.modal-backdrop {
+  z-index: 1040 !important;
+}
+
+.modal {
+  z-index: 1050 !important;
+}
+
+.modal-open .nav-wrap {
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(0, 102, 255, 0.5), rgba(0, 204, 255, 0.5));
+  backdrop-filter: blur(4px); /* Adds a subtle blur effect */
+  transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
 .modal-dialog {
   transform: translate(0, -50%);
   top: 20%;

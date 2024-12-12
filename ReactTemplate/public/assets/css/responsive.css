@@ -1196,6 +1196,7 @@
 /* Table of Contents (everything above came with template)
 1. Footer 1
 2. Footer 2
+3. Checkout Modal
 */
 
 /* 
@@ -1415,3 +1416,16 @@
             top: -325px;
         }
     }
+
+/* 
+3. Checkout Modal
+*/
+
+
+/* Might still need to adjust modal positioning on chrome and other web browsers */
+
+@media (min-width: 769px) and (max-width: 1700px){
+    .modal-dialog {
+      top: 30%; /* Adjust to move the modal further down on larger screens */
+    }
+  }
