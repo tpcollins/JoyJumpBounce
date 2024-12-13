@@ -93,7 +93,14 @@ const StockGrid = ({ additionalData, handleAddToCart, stockData }) => {
                                     <div className="price-options">
                                         <p>Select an option:</p>
                                         {item.priceOptions.map((option) => (
-                                            <label key={option.label} className="price-option">
+                                            <label 
+                                            key={option.label} 
+                                            className="price-option"
+                                            // style={{
+                                            //     paddingRight: '35px',
+                                            //     fontSize: '3em'
+                                            // }}
+                                            >
                                                 <input
                                                     type="radio"
                                                     name={`price-option-${item.id}`}

@@ -7687,6 +7687,41 @@
   color: rgba(255, 0, 0, 0.9);
 }
 
+.price-options {
+  /* margin-top: 5px; */
+  /* margin-bottom: 10px; */
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px;  */
+}
+
+/* Style for individual radio buttons */
+.price-option {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem; /* Smaller font size for consistency */
+  font-weight: normal; /* Removes boldness */
+  color: #333; /* Match the text color */
+}
+
+/* Style for the actual radio button */
+.price-option input[type="radio"] {
+  appearance: none; /* Remove default styling */
+  border: 2px solid #ccc; /* Border color */
+  border-radius: 50%; /* Circular shape */
+  width: 20px; /* Size of the radio button */
+  height: 20px;
+  margin-right: 10px; /* Space between button and label */
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Style for selected state */
+.price-option input[type="radio"]:checked {
+  background-color: #ff6347; /* Match the button color */
+  border-color: #ff6347;
+}
+
 /* Book Now Button
 --------------------------------------------------*/
 .side-button {

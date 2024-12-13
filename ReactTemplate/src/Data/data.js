@@ -119,7 +119,7 @@ export const bcyHseStockData = {
           { label: "Wet", price: 225 },
           { label: "Dry", price: 175 },
         ],
-        pgSection: "tropcombo",
+        pgSection: "tropcombo"
       },
       {
         id: 3,

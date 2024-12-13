@@ -57,7 +57,7 @@ const CheckoutPage = ({ data }) => {
             cartItems.some(
                 (item) =>
                     item.title === "Wave Rider" ||
-                    item.title === "Tropical Combo Slide"
+                    (item.title === "Tropical Combo Slide" && item.price === 225)
             )
         ) {
             setWaterFloat(true);
@@ -550,7 +550,7 @@ const CheckoutPage = ({ data }) => {
                                         <p className="cart-item-title">{index + 1}. {item.title}</p>
                                     }
                                     <p className="cart-item-title">Selected Date: {new Date(item.date).toLocaleDateString()}</p>
-                                    <p className="cart-item-price">{item.showPrice}</p>
+                                    <p className="cart-item-price">${item.price}</p>
                                     <Button onClick={() => dispatch(removeItemFromCart(item))}>Remove From Cart</Button>
                                 </div>
                             </div>
