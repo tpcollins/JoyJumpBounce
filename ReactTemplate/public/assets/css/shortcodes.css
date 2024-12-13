@@ -1718,16 +1718,30 @@
   color: var(--primary-color1);
 }
 
-.item-slider-1 .box-content ul li.st-1 i {
-  background-color: #fc477e;
+.item-slider-1 .box-content ul li i {
+  font-size: 2rem; /* Adjust the size as needed */
+  margin-right: 8px; /* Optional: Add spacing between the icon and text */
+  vertical-align: middle; /* Aligns with text */
+  font-style: normal;
 }
 
-.item-slider-1 .box-content ul li.st-2 i {
-  background-color: #b250fe;
+.item-slider-1 .box-content ul li p {
+  display: inline-block; /* Ensure the text stays in line with the icon */
+  vertical-align: middle; /* Align text with the icon */
 }
 
-.item-slider-1 .box-content ul li.st-3 i {
-  background-color: #1ab9ff;
+.item-slider-1 .box-content ul li span {
+  display: inline-flex; /* Ensures proper alignment with text */
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem; /* Adjust size as needed */
+  height: 2.5rem; /* Adjust size as needed */
+  font-size: 1.5rem; /* Adjust emoji size */
+  background-color: rgba(255, 255, 255, 0.8); /* Light background for contrast */
+  border-radius: 50%; /* Makes it circular */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adds a shadow */
+  margin-right: 8px; /* Spacing between icon and text */
+  border: 1px solid rgba(0, 0, 0, 0.1); /* Optional border for extra contrast */
 }
 
 .item-slider-1 .box-btn {

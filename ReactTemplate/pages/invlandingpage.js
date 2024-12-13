@@ -61,13 +61,13 @@ const InvLandingPage = () => {
 
         <div className="landing-container">
             <div className="image-box">
-                <a href="/InventoryComp">
+                <a href="/floats">
                 <img
                     src="assets/images/inflatables/ComboWetSlideNoShadow.png"
                     alt="Bouncy Castles"
                     className="landing-image"
                 />
-                <div className="overlay-text">Bouncy Castles</div> {/* Overlay text */}
+                <div className="overlay-text">Floats</div> {/* Overlay text */}
                 </a>
             </div>
             <div className="image-box">

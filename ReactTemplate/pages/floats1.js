@@ -6,11 +6,11 @@ TODO:
 
 */
 
-import { LeftArrow, RightArrow } from "../Icons";
-import { inventoryData } from "../Data/data";
+import { LeftArrow, RightArrow } from "../src/Icons";
+import { inventoryData } from "../src/Data/data";
 import { useEffect } from "react";
 
-const InventoryComp = () => {
+const Floats = () => {
 
     useEffect(() => {
         document.body.classList.add('inventory-body');
@@ -72,4 +72,4 @@ const InventoryComp = () => {
     );
 };
 
-export default InventoryComp;
+export default Floats;

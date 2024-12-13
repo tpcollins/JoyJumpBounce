@@ -46,20 +46,89 @@ export const inventoryData = {
 // 3. swiper slider section (for slider component)
 export const invSwiperData = {
     swiperItems: [
-        {sub:"Book Today!", 
-        title: "View All of our Inventory Below!", 
+        // Tropical Combo Slide
+        {sub:"Tropical Combo Slide", 
+        title: "Book Today for just $225! ($175 Dry)", 
         wrap:"Joy Jump Inflatables", 
         listItems: [
             "Birthdays!",
             "Get Togethers!",
-            "Tailgates and so Much More!"
+            "Tailgates!"
+        ],
+        icons: [
+            "🎂",
+            "🎉",
+            "🏈"
         ],
         routeBtns: [
-            {href: "#", text: "Inventory", className: "fl-btn st-12"},
-            {href: "#", text: "Booking", className: "fl-btn st-1"},
+            {href: "/floats", text: "View All Floats", className: "fl-btn st-12"},
+            {href: "/booking", text: "Booking", className: "fl-btn st-1"},
         ],
         imgs: [
-            {src: "assets/images/inflatables/DrySlide.png"}
+            {src: "assets/images/inflatables/ComboWetSlideNoShadow.png"}
+        ]},
+        // Dry Slide
+        {sub:"Dry Slide", 
+            title: "Book Today for just $200!", 
+            wrap:"Joy Jump Inflatables", 
+            listItems: [
+                "100% Satisfaction!",
+                "We do Holidays!",
+                "Book Below!"
+            ],
+            icons: [
+                "✅",
+                "🎁",
+                "🛒"
+            ],
+            routeBtns: [
+                {href: "/floats", text: "View All Floats", className: "fl-btn st-12"},
+                {href: "/booking", text: "Booking", className: "fl-btn st-1"},
+            ],
+            imgs: [
+                {src: "assets/images/inflatables/DrySlide2.png"}
+        ]},
+        // Accessories
+        {sub:"Need Additional Party Favors?", 
+            title: "We've got you Covered!", 
+            wrap:"Joy Jump Inflatables", 
+            listItems: [
+                "Chairs!",
+                "Tents!",
+                "Generators and so Much More!"
+            ],
+            icons: [
+                "🪑",
+                "🎪",
+                "⚙️"
+            ],
+            routeBtns: [
+                {href: "/accessories", text: "View All Accessories", className: "fl-btn st-12"},
+                {href: "/booking", text: "Booking", className: "fl-btn st-1"},
+            ],
+            imgs: [
+                {src: "assets/images/accessories/HomepageAccessories.png"}
+        ]},
+        // Contact Us
+        {sub:"Let's get to Know Each Other!", 
+            title: "Send us a Message Today!", 
+            wrap:"Joy Jump Inflatables", 
+            listItems: [
+                "Multi-Day Bookings!",
+                "General Info!",
+                "Let's Chat!"
+            ],
+            icons: [
+                "📅",
+                "❓",
+                "💬"
+            ],
+            routeBtns: [
+                {href: "/contactus", text: "Contact Us", className: "fl-btn st-12"},
+                {href: "/booking", text: "Booking", className: "fl-btn st-1"},
+            ],
+            imgs: [
+                {src: "assets/images/logo/HomepageSliderLogo.png"}
         ]},
     ]
 }

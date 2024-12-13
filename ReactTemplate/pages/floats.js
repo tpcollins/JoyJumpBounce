@@ -4,7 +4,7 @@ import Header1 from "../src/layouts/header/Header1";
 import { useEffect } from "react";
 import Footer from "../src/layouts/Footer";
 
-const InventoryComp = () => {
+const Floats = () => {
 
     useEffect(() => {
         document.body.classList.add('abus-body');
@@ -118,4 +118,4 @@ const InventoryComp = () => {
     );
 };
 
-export default InventoryComp;
+export default Floats;

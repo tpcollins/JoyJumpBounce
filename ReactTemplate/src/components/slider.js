@@ -14,9 +14,13 @@ const Slider = ({data}) => {
                   <Swiper
                     {...heroSlider}
                     className="owl-carousel owl-theme none dots-none"
+                    autoplay={{
+                      delay: 7000, // Time in milliseconds (5 seconds here)
+                      disableOnInteraction: false, // Optional: Keeps autoplay running even after interaction
+                    }}
                   >
-                    <SwiperSlide className="owl-item">
                     {data.swiperItems.map((item, sdIdx) => (
+                    <SwiperSlide className="owl-item">
                       <div 
                       className="item-slider-1"
                       key={sdIdx}
@@ -53,10 +57,14 @@ const Slider = ({data}) => {
                           <ul>
                           {item.listItems.map((li, liIdx) => (
                             <li 
-                            className={`st-${liIdx + 1} fx`}
+                            className={`fx`}
                             key={liIdx}
                             >
-                              <i className="fas fa-check" />
+                              {/* <i>
+                                {item.icons[liIdx]}
+                              </i> */}
+
+                              <span className="emoji-box">{item.icons[liIdx]}</span>
                               <p 
                               className="li-clr-pri-2"
                               >{li}</p>
@@ -87,8 +95,8 @@ const Slider = ({data}) => {
                           </div>
                         </div>
                       </div>
-                    ))}
                     </SwiperSlide>
+                    ))}
                   </Swiper>
                 </div>
               </div>
