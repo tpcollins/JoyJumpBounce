@@ -78,7 +78,8 @@ const Header1 = () => {
                     <li className="clr-pri-2">+(205) 861-4553</li>
                   </ul>
                 </div>
-                <a
+
+                {/* <a
                   href="#"
                   className="menu-bar-right header-menu"
                   onClick={() => setSidebarToggle(true)}
@@ -113,7 +114,8 @@ const Header1 = () => {
                       </g>
                     </g>
                   </svg>
-                </a>
+                </a> */}
+                
               </div>
             </div>
           </div>
