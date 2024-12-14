@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addItemToCart } from '../redux/slices/cartslice';
 
-const AccessoriesGrid = ({ accessoryData }) => {
+const AccessoriesGrid = ({ 
+  accessoryData,
+  date
+}) => {
   const dispatch = useDispatch();
   
   // Local state for selected quantities
