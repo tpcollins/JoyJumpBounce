@@ -15,7 +15,10 @@ const AccessoriesGrid = ({
   // Function to handle quantity selection
   const handleQuantityChange = (item, quantity) => {
     const totalPrice = quantity * item.price;
-    const itemWithQuantity = { ...item, quantity, totalPrice };
+    const date = item.date;
+    const itemWithQuantity = { ...item, quantity, totalPrice, date };
+    
+    console.log("Date: ", date);
     
     setSelectedQuantities(prev => ({
       ...prev,
