@@ -15,7 +15,6 @@ const AccessoriesGrid = ({
   // Function to handle quantity selection
   const handleQuantityChange = (item, quantity) => {
     const totalPrice = quantity * item.price;
-    const date = item.date;
     const itemWithQuantity = { ...item, quantity, totalPrice, date };
     
     console.log("Date: ", date);
@@ -28,6 +27,12 @@ const AccessoriesGrid = ({
     // Dispatch the item with quantity and total price to Redux
     dispatch(addItemToCart(itemWithQuantity));
   };
+
+  const handleAddDate = (item, quantity) => {
+    const itemWithDate = { ...item, date };
+
+    dispatch(addItemToCart(itemWithDate));
+  }
 
   return (
     <div className="accessories-grid">
@@ -54,7 +59,8 @@ const AccessoriesGrid = ({
                   <span
                       id={`add-to-cart-${index}`}
                       className="inner add-to-cart-button"
-                      onClick={() => dispatch(addItemToCart(item))}
+                      onClick={() => dispatch(addItemToCart({ ...item, date }))}
+                      // onClick={handleAddDate(item)}
                   >
                       Add to Cart
                   </span>

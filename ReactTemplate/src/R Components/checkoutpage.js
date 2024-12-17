@@ -40,6 +40,9 @@ const CheckoutPage = ({ data }) => {
     let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
     totalPrice += deliveryCharge;
 
+    // Date for the accessories grid
+    const singleDate = cartItems.length > 0 ? cartItems[0].date : null;
+
     // Card Instance variable for Square
     let cardInstance = null;
 
@@ -536,6 +539,7 @@ const CheckoutPage = ({ data }) => {
 
                     <AccessoriesGrid
                         accessoryData={accessoryData}
+                        date={singleDate}
                     />
 
                     <div className='items'>
