@@ -12,6 +12,7 @@ import ErrorModal from "../src/R Components/errormodal";
 // import CheckoutModal from "../src/R Components/checkoutmodal";
 // Data
 import { bcyHseStockData, footerData } from "../src/Data/data";
+import { multiDayError } from "../src/Data/data";
 // Redux Variables
 import { useDispatch, useSelector } from 'react-redux';
 import { addItemToCart } from "../src/redux/slices/cartslice";
@@ -24,6 +25,7 @@ const Booking = () => {
     const [selectedDate, setSelectedDate] = useState(null);
     const [isDateClicked, setIsDateClicked] = useState(false);
     const [stockData, setStockData] = useState(bcyHseStockData);
+    const [errorModalData] = useState(multiDayError);
 
     // Modal Variables
     // const [isOpen, setIsOpen] = useState(false);
@@ -289,6 +291,7 @@ const Booking = () => {
           )}
 
             <ErrorModal
+                data={errorModalData}
                 errorMessage={errorMessage}
                 openError={openErrorModal}
                 setOpenError={setOpenErrorModal}

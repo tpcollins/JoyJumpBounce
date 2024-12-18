@@ -18,6 +18,7 @@ TABLE OF CONTENTS:
 6. checkout accessories 
 7. checkout modal
 8. footer
+9. error modal
 
 */
 
@@ -262,4 +263,10 @@ export const footerData = {
         {title: "JoyJumpInflatables@gmail.com", className: "far fa-envelope", type: "email"},
         {title: "+1 (205) 861-4553", className: "fal fa-phone", type: "phoneNumber", href: "tel:2058614553"}
     ]
+}
+
+// 9. error modal
+export const multiDayError = {
+    title: "Error",
+    errorMessage: "Multi-day bookings are not available online."
 }

@@ -2,7 +2,7 @@ import { Modal, Button } from 'react-bootstrap';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const ErrorModal = ({ errorMessage, openError, setOpenError }) => {
+const ErrorModal = ({ data, openError, setOpenError }) => {
     const [show, setShow] = useState(false);
 
     const handleModalClose = () => {
@@ -23,20 +23,20 @@ const ErrorModal = ({ errorMessage, openError, setOpenError }) => {
         >
             <Modal.Header closeButton>
                 <Modal.Title style={{ fontSize: '20px', textAlign: 'center' }}>
-                    Error
+                    {data.title}
                 </Modal.Title>
             </Modal.Header>
 
             <Modal.Body style={{ textAlign: 'center' }}>
                 <p>
-                    Multi-day bookings are not available online. <br />
+                    {data.errorMessage} <br />
                     We apologize for the inconvenience.
                 </p>
                 <p>
                     Please give us a call so we can get you the <br />
                     best discount possible at <strong>(205) 861-4553</strong> <br />
                     or visit our&nbsp;
-                        <a href="/contactus" style={{ color: '#007bff', textDecoration: 'underline' }}>
+                        <a href="/contactus" target="_blank" style={{ color: '#007bff', textDecoration: 'underline' }}>
                             contact page
                         </a>
                     &nbsp;to send us a message.
