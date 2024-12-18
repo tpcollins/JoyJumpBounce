@@ -149,9 +149,6 @@ const Booking = () => {
       }
   };
     
-    
-    
-
     // Handler to open modal
     // const handleModalOpen = () =>{
     //   console.log("handleModalOpen clicked");
@@ -159,7 +156,6 @@ const Booking = () => {
     //   console.log("show on booking: ", isOpen)
     // };
 
-  // useEffect
     useEffect(() => {
       activeNavMenu();
     }, []);
