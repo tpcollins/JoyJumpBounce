@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 // Non-Template Components
 import ReactCalendar from "./calendar";
 import StockGrid from "../src/R Components/stockgrid";
+import ErrorModal from "../src/R Components/errormodal";
 // import CheckoutModal from "../src/R Components/checkoutmodal";
 // Data
 import { bcyHseStockData, footerData } from "../src/Data/data";
@@ -26,6 +27,10 @@ const Booking = () => {
 
     // Modal Variables
     // const [isOpen, setIsOpen] = useState(false);
+
+    // Error modal variables
+    const [openErrorModal, setOpenErrorModal] = useState(false);
+    const [errorMessage, setErrorMessage] = useState("");
 
     // Cart Variables
     const dispatch = useDispatch();
@@ -58,47 +63,90 @@ const Booking = () => {
     };
 
     // Handler to add items to cart
+    // const handleAddToCart = (item, index) => {
+    //   const cartIcon = document.getElementById("cart-icon");
+    //   const button = document.querySelector(`#add-to-cart-${index}`); // Select specific button
+    
+    //   // Proceed with the animation even if the cart icon is hidden
+    //   if (cartIcon && button) {
+    //     const cartRect = cartIcon.getBoundingClientRect();
+    //     const buttonRect = button.getBoundingClientRect();
+    
+    //     // Create a clone of the button
+    //     const clone = button.cloneNode(true);
+    //     clone.style.position = "fixed";
+    //     clone.style.left = `${buttonRect.left}px`;
+    //     clone.style.top = `${buttonRect.top}px`;
+    //     clone.style.transition = "transform 1s ease, opacity 1s ease";
+    //     clone.style.zIndex = 1000;
+    
+    //     // Add the clone to the document
+    //     document.body.appendChild(clone);
+    
+    //     // Start animation to the cart
+    //     requestAnimationFrame(() => {
+    //       clone.style.transform = `translate(${cartRect.left - buttonRect.left}px, ${cartRect.top - buttonRect.top}px) scale(3)`;
+    //       clone.style.opacity = "0"; // Fade out as it reaches the cart
+    //     });
+    
+    //     // Remove the clone after the animation completes
+    //     setTimeout(() => {
+    //       clone.remove();
+    //     }, 1000); // Match the transition duration
+    //   }
+    
+    //   // Add item to cart and ensure cart icon appears
+    //   if (cartItemsLength === 0) {
+    //     setTimeout(() => {
+    //       dispatch(addItemToCart(item)); // Dispatch after animation
+    //     }, 1000); // Slight delay to synchronize with animation
+    //   } else {
+    //     dispatch(addItemToCart(item));
+    //   }
+    // };
+
     const handleAddToCart = (item, index) => {
+      // Check if the cart already has items and if the date matches
+      if (cartItems.length > 0 && cartItems[0].date !== item.date) {
+          setErrorMessage("This action is not allowed. The item date doesn't match the existing cart items.");
+          setOpenErrorModal(true); // Trigger the error modal
+          return; // Prevent adding the item to the cart
+      }
+
       const cartIcon = document.getElementById("cart-icon");
-      const button = document.querySelector(`#add-to-cart-${index}`); // Select specific button
-    
-      // Proceed with the animation even if the cart icon is hidden
+      const button = document.querySelector(`#add-to-cart-${index}`);
+
       if (cartIcon && button) {
-        const cartRect = cartIcon.getBoundingClientRect();
-        const buttonRect = button.getBoundingClientRect();
-    
-        // Create a clone of the button
-        const clone = button.cloneNode(true);
-        clone.style.position = "fixed";
-        clone.style.left = `${buttonRect.left}px`;
-        clone.style.top = `${buttonRect.top}px`;
-        clone.style.transition = "transform 1s ease, opacity 1s ease";
-        clone.style.zIndex = 1000;
-    
-        // Add the clone to the document
-        document.body.appendChild(clone);
-    
-        // Start animation to the cart
-        requestAnimationFrame(() => {
-          clone.style.transform = `translate(${cartRect.left - buttonRect.left}px, ${cartRect.top - buttonRect.top}px) scale(3)`;
-          clone.style.opacity = "0"; // Fade out as it reaches the cart
-        });
-    
-        // Remove the clone after the animation completes
-        setTimeout(() => {
-          clone.remove();
-        }, 1000); // Match the transition duration
+          const cartRect = cartIcon.getBoundingClientRect();
+          const buttonRect = button.getBoundingClientRect();
+          const clone = button.cloneNode(true);
+          clone.style.position = "fixed";
+          clone.style.left = `${buttonRect.left}px`;
+          clone.style.top = `${buttonRect.top}px`;
+          clone.style.transition = "transform 1s ease, opacity 1s ease";
+          clone.style.zIndex = 1000;
+
+          document.body.appendChild(clone);
+
+          requestAnimationFrame(() => {
+              clone.style.transform = `translate(${cartRect.left - buttonRect.left}px, ${cartRect.top - buttonRect.top}px) scale(3)`;
+              clone.style.opacity = "0";
+          });
+
+          setTimeout(() => {
+              clone.remove();
+          }, 1000);
       }
-    
-      // Add item to cart and ensure cart icon appears
+
       if (cartItemsLength === 0) {
-        setTimeout(() => {
-          dispatch(addItemToCart(item)); // Dispatch after animation
-        }, 1000); // Slight delay to synchronize with animation
+          setTimeout(() => {
+              dispatch(addItemToCart(item));
+          }, 1000);
       } else {
-        dispatch(addItemToCart(item));
+          dispatch(addItemToCart(item));
       }
-    };
+  };
+    
     
     
 
@@ -240,17 +288,11 @@ const Booking = () => {
             </div>
           )}
 
-          {/* {cartItemsLength > 0 && (
-            <ShoppingCart 
-            onClick={handleModalOpen}
+            <ErrorModal
+                errorMessage={errorMessage}
+                openError={openErrorModal}
+                setOpenError={setOpenErrorModal}
             />
-          )}
-          
-
-          <CheckoutModal 
-          openVar={isOpen}
-          setOpenVar={setIsOpen}
-          /> */}
         </div>
 
         <Footer footerData={footerData}/>
