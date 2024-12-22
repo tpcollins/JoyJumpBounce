@@ -1198,6 +1198,7 @@
 2. Footer 2
 3. Checkout Modal
 4. Nav bar
+5. Homepage Slider
 */
 
 /* 
@@ -1432,14 +1433,40 @@
   }
 
 /* 
-3. Nav bar
+4. Nav bar
 */
 
 @media (min-width: 769px) and (max-width: 1700px){
     .nav-wrap {
-        transform: translateX(4%);
+        transform: translateX(3.8%);
     }
     .top-bar-2{
         transform: translateX(4%);
     }
+}
+
+/* 
+5. Homepage Slider
+*/
+@media (min-width: 769px) and (max-width: 1700px){
+    .tf-slider-1 .overlay {
+        top: 20px;
+        scale: 80%;
+    }
+
+    
+    .item-slider-1 .title{
+        top: 20px !important;
+    }
+
+    /* 
+    .item-slider-1 .sub{
+        scale: 70%;
+    } */
+
+    .tf-slider-1 .item-slider-1{
+        scale: 80%;
+        transform: translateY(-20%);
+    }
+
 }
