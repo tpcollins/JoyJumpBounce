@@ -15,8 +15,8 @@ const Slider = ({data}) => {
                     {...heroSlider}
                     className="owl-carousel owl-theme none dots-none"
                     autoplay={{
-                      delay: 7000, // Time in milliseconds (5 seconds here)
-                      disableOnInteraction: false, // Optional: Keeps autoplay running even after interaction
+                      delay: 7000,
+                      disableOnInteraction: false,
                     }}
                   >
                     {data.swiperItems.map((item, sdIdx) => (

@@ -1197,6 +1197,7 @@
 1. Footer 1
 2. Footer 2
 3. Checkout Modal
+4. Nav bar
 */
 
 /* 
@@ -1429,3 +1430,16 @@
       top: 30%; /* Adjust to move the modal further down on larger screens */
     }
   }
+
+/* 
+3. Nav bar
+*/
+
+@media (min-width: 769px) and (max-width: 1700px){
+    .nav-wrap {
+        transform: translateX(4%);
+    }
+    .top-bar-2{
+        transform: translateX(4%);
+    }
+}
