@@ -44,9 +44,6 @@ const CheckoutPage = ({ data }) => {
     // Date for the accessories grid
     const singleDate = cartItems.length > 0 ? cartItems[0].date : null;
 
-    // Card Instance variable for Square
-    let cardInstance = null;
-
     // Concatenate address components into one string
     //  **** DELETING THE FULLADDRESS VARIABLE CAUSES THE PROXIMITY METER TO BREAK FOR SOME REASON. DO NOT DELETE IT ****
     const fullAddress = `${formValues['Street Address']}, ${formValues['City']}, ${formValues['State']} ${formValues['Zip Code']}`;
@@ -149,31 +146,31 @@ const CheckoutPage = ({ data }) => {
         // Tokenize the card details to get a payment token (sourceId)
         const result = await cardInstance.tokenize();
 
-        if (result.status === 'OK') {
-            const paymentToken = result.token;
+            if (result.status === 'OK') {
+                const paymentToken = result.token;
 
-            // Send the token to your backend for processing
-            const response = await fetch('/api/createPayment', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                token: paymentToken, // Pass the generated sourceId (token)
-                firstName: formValues['First Name'], // Customer first name
-                lastName: formValues['Last Name'], // Customer last name
-                price: totalPrice * 100, // Convert total price to cents (Square expects price in cents)
-            }),
-            });
+                // Send the token to your backend for processing
+                const response = await fetch('/api/createPayment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    token: paymentToken, // Pass the generated sourceId (token)
+                    firstName: formValues['First Name'], // Customer first name
+                    lastName: formValues['Last Name'], // Customer last name
+                    price: totalPrice * 100, // Convert total price to cents (Square expects price in cents)
+                }),
+                });
 
-            const paymentResult = await response.json();
+                const paymentResult = await response.json();
 
-            return paymentResult;
-        } else {
-            console.error('Tokenization failed:', result.errors);
-            alert('Payment failed. Please check your card details.');
-            return { success: false };
-        }
+                return paymentResult;
+            } else {
+                console.error('Tokenization failed:', result.errors);
+                alert('Payment failed. Please check your card details.');
+                return { success: false };
+            }
         } catch (error) {
         console.error('Payment error:', error);
         alert('An error occurred during payment.');
