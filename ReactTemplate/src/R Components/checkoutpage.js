@@ -90,6 +90,22 @@ const CheckoutPage = ({ data }) => {
         initializePayments();
     }, []);
 
+    // useEffect(() => {
+    //     const setupCard = async () => {
+    //         if (typeof window !== 'undefined' && window.Square) {
+    //             const cardInstance = await initializePayments();
+    //             if (cardInstance) {
+    //                 setCard(cardInstance); // Save the card instance in state
+    //             }
+    //         } else {
+    //             console.error('Square Payments SDK is not loaded');
+    //         }
+    //     };
+    
+    //     setupCard();
+    // }, []);
+    
+
     // Function to handle form input change
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -143,11 +159,18 @@ const CheckoutPage = ({ data }) => {
     // Function to handle the payment process
     const handlePayment = async (cardInstance) => {
         try {
-        // Tokenize the card details to get a payment token (sourceId)
-        const result = await cardInstance.tokenize();
+            // Tokenize the card details to get a payment token (sourceId)
+            const result = await cardInstance.tokenize();
+
+            let firstName = formValues['First Name'] // Customer first name
+            let lastName = formValues['Last Name'] // Customer last name
+            let price = totalPrice * 100 // Convert total price to cents (Square expects price in cents)
+
+            console.log("First name sq: ", firstName, "Last name sq: ", lastName, "Price sq: ", price);
 
             if (result.status === 'OK') {
                 const paymentToken = result.token;
+                console.log("Token sq: ", paymentToken);
 
                 // Send the token to your backend for processing
                 const response = await fetch('/api/createPayment', {
@@ -155,12 +178,12 @@ const CheckoutPage = ({ data }) => {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({
-                    token: paymentToken, // Pass the generated sourceId (token)
-                    firstName: formValues['First Name'], // Customer first name
-                    lastName: formValues['Last Name'], // Customer last name
-                    price: totalPrice * 100, // Convert total price to cents (Square expects price in cents)
-                }),
+                    body: JSON.stringify({
+                        token: paymentToken, // Pass the generated sourceId (token)
+                        firstName: formValues['First Name'], // Customer first name
+                        lastName: formValues['Last Name'], // Customer last name
+                        price: totalPrice * 100, // Convert total price to cents (Square expects price in cents)
+                    }),
                 });
 
                 const paymentResult = await response.json();
