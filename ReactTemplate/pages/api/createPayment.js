@@ -23,26 +23,38 @@ export default async function handler(req, res) {
     const idempotencyKey = new Date().getTime().toString();
 
     try {
+      // Ensure price is a valid integer
+      if (!Number.isInteger(price)) {
+          res.status(400).json({ error: 'Price must be an integer.' });
+          return;
+      }
+  
       const response = await squareClient.paymentsApi.createPayment({
-        sourceId: token,
-        idempotencyKey: idempotencyKey,
-        amountMoney: {
-          amount: parseInt(price, 10), // Ensure price is an integer
-          currency: 'USD',
-        },
-        customerDetails: {
-          givenName: firstName,
-          familyName: lastName,
-        },
+          sourceId: token,
+          idempotencyKey: idempotencyKey,
+          amountMoney: {
+              amount: Number(price), // Ensure it's a valid number
+              currency: 'USD',
+          },
+          customerDetails: {
+              givenName: firstName,
+              familyName: lastName,
+          },
       });
-
+  
       const paymentResult = response.result.payment;
-
       res.status(200).json({ success: true, payment: paymentResult });
     } catch (error) {
-      console.error('Error creating payment:', error);
-      res.status(500).json({ error: 'Failed to create payment' });
+        console.error('Error creating payment:', error);
+    
+        // Handle specific serialization or validation issues
+        if (error.message.includes('BigInt')) {
+            res.status(500).json({ error: 'Price cannot be a BigInt. Ensure it is a valid integer.' });
+        } else {
+            res.status(500).json({ error: 'Failed to create payment.' });
+        }
     }
+  
   } else {
     res.status(405).json({ error: 'Only POST requests are allowed' });
   }

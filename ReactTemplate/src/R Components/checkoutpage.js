@@ -35,11 +35,14 @@ const CheckoutPage = ({ data }) => {
     const dispatch = useDispatch();
 
     // Delivery Charge Variable
-    const [deliveryCharge, setDeliveryCharge] = useState(null);
+    const [deliveryCharge, setDeliveryCharge] = useState(0);
 
     // Calculate total price
-    let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
-    totalPrice += deliveryCharge;
+    let totalPrice = cartItems.reduce(
+        (sum, item) => sum + parseFloat(item.price) * (item.quantity || 1),
+        0
+    );
+    totalPrice += Number(deliveryCharge || 0);
 
     // Date for the accessories grid
     const singleDate = cartItems.length > 0 ? cartItems[0].date : null;
@@ -67,45 +70,57 @@ const CheckoutPage = ({ data }) => {
         }
     }, [cartItems]);
 
-    // Initialize Square Payments and Card UI
     useEffect(() => {
-        const initializePayments = async () => {
-        if (typeof window !== 'undefined' && window.Square) {
-            try {
-            const paymentsInstance = window.Square.payments(
-                'sandbox-sq0idb-5Nc6RAjZkLqlYcvGAHxnOA', // Replace with your Application ID
-                'L82JRJN986YEA' // Replace with your Location ID
-            );
-            setPayments(paymentsInstance);
-
-            const cardInstance = await paymentsInstance.card();
-            await cardInstance.attach('#card-container');
-            setCard(cardInstance);
-            } catch (error) {
-            console.error('Failed to initialize Square Payments:', error);
+        const setupPayments = async () => {
+            if (typeof window !== 'undefined' && window.Square) {
+                try {
+                    // Initialize payments instance if not already initialized
+                    const paymentsInstance = window.Square.payments(
+                        'sandbox-sq0idb-5Nc6RAjZkLqlYcvGAHxnOA', // Sandbox Application ID
+                        'L82JRJN986YEA' // Sandbox Location ID
+                    );
+                    setPayments(paymentsInstance);
+                    console.log('Payments instance initialized:', paymentsInstance);
+    
+                    // Initialize card instance and attach to DOM
+                    const cardInstance = await paymentsInstance.card();
+                    await cardInstance.attach('#card-container');
+                    setCard(cardInstance);
+                    console.log('Card instance successfully attached');
+                } catch (error) {
+                    console.error('Failed to initialize Square Payments or Card:', error);
+                }
+            } else {
+                console.error('Square Payments SDK is not loaded');
             }
-        }
         };
-
-        initializePayments();
-    }, []);
-
+    
+        setupPayments();
+    }, []); // Empty dependency array ensures this runs only once on component mount    
+    
+    // Initialize Square Payments and Card UI
     // useEffect(() => {
-    //     const setupCard = async () => {
+    //     const initializePayments = async () => {
     //         if (typeof window !== 'undefined' && window.Square) {
-    //             const cardInstance = await initializePayments();
-    //             if (cardInstance) {
-    //                 setCard(cardInstance); // Save the card instance in state
+    //             try {
+    //             const paymentsInstance = window.Square.payments(
+    //                 'sandbox-sq0idb-5Nc6RAjZkLqlYcvGAHxnOA', // Replace with your Application ID
+    //                 'L82JRJN986YEA' // Replace with your Location ID
+    //             );
+    //             setPayments(paymentsInstance);
+
+    //             const cardInstance = await paymentsInstance.card();
+    //             await cardInstance.attach('#card-container');
+    //             setCard(cardInstance);
+    //             } catch (error) {
+    //             console.error('Failed to initialize Square Payments:', error);
     //             }
-    //         } else {
-    //             console.error('Square Payments SDK is not loaded');
     //         }
     //     };
-    
-    //     setupCard();
+
+    //     initializePayments();
     // }, []);
     
-
     // Function to handle form input change
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -130,64 +145,63 @@ const CheckoutPage = ({ data }) => {
         return true;
     };
 
-    // Function to initialize the Square Payments card instance
-    const initializeCard = async () => {
-        try {
-            // Initialize the Payments instance
-            const payments = await SquarePayments(
-                'sandbox-sq0idb-5Nc6RAjZkLqlYcvGAHxnOA', // Sandbox Application ID
-                'L82JRJN986YEA'                  // Replace with valid Sandbox Location ID
-            );
+    // // Function to initialize the Square Payments card instance
+    // const initializeCard = async () => {
+    //     try {
+    //         // Check if payments instance already exists in state
+    //         if (!payments) {
+    //             console.error("Payments instance not initialized.");
+    //             return null;
+    //         }
     
-            if (!payments) {
-                console.error("Failed to initialize Payments");
-                return null;
-            }
+    //         // Check if card instance already exists in state
+    //         if (!card) {
+    //             const cardInstance = await payments.card();
+    //             await cardInstance.attach('#card-container');
+    //             setCard(cardInstance); // Save to state
+    //             console.log('Card instance successfully attached');
+    //             return cardInstance;
+    //         }
     
-            // Initialize the card instance
-            const cardInstance = await payments.card();
-            await cardInstance.attach('#card-container'); // Attach the card UI to a div with ID 'card-container'
-    
-            console.log('Card instance successfully initialized');
-            return cardInstance;
-        } catch (error) {
-            console.error('Failed to initialize card:', error);
-            return null;
-        }
-    };
+    //         console.log('Card instance already initialized');
+    //         return card; // Return existing card instance
+    //     } catch (error) {
+    //         console.error('Failed to initialize card:', error);
+    //         return null;
+    //     }
+    // };    
 
     // Function to handle the payment process
-    const handlePayment = async (cardInstance) => {
+    const handlePayment = async () => {
         try {
-            // Tokenize the card details to get a payment token (sourceId)
-            const result = await cardInstance.tokenize();
-
-            let firstName = formValues['First Name'] // Customer first name
-            let lastName = formValues['Last Name'] // Customer last name
-            let price = totalPrice * 100 // Convert total price to cents (Square expects price in cents)
-
-            console.log("First name sq: ", firstName, "Last name sq: ", lastName, "Price sq: ", price);
-
+            // Check if card instance exists
+            if (!card) {
+                console.error("Card instance not initialized.");
+                alert("Payment setup failed. Please try refreshing the page.");
+                return { success: false };
+            }
+    
+            // Tokenize the card details
+            const result = await card.tokenize();
+    
             if (result.status === 'OK') {
                 const paymentToken = result.token;
-                console.log("Token sq: ", paymentToken);
-
+    
                 // Send the token to your backend for processing
                 const response = await fetch('/api/createPayment', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
                     body: JSON.stringify({
-                        token: paymentToken, // Pass the generated sourceId (token)
-                        firstName: formValues['First Name'], // Customer first name
-                        lastName: formValues['Last Name'], // Customer last name
-                        price: totalPrice * 100, // Convert total price to cents (Square expects price in cents)
+                        token: paymentToken,
+                        firstName: formValues['First Name'],
+                        lastName: formValues['Last Name'],
+                        price: Math.round(totalPrice * 100, 2)
                     }),
                 });
-
+    
                 const paymentResult = await response.json();
-
                 return paymentResult;
             } else {
                 console.error('Tokenization failed:', result.errors);
@@ -195,82 +209,82 @@ const CheckoutPage = ({ data }) => {
                 return { success: false };
             }
         } catch (error) {
-        console.error('Payment error:', error);
-        alert('An error occurred during payment.');
-        return { success: false };
+            console.error('Payment error:', error);
+            alert('An error occurred during payment.');
+            return { success: false };
         }
     };
+    
 
     // Function to handle the checkout process
     const handleCheckout = async () => {
         // Generate a unique order ID for this checkout session
         const orderId = `Order-${Date.now()}`;
-
+    
         // Add form data and order ID to each cart item
         const updatedCartItems = cartItems.map((item) => ({
-        ...item,
-        orderId,
-        firstName: formValues['First Name'],
-        lastName: formValues['Last Name'],
-        setupTime: formValues['What Time Does Your Event Start?*'],
-        turf: formValues['Grass or Concrete'],
-        waterHookup: formValues['Water Hook up Within 100 Feet?'],
-        powerHookup: formValues['Power Hook up Within 100 Feet?'],
-        phoneNumber: formValues['Phone Number'],
-        address: formValues['Street Address'],
-        city: formValues['City'],
-        state: formValues['State'],
-        zipCode: formValues['Zip Code'],
+            ...item,
+            orderId,
+            firstName: formValues['First Name'],
+            lastName: formValues['Last Name'],
+            setupTime: formValues['What Time Does Your Event Start?*'],
+            turf: formValues['Grass or Concrete'],
+            waterHookup: formValues['Water Hook up Within 100 Feet?'],
+            powerHookup: formValues['Power Hook up Within 100 Feet?'],
+            phoneNumber: formValues['Phone Number'],
+            address: formValues['Street Address'],
+            city: formValues['City'],
+            state: formValues['State'],
+            zipCode: formValues['Zip Code'],
         }));
-
+    
         // Add an extra row for totals
         updatedCartItems.push({
-        orderId: null,
-        totalPrice: totalPrice,
-        deliveryCharge: deliveryCharge,
+            orderId: null,
+            totalPrice: totalPrice,
+            deliveryCharge: deliveryCharge,
         });
-
+    
         try {
-        // Ensure the card is initialized before payment
-        const cardInstance = await initializeCard();
-
-        if (!cardInstance) {
-            alert('Card initialization failed. Please try again.');
-            return;
-        }
-
-        // Process the payment
-        const paymentResult = await handlePayment(cardInstance);
-
-        if (paymentResult?.success) {
-            // If payment is successful, send updated cart data to the backend
-            const response = await fetch(apiRoute, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                cartItems: updatedCartItems,
-            }),
-            });
-
-            const result = await response.json();
-
-            if (response.ok) {
-            // Clear the cart and redirect to the success page
-            dispatch(clearCart());
-            window.location.href = '/checkout-success';
-            } else {
-            alert(`Failed to send order data: ${result.message}`);
+            // Check if the card instance is ready
+            if (!card) {
+                console.error("Card instance is not initialized.");
+                alert('Payment setup failed. Please refresh the page and try again.');
+                return;
             }
-        } else {
-            alert('Payment failed. Please try again.');
-        }
+    
+            // Process the payment
+            const paymentResult = await handlePayment();
+    
+            if (paymentResult?.success) {
+                // If payment is successful, send updated cart data to the backend
+                const response = await fetch(apiRoute, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        cartItems: updatedCartItems,
+                    }),
+                });
+    
+                const result = await response.json();
+    
+                if (response.ok) {
+                    // Clear the cart and redirect to the success page
+                    dispatch(clearCart());
+                    window.location.href = '/checkout-success';
+                } else {
+                    alert(`Failed to send order data: ${result.message}`);
+                }
+            } else {
+                alert('Payment failed. Please try again.');
+            }
         } catch (error) {
-        console.error('Error during checkout:', error);
-        alert('An error occurred during checkout.');
+            console.error('Error during checkout:', error);
+            alert('An error occurred during checkout.');
         }
-    };
+    };    
 
     const fetchBookedFloats = async () => {
         setLoading(true); // Start spinner
