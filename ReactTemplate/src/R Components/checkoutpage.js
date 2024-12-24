@@ -35,14 +35,11 @@ const CheckoutPage = ({ data }) => {
     const dispatch = useDispatch();
 
     // Delivery Charge Variable
-    const [deliveryCharge, setDeliveryCharge] = useState(0);
+    const [deliveryCharge, setDeliveryCharge] = useState(null);
 
     // Calculate total price
-    let totalPrice = cartItems.reduce(
-        (sum, item) => sum + parseFloat(item.price) * (item.quantity || 1),
-        0
-    );
-    totalPrice += Number(deliveryCharge || 0);
+    let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
+    totalPrice += deliveryCharge;
 
     // Date for the accessories grid
     const singleDate = cartItems.length > 0 ? cartItems[0].date : null;
