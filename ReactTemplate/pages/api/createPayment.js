@@ -33,7 +33,7 @@ export default async function handler(req, res) {
           sourceId: token,
           idempotencyKey: idempotencyKey,
           amountMoney: {
-              amount: Number(500), // Ensure it's a valid number
+              amount: Number(price), // Ensure it's a valid number
               currency: 'USD',
           },
           customerDetails: {
@@ -42,8 +42,15 @@ export default async function handler(req, res) {
           },
       });
   
-      const paymentResult = response.result.payment;
-      res.status(200).json({ success: true, payment: paymentResult });
+      // Sanitize response to avoid BigInt serialization issues
+      const sanitizedResponse = JSON.parse(
+          JSON.stringify(response, (_, value) =>
+              typeof value === 'bigint' ? value.toString() : value
+          )
+      );
+  
+      console.log("Sanitized Response:", sanitizedResponse);
+      res.status(200).json({ success: true, payment: sanitizedResponse });
     } catch (error) {
         console.error('Error creating payment:', error);
     
@@ -54,8 +61,5 @@ export default async function handler(req, res) {
             res.status(500).json({ error: 'Failed to create payment.' });
         }
     }
-  
-  } else {
-    res.status(405).json({ error: 'Only POST requests are allowed' });
-  }
+  }  
 }
