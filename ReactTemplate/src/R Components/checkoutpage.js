@@ -1,4 +1,16 @@
-// TODO: Set correct variables for receipt
+/* TODOS:
+1. Get quantity displaying properly for accessories when necessary
+
+2. Get price updated on the checkout page for when there are multiple quantities with accessories (total price is fine -
+- but the unit price is not. i.e: 7 chairs is still saying $2 instead of $14)
+
+3. Make complete checkout button unclickable if card container is not filled in
+
+4. Add disclaimer or make card container permenanat somehow. Probably for MVP we will just have a disclaimer (see aria log:
+Receipt Email Before Redirect
+)
+
+*/
 
 import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
@@ -123,17 +135,28 @@ const CheckoutPage = ({ data }) => {
     // }, []);
 
     // Function to send receipt email
-    const sendReceiptEmail = (customerName, date, message) => {
+    const sendReceiptEmail = (customerName, orderId, totalPrice, toEmail) => {
+
+        let message = cartItems.map((item, index) => {
+            return `${index + 1}. ${item.quantity || 1}x ${item.title} - $${(item.price * (item.quantity || 1)).toFixed(2)}`;
+        }).join('\n');
+
+        if (deliveryCharge ? message += `\n\n Delivery Charge $${deliveryCharge.toFixed(2)}` : message += "");
+
         const templateParams = {
             to_name: customerName,  // Matches {{to_name}} in the template
-            date: date,            // Matches {{date}} in the template
+            order_ID: orderId,            // Matches {{date}} in the template
             message: message,      // Matches {{message}} in the template
+            total_price: totalPrice.toFixed(2),
+            to_email: toEmail,
+            reply_to: 'no-reply@joyjumpbounce.com', // Add this line
+            from_name: 'Joy Jump Bounce'  // Add this to make it clearer who it's from
         };
     
         emailjs
             .send(
                 process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Replace with your EmailJS service ID
-                NEXT_PUBLIC_EMAILJS_TEMPLATE_RECEIPT_ID, // Replace with your EmailJS template ID
+                process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_RECEIPT_ID, // Replace with your EmailJS template ID
                 templateParams,
                 process.env.NEXT_PUBLIC_EMAILJS_USER_ID // Replace with your EmailJS public key
             )
@@ -296,23 +319,32 @@ const CheckoutPage = ({ data }) => {
                 });
     
                 const result = await response.json();
-    
                 if (response.ok) {
                     // Clear the cart
                     dispatch(clearCart());
-    
+            
                     // Send receipt email
                     const customerName = `${formValues['First Name']} ${formValues['Last Name']}`;
-                    sendReceiptEmail(customerName, orderId, totalPrice);
-    
-                    // Redirect to the success page
-                    window.location.href = '/checkout-success';
-                } else {
+                    const toEmail = `${formValues['Email']}`;
+                    console.log("customer name: ", customerName);
+                    console.log("orderID: ", orderId);
+                    console.log("total price: ", totalPrice);
+            
+                    try {
+                        await sendReceiptEmail(customerName, orderId, totalPrice, toEmail);
+                        // Redirect to the success page after the email is sent
+                        window.location.href = '/checkout-success';
+                    } catch (error) {
+                        console.error("Error sending email:", error);
+                        // Handle the error as needed
+                    }
+                }else{
                     alert(`Failed to send order data: ${result.message}`);
                 }
-            } else {
-                alert('Payment failed. Please try again.');
             }
+            // } else {
+            //     alert('Payment failed. Please try again.');
+            // }
         } catch (error) {
             console.error('Error during checkout:', error);
             alert('An error occurred during checkout.');
