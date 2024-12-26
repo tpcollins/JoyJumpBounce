@@ -16,7 +16,7 @@ TABLE OF CONTENTS:
 4. contact form section
 5. stock grid
 6. checkout accessories 
-7. checkout modal
+7. checkout page
 8. footer
 9. error modal
 
@@ -237,13 +237,14 @@ export const accessoryData = {
     ]
 }
 
-// 7. checkout modal
+// 7. checkout page
 export const checkoutData = {
     apiRoute: '/api/checkout',
     fields: [
         {title: "What Time Does Your Event Start?*", type: "time", message: "*We will show up an hour before this time to set everything up"},
         {title: "First Name", type: "text"},
         {title: "Last Name", type: "text"},
+        {title: "Email", type: "text"},
         {title: "Grass or Concrete", type: "radio", options: [ {label: "Grass", value: "Grass"}, {label: "Concrete", value: "Concrete"}]},
         {title: "Water Hook up Within 100 Feet?", type: "radio", options: [ {label: "Yes", value: "Yes"}, {label: "No", value: "No"}]},
         {title: "Power Hook up Within 100 Feet?*", type: "radio", options: [ {label: "Yes", value: "Yes"}, {label: "No", value: "No"}], message: "*You will need to rent a generator from Accessories if there is no power hookup within 100 feet"},

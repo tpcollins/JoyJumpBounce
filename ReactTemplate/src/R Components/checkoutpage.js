@@ -1,4 +1,4 @@
-// TODO: Setup Email JS for sending receipt
+// TODO: Set correct variables for receipt
 
 import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
@@ -121,6 +121,31 @@ const CheckoutPage = ({ data }) => {
 
     //     initializePayments();
     // }, []);
+
+    // Function to send receipt email
+    const sendReceiptEmail = (customerName, date, message) => {
+        const templateParams = {
+            to_name: customerName,  // Matches {{to_name}} in the template
+            date: date,            // Matches {{date}} in the template
+            message: message,      // Matches {{message}} in the template
+        };
+    
+        emailjs
+            .send(
+                process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID, // Replace with your EmailJS service ID
+                NEXT_PUBLIC_EMAILJS_TEMPLATE_RECEIPT_ID, // Replace with your EmailJS template ID
+                templateParams,
+                process.env.NEXT_PUBLIC_EMAILJS_USER_ID // Replace with your EmailJS public key
+            )
+            .then(
+                (response) => {
+                    console.log('Receipt email sent successfully:', response.status, response.text);
+                },
+                (error) => {
+                    console.error('Error sending receipt email:', error);
+                }
+            );
+    };
     
     // Function to handle form input change
     const handleInputChange = (e) => {
@@ -137,7 +162,7 @@ const CheckoutPage = ({ data }) => {
     };
 
     const handleValidateForm = () => {
-        const requiredFields = ["First Name", "Last Name", "Street Address", "City", "State", "Zip Code"];
+        const requiredFields = ["First Name", "Last Name", "Email", "Street Address", "City", "State", "Zip Code"];
         for (let field of requiredFields) {
             if (!formValues[field] || formValues[field].trim() === "") {
                 return false;
@@ -228,10 +253,11 @@ const CheckoutPage = ({ data }) => {
             orderId,
             firstName: formValues['First Name'],
             lastName: formValues['Last Name'],
+            email: formValues['Email'],
             setupTime: formValues['What Time Does Your Event Start?*'],
             turf: formValues['Grass or Concrete'],
             waterHookup: formValues['Water Hook up Within 100 Feet?'],
-            powerHookup: formValues['Power Hook up Within 100 Feet?'],
+            powerHookup: formValues['Power Hook up Within 100 Feet?*'],
             phoneNumber: formValues['Phone Number'],
             address: formValues['Street Address'],
             city: formValues['City'],
@@ -272,8 +298,14 @@ const CheckoutPage = ({ data }) => {
                 const result = await response.json();
     
                 if (response.ok) {
-                    // Clear the cart and redirect to the success page
+                    // Clear the cart
                     dispatch(clearCart());
+    
+                    // Send receipt email
+                    const customerName = `${formValues['First Name']} ${formValues['Last Name']}`;
+                    sendReceiptEmail(customerName, orderId, totalPrice);
+    
+                    // Redirect to the success page
                     window.location.href = '/checkout-success';
                 } else {
                     alert(`Failed to send order data: ${result.message}`);

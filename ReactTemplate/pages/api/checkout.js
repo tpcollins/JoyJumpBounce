@@ -32,6 +32,7 @@ export default async function handler(req, res) {
           'Order ID': item.orderId,
           'First Name': item.firstName,
           'Last Name': item.lastName,
+          'Email': item.email,
           'Inflatable': item.title,  // The title of the item
           'Price': Number(item.price),       // The price of the item
           'Booking Date': formatDate(item.date),
