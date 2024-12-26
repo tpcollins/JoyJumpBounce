@@ -1,3 +1,5 @@
+// TODO: Setup Email JS for sending receipt
+
 import { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { Circles } from 'react-loader-spinner';
@@ -9,6 +11,8 @@ import ProximityMeter from '../components/proximitymeter';
 // Accessories
 import AccessoriesGrid from '../components/accessoriesgrid-checkout';
 import { accessoryData } from '../Data/data';
+// Email js
+import emailjs from 'emailjs-com';
 
 import { payments as SquarePayments } from '@square/web-sdk'; // Correct import
 
