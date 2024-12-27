@@ -1496,6 +1496,23 @@ a:focus {
     box-shadow: 0px 4px 8px rgb(0 0 0 / 10%), inset 0px 1px 0px #ececec;
 }
 
+#mainnav-mobi .close {
+    position: absolute; /* Position the button in the top-right corner */
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: red;
+    border: 0;
+    border-radius: 10px;
+    -webkit-appearance: none;
+    font-size: 1.5rem; /* Adjust size for mobile design */
+    color: white;
+    line-height: 1;
+    text-align: center;
+    z-index: 100;
+}  
+
 #mainnav-mobi ul {
 	display   : block;
 	list-style: none;
