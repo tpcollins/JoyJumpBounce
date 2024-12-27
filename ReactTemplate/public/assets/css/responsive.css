@@ -1491,7 +1491,7 @@
         display: none !important;
     }
 
-    .fx{
+    li.fx{
         display: none !important;
     }
 
@@ -1509,6 +1509,6 @@
     }
 
     .btn-menu{
-        margin-top: -5000px;
+        margin-top: 20px;
     }
 }
