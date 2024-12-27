@@ -1475,40 +1475,140 @@
 
 @media(max-width: 768px){
     /* Slider */
-    .title.clr-pri-2{
-        font-size: 25px;
-    }
+        /* Title Text */
+        .title.clr-pri-2{
+            font-size: 25px;
+        }
 
-    .sub.clr-pri-2{
-        font-size: 20px;
-    }
+        /* Sub Text */
+        .sub.clr-pri-2{
+            font-size: 20px;
+        }
 
-    .wrap.clr-pri-1{
-        font-size: 20px;
-    }
+        /* Wrap Text */
+        .wrap.clr-pri-1{
+            font-size: 20px;
+        }
 
-    .li-clr-pri-2{
-        display: none !important;
-    }
+        .box-custom{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
 
-    li.fx{
-        display: none !important;
-    }
+        /* List Item Text */
+        .li-clr-pri-2{
+            display: none !important;
+        }
 
-    .fl-btn.st-12{
-        height: 25px;
-    }
+        /* List Item Emojis */
+        li.fx{
+            display: none !important;
+        }
 
-    .fl-btn.st-1{
-        height: 25px;
-    }
+        /* Buttons */
+            /* Top Button */
+            .fl-btn.st-12{
+                height: 30px;
+                font-size: 13px;
+            }
+
+            /* Bottom Button */
+            .fl-btn.st-1{
+                height: 30px;
+                font-size: 13px;
+            }
+
+            /* Button Container */
+            .box-btn{
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                text-align: center; 
+                flex-direction: column;
+                width: 60%;
+                max-width: 300px; 
+                margin: 0 auto; 
+            }
+
+            .fl-btn {
+                width: 60%;
+                text-align: center; 
+                max-width: 300px; 
+                margin: 0 auto; 
+
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                text-align: center; 
+            }
 
     /* Navbar */
-    .nav-wrap{
-        display: none;
-    }
+        /* Non-mobile Navbar */
+        .nav-wrap{
+            display: none;
+        }
 
-    .btn-menu{
-        margin-top: 20px;
-    }
+        /* Button Menu for Mobile Navbar */
+        .btn-menu{
+            margin-top: 20px;
+        }
+
+    /* Footer */
+        /* Footer Image */
+        .f2-bg-img{
+            transform: translateY(110px)
+        }
+
+        /* First Text Box */
+        .f2.widget-logo{
+            position: inherit;
+            margin-top: -80px;
+        }
+
+        .wrap.f-mulish.short-bio{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+            height: 100%;  
+            padding: 10px; 
+        }
+
+        /* Opening Hours Text Box */
+        #footer.st-2{
+            overflow: visible;
+            margin-top: 0px;
+            /* padding-top: 100px; */
+        }
+
+        .widget.f2.widget-business{
+            display: flex; /* Enable Flexbox */
+            align-items: center; /* Center items vertically */
+            justify-content: center; /* Center items horizontally */
+            text-align: center; /* Ensure text is centered within the box */
+            height: 100%; /* Optional: Ensure the height is consistent */
+            padding: 10px; /* Add padding to prevent text from being too tight */
+        }
+
+        /* Contact Button (Removing from Mobile Design) */
+        .fl-btn.st-12.footer{
+            display: none;
+        }
+    
+    /* Owl Carousel (Home Page Bouncy House Images) */
+        .owl-carousel .owl-item img {
+            display: block !important; /* Ensure visibility */
+            width: 100% !important; /* Scale to fit the container */
+            max-width: 100% !important; /* Prevent overflow */
+            height: auto !important; /* Maintain aspect ratio */
+            visibility: visible !important; /* Override hidden states */
+            opacity: 1 !important; /* Ensure full visibility */
+            right: 0;
+          }
+          
+          .owl-carousel .owl-item {
+            text-align: center;
+          }               
 }
