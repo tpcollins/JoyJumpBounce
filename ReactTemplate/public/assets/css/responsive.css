@@ -1448,6 +1448,8 @@
 /* 
 5. Homepage Slider
 */
+
+/* Laptop Screen */
 @media (min-width: 769px) and (max-width: 1700px){
     .tf-slider-1 .overlay {
         top: 20px;
@@ -1469,4 +1471,44 @@
         transform: translateY(-15%);
     }
 
+}
+
+@media(max-width: 768px){
+    /* Slider */
+    .title.clr-pri-2{
+        font-size: 25px;
+    }
+
+    .sub.clr-pri-2{
+        font-size: 20px;
+    }
+
+    .wrap.clr-pri-1{
+        font-size: 20px;
+    }
+
+    .li-clr-pri-2{
+        display: none !important;
+    }
+
+    .fx{
+        display: none !important;
+    }
+
+    .fl-btn.st-12{
+        height: 25px;
+    }
+
+    .fl-btn.st-1{
+        height: 25px;
+    }
+
+    /* Navbar */
+    .nav-wrap{
+        display: none;
+    }
+
+    .btn-menu{
+        margin-top: -5000px;
+    }
 }

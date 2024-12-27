@@ -1,16 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import {
-  About,
-  Blog,
-  Classes,
-  Contact,
-  Event,
-  Home,
-  Pages,
-  Program,
-  Shop,
-  Teacher,
+  Inventory,
 } from "./Menus";
 
 const MobileMenu = () => {
@@ -33,7 +24,7 @@ const MobileMenu = () => {
       <div className="top-bar">
         <div className="inner jus-ct">
           <p className="clr-pri-1">
-            Working Jours : Sun - Friday, 08:00 am - 05:00 pm
+            Working Hours : Monday - Friday, 08:00 am - 05:00 pm
           </p>
         </div>
       </div>
@@ -155,92 +146,13 @@ const MobileMenu = () => {
           style={{ display: toggle ? "block" : "none" }}
         >
           <ul className="menu" id="mainnav">
-            <li className="menu-item-has-children">
-              <a href="#">HOME</a>
-              <span
-                className={`btn-submenu ${activeBtn("Home")}`}
-                onClick={() => activeMenuSet("Home")}
-              />
-              <ul className="sub-menu" style={activeLi("Home")}>
-                <Home />
-              </ul>
+            <li className="menu-item">
+              {/* <Home /> */}
             </li>
             <li className="menu-item">
-              <About />
+              <Inventory />
             </li>
-            <li className="menu-item-has-children">
-              <a>PAGES</a>
-              <span
-                className={`btn-submenu ${activeBtn("PAGES")}`}
-                onClick={() => activeMenuSet("PAGES")}
-              />
-              <ul className="sub-menu" style={activeLi("PAGES")}>
-                <li className="inner-menu-item">
-                  <a href="#">Teachers</a>
-                  <span
-                    className="btn-submenu"
-                    onClick={() => setSub("Teachers", "PAGES")}
-                  />
-                  <ul className="sub-menu" style={activeSub("Teachers")}>
-                    <Teacher />
-                  </ul>
-                </li>
-                <li className="inner-menu-item ">
-                  <a href="#">Classes</a>
-                  <span
-                    className="btn-submenu"
-                    onClick={() => setSub("Classes", "PAGES")}
-                  />
-                  <ul className="sub-menu" style={activeSub("Classes")}>
-                    <Classes />
-                  </ul>
-                </li>
-                <li className="inner-menu-item">
-                  <a href="#">Events</a>
-                  <span
-                    className="btn-submenu"
-                    onClick={() => setSub("Events", "PAGES")}
-                  />
-                  <ul className="sub-menu" style={activeSub("Events")}>
-                    <Event />
-                  </ul>
-                </li>
-                <Pages />
-              </ul>
-            </li>
-            <li className="menu-item-has-children">
-              <a>Programs</a>
-              <span
-                className={`btn-submenu ${activeBtn("Programs")}`}
-                onClick={() => activeMenuSet("Programs")}
-              />
-              <ul className="sub-menu" style={activeLi("Programs")}>
-                <Program />
-              </ul>
-            </li>
-            <li className="menu-item-has-children">
-              <a>BLOG</a>
-              <span
-                className={`btn-submenu ${activeBtn("BLOG")}`}
-                onClick={() => activeMenuSet("BLOG")}
-              />
-              <ul className="sub-menu" style={activeLi("BLOG")}>
-                <Blog />
-              </ul>
-            </li>
-            <li className="menu-item-has-children">
-              <a>SHOP</a>
-              <span
-                className={`btn-submenu ${activeBtn("SHOP")}`}
-                onClick={() => activeMenuSet("SHOP")}
-              />
-              <ul className="sub-menu" style={activeLi("SHOP")}>
-                <Shop />
-              </ul>
-            </li>
-            <li className="inner">
-              <Contact />
-            </li>
+            
           </ul>
           {/* /.menu */}
         </nav>
