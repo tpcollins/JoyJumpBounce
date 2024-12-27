@@ -1,5 +1,5 @@
 /* TODOS:
-1. Get quantity displaying properly for accessories when necessary
+1. Get quantity displaying properly for accessories when necessary in database
 
 2. Get price updated on the checkout page for when there are multiple quantities with accessories (total price is fine -
 - but the unit price is not. i.e: 7 chairs is still saying $2 instead of $14)
