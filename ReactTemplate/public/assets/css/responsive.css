@@ -1646,19 +1646,29 @@
         }
         
         /* About Us */
-        .about-section{
-            width: 100%;
-        }
+            /* Entire Container */
+            .about-container{
+                padding-top: 100px;
+            }
 
-        .about-container{
-            padding-top: 100px;
-        }
+            /* Outer Section */
+            .about-section{
+                width: 100%;
+            }
 
-        .about-section-inner{
-            width: 95%;
-        }
+            /* Inner Section */
+            .about-section-inner{
+                width: 95%;
+            }
 
-        .about-section p {
-            font-size: 14px;
-        }
+            /* Text */
+            .about-section p {
+                font-size: 14px;
+            }
+
+            /* Image */
+            .about-section-inner img{
+                max-width: 80%;
+                height: auto;
+            }
 }
