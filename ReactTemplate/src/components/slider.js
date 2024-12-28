@@ -2,7 +2,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { heroSlider } from "../SliderProps";
 
 const Slider = ({data}) => {
-
     return(
     <section className="tf-slider-1">
         <div className="overlay" />

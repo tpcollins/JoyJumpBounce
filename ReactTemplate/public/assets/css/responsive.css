@@ -1555,7 +1555,7 @@
             margin-top: 20px;
         }
 
-    /* Footer */
+    /* Footer 2 */
         /* Footer Image */
         .f2-bg-img{
             transform: translateY(110px)
@@ -1567,7 +1567,7 @@
             margin-top: -80px;
         }
 
-        .wrap.f-mulish.short-bio{
+        .f2 .wrap.f-mulish.short-bio{
             display: flex; 
             align-items: center;
             justify-content: center;
@@ -1596,19 +1596,69 @@
         .fl-btn.st-12.footer{
             display: none;
         }
+
+    /* Footer 1 */
+        /* Footer background */
+        #footer-1{
+            margin-top: -300px;
+
+            height: 1100px;
+        }
     
-    /* Owl Carousel (Home Page Bouncy House Images) */
-        .owl-carousel .owl-item img {
-            display: block !important; /* Ensure visibility */
-            width: 100% !important; /* Scale to fit the container */
-            max-width: 100% !important; /* Prevent overflow */
-            height: auto !important; /* Maintain aspect ratio */
-            visibility: visible !important; /* Override hidden states */
-            opacity: 1 !important; /* Ensure full visibility */
-            right: 0;
-          }
-          
-          .owl-carousel .owl-item {
+        /* Top Footer Widget */
+        #footer-1 .widget-footer{
+            position: inherit;
+            top: 390px;
+        }
+
+        .f1 .wrap.f-mulish.short-bio{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+            height: 100%;  
+            padding: 10px; 
+        }
+
+        /* Middle Widget */
+        .widget.f1.widget-business{
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-          }               
+            height: 100%;
+            padding: 10px;
+        }
+
+        /* Bottom Widget */
+        .footer-bottom.f1.jus-ct{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            top: 350px;
+            position: relative;
+        }
+
+        /* Additional Questions */
+        .title-widget.additional-title{
+            display: none;
+        }
+        
+        /* About Us */
+        .about-section{
+            width: 100%;
+        }
+
+        .about-container{
+            padding-top: 100px;
+        }
+
+        .about-section-inner{
+            width: 95%;
+        }
+
+        .about-section p {
+            font-size: 14px;
+        }
 }

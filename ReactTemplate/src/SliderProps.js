@@ -11,7 +11,7 @@ export const heroSlider = {
   autoplay: {
     delay: 6000,
     disableOnInteraction: false,
-  },
+  }, 
 };
 export const themesflatcarousel = {
   loop: true,
