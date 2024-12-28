@@ -1755,4 +1755,44 @@
                 right: 20px;
                 bottom: 75px;
             }
+
+            /* Accessories Stock Grid */
+                /* Accessory Image */
+                .accessories-grid{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                /* Individual Items */
+                .accessories-item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 385px;
+                    height: 300px;
+                    padding: 0;
+                }
+
+                /* Accessory Images */
+                .accessories-item img{
+                    width: 150px;
+                    height: 150px;
+                }
+
+        /* Checkout Page */
+            /* Checkout Container */
+            .checkout-container{
+                padding-top: 100px;
+            }
+
+            /* Input Item Labels */
+            .checkout-container .form-group{
+                font-size: 15px;
+            }
+
+            /* Input Item Warning Messages */
+            .checkout-container{
+                font-size: 15px;
+            }
 }
