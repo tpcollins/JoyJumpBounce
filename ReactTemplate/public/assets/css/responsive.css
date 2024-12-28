@@ -141,9 +141,9 @@
         padding: 0 15px;
     }
 
-    .title-heading.st-4 {
+    /* .title-heading.st-4 {
         padding: 0 10% !important;
-    }
+    } */
 
     .header-contact,
     .inner-contact {
@@ -1706,5 +1706,53 @@
                 justify-content: center;
                 text-align: center;
                 margin: 0 auto;
+            }
+        
+        /* Booking */
+            /* Title */
+            .title-heading.st-4{
+                transform: translateY(40%);
+            }
+
+            .react-calendar{
+                transform: translateY(10%);
+                margin-bottom: 70px;
+            }
+
+        /* Stock Grid */
+            /* Container */
+            .stock-item-box{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%; /* Ensure it takes the full width of its parent */
+                max-width: 1000px; /* Optional: Restrict the width */
+                margin: 0 auto; /* Center horizontally */
+                box-sizing: border-box; /* Include padding and border in width calculation */
+                height: 325px;
+            }
+
+            /* Title and Price */
+            .stock-title, .stock-price{
+                font-size: 2em;
+            }
+
+            /* Other Information */
+            .stock-info {
+                display: flex; /* Enables flexbox */
+                flex-direction: column; /* Stacks items vertically */
+                gap: 1rem; /* Optional: Adds spacing between items */
+            }
+
+            /* Float Image */
+            .stock-image{
+                width: 150px;
+            }
+
+            .cart-icon{
+                width: 120px;
+                height: 120px;
+                right: 20px;
+                bottom: 75px;
             }
 }
