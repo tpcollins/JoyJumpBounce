@@ -26,7 +26,7 @@ const Contact = () => {
 
               <div className="row">
                 <div className="col-md-5">
-                  <div className="title-heading">
+                  <div className="title-heading th-2">
                     <div className="sub-heading clr-pri-3 f-mulish">
                       <span className="inner-sub">Contact Us</span>
                       <RightArrow />

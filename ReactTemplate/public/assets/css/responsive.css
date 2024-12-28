@@ -1603,6 +1603,7 @@
             margin-top: -300px;
 
             height: 1100px;
+            z-index: -1;
         }
     
         /* Top Footer Widget */
@@ -1670,5 +1671,40 @@
             .about-section-inner img{
                 max-width: 80%;
                 height: auto;
+            }
+
+        /* Contact Us */
+            /* Container */
+            .contact-container{
+                padding-top: 25px;
+            }
+
+            /* Inner Container */
+            .container .contact-inner{
+                padding-bottom: 20px;
+                
+            }
+
+            /* Need Any Support? */
+            .title-heading .sub-heading{
+                font-size: 14px;
+            }
+
+            /* Heading section under main title; removing for mobile */
+            .title-heading.th-2{
+                display: none;
+            }
+
+            .wrap-contact .fx .content h4{
+                font-size: 21px;
+            }
+
+            /* Send Message Button */
+            .cntct-btn-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                margin: 0 auto;
             }
 }

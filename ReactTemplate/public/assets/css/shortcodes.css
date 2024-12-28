@@ -7002,6 +7002,31 @@
   font-weight: bold;
 }
 
+.send-msg-cntct {
+  text-align: center;
+  width: max-content; /* Ensure button adjusts to content */
+  border-radius: 10px; /* Rounded corners */
+  border: none; /* Remove border */
+  background-color: #a855f7; /* Purple background */
+  padding: 0.5rem 1rem; /* Padding for size */
+  font-size: 2rem; /* Small text size */
+  font-weight: 500; /* Medium font weight */
+  color: #ffffff; /* White text */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  outline: none; /* Remove outline */
+  transition: background-color 0.2s ease-in-out; /* Smooth transition */
+}
+
+.send-msg-cntct:hover {
+  background-color: #9333ea; /* Darker purple on hover */
+}
+
+.send-msg-cntct:focus {
+  outline: none; /* No focus outline */
+}
+
+
+
 
 /* Calendar
 --------------------------------------------------*/
