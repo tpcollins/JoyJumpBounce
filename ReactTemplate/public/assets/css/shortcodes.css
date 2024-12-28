@@ -7761,6 +7761,10 @@
   border-color: #ff6347;
 }
 
+.mbl-radio{
+  padding-right: 20px;
+}
+
 /* Book Now Button
 --------------------------------------------------*/
 .side-button {

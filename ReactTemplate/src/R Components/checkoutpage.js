@@ -541,8 +541,9 @@ const CheckoutPage = ({ data }) => {
                                                 <label style={{ paddingRight: "10px" }}>{item.title}</label>
                                                 {item.options.map((option, optionIdx) => (
                                                     <label
+                                                        className='mbl-radio'
                                                         key={optionIdx}
-                                                        style={{ paddingRight: "20px" }}
+                                                        // style={{ paddingRight: "20px" }}
                                                     >
                                                         <input
                                                             name={item.title}
@@ -562,8 +563,9 @@ const CheckoutPage = ({ data }) => {
                                                 <label style={{ paddingRight: "10px" }}>{item.title}</label>
                                                 {item.options.map((option, optionIdx) => (
                                                     <label
+                                                        className='mbl-radio'
                                                         key={optionIdx}
-                                                        style={{ paddingRight: "20px" }}
+                                                        // style={{ paddingRight: "20px" }}
                                                     >
                                                         <input
                                                             name={item.title}
@@ -583,8 +585,9 @@ const CheckoutPage = ({ data }) => {
                                                 <label style={{ paddingRight: "10px" }}>{item.title}</label>
                                                 {item.options.map((option, optionIdx) => (
                                                     <label
+                                                        className='mbl-radio'
                                                         key={optionIdx}
-                                                        style={{ paddingRight: "20px" }}
+                                                        // style={{ paddingRight: "20px" }}
                                                     >
                                                         <input
                                                             name={item.title}

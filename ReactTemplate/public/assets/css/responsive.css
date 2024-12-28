@@ -1749,19 +1749,22 @@
                 width: 150px;
             }
 
-            .cart-icon{
-                width: 120px;
-                height: 120px;
-                right: 20px;
-                bottom: 75px;
-            }
-
             /* Accessories Stock Grid */
-                /* Accessory Image */
+                /* Accessory Grid */
                 .accessories-grid{
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                }
+
+                /* Accessory Grid Headers */
+                .accessories-grid h1{
+                    font-size: 1.5em !important;
+                }
+
+                /* Accessory Name */
+                .accessories-title{
+                    font-size: 2em;
                 }
 
                 /* Individual Items */
@@ -1795,4 +1798,36 @@
             .checkout-container{
                 font-size: 15px;
             }
+
+            /* Complete Checkout Button */
+            .checkout-button.btn.btn-primary{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            /* Radio Buttons */
+            .mbl-radio{
+                font-size: 12px;
+                padding-right: 2px;
+            }
+
+            .mbl-radio input[type="radio"] {
+                transform: scale(1.2); /* Adjust the scale to make it smaller */
+                margin: 0 3px;
+            }
+        /* Shopping Cart */
+            /* Cart Modal */
+                .cart-icon{
+                    width: 120px;
+                    height: 120px;
+                    right: 20px;
+                    bottom: 75px;
+                }
+            
+            /* Checkout Page Cart */
+                .cart-item-title{
+                    font-size: 2rem;
+                }
 }
