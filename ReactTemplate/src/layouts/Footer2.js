@@ -9,6 +9,7 @@ const Footer2 = ({footerData}) => {
           {/* We know this works. This is probably what we will need to do for fixing mobile footer */}
           <picture className="f2-bg-img">
             <source
+              id="mbl-ftr"
               srcSet="/assets/images/inflatables/MobileFooterBackground.png"
               media="(max-width: 768px)"
             />

@@ -1930,4 +1930,23 @@
                 .landing-image{
                     filter: none;
                 }
+
+
+            .tf-slider-1{
+                /* display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center; */
+
+                transform: translateX(12px);
+            }
+
+            .tf-slider-1 .overlay{
+                width: 95%;
+                height: 90%;
+            } 
+
+            #mbl-ftr{
+                scale: 120%;
+            }
 }
