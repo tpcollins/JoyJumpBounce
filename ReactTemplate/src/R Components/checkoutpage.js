@@ -1,18 +1,5 @@
-/* TODOS:
-
-2. Get price updated on the checkout page for when there are multiple quantities with accessories (total price is fine -
-- but the unit price is not. i.e: 7 chairs is still saying $2 instead of $14)
-
-3. Make complete checkout button unclickable if card container is not filled in
-
-4. Add disclaimer or make card container permenanat somehow. Probably for MVP we will just have a disclaimer (see aria log:
-Receipt Email Before Redirect
-)
-
-*/
-
-import { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import { useState, useEffect } from 'react'; 
+import { Button, Spinner } from 'react-bootstrap';
 import { Circles } from 'react-loader-spinner';
 // Redux Variables
 import { removeItemFromCart, clearCart } from '../redux/slices/cartslice';
@@ -52,6 +39,10 @@ const CheckoutPage = ({ data }) => {
     // Delivery Charge Variable
     const [deliveryCharge, setDeliveryCharge] = useState(null);
 
+    // State to hold card container loading status
+    const [isCardLoading, setIsCardLoading] = useState(true);
+    const [loadError, setLoadError] = useState(false);
+
     // Calculate total price
     let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
     totalPrice += deliveryCharge;
@@ -82,60 +73,72 @@ const CheckoutPage = ({ data }) => {
         }
     }, [cartItems]);
 
-    useEffect(() => {
-        const setupPayments = async () => {
-            if (typeof window !== 'undefined' && window.Square) {
-                try {
-                    // Initialize payments instance if not already initialized
-                    const paymentsInstance = window.Square.payments(
-                        'sandbox-sq0idb-5Nc6RAjZkLqlYcvGAHxnOA', // Sandbox Application ID
-                        'L82JRJN986YEA' // Sandbox Location ID
-                    );
-                    setPayments(paymentsInstance);
-                    console.log('Payments instance initialized:', paymentsInstance);
-    
-                    // Initialize card instance and attach to DOM
-                    const cardInstance = await paymentsInstance.card();
-                    await cardInstance.attach('#card-container');
-                    setCard(cardInstance);
-                    console.log('Card instance successfully attached');
-                } catch (error) {
-                    console.error('Failed to initialize Square Payments or Card:', error);
-                }
-            } else {
-                console.error('Square Payments SDK is not loaded');
-            }
-        };
-    
-        setupPayments();
-    }, []); // Empty dependency array ensures this runs only once on component mount   
-    
-    useEffect(() => {
-        console.log("Updated Cart Items: ", cartItems);
-    }, [cartItems]);
-    
-    // Initialize Square Payments and Card UI
     // useEffect(() => {
-    //     const initializePayments = async () => {
+    //     const setupPayments = async () => {
     //         if (typeof window !== 'undefined' && window.Square) {
     //             try {
-    //             const paymentsInstance = window.Square.payments(
-    //                 'sandbox-sq0idb-5Nc6RAjZkLqlYcvGAHxnOA', // Replace with your Application ID
-    //                 'L82JRJN986YEA' // Replace with your Location ID
-    //             );
-    //             setPayments(paymentsInstance);
-
-    //             const cardInstance = await paymentsInstance.card();
-    //             await cardInstance.attach('#card-container');
-    //             setCard(cardInstance);
+    //                 // Initialize payments instance if not already initialized
+    //                 const paymentsInstance = window.Square.payments(
+    //                     'sandbox-sq0idb-5Nc6RAjZkLqlYcvGAHxnOA', // Sandbox Application ID
+    //                     'L82JRJN986YEA' // Sandbox Location ID
+    //                 );
+    //                 setPayments(paymentsInstance);
+    //                 console.log('Payments instance initialized:', paymentsInstance);
+    
+    //                 // Initialize card instance and attach to DOM
+    //                 const cardInstance = await paymentsInstance.card();
+    //                 await cardInstance.attach('#card-container');
+    //                 setCard(cardInstance);
+    //                 console.log('Card instance successfully attached');
     //             } catch (error) {
-    //             console.error('Failed to initialize Square Payments:', error);
+    //                 console.error('Failed to initialize Square Payments or Card:', error);
     //             }
+    //         } else {
+    //             console.error('Square Payments SDK is not loaded');
     //         }
     //     };
+    
+    //     setupPayments();
+    // }, []); // Empty dependency array ensures this runs only once on component mount   
+    
+    const setupPayments = async () => {
+        try {
+            if (typeof window !== 'undefined' && window.Square) {
+                const paymentsInstance = window.Square.payments(
+                    'sandbox-sq0idb-5Nc6RAjZkLqlYcvGAHxnOA', // Application ID
+                    'L82JRJN986YEA' // Location ID
+                );
+                setPayments(paymentsInstance);
 
-    //     initializePayments();
-    // }, []);
+                // Wait for the card container to be in the DOM
+                const cardContainer = document.getElementById('card-container');
+                if (!cardContainer) {
+                    throw new Error('Card container not found in DOM');
+                }
+
+                const cardInstance = await paymentsInstance.card();
+                await cardInstance.attach('#card-container'); // Attach to the container
+                setCard(cardInstance); // Save the card instance for later use
+                setIsCardLoading(false); // Stop the spinner
+            } else {
+                throw new Error('Square Payments SDK not loaded');
+            }
+        } catch (error) {
+            console.error('Failed to initialize Square Payments:', error);
+            setLoadError(true); // Mark as failed
+            setIsCardLoading(false); // Stop loading spinner
+        }
+    };
+
+    const handleRetry = () => {
+        setLoadError(false); // Reset error state
+        setIsCardLoading(true); // Show loading spinner again
+        setupPayments(); // Retry setup
+    };
+
+    useEffect(() => {
+        setupPayments();
+    }, []);
 
     // Function to send receipt email
     const sendReceiptEmail = (customerName, orderId, totalPrice, toEmail) => {
@@ -195,33 +198,7 @@ const CheckoutPage = ({ data }) => {
             }
         }
         return true;
-    };
-
-    // // Function to initialize the Square Payments card instance
-    // const initializeCard = async () => {
-    //     try {
-    //         // Check if payments instance already exists in state
-    //         if (!payments) {
-    //             console.error("Payments instance not initialized.");
-    //             return null;
-    //         }
-    
-    //         // Check if card instance already exists in state
-    //         if (!card) {
-    //             const cardInstance = await payments.card();
-    //             await cardInstance.attach('#card-container');
-    //             setCard(cardInstance); // Save to state
-    //             console.log('Card instance successfully attached');
-    //             return cardInstance;
-    //         }
-    
-    //         console.log('Card instance already initialized');
-    //         return card; // Return existing card instance
-    //     } catch (error) {
-    //         console.error('Failed to initialize card:', error);
-    //         return null;
-    //     }
-    // };    
+    }; 
 
     // Function to handle the payment process
     const handlePayment = async () => {
@@ -501,124 +478,7 @@ const CheckoutPage = ({ data }) => {
         } finally {
             setLoading(false); // Stop spinner
         }
-        };
-
-    // const fetchBookedFloats = async () => {
-    //     setLoading(true); // Start spinner
-    //     try {
-    //         const itemsToCheck = cartItems.map(item => ({
-    //             date: new Date(item.date).toLocaleDateString('en-US'),
-    //             title: item.title,
-    //         }));
-
-    //         const response = await fetch('/api/getBookedFloatsCheckout', {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify({ itemsToCheck }),
-    //         });
-
-    //         const result = await response.json();
-
-    //         if (response.ok) {
-    //             let alreadyBooked = [];
-
-    //             itemsToCheck.forEach(item => {
-    //                 const isBooked = result.bookedFloats.some(booked => {
-    //                     return booked.title === item.title && booked.date === item.date;
-    //                 });
-
-    //                 if (isBooked) {
-    //                     alreadyBooked.push({ title: item.title, date: item.date });
-    //                 }
-    //             });
-
-    //             if (alreadyBooked.length > 0) {
-    //                 alert('One or more of your items has already been booked. Please review your selection. We apologize for the inconvenience.');
-    //                 window.location.href = '/booking';
-    //             } else {
-    //                 await handleCheckout(); // Proceed to checkout
-    //             }
-    //         } else {
-    //             console.error('Failed to check booked floats:', result.message);
-    //         }
-    //     } catch (error) {
-    //         console.error('Error during fetch:', error);
-    //     } finally {
-    //         setLoading(false); // Stop spinner
-    //     }
-    // };
-
-    // const handleCheckout = async () => {
-    //     // Generate a unique order ID for this checkout session
-    //     const orderId = `Order-${Date.now()}`;
-
-    //     // Add the form data and order ID to each cart item
-    //     const updatedCartItems = cartItems.map((item) => ({
-    //         ...item,
-    //         orderId: orderId,
-    //         firstName: formValues['First Name'],
-    //         lastName: formValues['Last Name'],
-    //         setupTime: formValues['What Time Does Your Event Start?*'],
-    //         turf: formValues['Grass or Concrete'],
-    //         waterHookup: formValues['Water Hook up Within 100 Feet?'],
-    //         powerHookup: formValues['Power Hook up Within 100 Feet?*'],
-    //         phoneNumber: formValues['Phone Number'],
-    //         address: formValues['Street Address'],
-    //         city: formValues['City'],
-    //         state: formValues['State'],
-    //         zipCode: formValues['Zip Code']
-    //     }));
-
-    //     updatedCartItems.push({
-    //         orderId: null, // Leave this null as it's not needed for this row
-    //         firstName: null,
-    //         lastName: null,
-    //         setupTime: null,
-    //         turf: null,
-    //         waterHookup: null,
-    //         powerHookup: null,
-    //         phoneNumber: null,
-    //         address: null,
-    //         city: null,
-    //         state: null,
-    //         zipCode: null,
-    //         inflatable: null,
-    //         price: null,
-    //         totalPrice: totalPrice,
-    //         deliveryCharge: deliveryCharge
-    //     });
-
-    //     // Add an empty row for separation
-    //     updatedCartItems.push({
-    //         isSeparator: true, // Flag to indicate this is a separator row
-    //     });
-
-    //     try {
-    //         const response = await fetch(apiRoute, {
-    //             method: 'POST',
-    //             headers: {
-    //                 'Content-Type': 'application/json',
-    //             },
-    //             body: JSON.stringify({
-    //                 cartItems: updatedCartItems
-    //             }),
-    //         });
-
-    //         const result = await response.json();
-
-    //         if (response.ok) {
-    //             dispatch(clearCart());
-    //             window.location.href = '/checkout-success';
-    //         } else {
-    //             alert(`Failed to send data: ${result.message}`);
-    //         }
-    //     } catch (error) {
-    //         console.error('Error during checkout:', error);
-    //         alert('An error occurred while sending data.');
-    //     }
-    // };
+    };
 
     return (
         <div className="container">
@@ -786,9 +646,48 @@ const CheckoutPage = ({ data }) => {
                         <p><strong>Total Price:</strong> ${totalPrice.toFixed(2)}</p>
                     </div>
 
-                    <div id='card-container'></div>
+                    {/* <div id='card-container'></div> */}
 
-                    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                    {/* <div className="container">
+                        <div className="checkout-container">
+                            <div className="checkout-inner"> */}
+                                {/* Card container to always render in the DOM */}
+                                <div id="card-container"></div>
+
+                                {/* Show loading spinner while initializing */}
+                                {isCardLoading && !loadError && (
+                                    <div className="loading-container">
+                                        <Circles ariaLabel="loading" color="#000" height="40" width="40" />
+                                        <p>Payment Details Loading. Please Wait...</p>
+                                    </div>
+                                )}
+
+                                {/* Show error message if initialization fails */}
+                                {loadError && (
+                                    <div className="error-container">
+                                        <p>Unable to load payment form. Please check your internet connection and try again.</p>
+                                        <Button onClick={handleRetry}>Retry</Button>
+                                    </div>
+                                )}
+
+                                {/* Checkout button */}
+                                {!isCardLoading && (
+                                    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                                        <Button
+                                            className="checkout-button"
+                                            disabled={loadError || isCardLoading}
+                                            onClick={() => console.log('Checkout clicked')}
+                                            style={{ fontSize: '2em' }}
+                                        >
+                                            Complete Checkout
+                                        </Button>
+                                    </div>
+                                )}
+                            {/* </div>
+                        </div>
+                    </div> */}
+
+                    {/* <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                         <Button
                             className="checkout-button"
                             disabled={!isFormValid || cartItems.length === 0 || loading}
@@ -801,7 +700,7 @@ const CheckoutPage = ({ data }) => {
                                 'Complete Checkout'
                             )}
                         </Button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
