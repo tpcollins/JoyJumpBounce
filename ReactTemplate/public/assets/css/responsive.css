@@ -1813,6 +1813,10 @@
                     width: 150px;
                     height: 150px;
                 }
+        /* Accessories Page */
+            .accessories-grid .separator-line {
+                margin-top: 40px;
+            }
 
         /* Checkout Page */
             /* Checkout Container */
