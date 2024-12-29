@@ -25,14 +25,16 @@ const Slider = ({data}) => {
                       key={sdIdx}
                       >
                         <div className="box-content">
-                          <div 
-                          className="sub clr-pri-2"
-                          style={{color: 'white !important'}}
-                          >
-                            {item.sub}
-                          </div>
-                          <div className="title clr-pri-2">
-                            {item.title}
+                          <div className="clr-content-mbl">
+                            <div 
+                            className="sub clr-pri-2"
+                            style={{color: 'white !important'}}
+                            >
+                              {item.sub}
+                            </div>
+                            <div className="title clr-pri-2">
+                              {item.title}
+                            </div>
                           </div>
                           <div className="box-custom">
                             <div className="wrap clr-pri-1">{item.wrap}</div>
