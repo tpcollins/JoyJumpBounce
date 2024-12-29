@@ -269,49 +269,159 @@ const CheckoutPage = ({ data }) => {
     
 
     // Function to handle the checkout process
+    // const handleCheckout = async () => {
+    //     // Generate a unique order ID for this checkout session
+    //     const orderId = `Order-${Date.now()}`;
+    
+    //     // Add form data and order ID to each cart item
+    //     const updatedCartItems = cartItems.map((item) => ({
+    //         ...item,
+    //         orderId,
+    //         firstName: formValues['First Name'],
+    //         lastName: formValues['Last Name'],
+    //         email: formValues['Email'],
+    //         setupTime: formValues['What Time Does Your Event Start?*'],
+    //         turf: formValues['Grass or Concrete'],
+    //         waterHookup: formValues['Water Hook up Within 100 Feet?'],
+    //         powerHookup: formValues['Power Hook up Within 100 Feet?*'],
+    //         phoneNumber: formValues['Phone Number'],
+    //         address: formValues['Street Address'],
+    //         city: formValues['City'],
+    //         state: formValues['State'],
+    //         zipCode: formValues['Zip Code'],
+    //     }));
+    
+    //     // Add an extra row for totals
+    //     updatedCartItems.push({
+    //         orderId: null,
+    //         totalPrice: totalPrice,
+    //         deliveryCharge: deliveryCharge,
+    //     });
+    
+    //     try {
+    //         // Check if the card instance is ready
+    //         if (!card) {
+    //             console.error("Card instance is not initialized.");
+    //             alert('Payment setup failed. Please refresh the page and try again.');
+    //             return;
+    //         }
+    
+    //         // Process the payment
+    //         const paymentResult = await handlePayment();
+    
+    //         if (paymentResult?.success) {
+    //             // If payment is successful, send updated cart data to the backend
+    //             const response = await fetch(apiRoute, {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     'Content-Type': 'application/json',
+    //                 },
+    //                 body: JSON.stringify({
+    //                     cartItems: updatedCartItems,
+    //                 }),
+    //             });
+    
+    //             const result = await response.json();
+    //             if (response.ok) {
+    //                 // Clear the cart
+    //                 dispatch(clearCart());
+            
+    //                 // Send receipt email
+    //                 const customerName = `${formValues['First Name']} ${formValues['Last Name']}`;
+    //                 const toEmail = `${formValues['Email']}`;
+    //                 console.log("customer name: ", customerName);
+    //                 console.log("orderID: ", orderId);
+    //                 console.log("total price: ", totalPrice);
+            
+    //                 try {
+    //                     await sendReceiptEmail(customerName, orderId, totalPrice, toEmail);
+    //                     // Redirect to the success page after the email is sent
+    //                     window.location.href = '/checkout-success';
+    //                 } catch (error) {
+    //                     console.error("Error sending email:", error);
+    //                     // Handle the error as needed
+    //                 }
+    //             }else{
+    //                 alert(`Failed to send order data: ${result.message}`);
+    //             }
+    //         }
+    //         // } else {
+    //         //     alert('Payment failed. Please try again.');
+    //         // }
+    //     } catch (error) {
+    //         console.error('Error during checkout:', error);
+    //         alert('An error occurred during checkout.');
+    //     }
+    // };    
+
     const handleCheckout = async () => {
-        // Generate a unique order ID for this checkout session
-        const orderId = `Order-${Date.now()}`;
-    
-        // Add form data and order ID to each cart item
-        const updatedCartItems = cartItems.map((item) => ({
-            ...item,
-            orderId,
-            firstName: formValues['First Name'],
-            lastName: formValues['Last Name'],
-            email: formValues['Email'],
-            setupTime: formValues['What Time Does Your Event Start?*'],
-            turf: formValues['Grass or Concrete'],
-            waterHookup: formValues['Water Hook up Within 100 Feet?'],
-            powerHookup: formValues['Power Hook up Within 100 Feet?*'],
-            phoneNumber: formValues['Phone Number'],
-            address: formValues['Street Address'],
-            city: formValues['City'],
-            state: formValues['State'],
-            zipCode: formValues['Zip Code'],
-        }));
-    
-        // Add an extra row for totals
-        updatedCartItems.push({
-            orderId: null,
-            totalPrice: totalPrice,
-            deliveryCharge: deliveryCharge,
-        });
-    
         try {
-            // Check if the card instance is ready
+            // Validate and tokenize the card details only on button click
             if (!card) {
                 console.error("Card instance is not initialized.");
                 alert('Payment setup failed. Please refresh the page and try again.');
                 return;
             }
     
-            // Process the payment
-            const paymentResult = await handlePayment();
+            // Tokenize the card details
+            const tokenizationResult = await card.tokenize();
+    
+            if (tokenizationResult.status !== 'OK') {
+                console.error('Card validation failed:', tokenizationResult.errors);
+                alert('Invalid card details. Please check your card information and try again.');
+                return;
+            }
+    
+            // Proceed with the checkout process if the tokenization succeeds
+            const paymentToken = tokenizationResult.token;
+    
+            // Generate a unique order ID for this checkout session
+            const orderId = `Order-${Date.now()}`;
+        
+            // Add form data and order ID to each cart item
+            const updatedCartItems = cartItems.map((item) => ({
+                ...item,
+                orderId,
+                firstName: formValues['First Name'],
+                lastName: formValues['Last Name'],
+                email: formValues['Email'],
+                setupTime: formValues['What Time Does Your Event Start?*'],
+                turf: formValues['Grass or Concrete'],
+                waterHookup: formValues['Water Hook up Within 100 Feet?'],
+                powerHookup: formValues['Power Hook up Within 100 Feet?*'],
+                phoneNumber: formValues['Phone Number'],
+                address: formValues['Street Address'],
+                city: formValues['City'],
+                state: formValues['State'],
+                zipCode: formValues['Zip Code'],
+            }));
+    
+            // Add an extra row for totals
+            updatedCartItems.push({
+                orderId: null,
+                totalPrice: totalPrice,
+                deliveryCharge: deliveryCharge,
+            });
+    
+            // Process payment
+            const response = await fetch('/api/createPayment', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    token: paymentToken, // Use the token from card.tokenize
+                    firstName: formValues['First Name'],
+                    lastName: formValues['Last Name'],
+                    price: Math.round(totalPrice * 100, 2),
+                }),
+            });
+    
+            const paymentResult = await response.json();
     
             if (paymentResult?.success) {
-                // If payment is successful, send updated cart data to the backend
-                const response = await fetch(apiRoute, {
+                // Send updated cart data to the backend if payment is successful
+                const orderResponse = await fetch(apiRoute, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -321,35 +431,31 @@ const CheckoutPage = ({ data }) => {
                     }),
                 });
     
-                const result = await response.json();
-                if (response.ok) {
+                const orderResult = await orderResponse.json();
+    
+                if (orderResponse.ok) {
                     // Clear the cart
                     dispatch(clearCart());
-            
+    
                     // Send receipt email
                     const customerName = `${formValues['First Name']} ${formValues['Last Name']}`;
                     const toEmail = `${formValues['Email']}`;
-                    console.log("customer name: ", customerName);
-                    console.log("orderID: ", orderId);
-                    console.log("total price: ", totalPrice);
-            
+    
                     try {
                         await sendReceiptEmail(customerName, orderId, totalPrice, toEmail);
                         // Redirect to the success page after the email is sent
                         window.location.href = '/checkout-success';
                     } catch (error) {
                         console.error("Error sending email:", error);
-                        // Handle the error as needed
                     }
-                }else{
-                    alert(`Failed to send order data: ${result.message}`);
+                } else {
+                    alert(`Failed to send order data: ${orderResult.message}`);
                 }
+            } else {
+                alert('Payment failed. Please try again.');
             }
-            // } else {
-            //     alert('Payment failed. Please try again.');
-            // }
         } catch (error) {
-            console.error('Error during checkout:', error);
+            console.error('Checkout error:', error);
             alert('An error occurred during checkout.');
         }
     };    
