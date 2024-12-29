@@ -1834,6 +1834,7 @@ a:focus {
 }
 
 .f2-bg-img {
+    background: url('/assets/images/inflatables/FooterBlurred.png');
     position: relative;
     z-index: 2;
     background-repeat: no-repeat;

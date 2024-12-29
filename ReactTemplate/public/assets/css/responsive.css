@@ -1850,15 +1850,21 @@
             }
         /* Shopping Cart */
             /* Cart Modal */
-                .cart-icon{
-                    width: 120px;
-                    height: 120px;
-                    right: 20px;
-                    bottom: 75px;
-                }
-            
+            .cart-icon{
+                width: 120px;
+                height: 120px;
+                right: 20px;
+                bottom: 75px;
+            }
+        
             /* Checkout Page Cart */
-                .cart-item-title{
-                    font-size: 2rem;
+            .cart-item-title{
+                font-size: 2rem;
+            }
+        
+        /* Inventory Landing Page */
+                /* Page Images */
+                .landing-image{
+                    filter: none;
                 }
 }

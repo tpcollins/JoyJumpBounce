@@ -5,6 +5,22 @@ const Footer2 = ({footerData}) => {
     <>
       <div className="f2-bg-img">
           <Image src="/assets/images/inflatables/FooterBlurred.png" alt="img not found"/>
+
+          {/* We know this works. This is probably what we will need to do for fixing mobile footer */}
+          {/* <picture>
+            <source
+              srcSet="/assets/images/inflatables/FooterBlurred-small.png"
+              media="(max-width: 768px)"
+            />
+            <source
+              srcSet="/assets/images/inflatables/FooterBlurred.png"
+              media="(min-width: 769px)"
+            />
+            <img
+              src="/assets/images/inflatables/FooterBlurred-large.png"
+              alt="img not found"
+            />
+          </picture> */}
       </div>
       <footer id="footer" className="st-2">
         
