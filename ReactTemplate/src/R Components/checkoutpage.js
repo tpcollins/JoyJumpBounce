@@ -1,5 +1,4 @@
 /* TODOS:
-1. Get quantity displaying properly for accessories when necessary in database
 
 2. Get price updated on the checkout page for when there are multiple quantities with accessories (total price is fine -
 - but the unit price is not. i.e: 7 chairs is still saying $2 instead of $14)
@@ -670,7 +669,7 @@ const CheckoutPage = ({ data }) => {
                                         <p className="cart-item-title">{index + 1}. {item.title}</p>
                                     }
                                     <p className="cart-item-title">Selected Date: {new Date(item.date).toLocaleDateString()}</p>
-                                    <p className="cart-item-price">${item.price}</p>
+                                    <p className="cart-item-price">${item.quantity > 1 ? item.price * item.quantity : item.price}</p>
                                     <Button onClick={() => dispatch(removeItemFromCart(item))}>Remove From Cart</Button>
                                 </div>
                             </div>
