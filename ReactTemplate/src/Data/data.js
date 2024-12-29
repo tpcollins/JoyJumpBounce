@@ -155,8 +155,9 @@ export const checkoutSwiperData = {
 export const subjectData = {
     subjects: [
         {subject: "General Information"},
-        {subject: "Bouncy House Rental"},
+        {subject: "Float Rental"},
         {subject: "Accessories Rental"},
+        {subject: "Multi-Day Rental"},
         {subject: "Pricing"},
         {subject: "Other"}
     ]
