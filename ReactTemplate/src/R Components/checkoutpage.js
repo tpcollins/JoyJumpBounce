@@ -11,6 +11,8 @@ import AccessoriesGrid from '../components/accessoriesgrid-checkout';
 import { accessoryData } from '../Data/data';
 // Email js
 import emailjs from 'emailjs-com';
+// Liability Modal
+import LiabilityModal  from '../components/liabilitymodal';
 
 import { payments as SquarePayments } from '@square/web-sdk'; // Correct import
 
@@ -25,6 +27,9 @@ const CheckoutPage = ({ data }) => {
     const [loading, setLoading] = useState(false);
     // Water float
     const [waterFloat, setWaterFloat] = useState(false);
+
+    // Show Liability Modal
+    const [showLiabilityModal, setShowLiabilityModal] = useState(false);
 
     // Square variables
     const [payments, setPayments] = useState(null);
@@ -139,6 +144,22 @@ const CheckoutPage = ({ data }) => {
     useEffect(() => {
         setupPayments();
     }, []);
+
+    // Function to open the modal
+    const handleShowModal = () => {
+        setShowLiabilityModal(true);
+    };
+
+    // Function to close the modal
+    const handleCloseModal = () => {
+        setShowLiabilityModal(false);
+    };
+
+    // Function to proceed with the checkout
+    const handleProceedWithCheckout = async () => {
+        setShowLiabilityModal(false); // Close the modal
+        await fetchBookedFloats(); // Call the original checkout logic
+    };
 
     // Function to send receipt email
     const sendReceiptEmail = (customerName, orderId, totalPrice, toEmail) => {
@@ -675,14 +696,25 @@ const CheckoutPage = ({ data }) => {
                                     <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                                         <Button
                                             className="checkout-button"
-                                            disabled={loadError || isCardLoading}
-                                            onClick={() => console.log('Checkout clicked')}
+                                            disabled={!isFormValid || cartItems.length === 0 || loading}
+                                            onClick={handleShowModal}
                                             style={{ fontSize: '2em' }}
                                         >
-                                            Complete Checkout
+                                            {loading ? (
+                                                <Circles ariaLabel="loading" color="#ffffff" height="24" width="24" />
+                                            ) : (
+                                                'Complete Checkout'
+                                            )}
                                         </Button>
                                     </div>
                                 )}
+
+                                {/* Liability Modal */}
+                                <LiabilityModal
+                                    show={showLiabilityModal}
+                                    onClose={handleCloseModal}
+                                    onProceed={handleProceedWithCheckout}
+                                />
                             {/* </div>
                         </div>
                     </div> */}

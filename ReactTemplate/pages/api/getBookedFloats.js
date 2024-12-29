@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       filterByFormula: `IS_SAME({Booking Date}, '${selectedDate}', 'day')`,
     }).firstPage();
 
-    const bookedFloats = records.map(record => record.fields['Inflatable']);
+    const bookedFloats = records.map(record => record.fields['Item']);
     res.status(200).json({ bookedFloats });
   } catch (error) {
     console.error('Error querying Airtable:', error);
