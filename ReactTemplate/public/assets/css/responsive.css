@@ -1996,3 +1996,74 @@
 
         /*  */
 }
+
+
+
+@media (min-width: 769px) and (max-width: 1700px) {
+    .gallery-item .image img, 
+    .gallery-item .description img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .image img {
+        max-width: 500px;
+    }
+
+    .description img {
+        max-width: 400px;
+    }
+
+    .gallery-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .description,
+    .image {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .gallery-item:nth-child(odd) .description {
+        text-align: left;
+        padding-right: 20px;
+    }
+    
+    .gallery-item:nth-child(even) .description {
+        text-align: right;
+        padding-left: 20px;
+    }
+
+    .gallery-container {
+        overflow: hidden;
+    }    
+
+    .gallery-container .box-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .gallery-item:nth-child(1) .box-btn {
+        /* padding-right: 400px; */
+        /* margin-top: -28px; */
+        transform: translateX(50%);
+    }
+
+    .gallery-item:nth-child(3) .box-btn {
+        /* padding-right: 400px; */
+        margin-top: -28px;
+        transform: translateX(50.5%);
+    }
+    
+    .gallery-item:nth-child(even) .box-btn {
+        margin-top: 6px;
+        transform: translateX(52%);
+    }
+}
