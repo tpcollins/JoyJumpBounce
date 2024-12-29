@@ -1943,7 +1943,9 @@
 
             .tf-slider-1 .overlay{
                 width: 95%;
-                height: 100%;
+                height: 95%;
+
+                background-image: url(../images/inflatables/MobileSliderHmpg.png);
             } 
 
             #mbl-ftr{
