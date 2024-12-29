@@ -33,7 +33,8 @@ export default async function handler(req, res) {
           'First Name': item.firstName,
           'Last Name': item.lastName,
           'Email': item.email,
-          'Inflatable': item.title,  // The title of the item
+          'Item': item.title,  // The title of the item
+          'Quantity': item.quantity,
           'Price': Number(item.price),       // The price of the item
           'Booking Date': formatDate(item.date),
           'Event Start Time': formatTime(item.setupTime),   // Default value

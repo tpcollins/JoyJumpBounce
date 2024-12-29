@@ -109,7 +109,11 @@ const CheckoutPage = ({ data }) => {
         };
     
         setupPayments();
-    }, []); // Empty dependency array ensures this runs only once on component mount    
+    }, []); // Empty dependency array ensures this runs only once on component mount   
+    
+    useEffect(() => {
+        console.log("Updated Cart Items: ", cartItems);
+    }, [cartItems]);
     
     // Initialize Square Payments and Card UI
     // useEffect(() => {
