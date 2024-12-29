@@ -3,24 +3,25 @@ import Image from 'react-bootstrap/Image';
 const Footer2 = ({footerData}) => {
   return (
     <>
-      <div className="f2-bg-img">
-          <Image src="/assets/images/inflatables/FooterBlurred.png" alt="img not found"/>
+      <div>
+          {/* <Image src="/assets/images/inflatables/FooterBlurred.png" alt="img not found"/> */}
 
           {/* We know this works. This is probably what we will need to do for fixing mobile footer */}
-          {/* <picture>
+          <picture className="f2-bg-img">
             <source
-              srcSet="/assets/images/inflatables/FooterBlurred-small.png"
+              srcSet="/assets/images/inflatables/MobileFooterBackground.png"
               media="(max-width: 768px)"
             />
             <source
+              
               srcSet="/assets/images/inflatables/FooterBlurred.png"
               media="(min-width: 769px)"
             />
             <img
-              src="/assets/images/inflatables/FooterBlurred-large.png"
+              src="/assets/images/inflatables/FooterBlurred.png"
               alt="img not found"
             />
-          </picture> */}
+          </picture>
       </div>
       <footer id="footer" className="st-2">
         
