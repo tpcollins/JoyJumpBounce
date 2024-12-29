@@ -11,6 +11,8 @@ import AccessoriesGrid from '../components/accessoriesgrid-checkout';
 import { accessoryData } from '../Data/data';
 // Email js
 import emailjs from 'emailjs-com';
+// Liability Modal
+import LiabilityModal  from '../components/liabilitymodal';
 
 import { payments as SquarePayments } from '@square/web-sdk'; // Correct import
 
@@ -25,6 +27,9 @@ const CheckoutPage = ({ data }) => {
     const [loading, setLoading] = useState(false);
     // Water float
     const [waterFloat, setWaterFloat] = useState(false);
+
+    // Show Liability Modal
+    const [showLiabilityModal, setShowLiabilityModal] = useState(false);
 
     // Square variables
     const [payments, setPayments] = useState(null);
@@ -139,6 +144,22 @@ const CheckoutPage = ({ data }) => {
     useEffect(() => {
         setupPayments();
     }, []);
+
+    // Function to open the modal
+    const handleShowModal = () => {
+        setShowLiabilityModal(true);
+    };
+
+    // Function to close the modal
+    const handleCloseModal = () => {
+        setShowLiabilityModal(false);
+    };
+
+    // Function to proceed with the checkout
+    const handleProceedWithCheckout = async () => {
+        setShowLiabilityModal(false); // Close the modal
+        await fetchBookedFloats(); // Call the original checkout logic
+    };
 
     // Function to send receipt email
     const sendReceiptEmail = (customerName, orderId, totalPrice, toEmail) => {
@@ -676,7 +697,7 @@ const CheckoutPage = ({ data }) => {
                                         <Button
                                             className="checkout-button"
                                             disabled={!isFormValid || cartItems.length === 0 || loading}
-                                            onClick={fetchBookedFloats}
+                                            onClick={handleShowModal}
                                             style={{ fontSize: '2em' }}
                                         >
                                             {loading ? (
@@ -687,6 +708,13 @@ const CheckoutPage = ({ data }) => {
                                         </Button>
                                     </div>
                                 )}
+
+                                {/* Liability Modal */}
+                                <LiabilityModal
+                                    show={showLiabilityModal}
+                                    onClose={handleCloseModal}
+                                    onProceed={handleProceedWithCheckout}
+                                />
                             {/* </div>
                         </div>
                     </div> */}
