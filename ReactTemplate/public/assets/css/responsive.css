@@ -1473,21 +1473,40 @@
 
 }
 
+
+/* Phone Screens */
+
+/* 1. iPhone 14 Pro Max */
 @media(max-width: 768px){
     /* Slider */
         /* Title Text */
         .title.clr-pri-2{
             font-size: 25px;
+
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
         }
 
         /* Sub Text */
         .sub.clr-pri-2{
             font-size: 20px;
+
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
         }
 
         /* Wrap Text */
         .wrap.clr-pri-1{
             font-size: 20px;
+
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
         }
 
         .box-custom{
@@ -1558,7 +1577,9 @@
     /* Footer 2 */
         /* Footer Image */
         .f2-bg-img{
-            transform: translateY(110px)
+            top: 110px;
+            transform: translateX(-15px);
+            width: 105%;
         }
 
         /* First Text Box */
@@ -1574,6 +1595,7 @@
             text-align: center; 
             height: 100%;  
             padding: 10px; 
+            font-size: 12px;
         }
 
         /* Opening Hours Text Box */
@@ -1584,17 +1606,26 @@
         }
 
         .widget.f2.widget-business{
-            display: flex; /* Enable Flexbox */
-            align-items: center; /* Center items vertically */
-            justify-content: center; /* Center items horizontally */
-            text-align: center; /* Ensure text is centered within the box */
-            height: 100%; /* Optional: Ensure the height is consistent */
-            padding: 10px; /* Add padding to prevent text from being too tight */
+            /* display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            height: 100%; 
+            padding: 10px; */
+            display: none;
         }
 
         /* Contact Button (Removing from Mobile Design) */
         .fl-btn.st-12.footer{
             display: none;
+        }
+
+        .footer-bottom{
+            background-color: #9d1ffe;
+        }
+
+        .copy-right{
+            font-size: 12px;
         }
 
     /* Footer 1 */
