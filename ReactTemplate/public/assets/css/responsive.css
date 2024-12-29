@@ -1813,9 +1813,68 @@
                     width: 150px;
                     height: 150px;
                 }
-        /* Accessories Page */
+
+        /* Floats Page */
+            /* Floats Title */
+            .tf-section.tf-gallery .title-heading.st-4{
+                top: -180px;
+                position: relative;
+            }
+
+            /* Accessories Page */
             .accessories-grid .separator-line {
                 margin-top: 40px;
+            }
+
+            /* Inventory Gallery */
+            .gallery-container {
+                display: flex;
+                flex-direction: column;
+                transform: translateY(-10%);
+
+                /* margin-bottom: -100px; */
+                padding-bottom: -100px;
+              }
+            
+            .gallery-item {
+                display: flex; /* Explicitly set flexbox */
+                flex-direction: column; /* Stack items vertically */
+                justify-content: flex-start; /* Ensure proper alignment */
+                align-items: center; /* Center items horizontally */
+                position: relative; /* Avoid unexpected positioning shifts */
+            }
+        
+            .gallery-item .image {
+                order: 1 !important; /* Ensure the image always appears first */
+                margin-bottom: 10px; /* Add space below the image */
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+        
+            .gallery-item .description {
+                order: 2 !important; /* Ensure the description appears second */
+                text-align: center; /* Center-align the description */
+                margin-bottom: 10px; /* Add spacing below */
+                width: 100%; /* Prevent unexpected shrinking */
+
+                transform: translateX(-7%);
+            }
+        
+            .gallery-item .box-btn {
+                order: 3 !important; /* Ensure the button is always last */
+                align-self: center; /* Center the button */
+                margin: 0 auto; /* Align button horizontally */
+
+                transform: translateX(7%);
+            }
+        
+            /* Remove any padding or extra spacing specific to even/odd items */
+            .gallery-item:nth-child(even) .box-btn,
+            .gallery-item:nth-child(odd) .box-btn {
+                padding-right: 0;
             }
 
         /* Checkout Page */
