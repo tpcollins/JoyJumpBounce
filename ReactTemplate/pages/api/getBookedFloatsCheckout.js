@@ -24,7 +24,7 @@ export default async function handler(req, res) {
 
     // Return an array of objects with title and date
     const bookedFloats = records.map(record => ({
-      title: record.fields['Inflatable'],
+      title: record.fields['Item'],
       date: new Date(record.fields['Booking Date']).toLocaleDateString('en-US'),
     }));
 

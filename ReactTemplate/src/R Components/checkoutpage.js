@@ -675,11 +675,15 @@ const CheckoutPage = ({ data }) => {
                                     <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
                                         <Button
                                             className="checkout-button"
-                                            disabled={loadError || isCardLoading}
-                                            onClick={() => console.log('Checkout clicked')}
+                                            disabled={!isFormValid || cartItems.length === 0 || loading}
+                                            onClick={fetchBookedFloats}
                                             style={{ fontSize: '2em' }}
                                         >
-                                            Complete Checkout
+                                            {loading ? (
+                                                <Circles ariaLabel="loading" color="#ffffff" height="24" width="24" />
+                                            ) : (
+                                                'Complete Checkout'
+                                            )}
                                         </Button>
                                     </div>
                                 )}
