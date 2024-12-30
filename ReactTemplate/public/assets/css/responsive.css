@@ -1791,6 +1791,11 @@
                 margin-bottom: 70px;
             }
 
+            /* Month Button */
+            .react-calendar__navigation button{
+                font-size: 1em;
+            }
+
         /* Stock Grid */
             /* Container */
             .stock-item-box{
