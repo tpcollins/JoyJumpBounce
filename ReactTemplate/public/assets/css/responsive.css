@@ -1727,7 +1727,8 @@
         /* Contact Us */
             /* Container */
             .contact-container{
-                padding-top: 25px;
+                padding-top: 15px;
+                padding-bottom: 35px;
             }
 
             /* Inner Container */
@@ -1738,7 +1739,23 @@
 
             /* Need Any Support? */
             .title-heading .sub-heading{
-                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                transform: translateX(6%);
+            }
+
+            .title-heading .sub-heading .inner-sub.st-1{
+                font-size: 12px;
+                padding: 0;
+                margin-left: -23px;
+            }
+
+            .title-heading .sub-heading image{
+                width: 70%;
+                height: auto;
             }
 
             /* Heading section under main title; removing for mobile */
@@ -1746,8 +1763,12 @@
                 display: none;
             }
 
+            .wrap-contact .fx .content p{
+                font-size: 20px;
+            }
+
             .wrap-contact .fx .content h4{
-                font-size: 21px;
+                font-size: 17px;
             }
 
             /* Send Message Button */
