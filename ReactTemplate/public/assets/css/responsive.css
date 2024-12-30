@@ -1796,6 +1796,10 @@
                 font-size: 1em;
             }
 
+            .react-calendar__month-view__weekdays{
+                font-size: 14px !important;
+            }
+
         /* Stock Grid */
             /* Container */
             .stock-item-box{
@@ -1811,19 +1815,34 @@
 
             /* Title and Price */
             .stock-title, .stock-price{
-                font-size: 2em;
+                font-size: 1.75em;
             }
 
             /* Other Information */
             .stock-info {
                 display: flex; /* Enables flexbox */
+                align-items: flex-start; /* Align items to the top */
                 flex-direction: column; /* Stacks items vertically */
-                gap: 1rem; /* Optional: Adds spacing between items */
-            }
+                gap: 1rem; /* Adds spacing between items */
+                margin-left: 5rem; /* Adds left margin to move the items to the right */
+                width: calc(100% - 8rem); /* Adjust width to accommodate the float image */
+            }            
 
             /* Float Image */
             .stock-image{
                 width: 150px;
+
+                transform: translateX(40%);
+            }
+
+            /* Button */
+            .stock-grid-container .fl-btn.st-12 .inner::before, .fl-btn.st-12 .inner::after{
+                right: -45px;
+            }
+
+            .stock-grid-container .fl-btn.st-12{
+                top: 20px;
+                right: 40px;
             }
 
             /* Accessories Stock Grid */
@@ -1859,6 +1878,8 @@
                     width: 150px;
                     height: 150px;
                 }
+
+                
 
         /* Floats Page */
             /* Floats Title */
