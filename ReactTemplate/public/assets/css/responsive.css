@@ -1623,7 +1623,7 @@
             display: none;
         }
 
-        .footer-bottom{
+        #footer.st-2 .footer-bottom{
             background-color: #9d1ffe;
         }
 
@@ -1641,16 +1641,16 @@
     /* Footer 1 */
         /* Footer background */
         #footer-1{
-            margin-top: -300px;
+            margin-top: -150px;
 
-            height: 1100px;
+            height: 600px;
             z-index: -1;
         }
     
         /* Top Footer Widget */
         #footer-1 .widget-footer{
             position: inherit;
-            top: 390px;
+            top: 240px;
         }
 
         .f1 .wrap.f-mulish.short-bio{
@@ -1664,12 +1664,17 @@
 
         /* Middle Widget */
         .widget.f1.widget-business{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            height: 100%;
-            padding: 10px;
+            display: none;
+        }
+
+        /* Social Media Icons */
+        #footer-1 .social-icons {
+            flex-direction: row; 
+            /* margin-top: 10px;  */
+            justify-content: center; 
+            padding-left: 135px;
+            transform: translateY(500%);
+            position: inherit;
         }
 
         /* Bottom Widget */
@@ -1678,8 +1683,9 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            top: 350px;
+            top: 240px;
             position: relative;
+            /* width: 80%; */
         }
 
         /* Additional Questions */
