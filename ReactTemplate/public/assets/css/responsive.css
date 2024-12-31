@@ -1858,11 +1858,6 @@
                     font-size: 1.5em !important;
                 }
 
-                /* Accessory Name */
-                .accessories-title{
-                    font-size: 2em;
-                }
-
                 /* Individual Items */
                 .accessories-item{
                     display: flex;
@@ -1888,7 +1883,7 @@
                 position: relative;
             }
 
-            /* Accessories Page */
+        /* Accessories Page */
             .accessories-grid .separator-line {
                 margin-top: 40px;
             }
@@ -1961,11 +1956,15 @@
             }
 
             /* Complete Checkout Button */
-            .checkout-button.btn.btn-primary{
+            .checkout-button-container{
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+            }
+
+            .checkout-button.btn.btn-primary{
+                font-size: 1em;
             }
 
             /* Radio Buttons */
@@ -1978,6 +1977,42 @@
                 transform: scale(1.2); /* Adjust the scale to make it smaller */
                 margin: 0 3px;
             }
+
+            /* Delivery Charge */
+            .delivery-disclaimer{
+                font-size: 0.8em;
+            }
+
+            /* Name and Price Container */
+            .checkout-container .accessories-info .accessories-title, .accessories-price{
+                transform: translateX(20%);
+            }
+
+            /* Accessory Name */
+            .checkout-container .accessories-title{
+                font-size: 1.5em;
+            }
+            
+            /* Accessory Price */
+            .checkout-container .accessories-price{
+                font-size: 1.5em;
+            }
+
+            /* Add to Cart Button */
+            .checkout-container .accessories-grid .fl-btn.st-12 .inner::before, .fl-btn.st-12 .inner::after{
+                right: -45px;
+            }
+
+            /* Add to Cart Buttons */
+            .checkout-container .accessories-grid .fl-btn.st-12{
+                top: 40px;
+                right: 30px;
+            }
+
+            /* Checkout Images */
+            .checkout-container .accessories-item img{
+                transform: translateX(10%);
+            }
         /* Shopping Cart */
             /* Cart Modal */
             .cart-icon{
@@ -1988,9 +2023,33 @@
             }
         
             /* Checkout Page Cart */
-            .cart-item-title{
-                font-size: 2rem;
-            }
+                /* Info Container */
+                .checkout-container .cart-item-info{
+                    transform: translateX(-20%);
+                }
+
+                /* Title */
+                .checkout-container .cart-item-title{
+                    font-size: 2rem;
+                }
+
+                /* Image */
+                .checkout-container .cart-item-image{
+                    transform: translateX(-15%);
+                }
+
+                /* Remove From Cart Button */
+                .checkout-container .cart-item-info button{
+                    font-size: 1rem;
+                    width: 130px;
+                }
+
+                /* Total Price */
+                .checkout-container .cart-total p{
+                    font-size: 2.6rem !important;
+                } 
+
+                
         
         /* Inventory Landing Page */
             /* Page Images */
@@ -2504,6 +2563,14 @@
             .mbl-radio input[type="radio"] {
                 transform: scale(1.2); /* Adjust the scale to make it smaller */
                 margin: 0 3px;
+            }
+
+            /* Checkout Cart */
+            .accessories-item img{
+                width: 150px;
+                height: 150px;
+
+                /* transform: translateX(10%); */
             }
         /* Shopping Cart */
             /* Cart Modal */

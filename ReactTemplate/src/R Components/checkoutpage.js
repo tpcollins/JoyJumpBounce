@@ -693,12 +693,11 @@ const CheckoutPage = ({ data }) => {
 
                                 {/* Checkout button */}
                                 {!isCardLoading && (
-                                    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+                                    <div className='checkout-button-container'>
                                         <Button
                                             className="checkout-button"
                                             disabled={!isFormValid || cartItems.length === 0 || loading}
                                             onClick={handleShowModal}
-                                            style={{ fontSize: '2em' }}
                                         >
                                             {loading ? (
                                                 <Circles ariaLabel="loading" color="#ffffff" height="24" width="24" />

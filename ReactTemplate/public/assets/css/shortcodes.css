@@ -7700,6 +7700,15 @@
   text-align: center;
 }
 
+.checkout-button-container{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.checkout-button{
+  font-size: 2em;
+}
+
 .checkout-button.disabled {
   background-color: #cccccc;
   color: #666666; 
