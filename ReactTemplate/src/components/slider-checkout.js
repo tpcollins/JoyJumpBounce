@@ -4,7 +4,7 @@ import { heroSlider } from "../SliderProps";
 const CheckoutSlider = ({data}) => {
 
     return(
-    <section className="tf-slider-1">
+    <section className="tf-slider-1 slider-checkout">
         <div className="overlay" />
         <div className="container-fluid">
           <div className="row">
@@ -18,37 +18,53 @@ const CheckoutSlider = ({data}) => {
                       key={sdIdx}
                       >
                         <div className="box-content">
-                          <div 
-                          className="sub clr-pri-2"
-                          style={{color: 'white !important'}}
-                          >
-                            {item.sub}
-                          </div>
-                          <div className="title clr-pri-2">
-                            {item.title}
-                          </div>
-                          <ul>
-                          {item.listItems.map((li, liIdx) => (
-                            <li 
-                            key={liIdx}
-                            style={{
-                                paddingTop: '60px'
-                            }}
+                          
+                          <div className="clr-content-mbl">
+                            <div 
+                            className="sub clr-pri-2"
+                            style={{color: 'white !important'}}
                             >
-                              <p 
-                                className="li-clr-pri-2-chkout"
-                                style={{
-                                    color: 'white'
-                                }}
-                              >{li}</p>
-                            </li>
-                          ))}
-                          </ul>
+                              {item.sub}
+                            </div>
+                            <div className="title clr-pri-2">
+                              {item.title}
+                            </div>
+                          </div>
+
+                          <div className="box-feature">
+                            <div className="image">
+                            {item.imgs.map((img, imgIdx) => (
+                              <img
+                                alt="Image"
+                                key={imgIdx}
+                                src={img.src}
+                              />
+                            ))}
+                            </div>
+                          </div>
+
+                          <div className="box-custom">
+                            <ul>
+                            {item.listItems.map((li, liIdx) => (
+                              <li 
+                              key={liIdx}
+                              style={{
+                                  paddingTop: '60px'
+                              }}
+                              >
+                                <p 
+                                  className="li-clr-pri-2-chkout"
+                                  style={{
+                                      color: 'white'
+                                  }}
+                                >{li}</p>
+                              </li>
+                            ))}
+                            </ul>
+                          </div>
+
                           <div 
                             className="box-btn"
-                            style={{
-                                paddingTop: '60px'
-                            }}
                           >
                           {item.routeBtns.map((btn, btnIdx) => (
                             <a 
@@ -58,21 +74,6 @@ const CheckoutSlider = ({data}) => {
                             >
                               <span className="inner">{btn.text}</span>
                             </a>
-                          ))}
-                          </div>
-                        </div>
-                        <div className="box-feature">
-                          <div className="image">
-                          {item.imgs.map((img, imgIdx) => (
-                            <img
-                              alt="Image"
-                              key={imgIdx}
-                              src={img.src}
-                              style={{
-                                paddingTop: '30px',
-                                paddingBottom: '15px'
-                              }}
-                            />
                           ))}
                           </div>
                         </div>
