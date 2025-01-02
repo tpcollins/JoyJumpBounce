@@ -117,7 +117,8 @@ const StockGrid = ({ additionalData, handleAddToCart, stockData }) => {
 
                                 <p>{new Date(additionalData.date).toLocaleDateString()}</p>
                                 <p>
-                                    <a href={'/inventory#' + item.pgSection}>View on Inventory Page</a>
+                                    <a id='view-invpg'
+                                    href={'/inventory#' + item.pgSection}>View on Inventory Page</a>
                                 </p>
 
                                 <div>

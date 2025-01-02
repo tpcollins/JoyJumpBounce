@@ -103,6 +103,7 @@ const HowItWorks = () => {
                             href="/inventory"
                             style={{color: "white"}}
                             target="_blank"
+                            id="hiw-btn"
                             >
                               View Our Inventory Now!
                             </a>

@@ -4864,7 +4864,7 @@
     /* Slider */
         /* Title Text */
         .title.clr-pri-2{
-            font-size: 24px;
+            font-size: 22px;
             display: flex; 
             align-items: center;
             justify-content: center;
@@ -4882,7 +4882,7 @@
 
         /* Wrap Text */
         .wrap.clr-pri-1{
-            font-size: 19px;
+            font-size: 17px;
             display: flex; 
             align-items: center;
             justify-content: center;
@@ -5106,6 +5106,10 @@
                 padding-top: 10px;
             }
 
+            .about-section #hiw-btn{
+                font-size: 13px;
+            }
+
         /* Contact Us */
             /* Container */
             .contact-container{
@@ -5159,7 +5163,7 @@
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                margin: 0 auto;
+                margin-left: -15px;
             }
         
         /* Booking */
@@ -5197,7 +5201,12 @@
 
             /* Title and Price */
             .stock-title, .stock-price{
-                font-size: 1.75em;
+                font-size: 1.6em;
+            }
+
+            /* View on Inventory Page */
+            #view-invpg{
+                font-size: 15px;
             }
 
             /* Other Information */
@@ -5223,8 +5232,11 @@
             }
 
             .stock-grid-container .fl-btn.st-12{
-                top: 20px;
-                right: 40px;
+                right: 50px;
+
+                display: flex;
+                align-items: bottom;
+                justify-content: bottom;
             }
 
             /* Accessories Stock Grid */
