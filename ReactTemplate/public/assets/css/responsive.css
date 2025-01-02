@@ -4237,7 +4237,7 @@
             /* Top Button */
             .fl-btn.st-12{
                 height: 30px;
-                font-size: 13px;
+                font-size: 12px;
             }
 
             /* Bottom Button */
@@ -4333,7 +4333,7 @@
 
         .social-icons {
             flex-direction: row; /* Ensure icons are horizontally aligned */
-            margin-top: -2px; /* Adjust spacing */
+            margin-top: 20px; /* Adjust spacing */
             justify-content: center; /* Center-align on smaller screens */
             transform: translateX(160%);
         }
@@ -4376,7 +4376,7 @@
             flex-direction: row; 
             /* margin-top: 10px;  */
             justify-content: center; 
-            padding-left: 165px;
+            padding-left: 160px;
             transform: translateY(500%);
             position: inherit;
         }
@@ -4427,8 +4427,8 @@
         /* Contact Us */
             /* Container */
             .contact-container{
-                padding-top: 25px;
-                padding-bottom: 40px;
+                padding-top: 15px;
+                padding-bottom: 35px;
             }
 
             /* Inner Container */
@@ -4439,7 +4439,23 @@
 
             /* Need Any Support? */
             .title-heading .sub-heading{
-                font-size: 14px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                transform: translateX(6%);
+            }
+
+            .title-heading .sub-heading .inner-sub.st-1{
+                font-size: 15px;
+                padding: 0;
+                margin-left: -23px;
+            }
+
+            .title-heading .sub-heading image{
+                width: 70%;
+                height: auto;
             }
 
             /* Heading section under main title; removing for mobile */
@@ -4447,8 +4463,12 @@
                 display: none;
             }
 
+            .wrap-contact .fx .content p{
+                font-size: 20px;
+            }
+
             .wrap-contact .fx .content h4{
-                font-size: 21px;
+                font-size: 20px;
             }
 
             /* Send Message Button */
@@ -4499,6 +4519,7 @@
             /* Float Image */
             .stock-image{
                 width: 150px;
+                transform: translateX(8%)
             }
 
             /* Accessories Stock Grid */
@@ -4615,11 +4636,15 @@
             }
 
             /* Complete Checkout Button */
-            .checkout-button.btn.btn-primary{
+            .checkout-button-container{
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+            }
+
+            .checkout-button.btn.btn-primary{
+                font-size: 1em;
             }
 
             /* Radio Buttons */
@@ -4633,12 +4658,40 @@
                 margin: 0 3px;
             }
 
-            /* Checkout Cart */
-            .accessories-item img{
-                width: 150px;
-                height: 150px;
+            /* Delivery Charge */
+            .delivery-disclaimer{
+                font-size: 0.8em;
+            }
 
-                /* transform: translateX(10%); */
+            /* Name and Price Container */
+            .checkout-container .accessories-info .accessories-title, .accessories-price{
+                transform: translateX(20%);
+            }
+
+            /* Accessory Name */
+            .checkout-container .accessories-title{
+                font-size: 1.5em;
+            }
+            
+            /* Accessory Price */
+            .checkout-container .accessories-price{
+                font-size: 1.5em;
+            }
+
+            /* Add to Cart Button */
+            .checkout-container .accessories-grid .fl-btn.st-12 .inner::before, .fl-btn.st-12 .inner::after{
+                right: -45px;
+            }
+
+            /* Add to Cart Buttons */
+            .checkout-container .accessories-grid .fl-btn.st-12{
+                top: 40px;
+                right: 30px;
+            }
+
+            /* Checkout Images */
+            .checkout-container .accessories-item img{
+                transform: translateX(10%);
             }
         /* Shopping Cart */
             /* Cart Modal */
@@ -4650,9 +4703,31 @@
             }
         
             /* Checkout Page Cart */
-            .cart-item-title{
-                font-size: 2rem;
-            }
+                /* Info Container */
+                .checkout-container .cart-item-info{
+                    transform: translateX(-20%);
+                }
+
+                /* Title */
+                .checkout-container .cart-item-title{
+                    font-size: 2rem;
+                }
+
+                /* Image */
+                .checkout-container .cart-item-image{
+                    transform: translateX(-15%);
+                }
+
+                /* Remove From Cart Button */
+                .checkout-container .cart-item-info button{
+                    font-size: 1rem;
+                    width: 130px;
+                }
+
+                /* Total Price */
+                .checkout-container .cart-total p{
+                    font-size: 2.6rem !important;
+                } 
         
         /* Inventory Landing Page */
             /* Page Images */
