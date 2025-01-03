@@ -6339,7 +6339,7 @@
 
         /* Wrap Text */
         .wrap.clr-pri-1{
-            font-size: 17px;
+            font-size: 30px;
             display: flex; 
             align-items: center;
             justify-content: center;
@@ -6353,6 +6353,11 @@
             justify-content: center;
             text-align: center; 
         }
+
+        .box-custom .wrap{
+            background-size: 110%;
+        }
+
         /* Arrow */
         .box-custom svg{
             transform: translateX(-17%);
@@ -6435,9 +6440,12 @@
             align-items: center;
             justify-content: center;
             text-align: center; 
+
             height: 100%;  
             padding: 10px; 
             font-size: 12px;
+
+            transform: translateX(50%);
         }
 
         /* Opening Hours Text Box */
@@ -6471,8 +6479,8 @@
             flex-direction: row; /* Ensure icons are horizontally aligned */
             margin-top: 20px; /* Adjust spacing */
             justify-content: center; /* Center-align on smaller screens */
-            transform: translateX(160%);
-            padding-top: 10px;
+            transform: translateX(320%);
+            padding-top: 30px;
             padding-bottom: 10px;
         }
 
@@ -6483,9 +6491,9 @@
     /* Footer 1 */
         /* Footer background */
         #footer-1{
-            margin-top: -150px;
+            margin-top: -100px;
 
-            height: 600px;
+            height: 687px;
             z-index: -1;
         }
     
@@ -6493,6 +6501,7 @@
         #footer-1 .widget-footer{
             position: inherit;
             top: 240px;
+            left: 200px;
         }
 
         .f1 .wrap.f-mulish.short-bio{
@@ -6514,8 +6523,8 @@
             flex-direction: row; 
             /* margin-top: 10px;  */
             justify-content: center; 
-            padding-left: 160px;
-            transform: translateY(330%);
+            padding-left: 335px;
+            transform: translateY(260%);
             position: inherit;
         }
 
@@ -6553,7 +6562,7 @@
 
             /* Text */
             .about-section p {
-                font-size: 13px;
+                font-size: 18px;
             }
 
             /* Image */
@@ -6580,17 +6589,22 @@
             /* Inner Container */
             .container .contact-inner{
                 padding-bottom: 20px;
+                right: 15px;
                 
             }
 
             /* Need Any Support? */
-            .title-heading .sub-heading{
+            .contact-container .title-heading .sub-heading{
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 text-align: center;
 
-                transform: translateX(6%);
+                transform: translateX(4%);
+            }
+
+            .contact-container .form-message input[type="text"]{
+                font-size: 1rem;
             }
 
             .title-heading .sub-heading .inner-sub.st-1{
@@ -6623,7 +6637,7 @@
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                margin-left: 10px;
+                /* margin-left: 10px; */
             }
         
         /* Booking */
@@ -6701,32 +6715,43 @@
 
             /* Accessories Stock Grid */
                 /* Accessory Grid */
-                .accessories-grid{
+                .accessories-container .accessories-grid{
                     display: flex;
                     align-items: center;
                     justify-content: center;
                 }
 
                 /* Accessory Grid Headers */
-                .accessories-grid h1{
+                .accessories-container .accessories-grid h1{
                     font-size: 1.5em !important;
                 }
 
+                /* Accessories Page Title */
+                .accessories-container .accessories-grid h2{
+                    font-size: 3.2em !important;
+                }
+
+                /* Accessories Page Price */
+                .accessories-container .accessories-grid p{
+                    font-size: 3.2em !important;
+                    transform: translateX(2%);
+                }
+
                 /* Individual Items */
-                .accessories-item{
+                .accessories-container .accessories-item{
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 320px;
+                    width: 620px;
                     height: 300px;
                     padding: 0;
                 }
 
                 /* Accessory Images */
-                .accessories-item img{
-                    width: 150px;
-                    height: 150px;
-                    left: 15px;
+                .accessories-container .accessories-item img{
+                    width: 220px;
+                    height: 220px;
+                    left: -80px;
                     position: relative;
                 }
 
@@ -6736,7 +6761,32 @@
             /* Floats Title */
             .tf-section.tf-gallery .title-heading.st-4{
                 top: -180px;
+                right: 5px;
+                
                 position: relative;
+            }
+
+            .tf-section.tf-gallery .title-heading .sub-heading{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+            }
+
+            /* Explore our Inventory and Book Below */
+            .tf-section.tf-gallery .title-heading.st-4 h2{
+                top: 0px;
+                right: -10px;
+                position: relative;
+                padding-bottom: 30px;
+            }
+
+            .tf-section.tf-gallery .description{
+                top: 0px;
+                right: -10px;
+                position: relative;
+                padding-bottom: 30px;
             }
 
         /* Accessories Page */
@@ -6964,7 +7014,7 @@
                 display: inline-block;
                 order: 3 !important;
 
-                transform: translateY(-90%);
+                transform: translateY(-45%);
                 left: 40px;
             }
             
@@ -6977,7 +7027,7 @@
             }
             
             .item-slider-1 .box-btn {
-                transform: translateY(150%) !important;
+                transform: translateY(500%) !important;
             }
               
 
