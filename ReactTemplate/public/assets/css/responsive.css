@@ -5257,7 +5257,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 340px;
+                    width: 320px;
                     height: 300px;
                     padding: 0;
                 }
@@ -5266,6 +5266,8 @@
                 .accessories-item img{
                     width: 150px;
                     height: 150px;
+                    left: 15px;
+                    position: relative;
                 }
 
                 
@@ -5384,7 +5386,7 @@
 
             /* Accessory Name */
             .checkout-container .accessories-title{
-                font-size: 1.5em;
+                font-size: 1.3em;
             }
             
             /* Accessory Price */
@@ -5424,7 +5426,7 @@
 
                 /* Title */
                 .checkout-container .cart-item-title{
-                    font-size: 2rem;
+                    font-size: 1.7rem;
                 }
 
                 /* Image */
@@ -5434,8 +5436,9 @@
 
                 /* Remove From Cart Button */
                 .checkout-container .cart-item-info button{
-                    font-size: 1rem;
-                    width: 130px;
+                    font-size: 0.9rem;
+                    width: 120px;
+                    transform: translateX(-5%);
                 }
 
                 /* Total Price */
@@ -5443,7 +5446,16 @@
                     font-size: 2.6rem !important;
                 } 
 
-                
+
+                /* Pre-checkout Modal */
+                .checkout-mblresp-container p{
+                    font-size: 1.8rem;
+                }
+
+                .checkout-mblresp-container Button{
+                    font-size: 1rem;
+                    transform: translateX(-5%);
+                }
         
         /* Inventory Landing Page */
             /* Page Images */
@@ -5548,7 +5560,7 @@
                 order: 2 !important;
 
                 transform: translateY(30%);
-                left: 192px;
+                left: 175px;
             }
 
             .slider-checkout .item-slider-1 .box-feature .image img {

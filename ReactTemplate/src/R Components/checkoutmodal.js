@@ -63,7 +63,7 @@ const CheckoutModal = ({
 
             <Modal.Body>
             {cartItems.map((item, index) => (
-                <div key={index} className="cart-item">
+                <div key={index} className="cart-item checkout-mblresp-container">
                     <img src={item.imgSrc} alt={item.title} className="cart-item-image" />
                     <div className="cart-item-info">
                         <p className="cart-item-title">{index + 1}. {item.title}</p>
@@ -108,4 +108,4 @@ const CheckoutModal = ({
     );
 };
 
-export default CheckoutModal;
+export default CheckoutModal; 
