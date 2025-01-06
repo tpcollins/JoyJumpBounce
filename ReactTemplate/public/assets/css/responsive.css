@@ -9657,8 +9657,8 @@
 }
 
 /* 11. Surface Duo */
-/* **** Have not started */
-@media screen and (width: 430px) and (height: 932px){
+/* Currently Doing */
+@media screen and (device-width: 540px) and (device-height: 720px){
     /* Slider */
         /* Title Text */
         .title.clr-pri-2{
@@ -9802,13 +9802,15 @@
 
         #footer.st-2 .footer-bottom{
             background-color: #9d1ffe;
+            margin-top: 20px;
         }
 
         .social-icons {
             flex-direction: row; /* Ensure icons are horizontally aligned */
             margin-top: -2px; /* Adjust spacing */
+            padding-bottom: 5px;
             justify-content: center; /* Center-align on smaller screens */
-            transform: translateX(160%);
+            transform: translateX(225%);
         }
 
         .copy-right{
@@ -9847,9 +9849,9 @@
         /* Social Media Icons */
         #footer-1 .social-icons {
             flex-direction: row; 
-            /* margin-top: 10px;  */
+            margin-top: 0px; 
             justify-content: center; 
-            padding-left: 165px;
+            padding-left: 220px;
             transform: translateY(500%);
             position: inherit;
         }
@@ -9860,7 +9862,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            top: 240px;
+            top: 260px;
             position: relative;
             /* width: 80%; */
         }
@@ -9874,6 +9876,7 @@
             /* Entire Container */
             .about-container{
                 padding-top: 100px;
+                margin-bottom: 40px;
             }
 
             /* Outer Section */
@@ -9888,13 +9891,21 @@
 
             /* Text */
             .about-section p {
-                font-size: 14px;
+                font-size: 16.5px;
             }
 
             /* Image */
             .about-section-inner img{
                 max-width: 80%;
                 height: auto;
+            }
+
+            .about-section #hiw-btn{
+                font-size: 13px;
+            }
+
+            .about-section-inner.hiw p{
+                font-size: 15px;
             }
 
         /* Contact Us */
@@ -9912,7 +9923,7 @@
 
             /* Need Any Support? */
             .title-heading .sub-heading{
-                font-size: 14px;
+                font-size: 18px;
             }
 
             /* Heading section under main title; removing for mobile */
@@ -9941,7 +9952,7 @@
 
             .react-calendar{
                 transform: translateY(10%);
-                margin-bottom: 70px;
+                margin-bottom: 90px;
             }
 
         /* Stock Grid */
@@ -10113,6 +10124,11 @@
 
                 /* transform: translateX(10%); */
             }
+
+             /* Delivery Charge */
+             .delivery-disclaimer{
+                font-size: 1em;
+            }
         /* Shopping Cart */
             /* Cart Modal */
             .cart-icon{
@@ -10174,7 +10190,7 @@
                 display: inline-block;
                 order: 3 !important;
 
-                transform: translateY(-90%);
+                transform: translateY(-60%);
                 left: 40px;
             }
             
@@ -10187,8 +10203,9 @@
             }
             
             .item-slider-1 .box-btn {
-                transform: translateY(150%) !important;
+                transform: translateY(300%) !important;
                 order: 4 !important;
+                padding-right: 30px;
             }
               
 
@@ -10201,10 +10218,11 @@
             /* Title Text */
             .slider-checkout .sub.clr-pri-2{
                 transform: translateX(-3%);
+                font-size: 2.2rem !important;
             }
 
             .slider-checkout .li-clr-pri-2-chkout{
-                font-size: 1.5rem !important;
+                font-size: 1.8rem !important;
             }
 
 
@@ -10230,8 +10248,8 @@
                 display: inline-block;
                 order: 2 !important;
 
-                transform: translateY(30%);
-                left: 212px;
+                transform: translateY(40%);
+                left: 270px;
             }
 
             .slider-checkout .item-slider-1 .box-feature .image img {
@@ -10242,7 +10260,7 @@
 
             .slider-checkout .item-slider-1 .box-custom{
                 order: 3 !important;
-                transform: translateY(-10%);
+                transform: translateY(9%);
                 /* padding-left: 100px; */
                 margin-right: 20px;
             }
@@ -13333,7 +13351,7 @@
         }
 }
 
-/* 15. Nest Hub Max */
+/* 16. Nest Hub Max */
 /* **** Have not started */
 /* && */
 @media screen and (device-width: 1024px) and (device-height: 1366px) {

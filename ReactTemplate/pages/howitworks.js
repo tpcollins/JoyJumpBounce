@@ -62,7 +62,7 @@ const HowItWorks = () => {
         <div className="container">
             <div className="about-container">
                 <section className="about-section">
-                    <section className="about-section-inner">
+                    <section className="about-section-inner hiw">
                         <h1>How It Works
                             <img 
                                 src="assets/images/logo/JJLogoAbUs.png"
