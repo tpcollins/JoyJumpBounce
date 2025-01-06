@@ -47,7 +47,7 @@ const InvLandingPage = () => {
         >
             <div className="sub-heading clr-pri-3 f-mulish">
                 <LeftArrow />
-                <span className="inner-sub st-1">Inventory</span>
+                <span className="inner-sub st-1 inv">Inventory</span>
                 <RightArrow />
             </div>
             <h5>Have questions before booking? 

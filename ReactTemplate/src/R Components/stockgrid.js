@@ -123,6 +123,7 @@ const StockGrid = ({ additionalData, handleAddToCart, stockData }) => {
 
                                 <div>
                                     <a
+                                        id={`act-btn-${index}`}
                                         className={`fl-btn st-12 stkgrd ${
                                             item.type === 'radio' && !selectedPrice[item.id] ? 'disabled' : ''
                                         }`}
