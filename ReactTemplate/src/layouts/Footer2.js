@@ -14,15 +14,16 @@ const Footer2 = ({footerData}) => {
               media="(max-width: 768px)"
             />
 
-            <source
-              
-              srcSet="/assets/images/inflatables/FooterBlurred.png"
-              media="(min-width: 769px)"
-            />
-
+            {/* iPad Air */}
             <source
               srcSet="/assets/images/inflatables/MobileFooterBackground.png"
               media="(width: 820px) and (height: 1180px)"
+            />
+
+            {/* iPad Pro */}
+            <source
+              srcSet="/assets/images/inflatables/MobileFooterBackground.png"
+              media="(width: 1024px) and (height: 1366px)"
             />
 
             <img
