@@ -7342,6 +7342,7 @@
         #footer.st-2 .footer-bottom{
             background-color: #9d1ffe;
             padding-top: 30px;
+            transform: translateY(50%);
         }
 
         #footer.st-2 .social-icons {
@@ -7385,7 +7386,7 @@
             order: 1; /* Ensure it appears at the top */
             /* margin-bottom: 20px; */
             text-align: center;
-            transform: translateX(3%) translateY(270%);
+            transform: translateX(3%) translateY(310%);
 
             width: 190%;
             max-width: 3000px;
@@ -7425,16 +7426,15 @@
         
         /* Individual Social Link */
         #footer-1 .social-link {
-            width: 60px; /* Set the size of the clickable area */
+            width: 60px; 
             height: 60px;
-            
         }
         
         /* Social Icon (SVG) Styling */
         #footer-1 .social-link .social-icon,
         #footer-1 .social-icons svg {
-            width: 200%; /* Ensure the SVG fills the container */
-            height: 200%; /* Maintain the aspect ratio */
+            width: 200%;
+            height: 200%;
         }
     
         /* Adjust bottom footer alignment */
@@ -7663,7 +7663,7 @@
                 justify-content: bottom;
                 width: 190px !important;
                 font-size: 1.5rem;
-                transform: translateX(-80%) translateY(350%);
+                transform: translateX(40%) translateY(7%);
             }         
 
             /* Accessories Stock Grid */
@@ -7726,7 +7726,7 @@
             /* Explore our Inventory and Book Below */
             .tf-section.tf-gallery .title-heading.st-4 h2{
                 top: 0px;
-                right: 115px;
+                right: -5px;
                 position: relative;
                 padding-bottom: 30px;
             }
@@ -7783,9 +7783,15 @@
                 align-items: center;
                 justify-content: center;
                 text-align: center;
-                width: 200%;
-                height: 200%;
-                max-width: 900px;
+                width: 180%;
+                height: 180%;
+                max-width: 850px;
+
+                transform: translateX(-5.5%);
+            }
+
+            .gallery-item .img {
+                transform: translateX(-5.5%);
             }
         
             .gallery-item .description {
@@ -7794,7 +7800,7 @@
                 margin-bottom: 10px; /* Add spacing below */
                 width: 100%; /* Prevent unexpected shrinking */
 
-                transform: translateX(-7%);
+                transform: translateX(-10%);
             }
         
             .gallery-item .box-btn {
@@ -7810,15 +7816,15 @@
             }
 
             .gallery-item #box-btn-0{
-                transform: translateY(300%) translateX(-110%);
+                transform: translateY(0%) translateX(-230%);
             }
 
             .gallery-item #box-btn-1{
-                transform: translateY(310%) translateX(-120%);
+                transform: translateY(0%) translateX(-250%);
             }
 
             .gallery-item #box-btn-2{
-                transform: translateY(340%) translateX(-120%);
+                transform: translateY(15%) translateX(-240%);
             }
 
             .gallery-item .fl-btn.st-12 span{
@@ -7829,6 +7835,7 @@
             /* Checkout Container */
             .checkout-container{
                 padding-top: 100px;
+                margin-bottom: 350px;
                 transform: translateX(-2%);
             }
 
