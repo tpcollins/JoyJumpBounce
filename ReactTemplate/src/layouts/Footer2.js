@@ -13,11 +13,18 @@ const Footer2 = ({footerData}) => {
               srcSet="/assets/images/inflatables/MobileFooterBackground.png"
               media="(max-width: 768px)"
             />
+
             <source
               
               srcSet="/assets/images/inflatables/FooterBlurred.png"
               media="(min-width: 769px)"
             />
+
+            <source
+              srcSet="/assets/images/inflatables/MobileFooterBackground.png"
+              media="(width: 820px) and (height: 1180px)"
+            />
+
             <img
               src="/assets/images/inflatables/FooterBlurred.png"
               alt="img not found"
