@@ -7162,7 +7162,7 @@
             justify-content: center;
             text-align: center;
 
-            transform: translateX(15%) !important;
+            transform: translateX(5%) !important;
         }
 
         /* Sub Text */
@@ -7268,15 +7268,29 @@
     /* Footer 2 */
         /* Footer Image */
         .f2-bg-img{
-            top: 110px;
+            top: 1px;
             transform: translateX(-15px);
-            width: 105%;
+            /* width: 120%; */
         }
 
         /* First Text Box */
         .f2.widget-logo{
-            position: inherit;
-            margin-top: -80px;
+            /* position: inherit; */
+            transform: translateY(-170%);
+        }
+
+        .widget.f2.f2-widget.widget-logo{
+            width: 140%; /* Ensures it spans the same width as its parent container */
+            max-width: none !important; /* Remove any restrictions */
+            padding: 0;
+
+            display: flex;
+            flex-wrap: nowrap; /* Ensure no wrapping */
+            justify-content: center; /* Center content if needed */
+        }
+
+        .footer-inner.st-2 .col-12{
+            padding: 0 !important;
         }
 
         .f2 .wrap.f-mulish.short-bio{
@@ -7285,18 +7299,19 @@
             justify-content: center;
             text-align: center; 
 
-            height: 100%;  
+            /* height: 100%;  
+            width: 100%; */
             padding: 10px; 
-            font-size: 12px;
 
-            transform: translateX(50%);
+            /* font-size: 35px; */
+
+            transform: translateX(0%);
         }
 
         /* Opening Hours Text Box */
         #footer.st-2{
             overflow: visible;
             margin-top: 0px;
-            /* padding-top: 100px; */
         }
 
         .widget.f2.widget-business{
@@ -7306,11 +7321,16 @@
             text-align: center; 
             height: 100%; 
             padding: 10px; */
+
             display: none;
         }
 
         /* Contact Button (Removing from Mobile Design) */
         .fl-btn.st-12.footer{
+            display: none;
+        }
+
+        .title-widget.additional-title{
             display: none;
         }
 
@@ -7334,70 +7354,101 @@
 
     /* Footer 1 */
         /* Footer background */
-        #footer-1{
-            margin-top: -100px;
-            height: 735px;
-            /* z-index: -1; */
-            
+        #footer-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 10px;
+            margin-top: -100px !important;
+            height: auto; /* Allow height to adjust dynamically */
+            min-height: 120%; /* Make the footer container taller */
+            overflow: visible;
+        
             background: url(../images/logo/Footer1iPadAir.png) center bottom no-repeat !important;
-            background-size: cover;
-            /* width: 100vw; 
-            padding: 40px 0; 
-            margin: 0 auto;  */
+            background-size: 245% !important; /* Increase the background image size */
+        }
+
+        /* Top Footer Widget */
+        #footer-1 .wrap.f-mulish.short-bio {
+            order: 1; /* Ensure it appears at the top */
+            /* margin-bottom: 20px; */
+            text-align: center;
+            transform: translateX(3%) translateY(270%);
+
+            width: 190%;
+            max-width: 3000px;
+            font-size: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            text-align: center; /* Ensure text alignment is centered */
+        }
+
+        /* Opening Hours (Middle Widget) */
+        .widget.f1.widget-business {
+            order: 2;
+            margin-top: 20px;
+            text-align: center;
+            transform: translateX(25%) translateY(60%);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            text-align: center; /* Ensure text alignment is centered */
+        }
+
+        #footer-1 .social-icons {
+            display: flex;
+            flex-direction: column; /* Stack icons vertically */
+            align-items: flex-start; /* Align them to the left or adjust as needed */
+            gap: 60px; /* Add spacing between the icons */
+            transform: translateX(-160%) translateY(-70%); /* Adjust positioning as required */
+            position: relative; /* Relative positioning for proper alignment */
+            width: auto;
+            height: auto;
+        }
+        
+        /* Individual Social Link */
+        #footer-1 .social-link {
+            width: 60px; /* Set the size of the clickable area */
+            height: 60px;
+            
+        }
+        
+        /* Social Icon (SVG) Styling */
+        #footer-1 .social-link .social-icon,
+        #footer-1 .social-icons svg {
+            width: 200%; /* Ensure the SVG fills the container */
+            height: 200%; /* Maintain the aspect ratio */
         }
     
-        /* Top Footer Widget */
-        /* #footer-1 .widget-footer{
-            position: inherit;
-            top: 240px;
-            left: 200px;
-        } */
-
-        .f1 .wrap.f-mulish.short-bio{
-            display: block; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-            height: 100%;  
-            padding: 10px; 
-        }
-
-        /* Middle Widget */
-        .widget.f1.widget-business{
-            display: none;
-        }
-
-        /* Social Media Icons */
-        #footer-1 .social-icons {
-            flex-direction: row; 
-            margin-top: 10px; 
-            justify-content: center; 
-            padding-left: 100px;
-            transform: translateY(-160%);
-            /* left: 30px; */
-            position: inherit;
-        }
-
-        /* Bottom Widget */
-        .footer-bottom.f1.jus-ct{
-            /* display: flex;
-            align-items: center;
-            justify-content: center;
+        /* Adjust bottom footer alignment */
+        .footer-bottom.f1.jus-ct {
+            margin-top: 20px;
             text-align: center;
-            top: 240px;
-            position: relative; */
-            /* width: 80%; */
         }
 
-        /* Additional Questions */
-        /* .title-widget.additional-title{
-            display: none;
-        } */
+        /* Bottom Footer Widget */
+        .footer-bottom.f1.jus-ct {
+            margin-top: 40px;
+            text-align: center;
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .footer-bottom.f1.jus-ct .copy-right{
+            font-size: 15px;
+        }
         
         /* About Us */
             /* Entire Container */
             .about-container{
                 padding-top: 100px;
+                margin-bottom: 45px;
             }
 
             /* Outer Section */
@@ -7433,7 +7484,7 @@
             /* Container */
             .contact-container{
                 padding-top: 15px;
-                padding-bottom: 35px;
+                padding-bottom: 100px;
             }
 
             /* Inner Container */
@@ -7453,6 +7504,23 @@
                 transform: translateX(4%);
             }
 
+            .contact-container .title-heading .title.clr-pri-2{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                transform: translateX(0%) !important;
+            }
+
+            .contact-container .title-heading .sub-heading image{
+                transform: translateY(0%) !important;
+            }
+
+            .contact-container .wrap-contact .fx .content h4 {
+                font-size: 17.5px;
+            }
+
             /* Font Sizes for Input Placeholders */
             .form-message input[type="text"]::placeholder {
                 font-size: 1.5rem;
@@ -7468,7 +7536,7 @@
             
 
             .title-heading .sub-heading .inner-sub.st-1{
-                font-size: 15px;
+                font-size: 20px;
                 padding: 0;
                 margin-left: -23px;
             }
@@ -7510,8 +7578,12 @@
                 transform: translateY(40%);
             }
 
+            #ipad-resp{
+                transform: translateY(50%);
+            }
+
             .react-calendar{
-                transform: translateY(10%);
+                transform: translateY(15%) translateX(-2%);
                 margin-bottom: 70px;
             }
 
@@ -7526,6 +7598,11 @@
 
         /* Stock Grid */
             /* Container */
+            #ipad-resp-bk{
+                padding-top: 40px;
+                margin-bottom: 30px;
+            }
+
             .stock-item-box{
                 display: flex;
                 align-items: center;
@@ -7547,12 +7624,13 @@
 
             /* Other Information */
             .stock-info {
+                padding-top: 10px;
                 display: flex; /* Enables flexbox */
                 align-items: flex-start; /* Align items to the top */
                 flex-direction: column; /* Stacks items vertically */
-                gap: 1rem; /* Adds spacing between items */
-                margin-left: 8rem; /* Adds left margin to move the items to the right */
-                width: calc(100% - 8rem); /* Adjust width to accommodate the float image */
+                gap: 1rem; 
+                margin-left: 8rem;
+                width: calc(100% - 8rem); 
             }            
 
             /* Float Image */
@@ -7571,8 +7649,9 @@
                 display: flex;
                 align-items: bottom;
                 justify-content: bottom;
-                width: 170px !important;
-                font-size: 1.2rem;
+                width: 190px !important;
+                font-size: 1.5rem;
+                transform: translateX(-80%) translateY(350%);
             }         
 
             /* Accessories Stock Grid */
@@ -7629,19 +7708,21 @@
             }
 
             .tf-section.tf-gallery .title-heading .sub-heading{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-
+                display: none;
             }
 
             /* Explore our Inventory and Book Below */
             .tf-section.tf-gallery .title-heading.st-4 h2{
                 top: 0px;
-                right: -10px;
+                right: 115px;
                 position: relative;
                 padding-bottom: 30px;
+            }
+
+            .tf-section.tf-gallery .title-heading.st-4 h5{
+                font-size: 30px;
+                padding-bottom: 10px;
+                transform: translateX(2%);
             }
 
             .tf-section.tf-gallery .description{
@@ -7649,6 +7730,14 @@
                 right: -10px;
                 position: relative;
                 padding-bottom: 30px;
+
+                width: 200%;
+                height: 200%;
+                max-width: 900px;
+            }
+
+            .tf-section.tf-gallery .inner-sub.st-1{
+                font-size: 25px;
             }
 
         /* Accessories Page */
@@ -7660,7 +7749,7 @@
             .gallery-container {
                 display: flex;
                 flex-direction: column;
-                transform: translateY(-10%);
+                transform: translateY(-5%) translateX(0%);
 
                 /* margin-bottom: -100px; */
                 padding-bottom: -100px;
@@ -7682,6 +7771,9 @@
                 align-items: center;
                 justify-content: center;
                 text-align: center;
+                width: 200%;
+                height: 200%;
+                max-width: 900px;
             }
         
             .gallery-item .description {
@@ -7697,14 +7789,28 @@
                 order: 3 !important; /* Ensure the button is always last */
                 align-self: center; /* Center the button */
                 margin: 0 auto; /* Align button horizontally */
-
-                transform: translateX(7%);
             }
         
             /* Remove any padding or extra spacing specific to even/odd items */
             .gallery-item:nth-child(even) .box-btn,
             .gallery-item:nth-child(odd) .box-btn {
                 padding-right: 0;
+            }
+
+            .gallery-item #box-btn-0{
+                transform: translateY(300%) translateX(-110%);
+            }
+
+            .gallery-item #box-btn-1{
+                transform: translateY(310%) translateX(-120%);
+            }
+
+            .gallery-item #box-btn-2{
+                transform: translateY(340%) translateX(-120%);
+            }
+
+            .gallery-item .fl-btn.st-12 span{
+                font-size: 18px;
             }
 
         /* Checkout Page */
@@ -7776,6 +7882,8 @@
             .checkout-container .accessories-grid .fl-btn.st-12{
                 top: 40px;
                 right: -30px;
+
+                transform: translateX(-50%);
             }
 
             /* Checkout Images */
@@ -7813,8 +7921,8 @@
 
                 /* Remove From Cart Button */
                 .checkout-container .cart-item-info button{
-                    font-size: 0.9rem;
-                    width: 120px;
+                    font-size: 1.2rem;
+                    width: 160px;
                     transform: translateX(-5%);
                 }
 
@@ -7838,6 +7946,24 @@
             /* Page Images */
             .landing-image{
                 filter: none;
+            }
+
+            .image-box{
+                width: 150%;
+                height: 170%;
+            }
+
+            .title-heading .sub-heading .inner-sub.st-1.inv{
+                transform: translateY(15%);
+                font-size: 25px;
+            }
+
+            .title-heading .sub-heading image{
+                transform: translateY(25%);
+            }
+
+            .inv-container-resp{
+                transform: translateY(10%);
             }
 
         /* Home page Slider */

@@ -273,7 +273,7 @@ const Booking = () => {
           <ReactCalendar handleDateClick={handleDateClick}/>
 
           {isDateClicked && (
-            <div>
+            <div id="ipad-resp-bk">
               <h3
               className="text-center"
               >Available Stock For: {selectedDate.toLocaleDateString()}</h3>

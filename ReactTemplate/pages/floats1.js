@@ -53,6 +53,7 @@ const Floats = () => {
 
                                 <div className="box-btn">
                                     <a 
+                                    id={`box-btn-${index}`}
                                     className="fl-btn st-12 inv"
                                     href="#"
                                     >
