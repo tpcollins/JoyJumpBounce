@@ -5,7 +5,6 @@
 
 
 TODO:
-1. Finish checkout success page nesthub max
 -----------------------------------------------------------------------------
     These steps might have to be done repeatedly to ensure nothing
     changes on other devices and/or browsers when things shift around
@@ -1499,6 +1498,8 @@ TODO:
 /* Phone Screens */
 
 /* 1. iPhone SE */
+
+/* TODO-2 Finished */
 @media screen and (max-width: 375px){
     /* Slider */
         /* Title Text */
@@ -1599,6 +1600,9 @@ TODO:
             margin-top: 20px;
         }
 
+        .footer-content{
+            padding: 0;
+        }
     /* Footer 2 */
         /* Footer Image */
         .f2-bg-img{
@@ -1663,10 +1667,10 @@ TODO:
     /* Footer 1 */
         /* Footer background */
         #footer-1{
-            margin-top: -150px;
+            /* margin-top: -150px; */
 
             height: 600px;
-            z-index: -1;
+            /* z-index: -1; */
         }
     
         /* Top Footer Widget */
@@ -2006,7 +2010,11 @@ TODO:
             }
 
             /* Name and Price Container */
-            .checkout-container .accessories-info .accessories-title, .accessories-price{
+            .checkout-container .accessories-info .accessories-title{
+                transform: translateX(20%);
+            }
+
+            .checkout-container .accessories-info .accessories-price{
                 transform: translateX(20%);
             }
 
@@ -2042,6 +2050,10 @@ TODO:
                 height: 105px;
                 right: 20px;
                 bottom: 75px;
+            }
+
+            .checkout-mblresp-container .cart-item-title{
+                font-size: 1.6em;
             }
         
             /* Checkout Page Cart */
@@ -2202,6 +2214,7 @@ TODO:
 }
 
 /* 2. iPhone XR */
+/* TODO-2 Finished */
 @media screen and (width: 414px) and (height: 896px) {
 
     /* Slider */
@@ -2356,20 +2369,21 @@ TODO:
             flex-direction: row; /* Ensure icons are horizontally aligned */
             margin-top: 20px; /* Adjust spacing */
             justify-content: center; /* Center-align on smaller screens */
-            transform: translateX(140%);
+            transform: translateX(160%) translateY(-35%);
         }
 
         .copy-right{
-            font-size: 12px;
+            font-size: 14px;
         }
 
+        .footer-content{
+            padding: 0;
+        }
     /* Footer 1 */
         /* Footer background */
         #footer-1{
-            margin-top: -150px;
 
             height: 600px;
-            z-index: -1;
         }
     
         /* Top Footer Widget */
@@ -2397,8 +2411,8 @@ TODO:
             flex-direction: row; 
             /* margin-top: 10px;  */
             justify-content: center; 
-            padding-left: 135px;
-            transform: translateY(500%);
+            /* padding-left: 135px; */
+            transform: translateY(500%) translateX(160%);
             position: inherit;
         }
 
@@ -2709,7 +2723,11 @@ TODO:
             }
 
             /* Name and Price Container */
-            .checkout-container .accessories-info .accessories-title, .accessories-price{
+            .checkout-container .accessories-info .accessories-title{
+                transform: translateX(20%);
+            }
+
+            .checkout-container .accessories-info .accessories-price{
                 transform: translateX(20%);
             }
 
@@ -2745,6 +2763,10 @@ TODO:
                 height: 105px;
                 right: 20px;
                 bottom: 75px;
+            }
+
+            .checkout-mblresp-container .cart-item-title{
+                font-size: 1.6em;
             }
         
             /* Checkout Page Cart */
@@ -2905,6 +2927,7 @@ TODO:
 }
 
 /* 3. iPhone 12 Pro */
+/* TODO-2 Finished */
 @media screen and (width: 390px) and (height: 844px) {
 
     /* Slider */
@@ -3005,6 +3028,9 @@ TODO:
             margin-top: 20px;
         }
 
+        .footer-content{
+            padding: 0;
+        }
     /* Footer 2 */
         /* Footer Image */
         .f2-bg-img{
@@ -3069,10 +3095,8 @@ TODO:
     /* Footer 1 */
         /* Footer background */
         #footer-1{
-            margin-top: -150px;
 
             height: 600px;
-            z-index: -1;
         }
     
         /* Top Footer Widget */
@@ -3100,8 +3124,7 @@ TODO:
             flex-direction: row; 
             /* margin-top: 10px;  */
             justify-content: center; 
-            padding-left: 135px;
-            transform: translateY(500%);
+            transform: translateY(500%) translateX(145%);
             position: inherit;
         }
 
@@ -3412,7 +3435,11 @@ TODO:
             }
 
             /* Name and Price Container */
-            .checkout-container .accessories-info .accessories-title, .accessories-price{
+            .checkout-container .accessories-info .accessories-title{
+                transform: translateX(20%);
+            }
+
+            .checkout-container .accessories-info .accessories-price{
                 transform: translateX(20%);
             }
 
@@ -3448,6 +3475,10 @@ TODO:
                 height: 105px;
                 right: 20px;
                 bottom: 75px;
+            }
+
+            .checkout-mblresp-container .cart-item-title{
+                font-size: 1.6em;
             }
         
             /* Checkout Page Cart */
