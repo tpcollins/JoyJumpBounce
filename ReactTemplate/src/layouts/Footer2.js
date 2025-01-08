@@ -26,6 +26,12 @@ const Footer2 = ({footerData}) => {
               media="(width: 1024px) and (height: 1366px)"
             />
 
+            {/* Surface 7 Pro */}
+            <source
+              srcSet="/assets/images/inflatables/MobileFooterBackground.png"
+              media="(width: 912px) and (height: 1368px)"
+            />
+
             <img
               src="/assets/images/inflatables/FooterBlurred.png"
               alt="img not found"
