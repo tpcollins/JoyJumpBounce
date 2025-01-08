@@ -6,9 +6,14 @@
 
 TODO:
 1. Finish checkout success page nesthub max
-2. Run through responsive designs and make sure all buttons are clickable
-3. Run through responsive designs on all browsers
-4. Run through desktop and laptop designs on all browsers
+-----------------------------------------------------------------------------
+    These steps might have to be done repeatedly to ensure nothing
+    changes on other devices and/or browsers when things shift around
+
+    2. Run through responsive designs and make sure all buttons are clickable
+    3. Run through responsive designs on all browsers
+    4. Run through desktop and laptop designs on all browsers
+-----------------------------------------------------------------------------
 5. Swap square to production
 6. Swap airtable to jjb account
 7. Swap emailjs to jjb account
@@ -15288,18 +15293,19 @@ TODO:
 
         /* Checkout Success page */
         .tf-slider-1.slider-checkout{
-            top: -200px;
+            top: -120px;
         }
 
         .tf-slider-1.slider-checkout .overlay{
-            /* width: 95%;
-            height: 80%; */
-            background-image: url(../images/inflatables/MobileSliderHmpg.png);
-            border-radius: 70px !important;
+            width: 120% !important;
+            height: 90% !important;
+            /* background-image: url(../images/inflatables/MobileSliderHmpg.png);
+            background-size: cover;
+            border-radius: 70px !important; */
         }
         /* Title Text */
         .slider-checkout .sub.clr-pri-2{
-            transform: translateX(20%) translateY(100%);
+            transform: translateX(-12%) translateY(50%);
             font-size: 42px;
         }
 
@@ -15344,13 +15350,13 @@ TODO:
             align-items: center;
             max-width: 4000px;
             height: auto;
-            transform: translateX(40%) translateY(80%);
+            transform: translateX(25%) translateY(8%);
         }
 
         .slider-checkout .item-slider-1 .box-custom{
             order: 3 !important;
 
-            transform: translateY(90%) translateX(10%);
+            transform: translateY(-45%) translateX(-5%);
         }
 
         .slider-checkout .li-clr-pri-2-chkout{
@@ -15360,7 +15366,7 @@ TODO:
 
         .slider-checkout .item-slider-1 .box-btn .fl-btn.st-12{
             order: 4 !important;
-            transform: translateY(300%) translateX(10%);
+            transform: translateY(-300%) translateX(-12%);
             /* right: -5px; */
             width: 100%;
             font-size: 20px;
