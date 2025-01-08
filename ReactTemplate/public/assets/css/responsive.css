@@ -7144,8 +7144,11 @@
         }
 }
 
-/* These three have the card container issue for some reason
+/* These four have the card container issue for some reason
     Need to isolate the issue and figure it out. If we can fix it on one, we can probably fix it on all
+
+    - it is something we have done in the iPad design starting with iPad Air (iPad Mini isn't having the issue)
+    - when I coped over iPad Air for Asus, it start having the same issue
 */
 
 
@@ -9143,7 +9146,6 @@
     }
 
     /* 10. Surface Pro 7 */
-    /* **** Have not started */
     @media screen and (device-width: 912px) and (device-height: 1368px) {
 
         /* Slider */
@@ -10177,6 +10179,1010 @@
             }
     }
 
+    /* 13. Asus Zenbook Fold */
+    @media screen and (device-width: 853px) and (device-height: 1280px) {
+
+    /* Slider */
+        .item-slider-1 .box-content{
+            transform: translateX(30%) translateY(40%) !important;
+        }
+
+        /* Title Text */
+        .title.clr-pri-2{
+            font-size: 50px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Sub Text */
+        .sub.clr-pri-2{
+            font-size: 60px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        /* Wrap Text */
+        .wrap.clr-pri-1{
+            font-size: 30px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Arrow and JJ Ribbon */
+        .box-custom{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .box-custom .wrap{
+            background-size: 110%;
+        }
+
+        /* Arrow */
+        .box-custom svg{
+            transform: translateX(-17%);
+        }
+
+        /* List Item Text */
+        .li-clr-pri-2{
+            display: none !important;
+        }
+
+        /* List Item Emojis */
+        li.fx{
+            display: none !important;
+        }
+
+        /* Buttons */
+            /* Top Button */
+            .fl-btn.st-12{
+                height: 70px;
+                width: 120%;
+                font-size: 18px;
+            }
+
+            /* Bottom Button */
+            .fl-btn.st-1{
+                height: 70px;
+                width: 120%;
+                font-size: 23px;
+            }
+
+            /* Button Container */
+            .box-btn{
+                /* display: flex; 
+                align-items: center;
+                justify-content: center;
+                text-align: center;  */
+                /* flex-direction: column; */
+
+                width: 120%;
+                max-width: 3000px; 
+                /* margin-left: 60px; */
+
+                /* transform: translateX(0%) translateY(50%) !important; */
+            }
+
+            .fl-btn {
+                width: 300%;
+                text-align: center; 
+                max-width: 1000px; 
+                margin: 0 auto; 
+
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                text-align: center; 
+
+                top: -20px;
+                left: -95px;
+            }
+
+    /* Navbar */
+        /* Non-mobile Navbar */
+        .nav-wrap{
+            display: none;
+        }
+
+        /* Button Menu for Mobile Navbar */
+        .btn-menu{
+            margin-top: 20px;
+        }
+
+    .footer-content{
+        padding: 0;
+    }
+    /* Footer 2 */
+        /* Footer Image */
+        .f2-bg-img{
+            top: 1px;
+            /* transform: translateX(-15px); */
+            /* width: 120%; */
+        }
+
+        /* First Text Box */
+        .f2.widget-logo{
+            /* position: inherit; */
+            transform: translateY(-170%);
+        }
+
+        .widget.f2.f2-widget.widget-logo{
+            width: 140%; /* Ensures it spans the same width as its parent container */
+            max-width: none !important; /* Remove any restrictions */
+            padding: 0;
+
+            display: flex;
+            flex-wrap: nowrap; /* Ensure no wrapping */
+            justify-content: center; /* Center content if needed */
+        }
+
+        .footer-inner.st-2 .col-12{
+            padding: 0 !important;
+        }
+
+        .f2 .wrap.f-mulish.short-bio{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+
+            /* height: 100%;  
+            width: 100%; */
+            padding: 10px; 
+            width: 140%;
+            max-width: 3000px;
+
+            font-size: 25px;
+
+            transform: translateX(0%) translateY(40%);
+        }
+
+        #footer.st-2{
+            overflow: visible;
+            margin-top: 0px;
+            padding-bottom: 200px;
+        }
+
+        .widget.f2.widget-business{
+            /* display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            height: 100%; 
+            padding: 10px; */
+
+            display: none;
+        }
+
+        /* Contact Button (Removing from Mobile Design) */
+        .fl-btn.st-12.footer{
+            display: none;
+        }
+
+        .title-widget.additional-title{
+            display: none;
+        }
+
+        #footer.st-2 .footer-bottom{
+            background-color: #9d1ffe;
+            padding-top: 30px;
+            transform: translateY(210%);
+        }
+
+        #footer.st-2 .social-icons {
+            flex-direction: row; /* Ensure icons are horizontally aligned */
+            justify-content: center; /* Center-align on smaller screens */
+            transform: translateX(200%) translateY(-120%);
+            padding-top: 10px;
+            padding-bottom: 10px;
+            gap: 60px;
+        }
+
+        /* Social Icon (SVG) Styling */
+        #footer.st-2 .social-link .social-icon,
+        #footer.st-2 .social-icons svg {
+            width: 200%; /* Ensure the SVG fills the container */
+            height: 200%; /* Maintain the aspect ratio */
+        }
+
+        .copy-right{
+            font-size: 25px;
+        }
+
+    /* Footer 1 */
+        /* Footer background */
+        #footer-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 10px;
+            /* margin-top: -100px !important; */
+            height: auto; /* Allow height to adjust dynamically */
+            min-height: 120%; /* Make the footer container taller */
+            overflow: visible;
+        
+            background: url(../images/logo/Footer1iPadAir.png) center bottom no-repeat !important;
+            background-size: 245% !important; /* Increase the background image size */
+        }
+
+        /* Top Footer Widget */
+        #footer-1 .wrap.f-mulish.short-bio {
+            order: 1; /* Ensure it appears at the top */
+            /* margin-bottom: 20px; */
+            text-align: center;
+            transform: translateX(3%) translateY(310%);
+
+            width: 190%;
+            max-width: 3000px;
+            font-size: 20px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            text-align: center; /* Ensure text alignment is centered */
+        }
+
+        /* Opening Hours (Middle Widget) */
+        .widget.f1.widget-business {
+            order: 2;
+            margin-top: 20px;
+            text-align: center;
+            transform: translateX(25%) translateY(60%);
+
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            justify-content: center; /* Center content vertically */
+            text-align: center; /* Ensure text alignment is centered */
+        }
+
+        #footer-1 .social-icons {
+            display: flex;
+            flex-direction: column; /* Stack icons vertically */
+            align-items: flex-start; /* Align them to the left or adjust as needed */
+            gap: 60px; /* Add spacing between the icons */
+            transform: translateX(-160%) translateY(-70%); /* Adjust positioning as required */
+            position: relative; /* Relative positioning for proper alignment */
+            width: auto;
+            height: auto;
+        }
+        
+        /* Individual Social Link */
+        #footer-1 .social-link {
+            width: 60px; 
+            height: 60px;
+        }
+        
+        /* Social Icon (SVG) Styling */
+        #footer-1 .social-link .social-icon,
+        #footer-1 .social-icons svg {
+            width: 200%;
+            height: 200%;
+        }
+    
+        /* Adjust bottom footer alignment */
+        .footer-bottom.f1.jus-ct {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Bottom Footer Widget */
+        .footer-bottom.f1.jus-ct {
+            margin-top: 40px;
+            text-align: center;
+            position: relative;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .footer-bottom.f1.jus-ct .copy-right{
+            font-size: 15px;
+        }
+        
+        /* About Us */
+            /* Entire Container */
+            .about-container{
+                padding-top: 100px;
+                margin-bottom: 45px;
+            }
+
+            /* Outer Section */
+            .about-section{
+                width: 90%;
+            }
+
+            /* Inner Section */
+            .about-section-inner{
+                width: 95%;
+            }
+
+            /* Text */
+            .about-section p {
+                font-size: 18.5px;
+            }
+
+            /* Image */
+            .about-section-inner img{
+                max-width: 80%;
+                height: auto;
+            }
+
+            .about-section #ab-btn{
+                padding-top: 10px;
+            }
+
+            .about-section #hiw-btn{
+                font-size: 13px;
+            }
+
+        /* Contact Us */
+            /* Container */
+            .contact-container{
+                padding-top: 15px;
+                padding-bottom: 100px;
+            }
+
+            /* Inner Container */
+            .container .contact-inner{
+                padding-bottom: 20px;
+                right: 15px;
+                
+            }
+
+            /* Need Any Support? */
+            .contact-container .title-heading .sub-heading{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                transform: translateX(4%);
+            }
+
+            .contact-container .title-heading .title.clr-pri-2{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+
+                transform: translateX(0%) !important;
+            }
+
+            .contact-container .title-heading .sub-heading image{
+                transform: translateY(0%) !important;
+            }
+
+            .contact-container .wrap-contact .fx .content h4 {
+                font-size: 17.5px;
+            }
+
+            /* Font Sizes for Input Placeholders */
+            .form-message input[type="text"]::placeholder {
+                font-size: 1.5rem;
+            }
+
+            .form-message input[type="email"]::placeholder {
+                font-size: 1.5rem;
+            }
+
+            .form-message #subject {
+                font-size: 1.5rem;
+            }
+            
+
+            .title-heading .sub-heading .inner-sub.st-1{
+                font-size: 20px;
+                padding: 0;
+                margin-left: -23px;
+            }
+
+            .title-heading .sub-heading image{
+                width: 70%;
+                height: auto;
+            }
+
+            /* Heading section under main title; removing for mobile */
+            .title-heading.th-2{
+                display: none;
+            }
+
+            .wrap-contact .fx .content p{
+                font-size: 20px;
+            }
+
+            .wrap-contact .fx .content h4{
+                font-size: 17px;
+            }
+
+            .contact-container .th-mblresp-cntctus{
+                transform: translateX(-5%);
+            }
+
+            /* Send Message Button */
+            .cntct-btn-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                /* margin-left: 10px; */
+            }
+        
+        /* Booking */
+            /* Title */
+            .title-heading.st-4{
+                transform: translateY(40%);
+            }
+
+            #ipad-resp{
+                transform: translateY(50%);
+            }
+
+            .react-calendar{
+                transform: translateY(15%) translateX(-2%);
+                margin-bottom: 70px;
+            }
+
+            /* Month Button */
+            .react-calendar__navigation button{
+                font-size: 1em;
+            }
+
+            .react-calendar__month-view__weekdays{
+                font-size: 14px !important;
+            }
+
+        /* Stock Grid */
+            /* Container */
+            #ipad-resp-bk{
+                padding-top: 40px;
+                margin-bottom: 30px;
+            }
+
+            .stock-item-box{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 720px;
+                height: 300px;
+                padding: 0;
+            }
+
+            /* Title and Price */
+            .stock-title, .stock-price{
+                font-size: 3em;
+            }
+
+            /* View on Inventory Page */
+            #view-invpg{
+                font-size: 15px;
+            }
+
+            /* Other Information */
+            .stock-info {
+                padding-top: 10px;
+                display: flex; /* Enables flexbox */
+                align-items: flex-start; /* Align items to the top */
+                flex-direction: column; /* Stacks items vertically */
+                gap: 1rem; 
+                margin-left: 8rem;
+                width: calc(100% - 8rem); 
+            }            
+
+            /* Float Image */
+            .stock-image{
+                width: 220px;
+
+                transform: translateX(20%);
+            }
+
+            /* Button */
+            .stock-grid-container .fl-btn.st-12 .inner::before, .fl-btn.st-12 .inner::after{
+                right: -45px;
+            }
+
+            .stock-grid-container .fl-btn.st-12{
+                display: flex;
+                align-items: bottom;
+                justify-content: bottom;
+                width: 190px !important;
+                font-size: 1.5rem;
+                transform: translateX(40%) translateY(7%);
+            }         
+
+            /* Accessories Stock Grid */
+                /* Accessory Grid */
+                .accessories-container .accessories-grid{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                /* Accessory Grid Headers */
+                .accessories-container .accessories-grid h1{
+                    font-size: 1.5em !important;
+                }
+
+                /* Accessories Page Title */
+                .accessories-container .accessories-grid h2{
+                    font-size: 3.2em !important;
+                }
+
+                /* Accessories Page Price */
+                .accessories-container .accessories-grid p{
+                    font-size: 3.2em !important;
+                    transform: translateX(2%);
+                }
+
+                /* Individual Items */
+                .accessories-container .accessories-item{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 620px;
+                    height: 300px;
+                    padding: 0;
+                }
+
+                /* Accessory Images */
+                .accessories-container .accessories-item img{
+                    width: 220px;
+                    height: 220px;
+                    left: -80px;
+                    position: relative;
+                }
+
+                
+
+        /* Floats Page */
+            /* Floats Title */
+            .tf-section.tf-gallery .title-heading.st-4{
+                top: -180px;
+                right: 5px;
+                
+                position: relative;
+            }
+
+            .tf-section.tf-gallery .title-heading .sub-heading{
+                display: none;
+            }
+
+            /* Explore our Inventory and Book Below */
+            .tf-section.tf-gallery .title-heading.st-4 h2{
+                top: 0px;
+                right: -5px;
+                position: relative;
+                padding-bottom: 30px;
+            }
+
+            .tf-section.tf-gallery .title-heading.st-4 h5{
+                font-size: 30px;
+                padding-bottom: 10px;
+                transform: translateX(1%);
+            }
+
+            .tf-section.tf-gallery .description{
+                top: 0px;
+                right: -10px;
+                position: relative;
+                padding-bottom: 30px;
+
+                width: 200%;
+                height: 200%;
+                max-width: 900px;
+            }
+
+            .tf-section.tf-gallery .gallery-container .gallery-item .image{
+                transform: translateX(-3.5%);
+            }
+
+            .tf-section.tf-gallery .inner-sub.st-1{
+                font-size: 25px;
+            }
+
+        /* Accessories Page */
+            .accessories-grid .separator-line {
+                margin-top: 40px;
+            }
+
+            /* Inventory Gallery */
+            .gallery-container {
+                display: flex;
+                flex-direction: column;
+                transform: translateY(-5%) translateX(0%);
+
+                /* margin-bottom: -100px; */
+                padding-bottom: -100px;
+            }
+            
+            .gallery-item {
+                display: flex; /* Explicitly set flexbox */
+                flex-direction: column; /* Stack items vertically */
+                justify-content: flex-start; /* Ensure proper alignment */
+                align-items: center; /* Center items horizontally */
+                position: relative; /* Avoid unexpected positioning shifts */
+            }
+        
+            .gallery-item .image {
+                order: 1 !important; /* Ensure the image always appears first */
+                margin-bottom: 10px; /* Add space below the image */
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 180%;
+                height: 180%;
+                max-width: 850px;
+
+                transform: translateX(-5.5%);
+            }
+
+            .gallery-item .img {
+                transform: translateX(-5.5%);
+            }
+        
+            .gallery-item .description {
+                order: 2 !important; /* Ensure the description appears second */
+                text-align: center; /* Center-align the description */
+                margin-bottom: 10px; /* Add spacing below */
+                width: 100%; /* Prevent unexpected shrinking */
+
+                transform: translateX(-10%);
+            }
+        
+            .gallery-item .box-btn {
+                order: 3 !important; /* Ensure the button is always last */
+                align-self: center; /* Center the button */
+                margin: 0 auto; /* Align button horizontally */
+            }
+        
+            /* Remove any padding or extra spacing specific to even/odd items */
+            .gallery-item:nth-child(even) .box-btn,
+            .gallery-item:nth-child(odd) .box-btn {
+                padding-right: 0;
+            }
+
+            .gallery-item #box-btn-0{
+                transform: translateY(0%) translateX(-230%);
+            }
+
+            .gallery-item #box-btn-1{
+                transform: translateY(0%) translateX(-250%);
+            }
+
+            .gallery-item #box-btn-2{
+                transform: translateY(15%) translateX(-240%);
+            }
+
+            .gallery-item .fl-btn.st-12 span{
+                font-size: 18px;
+            }
+
+        /* Checkout Page */
+            /* Checkout Container */
+            .checkout-container{
+                padding-top: 100px;
+                padding-bottom: 100px;
+                transform: translateX(-2%);
+
+                z-index: 9999;
+            }
+
+            /* Input Item Labels */
+            .checkout-container .form-group{
+                font-size: 15px;
+            }
+
+            /* Input Item Warning Messages */
+            .checkout-container{
+                font-size: 15px;
+            }
+
+            /* Complete Checkout Button */
+            .checkout-button-container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+            }
+
+            .checkout-button.btn.btn-primary{
+                font-size: 1em;
+            }
+
+            /* Radio Buttons */
+            .mbl-radio{
+                font-size: 15px;
+                padding-right: 2px;
+            }
+
+            .mbl-radio input[type="radio"] {
+                transform: scale(1.2); /* Adjust the scale to make it smaller */
+                margin: 0 3px;
+            }
+
+            /* Delivery Charge */
+            .delivery-disclaimer{
+                font-size: 1.2em;
+            }
+
+            /* Name and Price Container */
+            .checkout-container .accessories-info .accessories-title, .accessories-price{
+                transform: translateX(20%);
+            }
+
+            /* Accessory Name */
+            .checkout-container .accessories-title{
+                font-size: 2em;
+            }
+            
+            /* Accessory Price */
+            .checkout-container .accessories-price{
+                font-size: 2em;
+            }
+
+            /* Add to Cart Button */
+            .checkout-container .accessories-grid .fl-btn.st-12 .inner::before, .fl-btn.st-12 .inner::after{
+                right: -45px;
+            }
+
+            /* Add to Cart Buttons */
+            .checkout-container .accessories-grid .fl-btn.st-12{
+                top: 40px;
+                right: -30px;
+
+                transform: translateX(50%);
+            }
+
+            /* Checkout Images */
+            .checkout-container .accessories-item img{
+                transform: translateX(10%);
+            }
+
+            .checkout-container .form-group{
+                font-size: 20px;
+            }
+
+            #card-container {
+                z-index: 9999;
+                position: relative;
+            }
+        /* Shopping Cart */
+            /* Cart Modal */
+            .cart-icon{
+                width: 150px;
+                height: 150px;
+                right: 20px;
+                bottom: 75px;
+            }
+        
+            /* Checkout Page Cart */
+                /* Info Container */
+                .checkout-container .cart-item-info{
+                    /* transform: translateX(-20%); */
+                }
+
+                /* Title */
+                .checkout-container .cart-item-title{
+                    font-size: 2rem;
+                }
+
+                /* Image */
+                .checkout-container .cart-item-image{
+                    /* transform: translateX(-15%); */
+                }
+
+                /* Remove From Cart Button */
+                .checkout-container .cart-item-info button{
+                    font-size: 1.2rem;
+                    width: 160px;
+                    transform: translateX(-5%);
+                }
+
+                /* Total Price */
+                .checkout-container .cart-total p{
+                    font-size: 2.6rem !important;
+                } 
+
+
+                /* Pre-checkout Modal */
+                .checkout-mblresp-container p{
+                    font-size: 2.5rem;
+                }
+
+                .checkout-mblresp-container Button{
+                    font-size: 1.2rem;
+                    transform: translateX(-5%);
+                }
+
+                .modal-footer .checkout-button.btn.btn.btn-secondary{
+                    font-size: 1.2rem;
+                    /* transform: translateX(-5%); */
+                }
+
+                .modal-footer .checkout-button.btn.btn-primary{
+                    font-size: 1.2rem;
+                    /* transform: translateX(-5%); */
+                }
+        
+        /* Inventory Landing Page */
+            /* Page Images */
+            .landing-image{
+                filter: none;
+            }
+
+            .image-box{
+                width: 150%;
+                height: 170%;
+            }
+
+            .title-heading .sub-heading .inner-sub.st-1.inv{
+                transform: translateY(15%);
+                font-size: 25px;
+            }
+
+            .title-heading .sub-heading image{
+                transform: translateY(25%);
+            }
+
+            .inv-container-resp{
+                transform: translateY(10%);
+            }
+
+        /* Home page Slider */
+            /* Slider Container */
+            .tf-slider-1{
+                transform: translateX(-90px);
+                top: -100px
+            }
+
+            /* Slider Innfer */
+            .tf-slider-1 .overlay{
+                width: 120% !important;
+                height: 120% !important;
+
+                /* background-image: url(../images/inflatables/MobileSliderHmpg.png); */
+                background-size: cover;
+            } 
+
+            .item-slider-1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+            }
+
+            .item-slider-1 .clr-content-mbl {
+                flex-direction: column;
+                align-items: center;
+
+                padding: 0;
+                order: 1 !important;
+            }
+
+            .item-slider-1 .box-custom{
+                order: 2 !important;
+            }
+
+            .item-slider-1 .box-feature {
+                flex-direction: column;
+                align-items: center;
+
+                padding: 0;
+                display: inline-block;
+                order: 3 !important;
+
+                transform: translateY(20%);
+                left: 280px;
+            }
+            
+            .item-slider-1 .box-feature .image img {
+                flex-direction: column;
+                align-items: center;
+
+                max-width: 200%;
+                height: auto;
+            }
+            
+            .item-slider-1 .box-btn {
+                transform: translateY(500%) !important;
+            }
+            
+
+        /* Home page Footer */
+            #mbl-ftr{
+                scale: 120%;
+            }
+
+        /* Checkout Success page */
+
+            .tf-slider-1.slider-checkout .overlay{
+                width: 95%;
+                height: 80%;
+                background-image: url(../images/inflatables/MobileSliderHmpg.png);
+                border-radius: 10px !important;
+            }
+            /* Title Text */
+            .slider-checkout .sub.clr-pri-2{
+                transform: translateX(-3%) translateY(-100%);
+                font-size: 35px;
+            }
+
+            .slider-checkout .li-clr-pri-2-chkout{
+                font-size: 2.5rem !important;
+                transform: translateX(-2%) translateY(-50%);
+            }
+
+
+            .slider-checkout .item-slider-1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+
+                height: 90%;
+            }
+
+            .slider-checkout .item-slider-1 .clr-content-mbl {
+                flex-direction: column;
+                align-items: center;
+
+                padding: 0;
+                order: 1 !important;
+            }
+
+            .slider-checkout .item-slider-1 .box-feature {
+                flex-direction: column;
+                padding: 0;
+                display: inline-block;
+                order: 2 !important;
+
+                transform: translateY(30%);
+                left: 235px;
+            }
+
+            .slider-checkout .item-slider-1 .box-feature .image img {
+                /* width: 120% !important;
+                height: auto;
+                padding: 0; */
+
+                flex-direction: column;
+                align-items: center;
+                max-width: 700%;
+                height: auto;
+                transform: translateX(30%) translateY(-20%);
+            }
+
+            .slider-checkout .item-slider-1 .box-custom{
+                order: 3 !important;
+
+                transform: translateY(-10%);
+                margin-right: 20px;
+            }
+
+            .slider-checkout .item-slider-1 .box-btn .fl-btn.st-12{
+                order: 4 !important;
+                transform: translateY(-750%) translateX(5%);
+                right: -5px;
+                width: 110%;
+                font-size: 20px;
+            }
+
+
+        /* Book Now Button */
+        .side-button{
+            padding: 40px 15px;
+            font-size: 18px;
+        }
+    }
+
 /* 11. Surface Duo */
 @media screen and (device-width: 540px) and (device-height: 720px){
     /* Slider */
@@ -10795,7 +11801,6 @@
 }
 
 /* 12. Galaxy Z Fold 5 */
-/* This one has the cart buttons with specific numbering. might need to apply this to other designs */
 @media screen and (width: 344px) and (height: 882px) {
     /* Top Page Hours */
     .top-bar .clr-pri-1{
@@ -11577,842 +12582,7 @@
             }     
 }
 
-/* 13. Asus Zenbook Fold */
-/* **** Have not started */
-/* && */
-@media screen and (device-width: 853px) and (device-height: 1368px) {
 
-    /* Slider */
-        /* Title Text */
-        .title.clr-pri-2{
-            font-size: 50px;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-
-            transform: translateX(15%) !important;
-        }
-
-        /* Sub Text */
-        .sub.clr-pri-2{
-            font-size: 60px;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-
-            transform: translateX(15%) !important;
-        }
-
-        /* Wrap Text */
-        .wrap.clr-pri-1{
-            font-size: 30px;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        /* Arrow and JJ Ribbon */
-        .box-custom{
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-
-            transform: translateX(15%) !important;
-        }
-
-        .box-custom .wrap{
-            background-size: 110%;
-        }
-
-        /* Arrow */
-        .box-custom svg{
-            transform: translateX(-17%);
-        }
-
-        /* List Item Text */
-        .li-clr-pri-2{
-            display: none !important;
-        }
-
-        /* List Item Emojis */
-        li.fx{
-            display: none !important;
-        }
-
-        /* Buttons */
-            /* Top Button */
-            .fl-btn.st-12{
-                height: 50px;
-                font-size: 22px;
-            }
-
-            /* Bottom Button */
-            .fl-btn.st-1{
-                height: 50px;
-                font-size: 23px;
-            }
-
-            /* Button Container */
-            .box-btn{
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center; 
-                flex-direction: column;
-                width: 60%;
-                max-width: 300px; 
-                margin-left: 60px;
-            }
-
-            .fl-btn {
-                width: 60%;
-                text-align: center; 
-                max-width: 300px; 
-                margin: 0 auto; 
-
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center; 
-
-                top: -180px;
-                left: 130px;
-            }
-
-    /* Navbar */
-        /* Non-mobile Navbar */
-        .nav-wrap{
-            display: none;
-        }
-
-        /* Button Menu for Mobile Navbar */
-        .btn-menu{
-            margin-top: 20px;
-        }
-
-    /* Footer 2 */
-        /* Footer Image */
-        .f2-bg-img{
-            top: 110px;
-            transform: translateX(-15px);
-            width: 105%;
-        }
-
-        /* First Text Box */
-        .f2.widget-logo{
-            position: inherit;
-            margin-top: -80px;
-        }
-
-        .f2 .wrap.f-mulish.short-bio{
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-
-            height: 100%;  
-            padding: 10px; 
-            font-size: 12px;
-
-            transform: translateX(50%);
-        }
-
-        /* Opening Hours Text Box */
-        #footer.st-2{
-            overflow: visible;
-            margin-top: 0px;
-            /* padding-top: 100px; */
-        }
-
-        .widget.f2.widget-business{
-            /* display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            text-align: center; 
-            height: 100%; 
-            padding: 10px; */
-            display: none;
-        }
-
-        /* Contact Button (Removing from Mobile Design) */
-        .fl-btn.st-12.footer{
-            display: none;
-        }
-
-        #footer.st-2 .footer-bottom{
-            background-color: #9d1ffe;
-            padding-top: 30px;
-        }
-
-        .social-icons {
-            flex-direction: row; /* Ensure icons are horizontally aligned */
-            margin-top: 20px; /* Adjust spacing */
-            justify-content: center; /* Center-align on smaller screens */
-            transform: translateX(320%);
-            padding-top: 30px;
-            padding-bottom: 10px;
-        }
-
-        .copy-right{
-            font-size: 12px;
-        }
-
-    /* Footer 1 */
-        /* Footer background */
-        #footer-1{
-            margin-top: -100px;
-            height: 735px;
-            /* z-index: -1; */
-            
-            background: url(../images/logo/Footer1iPadAir.png) center bottom no-repeat !important;
-            background-size: cover;
-            /* width: 100vw; 
-            padding: 40px 0; 
-            margin: 0 auto;  */
-        }
-    
-        /* Top Footer Widget */
-        /* #footer-1 .widget-footer{
-            position: inherit;
-            top: 240px;
-            left: 200px;
-        } */
-
-        .f1 .wrap.f-mulish.short-bio{
-            display: block; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-            height: 100%;  
-            padding: 10px; 
-        }
-
-        /* Middle Widget */
-        .widget.f1.widget-business{
-            display: none;
-        }
-
-        /* Social Media Icons */
-        #footer-1 .social-icons {
-            flex-direction: row; 
-            margin-top: 10px; 
-            justify-content: center; 
-            padding-left: 100px;
-            transform: translateY(-160%);
-            /* left: 30px; */
-            position: inherit;
-        }
-
-        /* Bottom Widget */
-        .footer-bottom.f1.jus-ct{
-            /* display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            top: 240px;
-            position: relative; */
-            /* width: 80%; */
-        }
-
-        /* Additional Questions */
-        /* .title-widget.additional-title{
-            display: none;
-        } */
-        
-        /* About Us */
-            /* Entire Container */
-            .about-container{
-                padding-top: 100px;
-            }
-
-            /* Outer Section */
-            .about-section{
-                width: 90%;
-            }
-
-            /* Inner Section */
-            .about-section-inner{
-                width: 95%;
-            }
-
-            /* Text */
-            .about-section p {
-                font-size: 18px;
-            }
-
-            /* Image */
-            .about-section-inner img{
-                max-width: 80%;
-                height: auto;
-            }
-
-            .about-section #ab-btn{
-                padding-top: 10px;
-            }
-
-            .about-section #hiw-btn{
-                font-size: 13px;
-            }
-
-        /* Contact Us */
-            /* Container */
-            .contact-container{
-                padding-top: 15px;
-                padding-bottom: 35px;
-            }
-
-            /* Inner Container */
-            .container .contact-inner{
-                padding-bottom: 20px;
-                right: 15px;
-                
-            }
-
-            /* Need Any Support? */
-            .contact-container .title-heading .sub-heading{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-
-                transform: translateX(4%);
-            }
-
-            /* Font Sizes for Input Placeholders */
-            .form-message input[type="text"]::placeholder {
-                font-size: 1.5rem;
-            }
-
-            .form-message input[type="email"]::placeholder {
-                font-size: 1.5rem;
-            }
-
-            .form-message #subject {
-                font-size: 1.5rem;
-            }
-            
-
-            .title-heading .sub-heading .inner-sub.st-1{
-                font-size: 15px;
-                padding: 0;
-                margin-left: -23px;
-            }
-
-            .title-heading .sub-heading image{
-                width: 70%;
-                height: auto;
-            }
-
-            /* Heading section under main title; removing for mobile */
-            .title-heading.th-2{
-                display: none;
-            }
-
-            .wrap-contact .fx .content p{
-                font-size: 20px;
-            }
-
-            .wrap-contact .fx .content h4{
-                font-size: 17px;
-            }
-
-            .contact-container .th-mblresp-cntctus{
-                transform: translateX(-5%);
-            }
-
-            /* Send Message Button */
-            .cntct-btn-container{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                /* margin-left: 10px; */
-            }
-        
-        /* Booking */
-            /* Title */
-            .title-heading.st-4{
-                transform: translateY(40%);
-            }
-
-            .react-calendar{
-                transform: translateY(10%);
-                margin-bottom: 70px;
-            }
-
-            /* Month Button */
-            .react-calendar__navigation button{
-                font-size: 1em;
-            }
-
-            .react-calendar__month-view__weekdays{
-                font-size: 14px !important;
-            }
-
-        /* Stock Grid */
-            /* Container */
-            .stock-item-box{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 720px;
-                height: 300px;
-                padding: 0;
-            }
-
-            /* Title and Price */
-            .stock-title, .stock-price{
-                font-size: 3em;
-            }
-
-            /* View on Inventory Page */
-            #view-invpg{
-                font-size: 15px;
-            }
-
-            /* Other Information */
-            .stock-info {
-                display: flex; /* Enables flexbox */
-                align-items: flex-start; /* Align items to the top */
-                flex-direction: column; /* Stacks items vertically */
-                gap: 1rem; /* Adds spacing between items */
-                margin-left: 8rem; /* Adds left margin to move the items to the right */
-                width: calc(100% - 8rem); /* Adjust width to accommodate the float image */
-            }            
-
-            /* Float Image */
-            .stock-image{
-                width: 220px;
-
-                transform: translateX(20%);
-            }
-
-            /* Button */
-            .stock-grid-container .fl-btn.st-12 .inner::before, .fl-btn.st-12 .inner::after{
-                right: -45px;
-            }
-
-            .stock-grid-container .fl-btn.st-12{
-                display: flex;
-                align-items: bottom;
-                justify-content: bottom;
-                width: 170px !important;
-                font-size: 1.2rem;
-            }         
-
-            /* Accessories Stock Grid */
-                /* Accessory Grid */
-                .accessories-container .accessories-grid{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                /* Accessory Grid Headers */
-                .accessories-container .accessories-grid h1{
-                    font-size: 1.5em !important;
-                }
-
-                /* Accessories Page Title */
-                .accessories-container .accessories-grid h2{
-                    font-size: 3.2em !important;
-                }
-
-                /* Accessories Page Price */
-                .accessories-container .accessories-grid p{
-                    font-size: 3.2em !important;
-                    transform: translateX(2%);
-                }
-
-                /* Individual Items */
-                .accessories-container .accessories-item{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 620px;
-                    height: 300px;
-                    padding: 0;
-                }
-
-                /* Accessory Images */
-                .accessories-container .accessories-item img{
-                    width: 220px;
-                    height: 220px;
-                    left: -80px;
-                    position: relative;
-                }
-
-                
-
-        /* Floats Page */
-            /* Floats Title */
-            .tf-section.tf-gallery .title-heading.st-4{
-                top: -180px;
-                right: 5px;
-                
-                position: relative;
-            }
-
-            .tf-section.tf-gallery .title-heading .sub-heading{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-
-            }
-
-            /* Explore our Inventory and Book Below */
-            .tf-section.tf-gallery .title-heading.st-4 h2{
-                top: 0px;
-                right: -10px;
-                position: relative;
-                padding-bottom: 30px;
-            }
-
-            .tf-section.tf-gallery .description{
-                top: 0px;
-                right: -10px;
-                position: relative;
-                padding-bottom: 30px;
-            }
-
-        /* Accessories Page */
-            .accessories-grid .separator-line {
-                margin-top: 40px;
-            }
-
-            /* Inventory Gallery */
-            .gallery-container {
-                display: flex;
-                flex-direction: column;
-                transform: translateY(-10%);
-
-                /* margin-bottom: -100px; */
-                padding-bottom: -100px;
-              }
-            
-            .gallery-item {
-                display: flex; /* Explicitly set flexbox */
-                flex-direction: column; /* Stack items vertically */
-                justify-content: flex-start; /* Ensure proper alignment */
-                align-items: center; /* Center items horizontally */
-                position: relative; /* Avoid unexpected positioning shifts */
-            }
-        
-            .gallery-item .image {
-                order: 1 !important; /* Ensure the image always appears first */
-                margin-bottom: 10px; /* Add space below the image */
-
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-            }
-        
-            .gallery-item .description {
-                order: 2 !important; /* Ensure the description appears second */
-                text-align: center; /* Center-align the description */
-                margin-bottom: 10px; /* Add spacing below */
-                width: 100%; /* Prevent unexpected shrinking */
-
-                transform: translateX(-7%);
-            }
-        
-            .gallery-item .box-btn {
-                order: 3 !important; /* Ensure the button is always last */
-                align-self: center; /* Center the button */
-                margin: 0 auto; /* Align button horizontally */
-
-                transform: translateX(7%);
-            }
-        
-            /* Remove any padding or extra spacing specific to even/odd items */
-            .gallery-item:nth-child(even) .box-btn,
-            .gallery-item:nth-child(odd) .box-btn {
-                padding-right: 0;
-            }
-
-        /* Checkout Page */
-            /* Checkout Container */
-            .checkout-container{
-                padding-top: 100px;
-                transform: translateX(-2%);
-            }
-
-            /* Input Item Labels */
-            .checkout-container .form-group{
-                font-size: 15px;
-            }
-
-            /* Input Item Warning Messages */
-            .checkout-container{
-                font-size: 15px;
-            }
-
-            /* Complete Checkout Button */
-            .checkout-button-container{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-            }
-
-            .checkout-button.btn.btn-primary{
-                font-size: 1em;
-            }
-
-            /* Radio Buttons */
-            .mbl-radio{
-                font-size: 12px;
-                padding-right: 2px;
-            }
-
-            .mbl-radio input[type="radio"] {
-                transform: scale(1.2); /* Adjust the scale to make it smaller */
-                margin: 0 3px;
-            }
-
-            /* Delivery Charge */
-            .delivery-disclaimer{
-                font-size: 0.8em;
-            }
-
-            /* Name and Price Container */
-            .checkout-container .accessories-info .accessories-title, .accessories-price{
-                transform: translateX(20%);
-            }
-
-            /* Accessory Name */
-            .checkout-container .accessories-title{
-                font-size: 2em;
-            }
-            
-            /* Accessory Price */
-            .checkout-container .accessories-price{
-                font-size: 2em;
-            }
-
-            /* Add to Cart Button */
-            .checkout-container .accessories-grid .fl-btn.st-12 .inner::before, .fl-btn.st-12 .inner::after{
-                right: -45px;
-            }
-
-            /* Add to Cart Buttons */
-            .checkout-container .accessories-grid .fl-btn.st-12{
-                top: 40px;
-                right: -30px;
-            }
-
-            /* Checkout Images */
-            .checkout-container .accessories-item img{
-                transform: translateX(10%);
-            }
-
-            .checkout-container .form-group{
-                font-size: 20px;
-            }
-        /* Shopping Cart */
-            /* Cart Modal */
-            .cart-icon{
-                width: 150px;
-                height: 150px;
-                right: 20px;
-                bottom: 75px;
-            }
-        
-            /* Checkout Page Cart */
-                /* Info Container */
-                .checkout-container .cart-item-info{
-                    /* transform: translateX(-20%); */
-                }
-
-                /* Title */
-                .checkout-container .cart-item-title{
-                    font-size: 2rem;
-                }
-
-                /* Image */
-                .checkout-container .cart-item-image{
-                    /* transform: translateX(-15%); */
-                }
-
-                /* Remove From Cart Button */
-                .checkout-container .cart-item-info button{
-                    font-size: 0.9rem;
-                    width: 120px;
-                    transform: translateX(-5%);
-                }
-
-                /* Total Price */
-                .checkout-container .cart-total p{
-                    font-size: 2.6rem !important;
-                } 
-
-
-                /* Pre-checkout Modal */
-                .checkout-mblresp-container p{
-                    font-size: 1.8rem;
-                }
-
-                .checkout-mblresp-container Button{
-                    font-size: 1rem;
-                    transform: translateX(-5%);
-                }
-        
-        /* Inventory Landing Page */
-            /* Page Images */
-            .landing-image{
-                filter: none;
-            }
-
-        /* Home page Slider */
-            /* Slider Container */
-            .tf-slider-1{
-                transform: translateX(-90px);
-                top: -100px
-            }
-
-            /* Slider Innfer */
-            .tf-slider-1 .overlay{
-                width: 120% !important;
-                height: 120% !important;
-
-                /* background-image: url(../images/inflatables/MobileSliderHmpg.png); */
-                background-size: cover;
-            } 
-
-            .item-slider-1 {
-                display: flex;
-                flex-direction: column;
-                align-items: center; 
-            }
-
-            .item-slider-1 .clr-content-mbl {
-                flex-direction: column;
-                align-items: center;
-
-                padding: 0;
-                order: 1 !important;
-            }
-
-            .item-slider-1 .box-custom{
-                order: 2 !important;
-            }
-
-            .item-slider-1 .box-feature {
-                flex-direction: column;
-                align-items: center;
-
-                padding: 0;
-                display: inline-block;
-                order: 3 !important;
-
-                transform: translateY(-45%);
-                left: 280px;
-            }
-            
-            .item-slider-1 .box-feature .image img {
-                flex-direction: column;
-                align-items: center;
-
-                max-width: 200%;
-                height: auto;
-            }
-            
-            .item-slider-1 .box-btn {
-                transform: translateY(500%) !important;
-            }
-              
-
-        /* Home page Footer */
-            #mbl-ftr{
-                scale: 120%;
-            }
-
-        /* Checkout Success page */
-
-            .tf-slider-1.slider-checkout .overlay{
-                width: 95%;
-                height: 80%;
-                background-image: url(../images/inflatables/MobileSliderHmpg.png);
-                border-radius: 10px !important;
-            }
-            /* Title Text */
-            .slider-checkout .sub.clr-pri-2{
-                transform: translateX(-3%);
-                font-size: 25px;
-            }
-
-            .slider-checkout .li-clr-pri-2-chkout{
-                font-size: 1.8rem !important;
-                transform: translateX(-2%);
-            }
-
-
-            .slider-checkout .item-slider-1 {
-                display: flex;
-                flex-direction: column;
-                align-items: center; 
-
-                height: 90%;
-            }
-
-            .slider-checkout .item-slider-1 .clr-content-mbl {
-                flex-direction: column;
-                align-items: center;
-
-                padding: 0;
-                order: 1 !important;
-            }
-
-            .slider-checkout .item-slider-1 .box-feature {
-                flex-direction: column;
-                padding: 0;
-                display: inline-block;
-                order: 2 !important;
-
-                transform: translateY(30%);
-                left: 235px;
-            }
-
-            .slider-checkout .item-slider-1 .box-feature .image img {
-                /* width: 120% !important;
-                height: auto;
-                padding: 0; */
-
-                flex-direction: column;
-                align-items: center;
-                max-width: 210%;
-                height: auto;
-                transform: translateX(-3%);
-            }
-
-            .slider-checkout .item-slider-1 .box-custom{
-                order: 3 !important;
-
-                transform: translateY(-10%);
-                margin-right: 20px;
-            }
-
-            .slider-checkout .item-slider-1 .box-btn .fl-btn.st-12{
-                order: 4 !important;
-                transform: translateY(-800%);
-                right: -5px;
-                width: 110%;
-                font-size: 12px;
-            }
-
-
-        /* Book Now Button */
-        .side-button{
-            padding: 40px 15px;
-            font-size: 18px;
-        }
-}
 
 /* 14. Samsung Galaxy A51/71 */
 @media screen and (width: 412px) and (height: 914px){

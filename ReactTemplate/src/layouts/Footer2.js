@@ -32,6 +32,12 @@ const Footer2 = ({footerData}) => {
               media="(width: 912px) and (height: 1368px)"
             />
 
+            {/* Asus Zenbook Fold */}
+            <source
+              srcSet="/assets/images/inflatables/MobileFooterBackground.png"
+              media="(width: 853px) and (height: 1280px)"
+            />
+
             <img
               src="/assets/images/inflatables/FooterBlurred.png"
               alt="img not found"
