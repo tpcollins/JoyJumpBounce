@@ -8512,7 +8512,7 @@
 
                 /* Text */
                 .about-section p {
-                    font-size: 18px;
+                    font-size: 20px;
                 }
 
                 /* Image */
@@ -8567,25 +8567,25 @@
                 }
 
                 .contact-container .wrap-contact .fx .content h4 {
-                    font-size: 17.5px;
+                    font-size: 22px;
                 }
 
                 /* Font Sizes for Input Placeholders */
                 .form-message input[type="text"]::placeholder {
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                 }
 
                 .form-message input[type="email"]::placeholder {
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                 }
 
                 .form-message #subject {
-                    font-size: 1.5rem;
+                    font-size: 1.8rem;
                 }
                 
 
                 .title-heading .sub-heading .inner-sub.st-1{
-                    font-size: 20px;
+                    font-size: 25px;
                     padding: 0;
                     margin-left: -23px;
                 }
@@ -8609,7 +8609,7 @@
                 }
 
                 .contact-container .th-mblresp-cntctus{
-                    transform: translateX(-5%);
+                    transform: translateX(0%);
                 }
 
                 /* Send Message Button */
@@ -8623,16 +8623,16 @@
             
             /* Booking */
                 /* Title */
-                .title-heading.st-4{
-                    transform: translateY(40%);
+                #booking-ctnr-resp .title-heading.st-4{
+                    transform: translateY(-25%);
                 }
 
                 #ipad-resp{
-                    transform: translateY(50%);
+                    transform: translateY(0%);
                 }
 
                 .react-calendar{
-                    transform: translateY(15%) translateX(-2%);
+                    transform: translateY(-20%) translateX(-2%);
                     margin-bottom: 70px;
                 }
 
@@ -8648,15 +8648,16 @@
             /* Stock Grid */
                 /* Container */
                 #ipad-resp-bk{
-                    padding-top: 40px;
-                    margin-bottom: 30px;
+                    /* padding-top: 40px;
+                    margin-bottom: 30px; */
+                    transform: translateY(-15%);
                 }
 
                 .stock-item-box{
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    width: 720px;
+                    width: 940px;
                     height: 300px;
                     padding: 0;
                 }
@@ -8699,8 +8700,9 @@
                     align-items: bottom;
                     justify-content: bottom;
                     width: 190px !important;
+                    height: 50px;
                     font-size: 1.5rem;
-                    transform: translateX(-80%) translateY(350%);
+                    transform: translateX(0%) translateY(-10%);
                 }         
 
                 /* Accessories Stock Grid */
@@ -8709,6 +8711,12 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
+
+                        transform: translateY(-14%);
+                    }
+
+                    .accessories-container .sp-2-resp{
+                        transform: translateY(-7900%);
                     }
 
                     /* Accessory Grid Headers */
@@ -8732,7 +8740,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        width: 620px;
+                        width: 750px;
                         height: 300px;
                         padding: 0;
                     }
@@ -8762,16 +8770,16 @@
 
                 /* Explore our Inventory and Book Below */
                 .tf-section.tf-gallery .title-heading.st-4 h2{
-                    top: 0px;
+                    /* top: 0px;
                     right: 115px;
                     position: relative;
-                    padding-bottom: 30px;
+                    padding-bottom: 30px; */
                 }
 
                 .tf-section.tf-gallery .title-heading.st-4 h5{
                     font-size: 30px;
                     padding-bottom: 10px;
-                    transform: translateX(2%);
+                    transform: translateX(0%);
                 }
 
                 .tf-section.tf-gallery .description{
@@ -8790,8 +8798,20 @@
                 }
 
             /* Accessories Page */
+                .accessories-container .title-heading.st-4{
+                    transform: translateY(-20%);
+                }
+
+                .accessories-container .title-heading.st-4 .inner-sub.st-1{
+                    font-size: 25px;
+                }
+
                 .accessories-grid .separator-line {
                     margin-top: 40px;
+                }
+
+                .accessories-container .clr-pri-2{
+                    font-size: 25px;
                 }
 
                 /* Inventory Gallery */
@@ -8820,9 +8840,11 @@
                     align-items: center;
                     justify-content: center;
                     text-align: center;
-                    width: 200%;
-                    height: 200%;
-                    max-width: 900px;
+                    width: 220%;
+                    height: 220%;
+                    max-width: 1050px;
+
+                    transform: translateX(-2%);
                 }
             
                 .gallery-item .description {
@@ -8831,7 +8853,7 @@
                     margin-bottom: 10px; /* Add spacing below */
                     width: 100%; /* Prevent unexpected shrinking */
 
-                    transform: translateX(-7%);
+                    transform: translateX(-8%);
                 }
             
                 .gallery-item .box-btn {
@@ -8847,15 +8869,15 @@
                 }
 
                 .gallery-item #box-btn-0{
-                    transform: translateY(300%) translateX(-110%);
+                    transform: translateY(0%) translateX(-22%);
                 }
 
                 .gallery-item #box-btn-1{
-                    transform: translateY(310%) translateX(-120%);
+                    transform: translateY(0%) translateX(-30%);
                 }
 
                 .gallery-item #box-btn-2{
-                    transform: translateY(340%) translateX(-120%);
+                    transform: translateY(0%) translateX(-22%);
                 }
 
                 .gallery-item .fl-btn.st-12 span{
@@ -8870,8 +8892,8 @@
                 }
 
                 /* Input Item Labels */
-                .checkout-container .form-group{
-                    font-size: 15px;
+                .checkout-container .form-group label{
+                    font-size: 22px;
                 }
 
                 /* Input Item Warning Messages */
@@ -8888,7 +8910,7 @@
                 }
 
                 .checkout-button.btn.btn-primary{
-                    font-size: 1em;
+                    font-size: 2em;
                 }
 
                 /* Radio Buttons */
@@ -8904,7 +8926,7 @@
 
                 /* Delivery Charge */
                 .delivery-disclaimer{
-                    font-size: 0.8em;
+                    font-size: 1.5em;
                 }
 
                 /* Name and Price Container */
@@ -8931,8 +8953,6 @@
                 .checkout-container .accessories-grid .fl-btn.st-12{
                     top: 40px;
                     right: -30px;
-
-                    transform: translateX(-50%);
                 }
 
                 /* Checkout Images */
@@ -8941,7 +8961,7 @@
                 }
 
                 .checkout-container .form-group{
-                    font-size: 20px;
+                    font-size: 22px;
                 }
             /* Shopping Cart */
                 /* Cart Modal */
@@ -8960,19 +8980,20 @@
 
                     /* Title */
                     .checkout-container .cart-item-title{
-                        font-size: 2rem;
+                        font-size: 3rem;
                     }
 
                     /* Image */
                     .checkout-container .cart-item-image{
                         /* transform: translateX(-15%); */
+                        width: 30%;
                     }
 
                     /* Remove From Cart Button */
                     .checkout-container .cart-item-info button{
-                        font-size: 1.2rem;
+                        font-size: 1.3rem;
                         width: 160px;
-                        transform: translateX(-5%);
+                        transform: translateX(0%) translateY(40%);
                     }
 
                     /* Total Price */
@@ -8983,12 +9004,20 @@
 
                     /* Pre-checkout Modal */
                     .checkout-mblresp-container p{
-                        font-size: 1.8rem;
+                        font-size: 3rem;
                     }
 
                     .checkout-mblresp-container Button{
-                        font-size: 1rem;
+                        font-size: 1.2rem;
                         transform: translateX(-5%);
+                    }
+
+                    .modal-footer .btn.btn-secondary{
+                        font-size: 1.4rem;
+                    }
+
+                    .modal-footer .checkout-button.btn.btn-primary{
+                        font-size: 1.4rem;
                     }
             
             /* Inventory Landing Page */
@@ -9012,12 +9041,16 @@
                 }
 
                 .inv-container-resp{
-                    transform: translateY(-30%);
+                    transform: translateY(-10%);
                 }
 
                 .landing-container{
                     top: 100px;
                     position: relative;
+                }
+
+                .landing-container .image-box .overlay-text{
+                    font-size: 3em;
                 }
 
             /* Home page Footer */
@@ -9027,76 +9060,85 @@
 
             /* Checkout Success page */
 
-                .tf-slider-1.slider-checkout .overlay{
-                    width: 95%;
-                    height: 80%;
-                    background-image: url(../images/inflatables/MobileSliderHmpg.png);
-                    border-radius: 10px !important;
-                }
-                /* Title Text */
-                .slider-checkout .sub.clr-pri-2{
-                    transform: translateX(-3%);
-                    font-size: 25px;
-                }
+            .tf-slider-1.slider-checkout .overlay{
+                width: 95%;
+                height: 80%;
+                background-image: url(../images/inflatables/MobileSliderHmpg.png);
+                border-radius: 10px !important;
+            }
+            /* Title Text */
+            .slider-checkout .sub.clr-pri-2{
+                transform: translateX(20%) translateY(100%);
+                font-size: 42px;
+            }
 
-                .slider-checkout .li-clr-pri-2-chkout{
-                    font-size: 1.8rem !important;
-                    transform: translateX(-2%);
-                }
+            .slider-checkout .li-clr-pri-2-chkout{
+                font-size: 2.2rem !important;
+                /* transform: translateX(-2%); */
+            }
 
 
-                .slider-checkout .item-slider-1 {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center; 
+            .slider-checkout .item-slider-1 {
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
 
-                    height: 90%;
-                }
+                height: 90%;
+            }
 
-                .slider-checkout .item-slider-1 .clr-content-mbl {
-                    flex-direction: column;
-                    align-items: center;
+            .slider-checkout .item-slider-1 .clr-content-mbl {
+                /* flex-direction: column;
+                align-items: center;
 
-                    padding: 0;
-                    order: 1 !important;
-                }
+                padding: 0;
+                order: 1 !important; */
+            }
 
-                .slider-checkout .item-slider-1 .box-feature {
-                    flex-direction: column;
-                    padding: 0;
-                    display: inline-block;
-                    order: 2 !important;
+            .slider-checkout .item-slider-1 .box-feature {
+                flex-direction: column;
+                padding: 0;
+                display: inline-block;
+                order: 2 !important;
 
-                    transform: translateY(30%);
-                    left: 235px;
-                }
+                transform: translateY(0%);
+                left: 235px;
+            }
 
-                .slider-checkout .item-slider-1 .box-feature .image img {
-                    /* width: 120% !important;
-                    height: auto;
-                    padding: 0; */
+            .slider-checkout .item-slider-1 .box-feature .image img {
+                width: 600% !important;
+                height: auto;
+                padding: 0;
 
-                    flex-direction: column;
-                    align-items: center;
-                    max-width: 210%;
-                    height: auto;
-                    transform: translateX(-3%);
-                }
+                flex-direction: column;
+                align-items: center;
+                max-width: 4000px;
+                height: auto;
+                transform: translateX(40%) translateY(80%);
+            }
 
-                .slider-checkout .item-slider-1 .box-custom{
-                    order: 3 !important;
+            .slider-checkout .item-slider-1 .box-custom{
+                order: 3 !important;
 
-                    transform: translateY(-10%);
-                    margin-right: 20px;
-                }
+                transform: translateY(90%) translateX(10%);
+            }
 
-                .slider-checkout .item-slider-1 .box-btn .fl-btn.st-12{
-                    order: 4 !important;
-                    transform: translateY(-800%);
-                    right: -5px;
-                    width: 110%;
-                    font-size: 12px;
-                }
+            .slider-checkout .li-clr-pri-2-chkout{
+                font-size: 2.5rem !important;
+                /* transform: translateX(-2%); */
+            }
+
+            .slider-checkout .item-slider-1 .box-btn .fl-btn.st-12{
+                order: 4 !important;
+                transform: translateY(300%) translateX(10%);
+                /* right: -5px; */
+                width: 100%;
+                font-size: 20px;
+
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
 
 
             /* Book Now Button */

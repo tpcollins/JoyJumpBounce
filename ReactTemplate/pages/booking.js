@@ -247,7 +247,7 @@ const Booking = () => {
 
         <Header1 />
 
-        <div className="container">
+        <div className="container" id="booking-ctnr-resp">
           
           <div 
           className="title-heading st-4"

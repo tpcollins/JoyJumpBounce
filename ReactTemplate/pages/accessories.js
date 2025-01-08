@@ -61,7 +61,7 @@ const Accessories = () => {
                         ))}
                     </div>
                     
-                    <hr className="separator-line" />
+                    <hr className="separator-line sp-2-resp" />
 
                 </div>
             </div>
