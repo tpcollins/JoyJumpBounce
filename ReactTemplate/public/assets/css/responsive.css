@@ -1245,6 +1245,10 @@ TODO:
             padding-top: 20px;
         }
 
+        #footer-1 .social-icons{
+            transform: translateX(-5%) translateY(850%)
+        }
+
         /* Chrome */
         body.chrome-browser #footer-1{
             background: url(../images/logo/FooterTopperLaptopChrome.png) center bottom no-repeat;
@@ -1401,6 +1405,10 @@ TODO:
 
     /* Footer 2 responsive design for laptop screens */
     @media (min-width: 769px) and (max-width: 1700px){
+        #footer.st-2 .social-icons{
+            transform: translateX(540%) translateY(850%) !important;
+        }
+
         /* Chrome */
         body.chrome-browser #footer.st-2 {
             margin-top: -70px;
@@ -1473,25 +1481,127 @@ TODO:
 
 /* Laptop Screen */
 @media (min-width: 769px) and (max-width: 1700px){
-    .tf-slider-1 .overlay {
+    /* .tf-slider-1 .overlay {
         top: 20px;
         scale: 80%;
     }
 
-    
     .item-slider-1 .title{
         top: 20px !important;
     }
 
-    /* 
-    .item-slider-1 .sub{
-        scale: 70%;
-    } */
-
     .tf-slider-1 .item-slider-1{
         scale: 80%;
         transform: translateY(-15%);
+    } */
+
+    .tf-slider-1{
+        transform: translateX(-5%) translateY(-5%);
     }
+
+    .tf-slider-1 .overlay{
+        width: 110%;
+        height: 100%;
+        border-radius: 5% !important;
+        scale: 80%;
+    }
+
+    /* Title Text */
+    .title.clr-pri-2{
+        font-size: 40px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        transform: translateX(10%);
+    }
+
+    /* Sub Text */
+    .sub.clr-pri-2{
+        font-size: 45px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        text-align: center; 
+    }
+
+    .item-slider-1 .box-feature {
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(0%) translateX(20%);
+        scale: 80%;
+    }
+
+    .item-slider-1 .box-btn {
+        transform: translateX(10%) translateY(0%)!important;
+    }
+
+    .item-slider-1 .box-custom{
+        transform: translateX(10%) !important;
+    }
+
+    /* Wrap Text */
+    .wrap.clr-pri-1{
+        font-size: 30px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Arrow and JJ Ribbon */
+    .item-slider-1 .box-custom{
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        text-align: center; 
+    }
+
+    .item-slider-1 .box-custom .wrap{
+        background-size: 110%;
+    }
+
+    /* Arrow */
+    .item-slider-1 .box-custom svg{
+        transform: translateX(-17%);
+    }
+
+    /* Buttons */
+        /* Top Button */
+        .item-slider-1 .fl-btn.st-12{
+            height: 70px;
+            width: 120%;
+            font-size: 18px;
+        }
+
+        /* Bottom Button */
+        .item-slider-1 .fl-btn.st-1{
+            height: 70px;
+            width: 120%;
+            font-size: 23px;
+        }
+
+        /* Button Container */
+        .item-slider-1 .box-btn{
+            width: 120%;
+            max-width: 3000px; 
+        }
+
+        .item-slider-1 .fl-btn {
+            width: 300%;
+            text-align: center; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+
+            top: -20px;
+            left: -95px;
+        }
 
 }
 
@@ -11757,6 +11867,7 @@ Some of these are marked as finished but they are still having the stupid card c
 
 
     /* 16. Nest Hub Max */
+    /* TODO-2 Finished */
     @media screen and (device-width: 1280px) and (device-height: 800px) {
 
         .tf-slider-1{
