@@ -13,11 +13,31 @@ const Footer2 = ({footerData}) => {
               srcSet="/assets/images/inflatables/MobileFooterBackground.png"
               media="(max-width: 768px)"
             />
+
+            {/* iPad Air */}
             <source
-              
-              srcSet="/assets/images/inflatables/FooterBlurred.png"
-              media="(min-width: 769px)"
+              srcSet="/assets/images/inflatables/MobileFooterBackground.png"
+              media="(width: 820px) and (height: 1180px)"
             />
+
+            {/* iPad Pro */}
+            <source
+              srcSet="/assets/images/inflatables/MobileFooterBackground.png"
+              media="(width: 1024px) and (height: 1366px)"
+            />
+
+            {/* Surface 7 Pro */}
+            <source
+              srcSet="/assets/images/inflatables/MobileFooterBackground.png"
+              media="(width: 912px) and (height: 1368px)"
+            />
+
+            {/* Asus Zenbook Fold */}
+            <source
+              srcSet="/assets/images/inflatables/MobileFooterBackground.png"
+              media="(width: 853px) and (height: 1280px)"
+            />
+
             <img
               src="/assets/images/inflatables/FooterBlurred.png"
               alt="img not found"

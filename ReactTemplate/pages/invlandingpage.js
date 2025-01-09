@@ -40,15 +40,15 @@ const InvLandingPage = () => {
   }, []);
 
   return (
-    <div className='container'>
+    <div className='container inv-container-resp'>
         <div 
-        className="title-heading st-4"
+        className="title-heading st-4 inv"
         style={{paddingTop: '250px'}}
         >
-            <div className="sub-heading clr-pri-3 f-mulish">
-                <LeftArrow />
-                <span className="inner-sub st-1">Inventory</span>
-                <RightArrow />
+            <div className="sub-heading clr-pri-3 f-mulish inv-resp">
+                <LeftArrow className='inv-resp'/>
+                <span className="inner-sub st-1 inv">Inventory</span>
+                <RightArrow className='inv-resp'/>
             </div>
             <h5>Have questions before booking? 
                 <a 
@@ -81,6 +81,8 @@ const InvLandingPage = () => {
                 </a>
             </div>
         </div>
+
+        {/* <Footer footerData={footerData}/> */}
 
     </div>
   );

@@ -247,7 +247,7 @@ const Booking = () => {
 
         <Header1 />
 
-        <div className="container">
+        <div className="container" id="booking-ctnr-resp">
           
           <div 
           className="title-heading st-4"
@@ -273,7 +273,7 @@ const Booking = () => {
           <ReactCalendar handleDateClick={handleDateClick}/>
 
           {isDateClicked && (
-            <div>
+            <div id="ipad-resp-bk">
               <h3
               className="text-center"
               >Available Stock For: {selectedDate.toLocaleDateString()}</h3>

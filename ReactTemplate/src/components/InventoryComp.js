@@ -6,11 +6,11 @@ TODO:
 
 */
 
-import { LeftArrow, RightArrow } from "../src/Icons";
-import { inventoryData } from "../src/Data/data";
+import { LeftArrow, RightArrow } from "../Icons";
+import { inventoryData } from "../Data/data";
 import { useEffect } from "react";
 
-const Floats = () => {
+const InventoryComp = () => {
 
     useEffect(() => {
         document.body.classList.add('inventory-body');
@@ -53,7 +53,6 @@ const Floats = () => {
 
                                 <div className="box-btn">
                                     <a 
-                                    id={`box-btn-${index}`}
                                     className="fl-btn st-12 inv"
                                     href="#"
                                     >
@@ -73,4 +72,4 @@ const Floats = () => {
     );
 };
 
-export default Floats;
+export default InventoryComp;
