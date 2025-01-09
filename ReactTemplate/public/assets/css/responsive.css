@@ -9686,34 +9686,63 @@ Some of these are marked as finished but they are still having the stupid card c
     }
 
     /* 13. Asus Zenbook Fold */
+    /* TODO-2 Finished */
     @media screen and (device-width: 853px) and (device-height: 1280px) {
 
-    /* Slider */
-        .item-slider-1 .box-content{
-            transform: translateX(30%) translateY(40%) !important;
+        .tf-slider-1{
+            transform: translateX(-10%);
+        }
+
+        .tf-slider-1 .overlay{
+            width: 120%;
+            height: 90%;
+            border-radius: 10% !important;
         }
 
         /* Title Text */
         .title.clr-pri-2{
-            font-size: 50px;
+            font-size: 40px; 
             display: flex; 
             align-items: center;
             justify-content: center;
             text-align: center;
+
+            transform: translateX(10%);
         }
 
         /* Sub Text */
         .sub.clr-pri-2{
-            font-size: 60px;
+            font-size: 45px;
             display: flex; 
             align-items: center;
             justify-content: center;
             text-align: center; 
         }
 
+        .item-slider-1 .box-feature {
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-10%) translateX(90%);
+            scale: 80%;
+        }
+
+        .item-slider-1 .box-content {
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(0%) translateX(0%);
+        }
+
+        .item-slider-1 .box-btn {
+            transform: translateX(20%) translateY(150%)!important;
+        }
+
+        .item-slider-1 .box-custom{
+            transform: translateX(0%) translateY(100%) !important;
+        }
+
         /* Wrap Text */
         .wrap.clr-pri-1{
-            font-size: 30px;
+            font-size: 22px;
             display: flex; 
             align-items: center;
             justify-content: center;
@@ -9764,17 +9793,8 @@ Some of these are marked as finished but they are still having the stupid card c
 
             /* Button Container */
             .box-btn{
-                /* display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center;  */
-                /* flex-direction: column; */
-
                 width: 120%;
                 max-width: 3000px; 
-                /* margin-left: 60px; */
-
-                /* transform: translateX(0%) translateY(50%) !important; */
             }
 
             .fl-btn {
@@ -9909,7 +9929,7 @@ Some of these are marked as finished but they are still having the stupid card c
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px 10px;
+            /* padding: 20px 10px; */
             /* margin-top: -100px !important; */
             height: auto; /* Allow height to adjust dynamically */
             min-height: 120%; /* Make the footer container taller */
@@ -10124,8 +10144,16 @@ Some of these are marked as finished but they are still having the stupid card c
         
         /* Booking */
             /* Title */
+            #booking-ctnr-resp .title-heading.st-4{
+                transform: translateY(40%);
+            }
+
             .title-heading.st-4{
                 transform: translateY(40%);
+            }
+
+            #booking-ctnr-resp .title.clr-pri-2{
+                transform: translateY(0%);
             }
 
             #ipad-resp{
@@ -10264,7 +10292,7 @@ Some of these are marked as finished but they are still having the stupid card c
             /* Explore our Inventory and Book Below */
             .tf-section.tf-gallery .title-heading.st-4 h2{
                 top: 0px;
-                right: -5px;
+                right: 50px;
                 position: relative;
                 padding-bottom: 30px;
             }
@@ -10544,141 +10572,122 @@ Some of these are marked as finished but they are still having the stupid card c
                 transform: translateY(10%);
             }
 
-        /* Home page Slider */
-            /* Slider Container */
-            .tf-slider-1{
-                transform: translateX(-90px);
-                top: -100px
-            }
-
-            /* Slider Innfer */
-            .tf-slider-1 .overlay{
-                width: 120% !important;
-                height: 120% !important;
-
-                /* background-image: url(../images/inflatables/MobileSliderHmpg.png); */
-                background-size: cover;
-            } 
-
-            .item-slider-1 {
-                display: flex;
-                flex-direction: column;
-                align-items: center; 
-            }
-
-            .item-slider-1 .clr-content-mbl {
-                flex-direction: column;
-                align-items: center;
-
-                padding: 0;
-                order: 1 !important;
-            }
-
-            .item-slider-1 .box-custom{
-                order: 2 !important;
-            }
-
-            .item-slider-1 .box-feature {
-                flex-direction: column;
-                align-items: center;
-
-                padding: 0;
-                display: inline-block;
-                order: 3 !important;
-
-                transform: translateY(20%);
-                left: 280px;
-            }
-            
-            .item-slider-1 .box-feature .image img {
-                flex-direction: column;
-                align-items: center;
-
-                max-width: 200%;
-                height: auto;
-            }
-            
-            .item-slider-1 .box-btn {
-                transform: translateY(500%) !important;
-            }
-            
-
         /* Home page Footer */
             #mbl-ftr{
                 scale: 120%;
             }
 
         /* Checkout Success page */
+        .tf-slider-1.slider-checkout  .overlay{
+            width: 120%;
+            height: 60%;
+            border-radius: 10% !important;
+            padding-bottom: 0;
+        }
 
-            .tf-slider-1.slider-checkout .overlay{
-                width: 95%;
-                height: 80%;
-                background-image: url(../images/inflatables/MobileSliderHmpg.png);
-                border-radius: 10px !important;
+        /* Sub Text */
+        .slider-checkout .sub.clr-pri-2{
+            font-size: 35px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .slider-checkout .item-slider-1 .box-feature {
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-50%) translateX(380%);
+            scale: 80%;
+        }
+
+        .slider-checkout .item-slider-1 .box-btn {
+            transform: translateX(50%) translateY(-640%)!important;
+        }
+
+        .slider-checkout .item-slider-1 .box-custom{
+            transform: translateX(50%) translateY(-160%) !important;
+        }
+
+
+
+        /* Wrap Text */
+        .slider-checkout .wrap.clr-pri-1{
+            font-size: 30px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Arrow and JJ Ribbon */
+        .slider-checkout .box-custom{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .slider-checkout .box-custom .wrap{
+            background-size: 110%;
+        }
+
+        /* Arrow */
+        .slider-checkout .box-custom svg{
+            transform: translateX(-17%);
+        }
+
+        /* List Item Text */
+        .slider-checkout .li-clr-pri-2{
+            display: none !important;
+        }
+
+        .slider-checkout .sub.clr-pri-2{
+            transform: translateX(55%) translateY(-30%);
+        }
+
+        /* List Item Emojis */
+        li.fx{
+            display: none !important;
+        }
+
+        /* Buttons */
+            /* Top Button */
+            .tf-slider-1.slider-checkout{
+                margin-bottom: -700px;
             }
-            /* Title Text */
-            .slider-checkout .sub.clr-pri-2{
-                transform: translateX(-3%) translateY(-100%);
-                font-size: 35px;
+            .slider-checkout .fl-btn.st-12{
+                height: 70px;
+                width: 120%;
+                font-size: 18px;
             }
 
-            .slider-checkout .li-clr-pri-2-chkout{
-                font-size: 2.5rem !important;
-                transform: translateX(-2%) translateY(-50%);
+            /* Bottom Button */
+            .slider-checkout .fl-btn.st-1{
+                height: 70px;
+                width: 120%;
+                font-size: 23px;
             }
 
-
-            .slider-checkout .item-slider-1 {
-                display: flex;
-                flex-direction: column;
-                align-items: center; 
-
-                height: 90%;
+            /* Button Container */
+            .slider-checkout .box-btn{
+                width: 120%;
+                max-width: 3000px; 
             }
 
-            .slider-checkout .item-slider-1 .clr-content-mbl {
-                flex-direction: column;
+            .slider-checkout .fl-btn {
+                width: 300%;
+                text-align: center; 
+                max-width: 1000px; 
+                margin: 0 auto; 
+
+                display: flex; 
                 align-items: center;
+                justify-content: center;
+                text-align: center; 
 
-                padding: 0;
-                order: 1 !important;
-            }
-
-            .slider-checkout .item-slider-1 .box-feature {
-                flex-direction: column;
-                padding: 0;
-                display: inline-block;
-                order: 2 !important;
-
-                transform: translateY(30%);
-                left: 235px;
-            }
-
-            .slider-checkout .item-slider-1 .box-feature .image img {
-                /* width: 120% !important;
-                height: auto;
-                padding: 0; */
-
-                flex-direction: column;
-                align-items: center;
-                max-width: 700%;
-                height: auto;
-                transform: translateX(30%) translateY(-20%);
-            }
-
-            .slider-checkout .item-slider-1 .box-custom{
-                order: 3 !important;
-
-                transform: translateY(-10%);
-                margin-right: 20px;
-            }
-
-            .slider-checkout .item-slider-1 .box-btn .fl-btn.st-12{
-                order: 4 !important;
-                transform: translateY(-750%) translateX(5%);
-                right: -5px;
-                width: 110%;
-                font-size: 20px;
+                top: -20px;
+                left: -95px;
             }
 
 
@@ -14190,8 +14199,6 @@ Some of these are marked as finished but they are still having the stupid card c
                 font-size: 12px;
             }     
 }
-
-
 
 /* 14. Samsung Galaxy A51/71 */
 @media screen and (width: 412px) and (height: 914px){
