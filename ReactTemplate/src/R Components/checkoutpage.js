@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'; 
+import { useState, useEffect, useRef } from 'react'; 
 import { Button, Spinner } from 'react-bootstrap';
 import { Circles } from 'react-loader-spinner';
 // Redux Variables
@@ -105,7 +105,38 @@ const CheckoutPage = ({ data }) => {
     
     //     setupPayments();
     // }, []); // Empty dependency array ensures this runs only once on component mount   
-    
+
+
+    // const setupPayments = async () => {
+    //     try {
+    //         if (typeof window !== 'undefined' && window.Square) {
+    //             const paymentsInstance = window.Square.payments(
+    //                 'sandbox-sq0idb-5Nc6RAjZkLqlYcvGAHxnOA', // Application ID
+    //                 'L82JRJN986YEA' // Location ID
+    //             );
+    //             setPayments(paymentsInstance);
+
+    //             // Wait for the card container to be in the DOM
+    //             const cardContainer = document.getElementById('card-container');
+    //             // const cardContainer = await waitForElement('#card-container');
+    //             if (!cardContainer) {
+    //                 throw new Error('Card container not found in DOM');
+    //             }
+
+    //             const cardInstance = await paymentsInstance.card();
+    //             await cardInstance.attach('#card-container'); // Attach to the container
+    //             setCard(cardInstance); // Save the card instance for later use
+    //             setIsCardLoading(false); // Stop the spinner
+    //         } else {
+    //             throw new Error('Square Payments SDK not loaded');
+    //         }
+    //     } catch (error) {
+    //         console.error('Failed to initialize Square Payments:', error);
+    //         setLoadError(true); // Mark as failed
+    //         setIsCardLoading(false); // Stop loading spinner
+    //     }
+    // };
+
     const setupPayments = async () => {
         try {
             if (typeof window !== 'undefined' && window.Square) {
@@ -114,13 +145,16 @@ const CheckoutPage = ({ data }) => {
                     'L82JRJN986YEA' // Location ID
                 );
                 setPayments(paymentsInstance);
-
-                // Wait for the card container to be in the DOM
+    
                 const cardContainer = document.getElementById('card-container');
+    
                 if (!cardContainer) {
                     throw new Error('Card container not found in DOM');
                 }
-
+    
+                // Clear the container before reattaching
+                cardContainer.innerHTML = '';
+    
                 const cardInstance = await paymentsInstance.card();
                 await cardInstance.attach('#card-container'); // Attach to the container
                 setCard(cardInstance); // Save the card instance for later use
@@ -673,7 +707,8 @@ const CheckoutPage = ({ data }) => {
                         <div className="checkout-container">
                             <div className="checkout-inner"> */}
                                 {/* Card container to always render in the DOM */}
-                                <div id="card-container"></div>
+                                    <div
+                                    id="card-container"></div>
 
                                 {/* Show loading spinner while initializing */}
                                 {isCardLoading && !loadError && (
