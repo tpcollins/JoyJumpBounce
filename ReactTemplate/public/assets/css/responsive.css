@@ -2342,7 +2342,7 @@ TODO-3 done on:
 2. Chrome
 3. FireFox
 4. Edge
-5.  
+5.  Safari
 
 */
 @media screen and (width: 414px) and (height: 896px) {
@@ -3072,6 +3072,16 @@ TODO-3 done on:
 
 /* 3. iPhone 12 Pro */
 /* TODO-2 Finished */
+
+/* 
+TODO-3 done on:
+1. Opera
+2. Chrome
+3. Firefox
+4. Edge
+5.
+
+*/
 @media screen and (width: 390px) and (height: 844px) {
 
     /* Slider */
@@ -3229,7 +3239,7 @@ TODO-3 done on:
             flex-direction: row; /* Ensure icons are horizontally aligned */
             margin-top: 20px; /* Adjust spacing */
             justify-content: center; /* Center-align on smaller screens */
-            transform: translateX(140%);
+            transform: translateX(150%);
         }
 
         .copy-right{
