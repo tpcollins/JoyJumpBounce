@@ -2978,6 +2978,8 @@ TODO-3 done on:
                 transform: translateY(-90%);
                 left: 40px;
             }
+
+            
             
             .item-slider-1 .box-feature .image img {
                 flex-direction: column;
@@ -2991,7 +2993,13 @@ TODO-3 done on:
                 transform: translateY(150%) !important;
             }
               
+            /* body.safari-browser .item-slider-1 .box-feature{
+                transform: translateY(-70%);
+            } */
 
+            body.safari-browser .item-slider-1 .box-btn{
+                transform: translateY(200%) !important;
+            }
         /* Home page Footer */
             #mbl-ftr{
                 scale: 120%;
@@ -3035,6 +3043,12 @@ TODO-3 done on:
             }
 
             .slider-checkout .item-slider-1 .box-feature .image img {
+                max-width: 230%;
+                height: auto;
+                padding: 0;
+            }
+
+            body.safari-browser .slider-checkout .item-slider-1 .box-feature .image img {
                 max-width: 230%;
                 height: auto;
                 padding: 0;
