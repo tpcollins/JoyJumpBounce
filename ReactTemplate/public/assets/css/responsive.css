@@ -1617,6 +1617,7 @@ TODO-3 done on:
 2. Chrome
 3. FireFox
 4. Edge
+5. Safari
 
 */
 @media screen and (max-width: 375px){
@@ -2334,6 +2335,16 @@ TODO-3 done on:
 
 /* 2. iPhone XR */
 /* TODO-2 Finished */
+
+/* 
+TODO-3 done on:
+1. Opera
+2. Chrome
+3. FireFox
+4. Edge
+5.  
+
+*/
 @media screen and (width: 414px) and (height: 896px) {
 
     /* Slider */
