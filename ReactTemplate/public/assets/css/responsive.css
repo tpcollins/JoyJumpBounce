@@ -1591,7 +1591,7 @@ TODO:
 }
 
 /* Small Laptop */
-@media (min-width: 769px) and (max-width: 1024px){
+@media (max-width: 1024px){
     .tf-slider-1{
         /* transform: translateX(-5%) translateY(-5%); */
         display: none;
