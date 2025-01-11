@@ -29,10 +29,10 @@ TODO:
     }
 
     .tf-slider-1 .overlay{
-        width: 110%;
-        height: 70%;
+        width: 110% !important;
+        height: 100% !important;
         border-radius: 5% !important;
-        scale: 80%;
+        scale: 80% !important;
     }
 
     /* Title Text */
