@@ -1478,9 +1478,10 @@ TODO:
 */
 
 /* Laptop Screen */
-@media (min-width: 1024px) and (max-width: 1400px){
+@media (min-width: 1024px) and (max-width: 1700px){
     .tf-slider-1{
         transform: translateX(-5%) translateY(-5%);
+        /* display: none; */
     }
 
     .tf-slider-1 .overlay{
@@ -1589,6 +1590,13 @@ TODO:
 
 }
 
+/* Small Laptop */
+@media (min-width: 769px) and (max-width: 1024px){
+    .tf-slider-1{
+        /* transform: translateX(-5%) translateY(-5%); */
+        display: none;
+    }
+}
 
 
 @media (min-width: 1024px) and (max-width: 1700px) {
