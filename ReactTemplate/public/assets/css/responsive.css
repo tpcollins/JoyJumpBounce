@@ -1488,6 +1488,7 @@ TODO:
             height: 50%;
             border-radius: 5% !important;
             scale: 80%;
+            display: none;
         }
     
         /* Title Text */
