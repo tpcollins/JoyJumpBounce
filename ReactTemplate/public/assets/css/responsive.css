@@ -58,7 +58,7 @@ TODO:
     .item-slider-1 .box-feature {
         flex-direction: column;
         align-items: center;
-        transform: translateY(0%) translateX(30%);
+        transform: translateY(0%) translateX(300%);
         scale: 80%;
     }
 
