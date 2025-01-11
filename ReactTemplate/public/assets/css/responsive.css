@@ -58,12 +58,16 @@ TODO:
     .item-slider-1 .box-feature {
         flex-direction: column;
         align-items: center;
-        transform: translateY(0%) translateX(300%);
+        transform: translateY(0%) translateX(20%);
         scale: 80%;
     }
 
     .item-slider-1 .box-btn {
         transform: translateX(10%) translateY(0%)!important;
+    }
+
+    .item-slider-1 .box-custom{
+        transform: translateY(20%) !important;
     }
 
     .item-slider-1 .clr-content-mbl{
