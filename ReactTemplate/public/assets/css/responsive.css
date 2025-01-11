@@ -67,7 +67,7 @@ TODO:
     }
 
     .item-slider-1 .box-custom{
-        transform: translateX(-40%) !important;
+        transform: translateY(-40%) !important;
     }
 
     .item-slider-1 .clr-content-mbl{
