@@ -8893,10 +8893,16 @@ Some of these are marked as finished but they are still having the stupid card c
 
     /* 10. Surface Pro 7 */
     /* TODO-2 Finished */
+    /* 
+    TODO-3 done on:
+    1. 
+
+    */
     @media screen and (device-width: 912px) and (device-height: 1368px) {
 
         .tf-slider-1{
             transform: translateX(-10%);
+            display: none;
         }
 
         .tf-slider-1 .overlay{
