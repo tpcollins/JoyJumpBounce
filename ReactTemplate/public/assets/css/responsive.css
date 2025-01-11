@@ -53,12 +53,13 @@ TODO:
         align-items: center;
         justify-content: center;
         text-align: center; 
+        transform: translateY(-10%)
     }
 
     .item-slider-1 .box-feature {
         flex-direction: column;
         align-items: center;
-        transform: translateY(-20%) translateX(20%);
+        transform: translateY(0%) translateX(20%);
         scale: 80%;
     }
 
