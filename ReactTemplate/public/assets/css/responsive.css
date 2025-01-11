@@ -4482,16 +4482,16 @@ TODO-3 done on:
             }  
 }
 
+
+/* 5. Pixel 7 + Samsung Galaxy S20 Ultra (Same screen dimensions)*/
+/* TODO-2 Finished */
 /* 
 TODO-3 done on:
 1. Opera
 2. Chrome
 3. Firefox
-4. 
 
 */
-/* 5. Pixel 7 + Samsung Galaxy S20 Ultra (Same screen dimensions)*/
-/* TODO-2 Finished */
 @media screen and (device-width: 412px) and (device-height: 915px){
     /* Slider */
         /* Title Text */
@@ -5185,6 +5185,13 @@ TODO-3 done on:
 
 /* 6. Samsung Galaxy 8+ */
 /* TODO-2 Finished */
+/* 
+TODO-3 done on:
+1. Opera
+2. Chrome
+3. Firefox
+
+*/
 @media screen and (width: 360px) and (height: 740px) {
 
     /* Slider */
