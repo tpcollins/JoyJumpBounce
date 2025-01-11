@@ -53,7 +53,6 @@ TODO:
         align-items: center;
         justify-content: center;
         text-align: center; 
-        transform: translateY(-10%) !important;
     }
 
     .item-slider-1 .box-feature {
@@ -69,6 +68,10 @@ TODO:
 
     .item-slider-1 .box-custom{
         transform: translateX(10%) !important;
+    }
+
+    .item-slider-1 .clr-content-mbl{
+        transform: translateY(-10%) !important;
     }
 
     /* Wrap Text */
