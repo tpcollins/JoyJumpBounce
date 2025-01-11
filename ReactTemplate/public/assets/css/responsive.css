@@ -1318,7 +1318,7 @@ TODO:
     }
 
     /* Footer 1 responsive design for desktop screens */
-    @media (min-width: 1650px) {
+    @media (min-width: 1200px) {
         #footer-1 {
             background-color: #B250FE;
             position: relative;
@@ -1478,7 +1478,7 @@ TODO:
 */
 
 /* Laptop Screen */
-@media (min-width: 1024px) and (max-width: 1650px){
+@media (min-width: 1024px) and (max-width: 1400px){
     .tf-slider-1{
         transform: translateX(-5%) translateY(-5%);
     }
@@ -1591,7 +1591,7 @@ TODO:
 
 
 
-@media (min-width: 769px) and (max-width: 1700px) {
+@media (min-width: 1024px) and (max-width: 1700px) {
     .gallery-item .image img, 
     .gallery-item .description img {
         max-width: 100%;
