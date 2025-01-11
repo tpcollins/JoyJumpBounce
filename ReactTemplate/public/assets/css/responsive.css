@@ -1222,6 +1222,7 @@ TODO:
 5. Homepage Slider
 6. Inventory Page
 7. About Us and How it Works
+8. Booking Page
 */
 
 /* 
@@ -1531,8 +1532,8 @@ TODO:
 /* Small Laptop Screens */
 @media screen and (min-width: 769px) and (max-width: 1350px){
     .tf-slider-1{
-        transform: translateX(-5%) translateY(0%) !important;
-        /* display: none; */
+        /* transform: translateX(-5%) translateY(0%) !important; */
+        display: none;
     }
 
     .tf-slider-1 .overlay{
