@@ -26,7 +26,7 @@ export default async function handler(req, res) {
   };
 
   try {
-    base('Booking').create(
+    base('Bookings').create(
       cartItems.map((item) => ({
         fields: {
           'Order ID': item.orderId,

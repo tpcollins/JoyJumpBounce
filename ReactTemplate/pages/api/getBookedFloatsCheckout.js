@@ -18,7 +18,7 @@ export default async function handler(req, res) {
       .map(date => `IS_SAME({Booking Date}, '${date}', 'day')`)
       .join(',')})`;
 
-    const records = await base('Booking').select({
+    const records = await base('Bookings').select({
       filterByFormula: filterFormula,
     }).firstPage();
 
