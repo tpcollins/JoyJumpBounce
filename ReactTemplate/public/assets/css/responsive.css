@@ -22,122 +22,6 @@ TODO:
 /* Media Queries
 -------------------------------------------------------------- */
 
-@media screen and (min-width: 769px) and (max-width: 1350px){
-    .tf-slider-1{
-        transform: translateX(-5%) translateY(0%) !important;
-        /* display: none; */
-    }
-
-    .tf-slider-1 .overlay{
-        width: 110% !important;
-        height: 80% !important;
-        border-radius: 5% !important;
-        scale: 80% !important;
-    }
-
-    /* Title Text */
-    .title.clr-pri-2{
-        font-size: 40px;
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        transform: translateX(10%);
-    }
-
-    /* Sub Text */
-    .sub.clr-pri-2{
-        font-size: 45px;
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        text-align: center; 
-    }
-
-    .item-slider-1 .box-feature {
-        flex-direction: column;
-        align-items: center;
-        transform: translateY(0%) translateX(20%);
-        scale: 80%;
-    }
-
-    .item-slider-1 .box-btn {
-        transform: translateX(10%) translateY(0%)!important;
-    }
-
-    .item-slider-1 .box-custom{
-        transform: translateX(100%) !important;
-    }
-
-    .item-slider-1 .clr-content-mbl{
-        transform: translateY(-40%) !important;
-    }
-
-    /* Wrap Text */
-    .wrap.clr-pri-1{
-        font-size: 30px;
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    /* Arrow and JJ Ribbon */
-    .item-slider-1 .box-custom{
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        text-align: center; 
-    }
-
-    .item-slider-1 .box-custom .wrap{
-        background-size: 110%;
-    }
-
-    /* Arrow */
-    .item-slider-1 .box-custom svg{
-        transform: translateX(-17%);
-    }
-
-    /* Buttons */
-        /* Top Button */
-        .item-slider-1 .fl-btn.st-12{
-            height: 70px;
-            width: 120%;
-            font-size: 18px;
-        }
-
-        /* Bottom Button */
-        .item-slider-1 .fl-btn.st-1{
-            height: 70px;
-            width: 120%;
-            font-size: 23px;
-        }
-
-        /* Button Container */
-        .item-slider-1 .box-btn{
-            width: 120%;
-            max-width: 3000px; 
-        }
-
-        .item-slider-1 .fl-btn {
-            width: 300%;
-            text-align: center; 
-            max-width: 1000px; 
-            margin: 0 auto; 
-
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-
-            top: -20px;
-            left: -95px;
-        }
-
-}
-
 @media only screen and (max-width: 1825px) {
     #site-header .site-header-inner {
         padding: 0 0;
@@ -1594,8 +1478,124 @@ TODO:
 5. Homepage Slider
 */
 
+/* Small Laptop Screens */
+@media screen and (min-width: 769px) and (max-width: 1350px){
+    .tf-slider-1{
+        transform: translateX(-5%) translateY(0%) !important;
+        /* display: none; */
+    }
 
+    .tf-slider-1 .overlay{
+        width: 110% !important;
+        height: 80% !important;
+        border-radius: 5% !important;
+        scale: 80% !important;
+    }
 
+    /* Title Text */
+    .title.clr-pri-2{
+        font-size: 40px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        transform: translateX(10%);
+    }
+
+    /* Sub Text */
+    .sub.clr-pri-2{
+        font-size: 45px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        text-align: center; 
+    }
+
+    .item-slider-1 .box-feature {
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(0%) translateX(20%);
+        scale: 80%;
+    }
+
+    .item-slider-1 .box-btn {
+        transform: translateX(10%) translateY(0%)!important;
+    }
+
+    .item-slider-1 .box-custom{
+        transform: translateX(100%) !important;
+    }
+
+    .item-slider-1 .clr-content-mbl{
+        transform: translateY(-40%) !important;
+    }
+
+    /* Wrap Text */
+    .wrap.clr-pri-1{
+        font-size: 30px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Arrow and JJ Ribbon */
+    .item-slider-1 .box-custom{
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        text-align: center; 
+    }
+
+    .item-slider-1 .box-custom .wrap{
+        background-size: 110%;
+    }
+
+    /* Arrow */
+    .item-slider-1 .box-custom svg{
+        transform: translateX(-17%);
+    }
+
+    /* Buttons */
+        /* Top Button */
+        .item-slider-1 .fl-btn.st-12{
+            height: 70px;
+            width: 120%;
+            font-size: 18px;
+        }
+
+        /* Bottom Button */
+        .item-slider-1 .fl-btn.st-1{
+            height: 70px;
+            width: 120%;
+            font-size: 23px;
+        }
+
+        /* Button Container */
+        .item-slider-1 .box-btn{
+            width: 120%;
+            max-width: 3000px; 
+        }
+
+        .item-slider-1 .fl-btn {
+            width: 300%;
+            text-align: center; 
+            max-width: 1000px; 
+            margin: 0 auto; 
+
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+
+            top: -20px;
+            left: -95px;
+        }
+
+}
+
+/* Medium Size Laptop Screens (working on MacBook) */
 @media (min-width: 1024px) and (max-width: 1700px){
     .tf-slider-1{
         transform: translateX(-5%) translateY(-5%);
