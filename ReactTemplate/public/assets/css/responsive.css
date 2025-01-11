@@ -9,8 +9,6 @@ TODO:
     These steps might have to be done repeatedly to ensure nothing
     changes on other devices and/or browsers when things shift around
 
-    2. Run through responsive designs and make sure all buttons are clickable
-        - Just the 3 phone screens we did not get to
     3. Run through responsive designs on all browsers
     4. Run through desktop and laptop designs on all browsers
 -----------------------------------------------------------------------------
@@ -3103,7 +3101,7 @@ TODO-3 done on:
 2. Chrome
 3. Firefox
 4. Edge
-5.
+5. Safari
 
 */
 @media screen and (width: 390px) and (height: 844px) {
@@ -3840,6 +3838,16 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
 
 /* 4. iPhone 14 Pro Max */
 /* TODO-2 Finished */
+
+/* 
+TODO-3 done on:
+1. Opera
+2. Chrome
+3. Firefox
+4. Edge
+5. 
+
+*/
 @media screen and (width: 430px) and (height: 932px){
     /* Slider */
         /* Title Text */
