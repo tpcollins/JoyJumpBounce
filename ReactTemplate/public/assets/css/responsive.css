@@ -1485,7 +1485,7 @@ TODO:
     
         .tf-slider-1 .overlay{
             width: 110%;
-            height: 70%;
+            height: 50%;
             border-radius: 5% !important;
             scale: 80%;
         }
