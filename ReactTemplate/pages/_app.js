@@ -34,12 +34,18 @@ const App = ({ Component, pageProps }) => {
                 <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
                 {/* Web App Manifest */}
                 <link rel="manifest" href="/site.webmanifest" />
+
+                <link 
+                href="https://fonts.googleapis.com/css2?family=Salsa&display=swap"
+                rel="stylesheet" />
+
+
                 {/* Meta for Web App */}
                 <meta name="theme-color" content="#ffffff" />
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="mobile-web-app-capable" content="yes" />
 
-                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
             </Head>
 
 
