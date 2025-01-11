@@ -66,7 +66,7 @@ TODO:
         transform: translateX(10%) translateY(0%)!important;
     }
 
-    .item-slider-1 .box-custom{
+    .item-slider-1 .wrap.sub.clr-pri-2{
         transform: translateY(-40%) !important;
     }
 
