@@ -1596,10 +1596,9 @@ TODO:
 }
 
 /* Medium Size Laptop Screens (working on MacBook) */
-@media (min-width: 1024px) and (max-width: 1700px){
+@media (min-width: 1350px) and (max-width: 1700px){
     .tf-slider-1{
         transform: translateX(-5%) translateY(-5%);
-        /* display: none; */
     }
 
     .tf-slider-1 .overlay{
@@ -1708,11 +1707,8 @@ TODO:
 
 }
 
-/* Laptop Screen */
-
-
-
-@media (min-width: 1024px) and (max-width: 1700px) {
+/* Laptop Screen Inventory Gallery */
+@media (min-width: 1350px) and (max-width: 1700px) {
     .gallery-item .image img, 
     .gallery-item .description img {
         max-width: 100%;
