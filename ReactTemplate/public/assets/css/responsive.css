@@ -3845,10 +3845,33 @@ TODO-3 done on:
 2. Chrome
 3. Firefox
 4. Edge
-5. 
+5. Safari
 
 */
 @media screen and (width: 430px) and (height: 932px){
+    body.safari-browser .item-slider-1 .box-feature{
+        transform: translateY(-70%);
+    }
+
+
+
+    body.safari-browser .item-slider-1 .box-btn{
+        transform: translateY(200%) !important;
+    }
+
+
+
+
+    body.safari-browser .slider-checkout .item-slider-1 .box-feature {
+        flex-direction: column;
+        padding: 0;
+        display: inline-block;
+        order: 2 !important;
+
+        transform: translateY(30%);
+        left: 203px;
+    }
+
     /* Slider */
         /* Title Text */
         .title.clr-pri-2{
