@@ -24,7 +24,7 @@ TODO:
 
 @media screen and (min-width: 769px) and (max-width: 1350px){
     .tf-slider-1{
-        transform: translateX(-5%) translateY(5%) !important;
+        transform: translateX(-5%) translateY(0%) !important;
         /* display: none; */
     }
 
