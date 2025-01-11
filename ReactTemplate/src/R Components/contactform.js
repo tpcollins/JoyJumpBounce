@@ -31,7 +31,7 @@ const ContactForm = () => {
           {
             name: formData.name,
             email: formData.mail,
-            phone: formData.number,
+            phone_number: formData.number,
             subject: formData.subject,
             message: formData.message,
           },
