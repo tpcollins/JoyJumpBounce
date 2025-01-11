@@ -2347,6 +2347,17 @@ TODO-3 done on:
 */
 @media screen and (width: 414px) and (height: 896px) {
 
+
+
+    body.safari-browser .slider-checkout .item-slider-1 .box-feature {
+        flex-direction: column;
+        padding: 0;
+        display: inline-block;
+        order: 2 !important;
+
+        transform: translateY(30%);
+        left: 203px;
+    }
     /* Slider */
         /* Title Text */
         .title.clr-pri-2{
@@ -2993,9 +3004,9 @@ TODO-3 done on:
                 transform: translateY(150%) !important;
             }
               
-            /* body.safari-browser .item-slider-1 .box-feature{
+            body.safari-browser .item-slider-1 .box-feature{
                 transform: translateY(-70%);
-            } */
+            }
 
             body.safari-browser .item-slider-1 .box-btn{
                 transform: translateY(200%) !important;
@@ -3042,6 +3053,16 @@ TODO-3 done on:
                 left: 203px;
             }
 
+            body.safari-browser .slider-checkout .item-slider-1 .box-feature {
+                flex-direction: column;
+                padding: 0;
+                display: inline-block;
+                order: 2 !important;
+
+                transform: translateY(30%);
+                left: 203px;
+            }
+
             .slider-checkout .item-slider-1 .box-feature .image img {
                 max-width: 230%;
                 height: auto;
@@ -3070,6 +3091,9 @@ TODO-3 done on:
             }     
 }
 
+
+
+
 /* 3. iPhone 12 Pro */
 /* TODO-2 Finished */
 
@@ -3084,6 +3108,28 @@ TODO-3 done on:
 */
 @media screen and (width: 390px) and (height: 844px) {
 
+    body.safari-browser .item-slider-1 .box-feature{
+        transform: translateY(-70%);
+    }
+
+
+
+    body.safari-browser .item-slider-1 .box-btn{
+        transform: translateY(200%) !important;
+    }
+
+
+
+
+body.safari-browser .slider-checkout .item-slider-1 .box-feature {
+        flex-direction: column;
+        padding: 0;
+        display: inline-block;
+        order: 2 !important;
+
+        transform: translateY(30%);
+        left: 203px;
+    }
     /* Slider */
         /* Title Text */
         .title.clr-pri-2{
