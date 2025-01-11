@@ -1225,7 +1225,7 @@ TODO:
 1. Footer 1
 */
     /* Footer 1 responsive design for laptop screens */
-    @media (min-width: 769px) and (max-width: 1700px) {
+    @media (min-width: 1024px) and (max-width: 1700px) {
         #footer-1 {
             background: url(../images/logo/FooterTopperLaptop.png) center bottom no-repeat;
             background-size: cover;
@@ -1402,7 +1402,7 @@ TODO:
     }
 
     /* Footer 2 responsive design for laptop screens */
-    @media (min-width: 769px) and (max-width: 1700px){
+    @media (min-width: 1024px) and (max-width: 1700px){
         #footer.st-2 .social-icons{
             transform: translateX(540%) translateY(850%) !important;
         }
@@ -1454,7 +1454,7 @@ TODO:
 
 /* Might still need to adjust modal positioning on chrome and other web browsers */
 
-@media (min-width: 769px) and (max-width: 1700px){
+@media (min-width: 1024px) and (max-width: 1700px){
     .modal-dialog {
       top: 30%; /* Adjust to move the modal further down on larger screens */
     }
@@ -1464,7 +1464,7 @@ TODO:
 4. Nav bar
 */
 
-@media (min-width: 769px) and (max-width: 1700px){
+@media (min-width: 1024px) and (max-width: 1700px){
     .nav-wrap {
         transform: translateX(3.8%);
     }
@@ -1478,21 +1478,7 @@ TODO:
 */
 
 /* Laptop Screen */
-@media (min-width: 769px) and (max-width: 1700px){
-    /* .tf-slider-1 .overlay {
-        top: 20px;
-        scale: 80%;
-    }
-
-    .item-slider-1 .title{
-        top: 20px !important;
-    }
-
-    .tf-slider-1 .item-slider-1{
-        scale: 80%;
-        transform: translateY(-15%);
-    } */
-
+@media (min-width: 1024px) and (max-width: 1650px){
     .tf-slider-1{
         transform: translateX(-5%) translateY(-5%);
     }
@@ -1603,6 +1589,77 @@ TODO:
 
 }
 
+
+
+@media (min-width: 769px) and (max-width: 1700px) {
+    .gallery-item .image img, 
+    .gallery-item .description img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .image img {
+        max-width: 500px;
+    }
+
+    .description img {
+        max-width: 400px;
+    }
+
+    .gallery-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .description,
+    .image {
+        flex: 1;
+        max-width: 50%;
+    }
+
+    .gallery-item:nth-child(odd) .description {
+        text-align: left;
+        padding-right: 20px;
+    }
+    
+    .gallery-item:nth-child(even) .description {
+        text-align: right;
+        padding-left: 20px;
+    }
+
+    .gallery-container {
+        overflow: hidden;
+    }    
+
+    .gallery-container .box-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .gallery-item:nth-child(1) .box-btn {
+        /* padding-right: 400px; */
+        /* margin-top: -28px; */
+        transform: translateX(50%);
+    }
+
+    .gallery-item:nth-child(3) .box-btn {
+        /* padding-right: 400px; */
+        margin-top: -28px;
+        transform: translateX(50.5%);
+    }
+    
+    .gallery-item:nth-child(even) .box-btn {
+        margin-top: 6px;
+        transform: translateX(52%);
+    }
+    
+}
 
 /* Phone Screens */
 
@@ -15190,78 +15247,4 @@ Some of these are marked as finished but they are still having the stupid card c
                 width: 110%;
                 font-size: 12px;
             }  
-}
-
-
-
-
-
-@media (min-width: 769px) and (max-width: 1700px) {
-    .gallery-item .image img, 
-    .gallery-item .description img {
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    .image img {
-        max-width: 500px;
-    }
-
-    .description img {
-        max-width: 400px;
-    }
-
-    .gallery-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    
-    .description,
-    .image {
-        flex: 1;
-        max-width: 50%;
-    }
-
-    .gallery-item:nth-child(odd) .description {
-        text-align: left;
-        padding-right: 20px;
-    }
-    
-    .gallery-item:nth-child(even) .description {
-        text-align: right;
-        padding-left: 20px;
-    }
-
-    .gallery-container {
-        overflow: hidden;
-    }    
-
-    .gallery-container .box-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        margin-top: 20px;
-    }
-    
-    .gallery-item:nth-child(1) .box-btn {
-        /* padding-right: 400px; */
-        /* margin-top: -28px; */
-        transform: translateX(50%);
-    }
-
-    .gallery-item:nth-child(3) .box-btn {
-        /* padding-right: 400px; */
-        margin-top: -28px;
-        transform: translateX(50.5%);
-    }
-    
-    .gallery-item:nth-child(even) .box-btn {
-        margin-top: 6px;
-        transform: translateX(52%);
-    }
-    
 }
