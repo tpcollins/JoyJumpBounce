@@ -30,10 +30,9 @@ TODO:
 
     .tf-slider-1 .overlay{
         width: 110%;
-        height: 50%;
+        height: 90%;
         border-radius: 5% !important;
         scale: 80%;
-        display: none;
     }
 
     /* Title Text */
