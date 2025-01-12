@@ -1,9 +1,5 @@
 /* Responsive Design Notes
 
-
--- Firefox
-    -- checkout success page needs to adjusted
-
 */
 
 /* Media Queries
@@ -2111,7 +2107,7 @@
         .item-slider-1 .box-feature {
             flex-direction: column;
             align-items: center;
-            transform: translateY(-10%) translateX(40%);
+            transform: translateY(0%) translateX(40%);
             scale: 80%;
         }
 
@@ -2209,14 +2205,14 @@
 
             .tf-slider-1.slider-checkout  .overlay{
                 width: 100% !important;
-                height: 50% !important;
+                height: 60% !important;
                 border-radius: 10% !important;
                 scale: 90%;
             }
 
             /* Sub Text */
             .slider-checkout .sub.clr-pri-2{
-                font-size: 35px;
+                font-size: 30px;
                 display: flex; 
                 align-items: center;
                 justify-content: center;
@@ -2224,22 +2220,22 @@
             }
 
             .tf-slider-1.slider-checkout .clr-content-mbl{
-                transform: translateX(0%) translateY(0%) !important;
+                transform: translateX(45%) translateY(-90%) !important;
             }
 
             .slider-checkout .item-slider-1 .box-feature {
                 flex-direction: column;
                 align-items: center;
-                transform: translateY(-60%) translateX(260%);
+                transform: translateY(-68%) translateX(250%);
                 scale: 80%;
             }
 
             .slider-checkout .item-slider-1 .box-btn {
-                transform: translateX(50%) translateY(-660%)!important;
+                transform: translateX(48%) translateY(-690%)!important;
             }
 
             .slider-checkout .item-slider-1 .box-custom{
-                transform: translateX(45%) translateY(-165%) !important;
+                transform: translateX(45%) translateY(-150%) !important;
             }
 
             li.fx{
