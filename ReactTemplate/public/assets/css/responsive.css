@@ -1,21 +1,16 @@
 /* Responsive Design Notes
 
-- **** IMPORTANT: footer-content has padding of 300. Set this to 0 in both footers and it allows for close footers with
-- clickability
-
 
 TODO:
 -----------------------------------------------------------------------------
     These steps might have to be done repeatedly to ensure nothing
     changes on other devices and/or browsers when things shift around
 
-    3. Run through responsive designs on all browsers
-    4. Run through desktop and laptop designs on all browsers
+    1. Run through responsive designs on all browsers
+    2. Run through desktop and laptop designs on all browsers
 -----------------------------------------------------------------------------
-5. Swap square to production
-6. Swap airtable to jjb account
-7. Swap emailjs to jjb account
-8. Deploy
+3. Swap square to production
+4. Deploy
 
 */
 
@@ -1504,6 +1499,73 @@ TODO:
     @media (min-width: 769px) and (max-width: 1350px){
         #footer.st-2{
             top: 0px;
+        }
+
+        #footer.st-2 .widget-footer{
+            top: 0px;
+            position: relative;
+        }
+
+        #footer.st-2 .social-icons{
+            transform: translateX(550%) translateY(850%) !important;
+        }
+
+        /* Chrome */
+        /* body.chrome-browser #footer.st-2 {
+            margin-top: 20px;
+            margin-bottom: -340px;
+        }
+
+        body.chrome-browser #footer.st-2 .social-icons{
+            transform: translateX(540%) translateY(-100%) !important;
+        }
+
+        body.chrome-browser .footer-bottom.f2{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            top: -350px;
+        } */
+
+        /* Safari */
+        body.safari-browser #footer.st-2 {
+            margin-top: 20px;
+            margin-bottom: -340px;
+        }
+
+        body.safari-browser #footer.st-2 .social-icons{
+            transform: translateX(540%) translateY(-100%) !important;
+        }
+
+        body.safari-browser .footer-bottom.f2{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            top: -350px;
+        }
+
+        /* Firefox */
+        body.firefox-browser #footer.st-2 {
+            margin-top: 20px;
+            margin-bottom: -340px;
+        }
+
+        body.firefox-browser #footer.st-2 .social-icons{
+            transform: translateX(540%) translateY(-100%) !important;
+        }
+
+        body.firefox-browser .footer-bottom.f2{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            top: -350px;
+        }
+    }
+
+    @media (min-width: 1350px) and (max-width: 1400px){
+        #footer.st-2{
+            /* top: 0px; */
+            display: none;
         }
 
         #footer.st-2 .widget-footer{
@@ -9511,7 +9573,7 @@ Some of these are marked as finished but they are still having the stupid card c
 
         .tf-slider-1{
             transform: translateX(-10%);
-            display: none;
+            /* display: none; */
         }
 
         .tf-slider-1 .overlay{
