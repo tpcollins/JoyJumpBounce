@@ -3196,16 +3196,6 @@
 
 /* 1. iPhone SE */
 /* TODO-2 Finished */
-
-/* 
-TODO-3 done on:
-1. Opera
-2. Chrome
-3. FireFox
-4. Edge
-5. Safari
-
-*/
 @media screen and (max-width: 375px){
     /* Slider */
         /* Title Text */
@@ -3921,16 +3911,6 @@ TODO-3 done on:
 
 /* 2. iPhone XR */
 /* TODO-2 Finished */
-
-/* 
-TODO-3 done on:
-1. Opera
-2. Chrome
-3. FireFox
-4. Edge
-5.  Safari
-
-*/
 @media screen and (width: 414px) and (height: 896px) {
 
 
@@ -4682,16 +4662,6 @@ TODO-3 done on:
 
 /* 3. iPhone 12 Pro */
 /* TODO-2 Finished */
-
-/* 
-TODO-3 done on:
-1. Opera
-2. Chrome
-3. Firefox
-4. Edge
-5. Safari
-
-*/
 @media screen and (width: 390px) and (height: 844px) {
 
     body.safari-browser .item-slider-1 .box-feature{
@@ -5426,16 +5396,6 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
 
 /* 4. iPhone 14 Pro Max */
 /* TODO-2 Finished */
-
-/* 
-TODO-3 done on:
-1. Opera
-2. Chrome
-3. Firefox
-4. Edge
-5. Safari
-
-*/
 @media screen and (width: 430px) and (height: 932px){
     body.safari-browser .item-slider-1 .box-feature{
         transform: translateY(-70%);
@@ -6073,13 +6033,6 @@ TODO-3 done on:
 
 /* 5. Pixel 7 + Samsung Galaxy S20 Ultra (Same screen dimensions)*/
 /* TODO-2 Finished */
-/* 
-TODO-3 done on:
-1. Opera
-2. Chrome
-3. Firefox
-
-*/
 @media screen and (device-width: 412px) and (device-height: 915px){
     /* Slider */
         /* Title Text */
@@ -6773,13 +6726,6 @@ TODO-3 done on:
 
 /* 6. Samsung Galaxy 8+ */
 /* TODO-2 Finished */
-/* 
-TODO-3 done on:
-1. Opera
-2. Chrome
-3. Firefox
-
-*/
 @media screen and (width: 360px) and (height: 740px) {
 
     /* Slider */
@@ -8351,10 +8297,6 @@ TODO-3 done on:
         }
 }
 
-/* 
-Some of these are marked as finished but they are still having the stupid card container issue
-*/
-
 
     /* 8. iPad Air */ 
     /* TODO-2 Finished */
@@ -8371,18 +8313,18 @@ Some of these are marked as finished but they are still having the stupid card c
 
         /* Title Text */
         .title.clr-pri-2{
-            font-size: 50px;
+            font-size: 30px;
             display: flex; 
             align-items: center;
             justify-content: center;
             text-align: center;
 
-            transform: translateX(10%);
+            /* transform: translateX(60%); */
         }
 
         /* Sub Text */
         .sub.clr-pri-2{
-            font-size: 57px;
+            font-size: 35px;
             display: flex; 
             align-items: center;
             justify-content: center;
@@ -8392,16 +8334,30 @@ Some of these are marked as finished but they are still having the stupid card c
         .item-slider-1 .box-feature {
             flex-direction: column;
             align-items: center;
-            transform: translateY(0%) translateX(100%);
+            transform: translateY(10%) translateX(50%);
             scale: 80%;
         }
 
+        .item-slider-1 .clr-content-mbl{
+            transform: translateX(20%) !important;
+        }
+
+        .item-slider-1 .box-feature .image img {
+            flex-direction: column;
+            align-items: center;
+            max-width: 200%;
+            height: auto;
+        }
+
         .item-slider-1 .box-btn {
-            transform: translateX(22%) translateY(100%)!important;
+            display: column;
+            flex-direction: column;
+            align-items: center;
+            transform: translateX(-5%) translateY(-10%)!important;
         }
 
         .item-slider-1 .box-custom{
-            transform: translateX(10%) !important;
+            transform: translateX(20%) !important;
         }
 
         /* Wrap Text */
@@ -8443,16 +8399,16 @@ Some of these are marked as finished but they are still having the stupid card c
         /* Buttons */
             /* Top Button */
             .fl-btn.st-12{
-                height: 70px;
-                width: 120%;
-                font-size: 18px;
+                height: 60px !important;
+                width: 40% !important;
+                font-size: 10px;
             }
 
             /* Bottom Button */
             .fl-btn.st-1{
-                height: 70px;
-                width: 120%;
-                font-size: 23px;
+                height: 60px !important;
+                width: 40% !important;
+                font-size: 10px;
             }
 
             /* Button Container */
@@ -8539,7 +8495,7 @@ Some of these are marked as finished but they are still having the stupid card c
                 overflow: visible;
                 margin-top: 0px;
                 height: 100%;
-                padding-bottom: 200px;
+                /* padding-bottom: 200px; */
             }
 
             .widget.f2.widget-business{
@@ -8565,13 +8521,13 @@ Some of these are marked as finished but they are still having the stupid card c
             #footer.st-2 .footer-bottom{
                 background-color: #9d1ffe;
                 padding-top: 30px;
-                transform: translateY(230%);
+                transform: translateY(0%);
             }
 
             #footer.st-2 .social-icons {
                 flex-direction: row; /* Ensure icons are horizontally aligned */
                 justify-content: center; /* Center-align on smaller screens */
-                transform: translateX(200%) translateY(-90%);
+                transform: translateX(200%) translateY(0%) !important;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 gap: 60px;
@@ -8821,6 +8777,10 @@ Some of these are marked as finished but they are still having the stupid card c
                     transform: translateY(0%) translateX(10%);
                 }
 
+                #booking-ctnr-resp h2{
+                    transform: translateX(10%) !important;
+                }
+
                 #ipad-resp{
                     transform: translateY(0%);
                 }
@@ -8953,6 +8913,10 @@ Some of these are marked as finished but they are still having the stupid card c
 
                 }
 
+                .tf-section.tf-gallery .title.clr-pri-2{
+                    transform: translateX(10%);
+                }
+
                 .tf-section.tf-gallery .title-heading .sub-heading{
                     display: none;
                 }
@@ -8986,9 +8950,25 @@ Some of these are marked as finished but they are still having the stupid card c
                     font-size: 25px;
                 }
 
+                .tf-section.tf-gallery .gallery-item #box-btn-0{
+                    transform: translateY(0%) translateX(-310%);
+                }
+
+                .tf-section.tf-gallery .gallery-item #box-btn-1{
+                    transform: translateY(0%) translateX(-250%);
+                }
+
+                .tf-section.tf-gallery .gallery-item #box-btn-2{
+                    transform: translateY(25%) translateX(-300%);
+                }
+
             /* Accessories Page */
                 .accessories-container .title-heading.st-4{
-                    transform: translateY(40%);
+                    transform: translateY(40%) translateX(0%);
+                }
+
+                .accessories-container .title-heading.st-4 .sub-heading.clr-pri-3.f-mulish{
+                    transform: translateX(3%);
                 }
 
                 .accessories-grid .separator-line {
@@ -9249,11 +9229,15 @@ Some of these are marked as finished but they are still having the stupid card c
                 }
 
             /* Checkout Success page */
-            .tf-slider-1.slider-checkout  .overlay{
-                width: 120%;
-                height: 50%;
+            .tf-slider-1.slider-checkout{
+                transform: translateX(-10%)  !important;
+                padding-bottom: 400px !important;
+            }
+
+            .tf-slider-1.slider-checkout .overlay{
+                width: 120% !important;
+                height: 50% !important;
                 border-radius: 10% !important;
-                padding-bottom: 0;
             }
     
             /* Sub Text */
@@ -9268,16 +9252,23 @@ Some of these are marked as finished but they are still having the stupid card c
             .slider-checkout .item-slider-1 .box-feature {
                 flex-direction: column;
                 align-items: center;
-                transform: translateY(-50%) translateX(400%);
-                scale: 80%;
+                transform: translateY(-30%) translateX(350%);
+                /* scale: 100%; */
+            }
+
+            .slider-checkout .item-slider-1 .box-feature .image img {
+                flex-direction: column;
+                align-items: center;
+                max-width: 500%;
+                height: auto;
             }
     
             .slider-checkout .item-slider-1 .box-btn {
-                transform: translateX(55%) translateY(-650%)!important;
+                transform: translateX(20%) translateY(-550%)!important;
             }
     
             .slider-checkout .item-slider-1 .box-custom{
-                transform: translateX(55%) translateY(-140%) !important;
+                transform: translateX(45%) translateY(-110%) !important;
             }
 
 
@@ -9314,7 +9305,7 @@ Some of these are marked as finished but they are still having the stupid card c
             }
 
             .slider-checkout .sub.clr-pri-2{
-                transform: translateX(55%) translateY(-25%);
+                transform: translateX(5%) translateY(70%);
             }
     
             /* List Item Emojis */
@@ -9360,73 +9351,6 @@ Some of these are marked as finished but they are still having the stupid card c
                     top: -20px;
                     left: -95px;
                 }
-                /* .tf-slider-1.slider-checkout .overlay{
-                    width: 95%;
-                    height: 80%;
-                    background-image: url(../images/inflatables/MobileSliderHmpg.png);
-                    border-radius: 10px !important;
-                }
-
-                .slider-checkout .sub.clr-pri-2{
-                    transform: translateX(-3%) translateY(-100%);
-                    font-size: 35px;
-                }
-
-                .slider-checkout .li-clr-pri-2-chkout{
-                    font-size: 2.5rem !important;
-                    transform: translateX(-2%) translateY(-50%);
-                }
-
-
-                .slider-checkout .item-slider-1 {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center; 
-
-                    height: 90%;
-                }
-
-                .slider-checkout .item-slider-1 .clr-content-mbl {
-                    flex-direction: column;
-                    align-items: center;
-
-                    padding: 0;
-                    order: 1 !important;
-                }
-
-                .slider-checkout .item-slider-1 .box-feature {
-                    flex-direction: column;
-                    padding: 0;
-                    display: inline-block;
-                    order: 2 !important;
-
-                    transform: translateY(30%);
-                    left: 235px;
-                }
-
-                .slider-checkout .item-slider-1 .box-feature .image img {
-                    flex-direction: column;
-                    align-items: center;
-                    max-width: 700%;
-                    height: auto;
-                    transform: translateX(30%) translateY(-20%);
-                }
-
-                .slider-checkout .item-slider-1 .box-custom{
-                    order: 3 !important;
-
-                    transform: translateY(-10%);
-                    margin-right: 20px;
-                }
-
-                .slider-checkout .item-slider-1 .box-btn .fl-btn.st-12{
-                    order: 4 !important;
-                    transform: translateY(-750%) translateX(5%);
-                    right: -5px;
-                    width: 110%;
-                    font-size: 20px;
-                } */
-
 
             /* Book Now Button */
             .side-button{
