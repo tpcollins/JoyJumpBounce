@@ -1666,15 +1666,15 @@ TODO:
     }
 
     .item-slider-1 .box-btn {
-        transform: translateX(15%) translateY(-290%)!important;
+        transform: translateX(15%) translateY(-270%)!important;
     }
 
     .item-slider-1 .box-custom{
-        transform: translateX(0%) translateY(-40%) !important;
+        transform: translateX(0%) translateY(-55%) !important;
     }
 
     .item-slider-1 .clr-content-mbl{
-        transform: translateY(-40%) !important;
+        transform: translateY(-50%) !important;
     }
 
     /* List Item Emojis */
@@ -1691,7 +1691,7 @@ TODO:
 
     /* Wrap Text */
     .wrap.clr-pri-1{
-        font-size: 30px;
+        font-size: 22px;
         display: flex; 
         align-items: center;
         justify-content: center;
