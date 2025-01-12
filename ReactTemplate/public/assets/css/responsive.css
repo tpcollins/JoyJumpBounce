@@ -1432,11 +1432,13 @@ TODO:
     }
 
     /* Footer 2 responsive design for medium laptop screens */
-    @media (min-width: 1350px) and (max-width: 1700px){
+    @media (min-width: 1400px) and (max-width: 1700px){
 
         #footer.st-2 .widget-footer{
             top: -100px;
             position: relative;
+
+            display: none;
         }
 
         #footer.st-2 .social-icons{
