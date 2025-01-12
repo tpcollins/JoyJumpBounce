@@ -20,6 +20,44 @@ import { addItemToCart } from "../src/redux/slices/cartslice";
 import { activeNavMenu } from "../src/utils";
 
 const Booking = () => {
+
+  // Safari Detection
+  useEffect(() => {
+    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+        document.body.classList.add('safari-browser');
+        console.log('Safari detected');
+    } else {
+        console.log('Not Safari');
+    }
+  }, []);
+
+  // Chrome Detection
+  useEffect(() => {
+    const isChrome =
+        /Chrome/.test(navigator.userAgent) &&
+        /Google Inc/.test(navigator.vendor) &&
+        !/OPR/.test(navigator.userAgent) &&
+        !/Edg/.test(navigator.userAgent);
+
+    if (isChrome) {
+        document.body.classList.add('chrome-browser');
+        console.log('Chrome detected');
+    }
+  }, []);
+  
+  
+  // Firefox Detection
+  useEffect(() => {
+    const isFirefox = /Firefox\/\d+\.\d+/i.test(navigator.userAgent);
+
+    if (isFirefox) {
+      document.body.classList.add('firefox-browser');
+      console.log('Firefox detected');
+    } else {
+      console.log('Not Firefox');
+    }
+  }, []);
+  
   // Variables
     // Date Variables
     const [selectedDate, setSelectedDate] = useState(null);

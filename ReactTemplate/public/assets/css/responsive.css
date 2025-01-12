@@ -1443,23 +1443,6 @@ TODO:
             transform: translateX(540%) translateY(750%) !important;
         }
 
-        /* Chrome */
-        body.chrome-browser #footer.st-2 {
-            margin-top: 20px;
-            margin-bottom: -340px;
-        }
-
-        body.chrome-browser #footer.st-2 .social-icons{
-            transform: translateX(540%) translateY(-100%) !important;
-        }
-
-        body.chrome-browser .footer-bottom.f2{
-            z-index: 3;
-            position: relative;
-            overflow: visible;
-            top: -350px;
-        }
-
         /* Safari */
         body.safari-browser #footer.st-2 {
             margin-top: 20px;
@@ -1545,69 +1528,21 @@ TODO:
         }
     }
 
+    /* Footer 2 responsive design for small laptop screens Chrome */
     @media (min-width: 1350px) and (max-width: 1400px){
-        /* #footer.st-2{
-            top: 0px;
-        }
-
-        #footer.st-2 .widget-footer{
-            top: 0px;
-            position: relative;
-        }
-
-        #footer.st-2 .social-icons{
-            transform: translateX(550%) translateY(850%) !important;
-        } */
-
-        /* Chrome */
-        /* body.chrome-browser #footer.st-2 {
-            margin-top: 20px;
-            margin-bottom: -340px;
-        }
-
-        body.chrome-browser #footer.st-2 .social-icons{
-            transform: translateX(540%) translateY(-100%) !important;
-        }
-
-        body.chrome-browser .footer-bottom.f2{
-            z-index: 3;
-            position: relative;
-            overflow: visible;
-            top: -350px;
-        } */
-
-        /* Safari */
-        body.safari-browser #footer.st-2 {
-            margin-top: 20px;
-            margin-bottom: -340px;
-        }
-
-        body.safari-browser #footer.st-2 .social-icons{
-            transform: translateX(540%) translateY(-100%) !important;
-        }
-
-        body.safari-browser .footer-bottom.f2{
-            z-index: 3;
-            position: relative;
-            overflow: visible;
-            top: -350px;
-        }
-
-        /* Firefox */
-        body.firefox-browser #footer.st-2 {
-            margin-top: 20px;
-            margin-bottom: -340px;
-        }
-
-        body.firefox-browser #footer.st-2 .social-icons{
-            transform: translateX(540%) translateY(-100%) !important;
-        }
-
-        body.firefox-browser .footer-bottom.f2{
-            z-index: 3;
-            position: relative;
-            overflow: visible;
-            top: -350px;
+        body.chrome-browser{
+            #footer.st-2{
+                top: 0px;
+            }
+    
+            #footer.st-2 .widget-footer{
+                top: 0px;
+                position: relative;
+            }
+    
+            #footer.st-2 .social-icons{
+                transform: translateX(540%) translateY(850%) !important;
+            }
         }
     }
 
@@ -1662,6 +1597,14 @@ TODO:
     }
     .top-bar-2{
         transform: translateX(4%);
+    }
+}
+
+@media (min-width: 1350px) and (max-width: 1400px){
+    body.chrome-browser{
+        #site-header.is-fixed{
+            display: none !important;
+        }
     }
 }
 
@@ -1836,6 +1779,181 @@ TODO:
             transform: translateX(45%) translateY(-150%) !important;
         }
 
+}
+
+/* Small Laptop Screens Chrome */
+@media (min-width: 1350px) and (max-width: 1400px){
+    body.chrome-browser{
+
+        .tf-slider-1{
+            transform: translateX(-5%) translateY(0%) !important;
+        }
+
+        .tf-slider-1 .overlay{
+            width: 110% !important;
+            height: 80% !important;
+            border-radius: 5% !important;
+            scale: 80% !important;
+        }
+
+        /* Title Text */
+        .title.clr-pri-2{
+            font-size: 40px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+
+            transform: translateX(10%);
+        }
+
+        /* Sub Text */
+        .sub.clr-pri-2{
+            font-size: 45px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .item-slider-1 .box-feature {
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-10%) translateX(40%);
+            scale: 80%;
+        }
+
+        .item-slider-1 .box-btn {
+            transform: translateX(15%) translateY(-270%)!important;
+        }
+
+        .item-slider-1 .box-custom{
+            transform: translateX(0%) translateY(-55%) !important;
+        }
+
+        .item-slider-1 .clr-content-mbl{
+            transform: translateY(-50%) !important;
+        }
+
+        /* List Item Emojis */
+        .item-slider-1 li.fx{
+            transform: translateY(-400%);
+            color: white !important; /* Set font color to white */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add a subtle shadow */
+        }
+
+        .item-slider-1 li.fx .li-clr-pri-2{
+            color: white !important; /* Set font color to white */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add a subtle shadow */
+        }
+
+        /* Wrap Text */
+        .wrap.clr-pri-1{
+            font-size: 22px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Arrow and JJ Ribbon */
+        .item-slider-1 .box-custom{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .item-slider-1 .box-custom .wrap{
+            background-size: 110%;
+        }
+
+        /* Arrow */
+        .item-slider-1 .box-custom svg{
+            transform: translateX(-17%);
+        }
+
+        /* Buttons */
+            /* Top Button */
+            .item-slider-1 .fl-btn.st-12{
+                height: 70px;
+                width: 120%;
+                font-size: 18px;
+            }
+
+            /* Bottom Button */
+            .item-slider-1 .fl-btn.st-1{
+                height: 70px;
+                width: 120%;
+                font-size: 23px;
+            }
+
+            /* Button Container */
+            .item-slider-1 .box-btn{
+                width: 120%;
+                max-width: 3000px; 
+            }
+
+            .item-slider-1 .fl-btn {
+                width: 300%;
+                text-align: center; 
+                max-width: 1000px; 
+                margin: 0 auto; 
+
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                text-align: center; 
+
+                top: -20px;
+                left: -95px;
+            }
+
+            /* Checkout Success page */
+            .tf-slider-1.slider-checkout{
+                transform: translateX(0%) translateY(0%) !important;
+                margin-bottom: -700px;
+            }
+
+            .tf-slider-1.slider-checkout  .overlay{
+                width: 100% !important;
+                height: 50% !important;
+                border-radius: 10% !important;
+                scale: 90%;
+            }
+
+            /* Sub Text */
+            .slider-checkout .sub.clr-pri-2{
+                font-size: 35px;
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                text-align: center; 
+            }
+
+            .tf-slider-1.slider-checkout .clr-content-mbl{
+                transform: translateX(0%) translateY(0%) !important;
+            }
+
+            .slider-checkout .item-slider-1 .box-feature {
+                flex-direction: column;
+                align-items: center;
+                transform: translateY(-60%) translateX(260%);
+                scale: 80%;
+            }
+
+            .slider-checkout .item-slider-1 .box-btn {
+                transform: translateX(50%) translateY(-660%)!important;
+            }
+
+            .slider-checkout .item-slider-1 .box-custom{
+                transform: translateX(45%) translateY(-165%) !important;
+            }
+
+            li.fx{
+                display: visible !important;
+            }
+    }
 }
 
 /* Medium Size Laptop Screens (working on MacBook) */
@@ -2025,9 +2143,9 @@ TODO:
         }
 
         /* List Item Emojis */
-        li.fx{
-            display: none !important;
-        }
+        /* li.fx{
+            display: none;
+        } */
 
         /* Buttons */
             /* Top Button */
@@ -2226,6 +2344,83 @@ TODO:
     
 }
 
+/* Small laptop screens Chrome */
+@media (min-width: 1350px) and (max-width: 1400px) {
+    body.chrome-browser{
+        .tf-section.tf-gallery .title.clr-pri-2{
+            transform: translateX(0%);
+        }
+
+        /* Inventory Gallery */
+        .gallery-item .image img, 
+        .gallery-item .description img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .image img {
+            max-width: 500px;
+        }
+
+        .description img {
+            max-width: 400px;
+        }
+
+        .gallery-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .description,
+        .image {
+            flex: 1;
+            max-width: 50%;
+        }
+
+        .gallery-item:nth-child(odd) .description {
+            text-align: left;
+            padding-right: 20px;
+        }
+        
+        .gallery-item:nth-child(even) .description {
+            text-align: right;
+            padding-left: 20px;
+        }
+
+        .gallery-container {
+            overflow: hidden;
+        }    
+
+        .gallery-container .box-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .gallery-item:nth-child(1) .box-btn {
+            /* padding-right: 400px; */
+            /* margin-top: -28px; */
+            transform: translateX(62%);
+        }
+
+        .gallery-item:nth-child(3) .box-btn {
+            /* padding-right: 400px; */
+            margin-top: -28px;
+            transform: translateX(62%);
+        }
+        
+        .gallery-item:nth-child(even) .box-btn {
+            margin-top: 6px;
+            transform: translateX(52%);
+        }
+    }
+}
+
 /* 7. About Us and How it Works */
 
 /* MacBook Laptop Screen */
@@ -2254,6 +2449,14 @@ TODO:
 @media (min-width: 769px) and (max-width: 1350px){
     .contact-container .title.clr-pri-2{
         transform: translateX(0%);
+    }
+}
+
+@media (min-width: 1350px) and (max-width: 1400px) {
+    body.chrome-browser{
+        .contact-container .title.clr-pri-2{
+            transform: translateX(0%);
+        }
     }
 }
 
