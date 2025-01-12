@@ -1594,6 +1594,25 @@ TODO:
         font-size: 1.8em;
     }
   }
+  /* Chrome */
+  @media (min-width: 1350px) and (max-width: 1400px){
+    #site-header.is-fixed{
+        display: none !important;
+    }
+    .modal-content{
+        transform: translateY(-15%);
+    }
+    .modal-dialog {
+        
+        max-width: 50%; /* Shrinks the modal width to 80% of the viewport */
+        max-height: 40%; /* Shrinks the modal width to 80% of the viewport */
+        margin: 0 auto; /* Centers the modal horizontally */
+    }
+
+    .checkout-mblresp-container .cart-item-info p{
+        font-size: 1.8em;
+    }
+  }
 
 /* 
 4. Nav bar
