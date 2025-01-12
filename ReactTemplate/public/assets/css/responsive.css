@@ -1,16 +1,8 @@
 /* Responsive Design Notes
 
 
-TODO:
------------------------------------------------------------------------------
-    These steps might have to be done repeatedly to ensure nothing
-    changes on other devices and/or browsers when things shift around
-
-    1. Run through responsive designs on all browsers
-    2. Run through desktop and laptop designs on all browsers
------------------------------------------------------------------------------
-3. Swap square to production
-4. Deploy
+-- Firefox
+    -- checkout success page needs to adjusted
 
 */
 
@@ -1688,11 +1680,25 @@ TODO:
         #site-header.is-fixed{
             display: none !important;
         }
+
+        .nav-wrap {
+            transform: translateX(3.8%);
+        }
+        .top-bar-2{
+            transform: translateX(4%);
+        }
     }
 
     body.firefox-browser{
         #site-header.is-fixed{
             display: none !important;
+        }
+
+        .nav-wrap {
+            transform: translateX(3.8%);
+        }
+        .top-bar-2{
+            transform: translateX(4%);
         }
     }
     
@@ -1700,11 +1706,25 @@ TODO:
         #site-header.is-fixed{
             display: none !important;
         }
+
+        .nav-wrap {
+            transform: translateX(3.8%);
+        }
+        .top-bar-2{
+            transform: translateX(4%);
+        }
     }
     
     body.safari-browser{
         #site-header.is-fixed{
             display: none !important;
+        }
+
+        .nav-wrap {
+            transform: translateX(3.8%);
+        }
+        .top-bar-2{
+            transform: translateX(4%);
         }
     }
 }
@@ -2057,178 +2077,6 @@ TODO:
     }
 
     body.firefox-browser{
-        .tf-slider-1{
-            transform: translateX(-5%) translateY(0%) !important;
-        }
-
-        .tf-slider-1 .overlay{
-            width: 110% !important;
-            height: 80% !important;
-            border-radius: 5% !important;
-            scale: 80% !important;
-        }
-
-        /* Title Text */
-        .title.clr-pri-2{
-            font-size: 40px;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-
-            transform: translateX(10%);
-        }
-
-        /* Sub Text */
-        .sub.clr-pri-2{
-            font-size: 45px;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-        }
-
-        .item-slider-1 .box-feature {
-            flex-direction: column;
-            align-items: center;
-            transform: translateY(-10%) translateX(40%);
-            scale: 80%;
-        }
-
-        .item-slider-1 .box-btn {
-            transform: translateX(15%) translateY(-270%)!important;
-        }
-
-        .item-slider-1 .box-custom{
-            transform: translateX(0%) translateY(-55%) !important;
-        }
-
-        .item-slider-1 .clr-content-mbl{
-            transform: translateY(-50%) !important;
-        }
-
-        /* List Item Emojis */
-        .item-slider-1 li.fx{
-            transform: translateY(-400%);
-            color: white !important; /* Set font color to white */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add a subtle shadow */
-        }
-
-        .item-slider-1 li.fx .li-clr-pri-2{
-            color: white !important; /* Set font color to white */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Add a subtle shadow */
-        }
-
-        /* Wrap Text */
-        .wrap.clr-pri-1{
-            font-size: 22px;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        /* Arrow and JJ Ribbon */
-        .item-slider-1 .box-custom{
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-        }
-
-        .item-slider-1 .box-custom .wrap{
-            background-size: 110%;
-        }
-
-        /* Arrow */
-        .item-slider-1 .box-custom svg{
-            transform: translateX(-17%);
-        }
-
-        /* Buttons */
-            /* Top Button */
-            .item-slider-1 .fl-btn.st-12{
-                height: 70px;
-                width: 120%;
-                font-size: 18px;
-            }
-
-            /* Bottom Button */
-            .item-slider-1 .fl-btn.st-1{
-                height: 70px;
-                width: 120%;
-                font-size: 23px;
-            }
-
-            /* Button Container */
-            .item-slider-1 .box-btn{
-                width: 120%;
-                max-width: 3000px; 
-            }
-
-            .item-slider-1 .fl-btn {
-                width: 300%;
-                text-align: center; 
-                max-width: 1000px; 
-                margin: 0 auto; 
-
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center; 
-
-                top: -20px;
-                left: -95px;
-            }
-
-            /* Checkout Success page */
-            .tf-slider-1.slider-checkout{
-                transform: translateX(0%) translateY(0%) !important;
-                margin-bottom: -700px;
-            }
-
-            .tf-slider-1.slider-checkout  .overlay{
-                width: 100% !important;
-                height: 50% !important;
-                border-radius: 10% !important;
-                scale: 90%;
-            }
-
-            /* Sub Text */
-            .slider-checkout .sub.clr-pri-2{
-                font-size: 35px;
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center; 
-            }
-
-            .tf-slider-1.slider-checkout .clr-content-mbl{
-                transform: translateX(0%) translateY(0%) !important;
-            }
-
-            .slider-checkout .item-slider-1 .box-feature {
-                flex-direction: column;
-                align-items: center;
-                transform: translateY(-60%) translateX(260%);
-                scale: 80%;
-            }
-
-            .slider-checkout .item-slider-1 .box-btn {
-                transform: translateX(50%) translateY(-660%)!important;
-            }
-
-            .slider-checkout .item-slider-1 .box-custom{
-                transform: translateX(45%) translateY(-165%) !important;
-            }
-
-            li.fx{
-                display: visible !important;
-            }
-    }
-
-    body.edge-browser{
-
         .tf-slider-1{
             transform: translateX(-5%) translateY(0%) !important;
         }
@@ -3281,6 +3129,31 @@ TODO:
     #booking-ctnr-resp .title.clr-pri-2{
         transform: translateX(0);
     }
+}
+
+/* Small laptop screens chrome */
+@media (min-width: 1350px) and (max-width: 1400px){
+    body.chrome-browser{
+        #booking-ctnr-resp .title.clr-pri-2{
+            transform: translateX(0);
+        }
+    }
+    body.firefox-browser{
+        #booking-ctnr-resp .title.clr-pri-2{
+            transform: translateX(0);
+        }
+    }
+    body.edge-browser{
+        #booking-ctnr-resp .title.clr-pri-2{
+            transform: translateX(0);
+        }
+    }
+    body.opera-browser{
+        #booking-ctnr-resp .title.clr-pri-2{
+            transform: translateX(0);
+        }
+    }
+    
 }
 
 /* 9. Contact Page */
