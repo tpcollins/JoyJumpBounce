@@ -1510,23 +1510,6 @@ TODO:
             transform: translateX(550%) translateY(850%) !important;
         }
 
-        /* Chrome */
-        /* body.chrome-browser #footer.st-2 {
-            margin-top: 20px;
-            margin-bottom: -340px;
-        }
-
-        body.chrome-browser #footer.st-2 .social-icons{
-            transform: translateX(540%) translateY(-100%) !important;
-        }
-
-        body.chrome-browser .footer-bottom.f2{
-            z-index: 3;
-            position: relative;
-            overflow: visible;
-            top: -350px;
-        } */
-
         /* Safari */
         body.safari-browser #footer.st-2 {
             margin-top: 20px;
@@ -1563,9 +1546,8 @@ TODO:
     }
 
     @media (min-width: 1350px) and (max-width: 1400px){
-        #footer.st-2{
-            /* top: 0px; */
-            display: none;
+        /* #footer.st-2{
+            top: 0px;
         }
 
         #footer.st-2 .widget-footer{
@@ -1575,7 +1557,7 @@ TODO:
 
         #footer.st-2 .social-icons{
             transform: translateX(550%) translateY(850%) !important;
-        }
+        } */
 
         /* Chrome */
         /* body.chrome-browser #footer.st-2 {
