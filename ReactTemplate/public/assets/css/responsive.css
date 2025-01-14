@@ -7585,7 +7585,7 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
 }
 
 /* 4. iPhone 14 */
-@media screen and (device-width: 390px) and (device-height: 896px){
+@media screen and (device-width: 390px) and (device-height: 844px){
 
     body.safari-browser .item-slider-1 .box-feature{
         transform: translateY(-70%);
@@ -7612,7 +7612,7 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
     /* Slider */
         /* Title Text */
         .title.clr-pri-2{
-            font-size: 24px;
+            font-size: 20px;
             display: flex; 
             align-items: center;
             justify-content: center;
