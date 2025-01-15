@@ -2657,6 +2657,58 @@
 
 }
 
+@media (min-width: 1650px){
+    .tf-slider-1.slider-checkout{
+        transform: translateX(0%) translateY(-8%);
+        margin-bottom: 50px;
+    }
+    
+    /* Entire container */
+    .slider-checkout .item-slider-1 .box-content{
+        transform: translateX(45%);
+    }
+
+    /* Image */
+    .slider-checkout .item-slider-1 .box-feature {
+        transform: translateY(0%) translateX(45%);
+        
+    }
+
+    .slider-checkout .item-slider-1 .box-feature .image img {
+        flex-direction: column;
+        align-items: center;
+        max-width: 200%;
+        height: auto;
+    }
+
+    .slider-checkout .item-slider-1 .box-btn {
+        transform: translateX(20%) translateY(-300%)!important;
+    }
+
+    .slider-checkout .item-slider-1 .box-custom{
+        transform: translateX(-10%) translateY(-60%) !important;
+    }
+
+    .slider-checkout .item-slider-1 .sub.clr-pri-2 {
+        text-align: center; /* Aligns text to the center */
+        line-height: 1.5; /* Adjusts line spacing for better readability */
+        word-wrap: break-word; /* Ensures long text wraps naturally */
+        padding: 0 10px; /* Optional: Add some padding for better aesthetics */
+        transform: translateX(-10%) translateY(0%) !important;
+    }
+    
+    .slider-checkout .item-slider-1 .li-clr-pri-2-chkout {
+        text-align: center; /* Aligns text to the center */
+        line-height: 1.5; /* Adjusts line spacing for better readability */
+        word-wrap: break-word; /* Ensures long text wraps naturally */
+        padding: 0 10px; /* Optional: Add some padding for better aesthetics */
+    }
+    
+
+}
+
+
+
 /* 6. Inventory Page */
 /* Laptop Screen Inventory Gallery */
 /* Medium laptop screens */
