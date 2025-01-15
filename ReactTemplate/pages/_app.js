@@ -12,6 +12,12 @@ import CartWrapper from "./cartwrapper";
 // Book Now Button
 import BookNowButton from "../src/components/booknow-button";
 
+// core js
+import '../polyfills';
+
+import '@babel/polyfill';
+
+
 const App = ({ Component, pageProps }) => {
     const [loader, setLoader] = useState(true);
 

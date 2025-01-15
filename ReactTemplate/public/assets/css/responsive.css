@@ -3192,8 +3192,15 @@
     }
 }
 
+
+
+
+
+
+
 /* Phone Screens */
 /* 1. iPhone SE */
+/* Finished */
 @media screen and (max-width: 375px){
     /* Slider */
         /* Title Text */
@@ -3513,6 +3520,7 @@
             .react-calendar{
                 transform: translateY(10%);
                 margin-bottom: 70px;
+                margin-right: 10px;
             }
 
             /* Month Button */
@@ -3522,6 +3530,10 @@
 
             .react-calendar__month-view__weekdays{
                 font-size: 14px !important;
+            }
+
+            .calendar-container{
+                width: 105%;
             }
 
         /* Stock Grid */
@@ -5362,6 +5374,7 @@
 }
 
 /* 3. iPhone XR + iPhone 11 (same dimensions) */
+/* Finished */
 @media screen and (min-width: 414px) and (max-width: 414px) and (min-height: 896px) and (max-height: 896px) {
 
 
@@ -5701,6 +5714,10 @@
 
             .react-calendar__month-view__weekdays{
                 font-size: 14px !important;
+            }
+
+            .calendar-container{
+                width: 110%;
             }
 
         /* Stock Grid */
@@ -6115,6 +6132,7 @@
 }
 
 /* 3. iPhone 11 + iPhone 11 Pro Max (Same Dimensions) */
+/* Finished */
 @media screen and (device-width: 414px) and (device-height: 896px) {
 
 
@@ -6216,13 +6234,7 @@
             }
 
             body.chrome-browser .item-slider-1 .box-feature {
-                flex-direction: column;
-                padding: 0;
-                display: inline-block;
-                order: 2 !important;
-        
-                transform: translateY(10%);
-                left: 203px;
+                transform: translateY(-80%);
             }
 
     /* Navbar */
@@ -6335,8 +6347,6 @@
             /* padding-left: 135px; */
             transform: translateY(500%) translateX(160%) !important;
             position: inherit;
-
-            display: none;
         }
 
         /* Bottom Widget */
@@ -6881,7 +6891,8 @@
             }     
 }
 
-/* 4. iPhone 12 Pro */
+/* 4. iPhone 12 Pro + iPhone 12 + iPhone 13 */
+/* Finished */
 @media screen and (min-width: 390px) and (max-width: 414px) and (min-height: 844px) and (max-height: 896px){
 
     body.safari-browser .item-slider-1 .box-feature{
@@ -7536,6 +7547,20 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
                 transform: translateY(-90%);
                 left: 40px;
             }
+
+            body.chrome-browser .item-slider-1 .box-feature {
+                flex-direction: column;
+                align-items: center;
+
+                padding: 0;
+                display: inline-block;
+                order: 3 !important;
+
+                transform: translateY(-110%);
+                left: 40px;
+
+                display: none;
+            }
             
             .item-slider-1 .box-feature .image img {
                 flex-direction: column;
@@ -7639,6 +7664,7 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
         transform: translateY(30%);
         left: 203px;
     }
+
     /* Slider */
         /* Title Text */
         .title.clr-pri-2{
@@ -8268,6 +8294,18 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
 
                 transform: translateY(-90%);
                 left: 40px;
+            }
+
+            body.chrome-browser .item-slider-1 .box-feature{
+                    flex-direction: column;
+                    align-items: center;
+    
+                    padding: 0;
+                    display: inline-block;
+                    order: 3 !important;
+    
+                    transform: translateY(-80%);
+                    left: 40px;
             }
             
             .item-slider-1 .box-feature .image img {
@@ -9082,7 +9120,13 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
 }
 
 /* 5. iPhone 12 Pro Max + iPhone 13 Pro Max (same dimensions) */
+/* Finished */
 @media screen and (device-width: 428px) and (device-height: 926px){
+    /* Book Now Button */
+    .side-button{
+        padding: 40px 15px;
+        font-size: 18px;
+    }
 
     body.safari-browser .item-slider-1 .box-feature{
         transform: translateY(-70%);
@@ -9095,16 +9139,38 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
     }
 
 
-
-
-body.safari-browser .slider-checkout .item-slider-1 .box-feature {
+    body.safari-browser .slider-checkout .item-slider-1 .box-feature {
         flex-direction: column;
         padding: 0;
         display: inline-block;
         order: 2 !important;
 
         transform: translateY(30%);
-        left: 203px;
+        left: 220px;
+    }
+
+
+    body.chrome-browser .item-slider-1 .box-feature{
+        transform: translateY(-70%);
+    }
+
+
+
+    body.chrome-browser .item-slider-1 .box-btn{
+        transform: translateY(200%) !important;
+    }
+
+
+    body.chrome-browser .slider-checkout .item-slider-1 .box-feature {
+        flex-direction: column;
+        padding: 0;
+        display: inline-block;
+        order: 2 !important;
+
+        transform: translateY(30%);
+        left: 220px;
+
+        display: none;
     }
     /* Slider */
         /* Title Text */
@@ -9255,13 +9321,15 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
 
         #footer.st-2 .footer-bottom{
             background-color: #9d1ffe;
+            padding-top: 40px;
         }
 
         .social-icons {
             flex-direction: row; /* Ensure icons are horizontally aligned */
             margin-top: 20px; /* Adjust spacing */
             justify-content: center; /* Center-align on smaller screens */
-            transform: translateX(150%);
+            /* gap: 100px; */
+            transform: translateX(170%)translateY(-20%);
         }
 
         .copy-right{
@@ -9300,7 +9368,7 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
             flex-direction: row; 
             /* margin-top: 10px;  */
             justify-content: center; 
-            transform: translateY(500%) translateX(145%);
+            transform: translateY(500%) translateX(170%);
             position: inherit;
         }
 
@@ -9427,6 +9495,8 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
                 font-size: 14px !important;
             }
 
+
+
         /* Stock Grid */
             /* Container */
             .stock-item-box{
@@ -9453,7 +9523,13 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
                 gap: 1rem; /* Adds spacing between items */
                 margin-left: 5rem; /* Adds left margin to move the items to the right */
                 width: calc(100% - 8rem); /* Adjust width to accommodate the float image */
-            }            
+            }      
+            
+            .stock-info .fl-btn.st-12.stkgrd {
+                transform: translateY(20%);
+            }       
+            
+            
 
             /* Float Image */
             .stock-image{
@@ -9788,8 +9864,7 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
                 display: inline-block;
                 order: 2 !important;
 
-                transform: translateY(30%);
-                left: 192px;
+                transform: translateY(30%) translateX(110%);
             }
 
             .slider-checkout .item-slider-1 .box-feature .image img {
