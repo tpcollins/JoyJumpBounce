@@ -217,7 +217,7 @@ export const accessoryData = {
           type: 'radio'
         },
         {
-            imgSrc: 'assets/images/accessories/tent.png',
+            imgSrc: 'assets/images/accessories/Tent.png',
             title: 'Inflatable Tent',
             price: 200,
             showPrice: '$200',

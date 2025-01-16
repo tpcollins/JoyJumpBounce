@@ -12,41 +12,146 @@ const Index = () => {
   }, []);
 
   // Safari Detection
+  // useEffect(() => {
+  //   const isSafari = () => {
+  //     const userAgent = navigator.userAgent;
+  //     const vendor = navigator.vendor;
+
+  //     return (
+  //       /Safari/.test(userAgent) && // Detects Safari
+  //       /Apple Computer/.test(vendor) && // Ensures vendor is Apple
+  //       !/Chrome/.test(userAgent) && // Excludes Chrome and Chromium-based browsers
+  //       !/Edg/.test(userAgent) && // Excludes Edge
+  //       !/OPR/.test(userAgent) && // Excludes Opera
+  //       !/CriOS/.test(userAgent) // Excludes Chrome on iOS
+  //     );
+  //   };
+
+  //   if (isSafari()) {
+  //     document.body.classList.add('safari-browser');
+  //     console.log('Safari detected');
+  //   } else {
+  //     console.log('Not Safari');
+  //   }
+  // }, []);
+
+  const isSafari = () => {
+    const userAgent = navigator.userAgent;
+    const vendor = navigator.vendor;
+  
+    return (
+      /Safari/.test(userAgent) &&
+      /Apple Computer/.test(vendor) &&
+      !/CriOS/.test(userAgent) && // Excludes Chrome on iOS
+      !/Chrome/.test(userAgent) && // Excludes Chrome
+      !/Edg/.test(userAgent) && // Excludes Edge
+      !/OPR/.test(userAgent) // Excludes Opera
+    );
+  };
+  
   useEffect(() => {
-    if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-        document.body.classList.add('safari-browser');
-        console.log('Safari detected');
+    if (isSafari()) {
+      document.body.classList.add("safari-browser");
+      console.log("Safari detected");
     } else {
-        console.log('Not Safari');
+      console.log("Not Safari");
     }
   }, []);
+  
 
   // Chrome Detection
-  useEffect(() => {
-    const isChrome =
-        /Chrome/.test(navigator.userAgent) &&
-        /Google Inc/.test(navigator.vendor) &&
-        !/OPR/.test(navigator.userAgent) &&
-        !/Edg/.test(navigator.userAgent);
+  // useEffect(() => {
+  //   const isChrome = () => {
+  //     const userAgent = navigator.userAgent;
+  //     const vendor = navigator.vendor;
 
-    if (isChrome) {
-        document.body.classList.add('chrome-browser');
-        console.log('Chrome detected');
+  //     return (
+  //       /Chrome/.test(userAgent) &&
+  //       /Google Inc/.test(vendor) &&
+  //       !/OPR/.test(userAgent) && // Excludes Opera
+  //       !/Edg/.test(userAgent) // Excludes Edge
+  //     );
+  //   };
+
+  //   if (isChrome()) {
+  //     document.body.classList.add('chrome-browser');
+  //     console.log('Chrome detected');
+  //   } else {
+  //     console.log('Not Chrome');
+  //   }
+  // }, []);
+
+  const isChrome = () => {
+    const userAgent = navigator.userAgent;
+    const vendor = navigator.vendor;
+  
+    return (
+      /Google Inc/.test(vendor) && // Vendor is Google Inc.
+      !/Edg/.test(userAgent) && // Exclude Edge
+      !/OPR/.test(userAgent) && // Exclude Opera
+      !/SamsungBrowser/.test(userAgent) // Exclude Samsung Internet
+    );
+  };
+  
+  useEffect(() => {
+    if (isChrome()) {
+      document.body.classList.add("chrome-browser");
+      console.log("Chrome detected");
+    } else {
+      console.log("Not Chrome");
+      console.log("User Agent:", navigator.userAgent);
+      console.log("Vendor:", navigator.vendor);
+    }
+  }, []);
+
+  const isChromeOnIOS = () => /CriOS/.test(navigator.userAgent);
+
+  useEffect(() => {
+    if (isChrome() || isChromeOnIOS()) {
+      document.body.classList.add("chrome-browser");
+      console.log("Chrome detected");
+    } else {
+      console.log("Not Chrome");
+      console.log("User Agent:", navigator.userAgent);
+      console.log("Vendor:", navigator.vendor);
     }
   }, []);
   
   
+  
+
   // Firefox Detection
   useEffect(() => {
-    const isFirefox = /Firefox\/\d+\.\d+/i.test(navigator.userAgent);
+    const isFirefox = () => {
+      return /Firefox\/\d+\.\d+/i.test(navigator.userAgent); // Detects Firefox
+    };
 
-    if (isFirefox) {
+    if (isFirefox()) {
       document.body.classList.add('firefox-browser');
       console.log('Firefox detected');
     } else {
       console.log('Not Firefox');
     }
   }, []);
+
+  // Edge Detection
+  useEffect(() => {
+    const isEdge = () => {
+      const userAgent = navigator.userAgent;
+
+      return (
+        /Edg/.test(userAgent) // Detects Edge
+      );
+    };
+
+    if (isEdge()) {
+      document.body.classList.add('edge-browser');
+      console.log('Edge detected');
+    } else {
+      console.log('Not Edge');
+    }
+  }, []);
+
 
   useEffect(() => {
     document.body.classList.add('homepage-body');
