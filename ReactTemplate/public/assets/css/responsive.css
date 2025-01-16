@@ -2655,6 +2655,529 @@
                 left: -95px;
             }
 
+
+
+        /* Chrome */
+        body.chrome-browser{
+            /* Checkout Success page */
+        .tf-slider-1.slider-checkout{
+            transform: translateX(0%) translateY(0%);
+            padding-bottom: 300px;
+        }
+
+        .tf-slider-1.slider-checkout  .overlay{
+            width: 100%;
+            height: 55%;
+            border-radius: 10% !important;
+            scale: 80%;
+        }
+
+        /* Sub Text */
+        .slider-checkout .sub.clr-pri-2{
+            font-size: 35px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .slider-checkout .item-slider-1 .box-feature {
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-80%) translateX(80%);
+            scale: 80%;
+        }
+
+        .slider-checkout .item-slider-1 .box-feature .image img {
+            flex-direction: column;
+            align-items: center;
+            max-width: 400%;
+            height: auto;
+        }
+
+        .slider-checkout .item-slider-1 .box-btn {
+            transform: translateX(0%) translateY(-800%)!important;
+        }
+
+        .slider-checkout .item-slider-1 .box-custom{
+            transform: translateX(-10%) translateY(-200%) !important;
+        }
+
+
+
+        /* Wrap Text */
+        .slider-checkout .wrap.clr-pri-1{
+            font-size: 30px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Arrow and JJ Ribbon */
+        .slider-checkout .box-custom{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .slider-checkout .box-custom .wrap{
+            background-size: 110%;
+        }
+
+        /* Arrow */
+        .slider-checkout .box-custom svg{
+            transform: translateX(-17%);
+        }
+
+        /* List Item Text */
+        .slider-checkout .li-clr-pri-2{
+            display: none !important;
+        }
+
+        .slider-checkout .sub.clr-pri-2{
+            padding-bottom: 40px;
+            bottom: 110px;
+            position: relative;
+        }
+
+        /* List Item Emojis */
+        /* li.fx{
+            display: none;
+        } */
+
+        /* Buttons */
+            /* Top Button */
+            .tf-slider-1.slider-checkout{
+                margin-bottom: -700px;
+            }
+            .slider-checkout .fl-btn.st-12{
+                height: 50px;
+                width: 100%;
+                font-size: 18px;
+            }
+
+            /* Bottom Button */
+            .slider-checkout .fl-btn.st-1{
+                height: 70px;
+                width: 120%;
+                font-size: 23px;
+            }
+
+            /* Button Container */
+            .slider-checkout .box-btn{
+                width: 120%;
+                max-width: 3000px; 
+            }
+
+            .slider-checkout .fl-btn {
+                width: 300%;
+                text-align: center; 
+                max-width: 1000px; 
+                margin: 0 auto; 
+
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                text-align: center; 
+
+                top: -20px;
+                left: -95px;
+            }
+        }
+
+        /* Firefox */
+        body.firefox-browser{
+            /* Checkout Success page */
+        .tf-slider-1.slider-checkout{
+            transform: translateX(0%) translateY(0%);
+            padding-bottom: 300px;
+        }
+
+        .tf-slider-1.slider-checkout  .overlay{
+            width: 100%;
+            height: 55%;
+            border-radius: 10% !important;
+            scale: 80%;
+        }
+
+        /* Sub Text */
+        .slider-checkout .sub.clr-pri-2{
+            font-size: 35px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .slider-checkout .item-slider-1 .box-feature {
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-80%) translateX(80%);
+            scale: 80%;
+        }
+
+        .slider-checkout .item-slider-1 .box-feature .image img {
+            flex-direction: column;
+            align-items: center;
+            max-width: 400%;
+            height: auto;
+        }
+
+        .slider-checkout .item-slider-1 .box-btn {
+            transform: translateX(0%) translateY(-800%)!important;
+        }
+
+        .slider-checkout .item-slider-1 .box-custom{
+            transform: translateX(-10%) translateY(-200%) !important;
+        }
+
+
+
+        /* Wrap Text */
+        .slider-checkout .wrap.clr-pri-1{
+            font-size: 30px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Arrow and JJ Ribbon */
+        .slider-checkout .box-custom{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .slider-checkout .box-custom .wrap{
+            background-size: 110%;
+        }
+
+        /* Arrow */
+        .slider-checkout .box-custom svg{
+            transform: translateX(-17%);
+        }
+
+        /* List Item Text */
+        .slider-checkout .li-clr-pri-2{
+            display: none !important;
+        }
+
+        .slider-checkout .sub.clr-pri-2{
+            padding-bottom: 40px;
+            bottom: 110px;
+            position: relative;
+        }
+
+        /* List Item Emojis */
+        /* li.fx{
+            display: none;
+        } */
+
+        /* Buttons */
+            /* Top Button */
+            .tf-slider-1.slider-checkout{
+                margin-bottom: -700px;
+            }
+            .slider-checkout .fl-btn.st-12{
+                height: 50px;
+                width: 100%;
+                font-size: 18px;
+            }
+
+            /* Bottom Button */
+            .slider-checkout .fl-btn.st-1{
+                height: 70px;
+                width: 120%;
+                font-size: 23px;
+            }
+
+            /* Button Container */
+            .slider-checkout .box-btn{
+                width: 120%;
+                max-width: 3000px; 
+            }
+
+            .slider-checkout .fl-btn {
+                width: 300%;
+                text-align: center; 
+                max-width: 1000px; 
+                margin: 0 auto; 
+
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                text-align: center; 
+
+                top: -20px;
+                left: -95px;
+            }
+        }
+
+
+        /* Safari */
+        body.safari-browser{
+            /* Checkout Success page */
+        .tf-slider-1.slider-checkout{
+            transform: translateX(0%) translateY(0%);
+            padding-bottom: 300px;
+        }
+
+        .tf-slider-1.slider-checkout  .overlay{
+            width: 100%;
+            height: 55%;
+            border-radius: 10% !important;
+            scale: 80%;
+        }
+
+        /* Sub Text */
+        .slider-checkout .sub.clr-pri-2{
+            font-size: 35px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .slider-checkout .item-slider-1 .box-feature {
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-80%) translateX(80%);
+            scale: 80%;
+        }
+
+        .slider-checkout .item-slider-1 .box-feature .image img {
+            flex-direction: column;
+            align-items: center;
+            max-width: 400%;
+            height: auto;
+        }
+
+        .slider-checkout .item-slider-1 .box-btn {
+            transform: translateX(0%) translateY(-800%)!important;
+        }
+
+        .slider-checkout .item-slider-1 .box-custom{
+            transform: translateX(-10%) translateY(-180%) !important;
+        }
+
+
+
+        /* Wrap Text */
+        .slider-checkout .wrap.clr-pri-1{
+            font-size: 30px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Arrow and JJ Ribbon */
+        .slider-checkout .box-custom{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .slider-checkout .box-custom .wrap{
+            background-size: 110%;
+        }
+
+        /* Arrow */
+        .slider-checkout .box-custom svg{
+            transform: translateX(-17%);
+        }
+
+        /* List Item Text */
+        .slider-checkout .li-clr-pri-2{
+            display: none !important;
+        }
+
+        .slider-checkout .sub.clr-pri-2{
+            padding-bottom: 40px;
+            bottom: 110px;
+            position: relative;
+        }
+
+        /* List Item Emojis */
+        /* li.fx{
+            display: none;
+        } */
+
+        /* Buttons */
+            /* Top Button */
+            .tf-slider-1.slider-checkout{
+                margin-bottom: -700px;
+            }
+            .slider-checkout .fl-btn.st-12{
+                height: 50px;
+                width: 100%;
+                font-size: 18px;
+            }
+
+            /* Bottom Button */
+            .slider-checkout .fl-btn.st-1{
+                height: 70px;
+                width: 120%;
+                font-size: 23px;
+            }
+
+            /* Button Container */
+            .slider-checkout .box-btn{
+                width: 120%;
+                max-width: 3000px; 
+            }
+
+            .slider-checkout .fl-btn {
+                width: 300%;
+                text-align: center; 
+                max-width: 1000px; 
+                margin: 0 auto; 
+
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                text-align: center; 
+
+                top: -20px;
+                left: -95px;
+            }
+        }
+
+        /* Edge */
+        body.edge-browser{
+            /* Checkout Success page */
+        .tf-slider-1.slider-checkout{
+            transform: translateX(0%) translateY(0%);
+            padding-bottom: 300px;
+        }
+
+        .tf-slider-1.slider-checkout  .overlay{
+            width: 100%;
+            height: 55%;
+            border-radius: 10% !important;
+            scale: 80%;
+        }
+
+        /* Sub Text */
+        .slider-checkout .sub.clr-pri-2{
+            font-size: 35px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .slider-checkout .item-slider-1 .box-feature {
+            flex-direction: column;
+            align-items: center;
+            transform: translateY(-80%) translateX(80%);
+            scale: 80%;
+        }
+
+        .slider-checkout .item-slider-1 .box-feature .image img {
+            flex-direction: column;
+            align-items: center;
+            max-width: 400%;
+            height: auto;
+        }
+
+        .slider-checkout .item-slider-1 .box-btn {
+            transform: translateX(0%) translateY(-800%)!important;
+        }
+
+        .slider-checkout .item-slider-1 .box-custom{
+            transform: translateX(-10%) translateY(-200%) !important;
+        }
+
+
+
+        /* Wrap Text */
+        .slider-checkout .wrap.clr-pri-1{
+            font-size: 30px;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Arrow and JJ Ribbon */
+        .slider-checkout .box-custom{
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            text-align: center; 
+        }
+
+        .slider-checkout .box-custom .wrap{
+            background-size: 110%;
+        }
+
+        /* Arrow */
+        .slider-checkout .box-custom svg{
+            transform: translateX(-17%);
+        }
+
+        /* List Item Text */
+        .slider-checkout .li-clr-pri-2{
+            display: none !important;
+        }
+
+        .slider-checkout .sub.clr-pri-2{
+            padding-bottom: 40px;
+            bottom: 110px;
+            position: relative;
+        }
+
+        /* List Item Emojis */
+        /* li.fx{
+            display: none;
+        } */
+
+        /* Buttons */
+            /* Top Button */
+            .tf-slider-1.slider-checkout{
+                margin-bottom: -700px;
+            }
+            .slider-checkout .fl-btn.st-12{
+                height: 50px;
+                width: 100%;
+                font-size: 18px;
+            }
+
+            /* Bottom Button */
+            .slider-checkout .fl-btn.st-1{
+                height: 70px;
+                width: 120%;
+                font-size: 23px;
+            }
+
+            /* Button Container */
+            .slider-checkout .box-btn{
+                width: 120%;
+                max-width: 3000px; 
+            }
+
+            .slider-checkout .fl-btn {
+                width: 300%;
+                text-align: center; 
+                max-width: 1000px; 
+                margin: 0 auto; 
+
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                text-align: center; 
+
+                top: -20px;
+                left: -95px;
+            }
+        }
+
 }
 
 @media (min-width: 1650px){
