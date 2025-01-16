@@ -198,7 +198,7 @@ export const bcyHseStockData = {
         id: 3,
         imgSrc: "assets/images/inflatables/DrySlide.png",
         title: "Dry Slide",
-        price: 200,
+        price: 2,
         showPrice: "$200",
         pgSection: "dryslide",
       },
