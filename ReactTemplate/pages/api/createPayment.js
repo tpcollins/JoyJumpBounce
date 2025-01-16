@@ -33,7 +33,7 @@ export default async function handler(req, res) {
           sourceId: token,
           idempotencyKey: idempotencyKey,
           amountMoney: {
-              amount: 1, // Ensure it's a valid number
+              amount: 100, // Ensure it's a valid number
               currency: 'USD',
           },
           customerDetails: {
