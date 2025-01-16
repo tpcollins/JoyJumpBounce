@@ -12,6 +12,9 @@ import CartWrapper from "./cartwrapper";
 // Book Now Button
 import BookNowButton from "../src/components/booknow-button";
 
+
+// Redeployment trigger
+
 const App = ({ Component, pageProps }) => {
     const [loader, setLoader] = useState(true);
 
