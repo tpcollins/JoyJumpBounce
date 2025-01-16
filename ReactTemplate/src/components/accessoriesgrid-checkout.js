@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // Redux Variables
 import { useDispatch } from 'react-redux';
 import { addItemToCart } from '../redux/slices/cartslice';
@@ -8,6 +8,13 @@ const AccessoriesGrid = ({
   date
 }) => {
   const dispatch = useDispatch();
+
+  const [availability, setAvailability] = useState({
+    tables: 10,
+    chairs: 40,
+    tent: true,
+    generator: true,
+  });
   
   // Local state for selected quantities
   const [selectedQuantities, setSelectedQuantities] = useState({});
@@ -34,6 +41,29 @@ const AccessoriesGrid = ({
     dispatch(addItemToCart(itemWithDate));
   }
 
+  useEffect(() => {
+    const fetchAvailability = async () => {
+      try {
+        const response = await fetch('/api/getBookedAcc', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ date }),
+        });
+
+        if (!response.ok) throw new Error('Failed to fetch availability');
+
+        const data = await response.json();
+        setAvailability(data.available);
+      } catch (error) {
+        console.error('Error fetching availability:', error);
+      }
+    };
+
+    fetchAvailability();
+  }, [date]);
+
   return (
     <div className="accessories-grid">
 
@@ -49,10 +79,31 @@ const AccessoriesGrid = ({
       {accessoryData.accessories.map((item, index) => {
         let inputElement;
 
-        switch (item.type) {
-          case 'radio':
-            inputElement = (
-              <label className='acc-selector'>
+        if (item.title === 'Inflatable Tent' && !availability.tent) {
+          inputElement = <p className="out-of-stock">Out of Stock</p>;
+        } else if (item.title === 'Generator' && !availability.generator) {
+          inputElement = <p className="out-of-stock">Out of Stock</p>;
+        } else if (item.title === 'Table' || item.title === 'Chair') {
+          const availableQuantity = item.title === 'Table' ? availability.tables : availability.chairs;
+
+          inputElement = availableQuantity > 0 ? (
+            <select
+              className="arrow-only-dropdown"
+              name="quantity"
+              value={selectedQuantities[item.title] || ""}
+              onChange={(e) => handleQuantityChange(item, Number(e.target.value))}
+            >
+              <option value="" disabled hidden>Select Quantity</option>
+              {Array.from({ length: availableQuantity }, (_, i) => (
+                <option key={i + 1} value={i + 1}>{i + 1}</option>
+              ))}
+            </select>
+          ) : (
+            <p className="out-of-stock">Out of Stock</p>
+          );
+        } else {
+          inputElement = (
+            <label className='acc-selector'>
                 <a 
                 className="fl-btn st-12 stkgrd"
                 >
@@ -66,29 +117,7 @@ const AccessoriesGrid = ({
                   </span>
                 </a>
               </label>
-            );
-            break;
-
-          case 'dropdown':
-            inputElement = (
-              <div style={{ paddingTop: '10px' }}>
-                <select
-                  className="arrow-only-dropdown"
-                  name="quantity"
-                  value={selectedQuantities[item.title] || ""}
-                  onChange={(e) => handleQuantityChange(item, Number(e.target.value))}
-                >
-                  <option value="" disabled hidden>Select Quantity</option>
-                  {Array.from({ length: 10 }, (_, i) => (
-                    <option key={i + 1} value={i + 1}>{i + 1}</option>
-                  ))}
-                </select>              
-              </div>
-            );
-            break;
-
-          default:
-            inputElement = <p>Unknown accessory type</p>;
+          );
         }
 
         return (
