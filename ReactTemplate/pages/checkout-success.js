@@ -36,6 +36,24 @@ const Index = () => {
   //   }
   // }, []);
 
+  useEffect(() => {
+    const isOpera = () => {
+      return (
+        !!window.opr ||  // Detects Opera on Desktop
+        !!window.opr?.addons || // Extra check for Opera
+        navigator.userAgent.includes('Opera') || // Older versions
+        (navigator.vendor === 'Google Inc.' && /Mobile/.test(navigator.userAgent) && !/Edg/.test(navigator.userAgent))
+      );
+    };
+
+    if (isOpera()) {
+      document.body.classList.add('opera-browser');
+      console.log('Opera detected');
+    } else {
+      console.log('Not Opera');
+    }
+  }, []);
+
   const isSafari = () => {
     const userAgent = navigator.userAgent;
     const vendor = navigator.vendor;
