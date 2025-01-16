@@ -78,6 +78,10 @@ const CheckoutPage = ({ data }) => {
         }
     }, [cartItems]);
 
+    useEffect(() => {
+        console.log("total price: ", Math.round(totalPrice * 100, 2))
+    }, [totalPrice]);
+
     // useEffect(() => {
     //     const setupPayments = async () => {
     //         if (typeof window !== 'undefined' && window.Square) {
@@ -255,49 +259,49 @@ const CheckoutPage = ({ data }) => {
         return true;
     }; 
 
-    // Function to handle the payment process
-    const handlePayment = async () => {
-        try {
-            // Check if card instance exists
-            if (!card) {
-                console.error("Card instance not initialized.");
-                alert("Payment setup failed. Please try refreshing the page.");
-                return { success: false };
-            }
+    // // Function to handle the payment process
+    // const handlePayment = async () => {
+    //     try {
+    //         // Check if card instance exists
+    //         if (!card) {
+    //             console.error("Card instance not initialized.");
+    //             alert("Payment setup failed. Please try refreshing the page.");
+    //             return { success: false };
+    //         }
     
-            // Tokenize the card details
-            const result = await card.tokenize();
+    //         // Tokenize the card details
+    //         const result = await card.tokenize();
     
-            if (result.status === 'OK') {
-                const paymentToken = result.token;
+    //         if (result.status === 'OK') {
+    //             const paymentToken = result.token;
     
-                // Send the token to your backend for processing
-                const response = await fetch('/api/createPayment', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        token: paymentToken,
-                        firstName: formValues['First Name'],
-                        lastName: formValues['Last Name'],
-                        price: Math.round(totalPrice * 100, 2)
-                    }),
-                });
+    //             // Send the token to your backend for processing
+    //             const response = await fetch('/api/createPayment', {
+    //                 method: 'POST',
+    //                 headers: {
+    //                     'Content-Type': 'application/json',
+    //                 },
+    //                 body: JSON.stringify({
+    //                     token: paymentToken,
+    //                     firstName: formValues['First Name'],
+    //                     lastName: formValues['Last Name'],
+    //                     price: Math.round(totalPrice * 100, 2)
+    //                 }),
+    //             });
     
-                const paymentResult = await response.json();
-                return paymentResult;
-            } else {
-                console.error('Tokenization failed:', result.errors);
-                alert('Payment failed. Please check your card details.');
-                return { success: false };
-            }
-        } catch (error) {
-            console.error('Payment error:', error);
-            alert('An error occurred during payment.');
-            return { success: false };
-        }
-    };
+    //             const paymentResult = await response.json();
+    //             return paymentResult;
+    //         } else {
+    //             console.error('Tokenization failed:', result.errors);
+    //             alert('Payment failed. Please check your card details.');
+    //             return { success: false };
+    //         }
+    //     } catch (error) {
+    //         console.error('Payment error:', error);
+    //         alert('An error occurred during payment.');
+    //         return { success: false };
+    //     }
+    // };
     
 
     // Function to handle the checkout process

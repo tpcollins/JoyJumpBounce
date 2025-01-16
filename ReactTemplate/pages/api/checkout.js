@@ -35,7 +35,7 @@ export default async function handler(req, res) {
           'Email': item.email,
           'Item': item.title,  // The title of the item
           'Quantity': item.quantity,
-          'Price': 1,       // The price of the item
+          'Price':  Number(item.price),       // The price of the item
           'Booking Date': formatDate(item.date),
           'Event Start Time': formatTime(item.setupTime),   // Default value
           'Turf': item.turf,           // Default value
