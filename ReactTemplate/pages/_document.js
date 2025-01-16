@@ -4,10 +4,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <script
-          type="text/javascript"
-          src="https://sandbox.web.squarecdn.com/v1/square.js"
-        ></script>
+      <script
+        type="text/javascript"
+        src="https://web.squarecdn.com/v1/square.js"
+      ></script>
       </Head>
       <body>
         <Main />
