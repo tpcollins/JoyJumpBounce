@@ -1481,6 +1481,23 @@
             overflow: visible;
             top: -350px;
         }
+
+        /* Edge */
+        body.edge-browser #footer.st-2 {
+            margin-top: 20px;
+            margin-bottom: -340px;
+        }
+
+        body.edge-browser #footer.st-2 .social-icons{
+            transform: translateX(540%) translateY(-100%) !important;
+        }
+
+        body.edge-browser .footer-bottom.f2{
+            z-index: 3;
+            position: relative;
+            overflow: visible;
+            top: -350px;
+        }
     }
 
     /* Footer 2 responsive design for small laptop screens */
