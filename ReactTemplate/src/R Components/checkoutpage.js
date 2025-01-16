@@ -141,8 +141,8 @@ const CheckoutPage = ({ data }) => {
         try {
             if (typeof window !== 'undefined' && window.Square) {
                 const paymentsInstance = window.Square.payments(
-                    'sandbox-sq0idb-5Nc6RAjZkLqlYcvGAHxnOA', // Application ID
-                    'L82JRJN986YEA' // Location ID
+                    'sq0idp-oTOzmovMpsG9qYkW2ydhGQ', // Application ID
+                    'L7R68JJEZXTCV' // Location ID
                 );
                 setPayments(paymentsInstance);
     
