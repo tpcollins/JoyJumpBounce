@@ -476,7 +476,7 @@ const CheckoutPage = ({ data }) => {
                     try {
                         await sendReceiptEmail(customerName, orderId, totalPrice, toEmail);
                         // Redirect to the success page after the email is sent
-                        // window.location.href = '/checkout-success';
+                        window.location.href = '/checkout-success';
                     } catch (error) {
                         console.error("Error sending email:", error);
                     }
