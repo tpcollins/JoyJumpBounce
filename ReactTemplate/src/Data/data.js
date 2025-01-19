@@ -261,7 +261,7 @@ export const checkoutData = {
 
 // 8. footer
 export const footerData = {
-    shortBio: "Joy Jump Bounce LLC. Let us Make Your Experience Unforgettable!",
+    shortBio: "Joy Jump Inflatables. Let us Make Your Experience Unforgettable!",
     contactSection: [
         {title: "Tuscaloosa, AL", className: "far fa-map-marker-alt", type: "location"},
         {title: "JoyJumpInflatables@gmail.com", className: "far fa-envelope", type: "email"},

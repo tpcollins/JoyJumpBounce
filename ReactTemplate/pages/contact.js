@@ -35,8 +35,7 @@ const Contact = () => {
                       Feel Free To Contact Us For More Info
                     </h2>
                     <p className="f-mulish">
-                      Consectetur adipiscin elitsed eiusmod tempor incidide labore
-                      magna aliqua suspendisse gravida commodo
+                       Use our contact form or reach out directly below!
                     </p>
                   </div>
                   <div className="wrap-contact">

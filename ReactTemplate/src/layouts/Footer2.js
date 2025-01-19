@@ -92,7 +92,7 @@ const Footer2 = ({footerData}) => {
                         </ul>
                       </div>
                       <div className="cls-time">
-                        <p>We can accomadate holidays.</p>
+                        <p>We can accommodate holidays.</p>
                         {/* <h4 className="title-widget">closed</h4> */}
                       </div>
                     </div>
