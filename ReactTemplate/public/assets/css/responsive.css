@@ -2159,7 +2159,7 @@
 }
 
 /* Small Laptop Screens Chrome */
-@media (min-width: 1350px) and (max-width: 1400px){
+@media (min-width: 1350px) and (max-width: 1500px){
     /* Chrome */
     body.chrome-browser{
 
@@ -2889,7 +2889,7 @@
 }
 
 /* Medium Size Laptop Screens (working on MacBook) */
-@media (min-width: 1400px) and (max-width: 1700px){
+@media (min-width: 1500px) and (max-width: 1700px){
     .tf-slider-1{
         transform: translateX(0%) translateY(0%);
         margin-bottom: 50px;
@@ -3642,7 +3642,10 @@
         }
 
 
-        @media screen and (device-width: 1470px) and (device-height: 832px){
+
+
+
+        @media screen and (device-width: 1400px) and (device-height: 626px){
             .tf-slider-1{
                 transform: translateX(0%) translateY(0%);
                 margin-bottom: 50px;
@@ -3894,8 +3897,7 @@
             }
         }
 
-
-        @media screen and (device-width: 1400px) and (device-height: 626px){
+        @media screen and (device-width: 1470px) and (device-height: 832px){
             .tf-slider-1{
                 transform: translateX(0%) translateY(0%);
                 margin-bottom: 50px;
