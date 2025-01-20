@@ -34,6 +34,21 @@ const Index = () => {
   //     console.log('Not Safari');
   //   }
   // }, []);
+  // Opera Detection
+  useEffect(() => {
+    const isOpera = () => {
+      const userAgent = navigator.userAgent;
+      return /OPR/.test(userAgent) || /Opera/.test(userAgent); // Detects Opera
+    };
+
+    if (isOpera()) {
+      document.body.classList.add("opera-browser");
+      console.log("Opera detected");
+    } else {
+      console.log("Not Opera");
+    }
+  }, []);
+
 
   const isSafari = () => {
     const userAgent = navigator.userAgent;
