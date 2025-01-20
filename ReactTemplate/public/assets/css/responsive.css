@@ -1420,7 +1420,7 @@
     }
 
     /* Footer 2 responsive design for medium laptop screens */
-    @media (min-width: 1400px) and (max-width: 1700px){
+    @media (min-width: 1500px) and (max-width: 1700px){
 
         #footer.st-2 .widget-footer{
             top: -100px;
@@ -1499,68 +1499,6 @@
             top: -350px;
         }
 
-        @media screen and (device-width: 1470px) and (device-height: 832px){
-            #footer.st-2 {
-                margin-top: 0px !important;
-                margin-bottom: -300px !important;
-            }
-    
-            #footer.st-2 .social-icons{
-                transform: translateX(540%) translateY(-100%) !important;
-            }
-    
-            .footer-bottom.f2{
-                z-index: 3;
-                position: relative;
-                overflow: visible;
-                top: -350px;
-            }
-
-            #footer.st-2 .widget-footer{
-                top: -400px;
-                position: relative;
-            }
-    
-            #footer.st-2 .social-icons{
-                transform: translateX(540%) translateY(750%) !important;
-            }
-        }
-
-        @media screen and (device-width: 1400px) and (device-height: 626px){
-            #footer.st-2 {
-                margin-top: 0px !important;
-                margin-bottom: -300px !important;
-            }
-    
-            #footer.st-2 .social-icons{
-                transform: translateX(540%) translateY(-100%) !important;
-            }
-
-            .footer-bottom.f2{
-                z-index: 3;
-                position: relative;
-                overflow: visible;
-                top: -350px;
-            }
-
-            #footer.st-2 .widget-footer{
-                top: -200px;
-                position: relative;
-
-                transform: translateY(-110%);
-
-                /* overflow: visible; */
-
-                z-index: 100;
-            }
-    
-            #footer.st-2 .social-icons{
-                transform: translateX(540%) translateY(750%) !important;
-
-                top: -750px;
-                position: relative;
-            }
-        }
     }
 
     /* Footer 2 responsive design for small laptop screens */
@@ -1614,7 +1552,7 @@
     }
 
     /* Footer 2 responsive design for small laptop screens Chrome */
-    @media (min-width: 1350px) and (max-width: 1400px){
+    @media (min-width: 1350px) and (max-width: 1500px){
         body.chrome-browser{
             #footer.st-2{
                 top: 0px;
@@ -1674,6 +1612,21 @@
                 transform: translateX(540%) translateY(850%) !important;
             }
         }
+
+        body.opera-browser{
+            #footer.st-2{
+                top: 0px;
+            }
+    
+            #footer.st-2 .widget-footer{
+                top: 0px;
+                position: relative;
+            }
+    
+            #footer.st-2 .social-icons{
+                transform: translateX(540%) translateY(850%) !important;
+            }
+        }
     }
 
 /* 
@@ -1686,6 +1639,9 @@
 @media (min-width: 1400px) and (max-width: 1700px){
     .modal-dialog {
       top: 30%; /* Adjust to move the modal further down on larger screens */
+    }
+    #site-header.is-fixed{
+        display: none !important;
     }
   }
 
@@ -1726,12 +1682,6 @@
         .checkout-mblresp-container .cart-item-info p{
             font-size: 1.8em;
         }
-    }
-  }
-
-  @media screen and (device-width: 1470px) and (device-height: 832px){
-    #site-header.is-fixed{
-        display: none !important;
     }
   }
 
@@ -2923,7 +2873,7 @@
         .item-slider-1 .box-feature {
             flex-direction: column;
             align-items: center;
-            transform: translateY(-10%) translateX(40%);
+            transform: translateY(-10%) translateX(0%);
             scale: 80%;
         }
 
@@ -3833,513 +3783,135 @@
             }
         }
 
-
-
-
-
-        @media screen and (device-width: 1400px) and (device-height: 626px){
-            .tf-slider-1{
-                transform: translateX(0%) translateY(0%);
-                margin-bottom: 50px;
-            }
-        
-            .tf-slider-1 .overlay{
-                width: 100%;
-                height: 80%;
-                border-radius: 8% !important;
-                scale: 80%;
-            }
-        
-            /* Title Text */
-            .tf-slider-1 .title.clr-pri-2{
-                font-size: 40px;
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-
-                bottom: 50px;
-                position: relative;
-        
-                transform: translateX(10%);
-            }
-        
-            .item-slider-1 .fx{
-                transform: translateY(-350%);
-            }
-
-            .item-slider-1 .fx .li-clr-pri-2{
-                color: white;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            }
-            /* Sub Text */
-            .item-slider-1 .sub.clr-pri-2{
-                font-size: 45px;
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center; 
-
-                bottom: 50px;
-                position: relative;
-            }
-        
-            .item-slider-1 .box-feature {
-                flex-direction: column;
-                align-items: center;
-                transform: translateY(0%) translateX(20%);
-                scale: 80%;
-            }
-        
-            .item-slider-1 .box-btn {
-                transform: translateX(10%) translateY(-250%)!important;
-            }
-        
-            .item-slider-1 .box-custom{
-                transform: translateX(0%) translateY(-50%)!important;
-            }
-        
-            /* Wrap Text */
-            .wrap.clr-pri-1{
-                font-size: 30px;
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-            }
-        
-            /* Arrow and JJ Ribbon */
-            .item-slider-1 .box-custom{
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center; 
-            }
-        
-            .item-slider-1 .box-custom .wrap{
-                background-size: 110%;
-            }
-        
-            /* Arrow */
-            .item-slider-1 .box-custom svg{
-                transform: translateX(-17%);
-            }
-        
-            /* Buttons */
-                /* Top Button */
-                .item-slider-1 .fl-btn.st-12{
-                    height: 70px;
-                    width: 120%;
-                    font-size: 18px;
+                /* Opera */
+                body.opera-browser{
+                    /* Checkout Success page */
+                .tf-slider-1.slider-checkout{
+                    transform: translateX(0%) translateY(0%);
+                    padding-bottom: 300px;
                 }
         
-                /* Bottom Button */
-                .item-slider-1 .fl-btn.st-1{
-                    height: 70px;
-                    width: 120%;
-                    font-size: 23px;
+                .tf-slider-1.slider-checkout  .overlay{
+                    width: 100%;
+                    height: 55%;
+                    border-radius: 10% !important;
+                    scale: 80%;
                 }
         
-                /* Button Container */
-                .item-slider-1 .box-btn{
-                    width: 120%;
-                    max-width: 3000px; 
-                }
-        
-                .item-slider-1 .fl-btn {
-                    width: 300%;
-                    text-align: center; 
-                    max-width: 1000px; 
-                    margin: 0 auto; 
-        
+                /* Sub Text */
+                .slider-checkout .sub.clr-pri-2{
+                    font-size: 35px;
                     display: flex; 
                     align-items: center;
                     justify-content: center;
                     text-align: center; 
-        
-                    top: -20px;
-                    left: -95px;
-                }
-
-                /* Checkout Success page */
-        .tf-slider-1.slider-checkout{
-            transform: translateX(0%) translateY(0%);
-            padding-bottom: 300px;
-        }
-
-        .tf-slider-1.slider-checkout  .overlay{
-            width: 100%;
-            height: 50%;
-            border-radius: 10% !important;
-            scale: 80%;
-        }
-
-        /* Sub Text */
-        .slider-checkout .sub.clr-pri-2{
-            font-size: 35px;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-        }
-
-        .slider-checkout .item-slider-1 .box-feature {
-            flex-direction: column;
-            align-items: center;
-            transform: translateY(-60%) translateX(250%);
-            scale: 80%;
-
-            left: 300px;
-        }
-
-        .slider-checkout .item-slider-1 .box-btn {
-            transform: translateX(50%) translateY(-900%)!important;
-            right: -300px;
-            top: 70px;
-            position: relative;
-        }
-
-        .slider-checkout .item-slider-1 .box-custom{
-            transform: translateX(50%) translateY(-100%) !important;
-
-            right: -300px;
-            top: 150px;
-            position: relative;
-        }
-
-
-
-        /* Wrap Text */
-        .slider-checkout .wrap.clr-pri-1{
-            font-size: 30px;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        /* Arrow and JJ Ribbon */
-        .slider-checkout .box-custom{
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-        }
-
-        .slider-checkout .box-custom .wrap{
-            background-size: 110%;
-        }
-
-        /* Arrow */
-        .slider-checkout .box-custom svg{
-            transform: translateX(-17%);
-        }
-
-        /* List Item Text */
-        .slider-checkout .li-clr-pri-2{
-            display: none !important;
-        }
-
-        .slider-checkout .sub.clr-pri-2{
-            transform: translateX(50%) translateY(0%);
-        }
-
-        /* List Item Emojis */
-        /* li.fx{
-            display: none;
-        } */
-
-        /* Buttons */
-            /* Top Button */
-            .tf-slider-1.slider-checkout{
-                margin-bottom: -700px;
-            }
-            .slider-checkout .fl-btn.st-12{
-                height: 50px;
-                width: 100%;
-                font-size: 18px;
-            }
-
-            /* Bottom Button */
-            .slider-checkout .fl-btn.st-1{
-                height: 70px;
-                width: 120%;
-                font-size: 23px;
-            }
-
-            /* Button Container */
-            .slider-checkout .box-btn{
-                width: 120%;
-                max-width: 3000px; 
-            }
-
-            .slider-checkout .fl-btn {
-                width: 300%;
-                text-align: center; 
-                max-width: 1000px; 
-                margin: 0 auto; 
-
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center; 
-
-                top: -20px;
-                left: -95px;
-            }
-        }
-
-        @media screen and (device-width: 1470px) and (device-height: 832px){
-            .tf-slider-1{
-                transform: translateX(0%) translateY(0%);
-                margin-bottom: 50px;
-            }
-        
-            .tf-slider-1 .overlay{
-                width: 100%;
-                height: 80%;
-                border-radius: 8% !important;
-                scale: 80%;
-            }
-        
-            /* Title Text */
-            .tf-slider-1 .title.clr-pri-2{
-                font-size: 40px;
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-
-                bottom: 50px;
-                position: relative;
-        
-                transform: translateX(10%);
-            }
-        
-            .item-slider-1 .fx{
-                transform: translateY(-350%);
-            }
-
-            .item-slider-1 .fx .li-clr-pri-2{
-                color: white;
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            }
-            /* Sub Text */
-            .item-slider-1 .sub.clr-pri-2{
-                font-size: 45px;
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center; 
-
-                bottom: 50px;
-                position: relative;
-            }
-        
-            .item-slider-1 .box-feature {
-                flex-direction: column;
-                align-items: center;
-                transform: translateY(0%) translateX(20%);
-                scale: 80%;
-            }
-        
-            .item-slider-1 .box-btn {
-                transform: translateX(10%) translateY(-250%)!important;
-            }
-        
-            .item-slider-1 .box-custom{
-                transform: translateX(0%) translateY(-50%)!important;
-            }
-        
-            /* Wrap Text */
-            .wrap.clr-pri-1{
-                font-size: 30px;
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-            }
-        
-            /* Arrow and JJ Ribbon */
-            .item-slider-1 .box-custom{
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center; 
-            }
-        
-            .item-slider-1 .box-custom .wrap{
-                background-size: 110%;
-            }
-        
-            /* Arrow */
-            .item-slider-1 .box-custom svg{
-                transform: translateX(-17%);
-            }
-        
-            /* Buttons */
-                /* Top Button */
-                .item-slider-1 .fl-btn.st-12{
-                    height: 70px;
-                    width: 120%;
-                    font-size: 18px;
                 }
         
-                /* Bottom Button */
-                .item-slider-1 .fl-btn.st-1{
-                    height: 70px;
-                    width: 120%;
-                    font-size: 23px;
+                .slider-checkout .item-slider-1 .box-feature {
+                    flex-direction: column;
+                    align-items: center;
+                    transform: translateY(-80%) translateX(80%);
+                    scale: 80%;
                 }
         
-                /* Button Container */
-                .item-slider-1 .box-btn{
-                    width: 120%;
-                    max-width: 3000px; 
+                .slider-checkout .item-slider-1 .box-feature .image img {
+                    flex-direction: column;
+                    align-items: center;
+                    max-width: 400%;
+                    height: auto;
                 }
         
-                .item-slider-1 .fl-btn {
-                    width: 300%;
-                    text-align: center; 
-                    max-width: 1000px; 
-                    margin: 0 auto; 
+                .slider-checkout .item-slider-1 .box-btn {
+                    transform: translateX(0%) translateY(-800%)!important;
+                }
         
+                .slider-checkout .item-slider-1 .box-custom{
+                    transform: translateX(-10%) translateY(-200%) !important;
+                }
+        
+        
+        
+                /* Wrap Text */
+                .slider-checkout .wrap.clr-pri-1{
+                    font-size: 30px;
+                    display: flex; 
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                }
+        
+                /* Arrow and JJ Ribbon */
+                .slider-checkout .box-custom{
                     display: flex; 
                     align-items: center;
                     justify-content: center;
                     text-align: center; 
-        
-                    top: -20px;
-                    left: -95px;
                 }
-
-                /* Checkout Success page */
-        .tf-slider-1.slider-checkout{
-            transform: translateX(0%) translateY(0%);
-            padding-bottom: 300px;
-        }
-
-        .tf-slider-1.slider-checkout  .overlay{
-            width: 100%;
-            height: 50%;
-            border-radius: 10% !important;
-            scale: 80%;
-        }
-
-        /* Sub Text */
-        .slider-checkout .sub.clr-pri-2{
-            font-size: 35px;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-        }
-
-        .slider-checkout .item-slider-1 .box-feature {
-            flex-direction: column;
-            align-items: center;
-            transform: translateY(-60%) translateX(250%);
-            scale: 80%;
-
-            left: 300px;
-        }
-
-        .slider-checkout .item-slider-1 .box-btn {
-            transform: translateX(50%) translateY(-900%)!important;
-            right: -300px;
-            top: 70px;
-            position: relative;
-        }
-
-        .slider-checkout .item-slider-1 .box-custom{
-            transform: translateX(50%) translateY(-100%) !important;
-
-            right: -300px;
-            top: 150px;
-            position: relative;
-        }
-
-
-
-        /* Wrap Text */
-        .slider-checkout .wrap.clr-pri-1{
-            font-size: 30px;
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        /* Arrow and JJ Ribbon */
-        .slider-checkout .box-custom{
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            text-align: center; 
-        }
-
-        .slider-checkout .box-custom .wrap{
-            background-size: 110%;
-        }
-
-        /* Arrow */
-        .slider-checkout .box-custom svg{
-            transform: translateX(-17%);
-        }
-
-        /* List Item Text */
-        .slider-checkout .li-clr-pri-2{
-            display: none !important;
-        }
-
-        .slider-checkout .sub.clr-pri-2{
-            transform: translateX(50%) translateY(0%);
-        }
-
-        /* List Item Emojis */
-        /* li.fx{
-            display: none;
-        } */
-
-        /* Buttons */
-            /* Top Button */
-            .tf-slider-1.slider-checkout{
-                margin-bottom: -700px;
-            }
-            .slider-checkout .fl-btn.st-12{
-                height: 50px;
-                width: 100%;
-                font-size: 18px;
-            }
-
-            /* Bottom Button */
-            .slider-checkout .fl-btn.st-1{
-                height: 70px;
-                width: 120%;
-                font-size: 23px;
-            }
-
-            /* Button Container */
-            .slider-checkout .box-btn{
-                width: 120%;
-                max-width: 3000px; 
-            }
-
-            .slider-checkout .fl-btn {
-                width: 300%;
-                text-align: center; 
-                max-width: 1000px; 
-                margin: 0 auto; 
-
-                display: flex; 
-                align-items: center;
-                justify-content: center;
-                text-align: center; 
-
-                top: -20px;
-                left: -95px;
-            }
-        }
+        
+                .slider-checkout .box-custom .wrap{
+                    background-size: 110%;
+                }
+        
+                /* Arrow */
+                .slider-checkout .box-custom svg{
+                    transform: translateX(-17%);
+                }
+        
+                /* List Item Text */
+                .slider-checkout .li-clr-pri-2{
+                    display: none !important;
+                }
+        
+                .slider-checkout .sub.clr-pri-2{
+                    padding-bottom: 40px;
+                    bottom: 110px;
+                    position: relative;
+                }
+        
+                /* List Item Emojis */
+                /* li.fx{
+                    display: none;
+                } */
+        
+                /* Buttons */
+                    /* Top Button */
+                    .tf-slider-1.slider-checkout{
+                        margin-bottom: -700px;
+                    }
+                    .slider-checkout .fl-btn.st-12{
+                        height: 50px;
+                        width: 100%;
+                        font-size: 18px;
+                    }
+        
+                    /* Bottom Button */
+                    .slider-checkout .fl-btn.st-1{
+                        height: 70px;
+                        width: 120%;
+                        font-size: 23px;
+                    }
+        
+                    /* Button Container */
+                    .slider-checkout .box-btn{
+                        width: 120%;
+                        max-width: 3000px; 
+                    }
+        
+                    .slider-checkout .fl-btn {
+                        width: 300%;
+                        text-align: center; 
+                        max-width: 1000px; 
+                        margin: 0 auto; 
+        
+                        display: flex; 
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center; 
+        
+                        top: -20px;
+                        left: -95px;
+                    }
+                }
 
 }
 
@@ -4400,7 +3972,7 @@
 /* Laptop Screen Inventory Gallery */
 
 /* Medium laptop screens */
-@media (min-width: 1400px) and (max-width: 1700px) {
+@media (min-width: 1500px) and (max-width: 1700px) {
 
     .tf-section.tf-gallery .title.clr-pri-2{
         transform: translateX(0%);
@@ -4472,28 +4044,6 @@
     .gallery-item:nth-child(even) .box-btn {
         margin-top: 6px;
         transform: translateX(52%);
-    }
-
-
-
-
-    @media screen and (device-width: 1470px) and (device-height: 832px){
-        .gallery-item:nth-child(1) .box-btn {
-            /* padding-right: 400px; */
-            /* margin-top: -28px; */
-            transform: translateX(60%);
-        }
-
-        .gallery-item:nth-child(3) .box-btn {
-            /* padding-right: 400px; */
-            margin-top: -28px;
-            transform: translateX(60%);
-        }
-        
-        .gallery-item:nth-child(even) .box-btn {
-            margin-top: 6px;
-            transform: translateX(52%);
-        }
     }
     
 }
@@ -4576,7 +4126,7 @@
 }
 
 /* Small laptop screens Chrome */
-@media (min-width: 1350px) and (max-width: 1400px) {
+@media (min-width: 1350px) and (max-width: 1500px) {
     body.chrome-browser{
         .tf-section.tf-gallery .title.clr-pri-2{
             transform: translateX(0%);
