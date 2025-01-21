@@ -216,13 +216,13 @@ export const accessoryData = {
           showPrice: '$75',
           type: 'radio'
         },
-        {
-            imgSrc: 'assets/images/accessories/Tent.png',
-            title: 'Inflatable Tent',
-            price: 200,
-            showPrice: '$200',
-            type: 'radio'
-          },
+        // {
+        //     imgSrc: 'assets/images/accessories/Tent.png',
+        //     title: 'Inflatable Tent',
+        //     price: 200,
+        //     showPrice: '$200',
+        //     type: 'radio'
+        //   },
         {
           imgSrc: 'assets/images/accessories/table.png',
           title: 'Table',
