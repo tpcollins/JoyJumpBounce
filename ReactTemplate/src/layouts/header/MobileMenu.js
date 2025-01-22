@@ -77,7 +77,7 @@ const MobileMenu = () => {
       <div className="top-bar">
         <div className="inner jus-ct">
           <p className="clr-pri-1">
-            Working Hours : Monday - Friday, 08:00 am - 05:00 pm
+            Open 24/7. Holidays can be Accommodated!
           </p>
         </div>
       </div>

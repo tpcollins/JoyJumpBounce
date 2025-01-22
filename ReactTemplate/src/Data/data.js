@@ -42,7 +42,8 @@ export const inventoryData = {
     inventoryItems: [
         { src: "assets/images/inflatables/WaveRiderWBG2.png", title: "Wave Rider Waterslide", price: "$285 Single Day",description: "kindergarten", font: "'WaveRider', sans-serif", textImg: "assets/images/InvTextImages/waverider.png", pgSection: 'waverider' },
         { src: "assets/images/inflatables/ComboWetSlideWBG.png", title: "Combo Wet Slide", price: "$200 Single Day", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/Tropical Combo.png", pgSection: 'tropcombo'},
-        { src: "assets/images/inflatables/DrySlideWBG.png", title: "17' Dry Slide", price: "$255 Single Day Wet, $175 Single Day Dry", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/DrySlide.png", pgSection: 'dryslide' }
+        { src: "assets/images/inflatables/DrySlideWBG.png", title: "17' Dry Slide", price: "$255 Single Day Wet, $175 Single Day Dry", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/DrySlide.png", pgSection: 'dryslide' },
+        { src: "assets/images/inflatables/ObstacleCourseWBG.png", title: "30 Foot Obstacle Course", price: "$225 Single Day Dry", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/OCInvText.png", pgSection: 'obc' },
     ]
 }
 
@@ -201,6 +202,14 @@ export const bcyHseStockData = {
         price: 200,
         showPrice: "$200",
         pgSection: "dryslide",
+      },
+      {
+        id: 4,
+        imgSrc: "assets/images/inflatables/oc-nobg.png",
+        title: "Obstacle Course",
+        price: 225,
+        showPrice: "$225",
+        pgSection: "obc",
       },
     ],
   };

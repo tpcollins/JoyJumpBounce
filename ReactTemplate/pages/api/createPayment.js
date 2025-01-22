@@ -34,6 +34,7 @@ export default async function handler(req, res) {
           idempotencyKey: idempotencyKey,
           amountMoney: {
               amount:  Number(price), // Ensure it's a valid number
+              // amount:  1, // Ensure it's a valid number
               currency: 'USD',
           },
           customerDetails: {

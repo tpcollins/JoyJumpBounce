@@ -81,18 +81,20 @@ const Footer2 = ({footerData}) => {
                   <div className="widget f2 widget-business">
                     <div className="inner">
                       <div className="op-time">
-                        <h4 className="title-widget">opening hours</h4>
-                        <ul>
+                        <h4 className="title-widget">Open 24/7!</h4>
+                        {/* <ul>
                           <li>
                             <span className="f-mulish">Monday - Friday</span>
                           </li>
                           <li>
                             <span className="f-mulish">8:00am - 5:00pm</span>
                           </li>
-                        </ul>
+                        </ul> */}
                       </div>
                       <div className="cls-time">
-                        <p>We can accommodate holidays.</p>
+                        <p>Communication Hours 8am - 5pm.</p>
+                        <br/>
+                        <p>Holidys can be Accommodated!</p>
                         {/* <h4 className="title-widget">closed</h4> */}
                       </div>
                     </div>

@@ -110,7 +110,7 @@ const InvLandingPage = () => {
                     alt="Bouncy Castles"
                     className="landing-image"
                 />
-                <div className="overlay-text">Floats</div> {/* Overlay text */}
+                <div className="overlay-text">Bounce Houses</div> {/* Overlay text */}
                 </a>
             </div>
             <div className="image-box">

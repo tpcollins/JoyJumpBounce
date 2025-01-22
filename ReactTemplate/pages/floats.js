@@ -104,7 +104,7 @@ const Floats = () => {
                         <div className="title-heading st-4">
                             <div className="sub-heading clr-pri-3 f-mulish">
                                 <LeftArrow />
-                                <span className="inner-sub st-1">Inventory</span>
+                                <span className="inner-sub st-1">Bounce Houses</span>
                                 <RightArrow />
                             </div>
                             <h2 className="title clr-pri-2">
