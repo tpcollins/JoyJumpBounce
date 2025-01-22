@@ -7092,7 +7092,8 @@
             .gallery-container {
                 display: flex;
                 flex-direction: column;
-                transform: translateY(-10%);
+                transform: translateY(-7%);
+                
 
                 /* margin-bottom: -100px; */
                 padding-bottom: -100px;
@@ -7852,7 +7853,7 @@
             .gallery-container {
                 display: flex;
                 flex-direction: column;
-                transform: translateY(-10%);
+                transform: translateY(-7%);
 
                 /* margin-bottom: -100px; */
                 padding-bottom: -100px;
