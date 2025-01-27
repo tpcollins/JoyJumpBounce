@@ -52,6 +52,22 @@ const App = ({ Component, pageProps }) => {
                 <meta name="mobile-web-app-capable" content="yes" />
 
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+                {/* Google Tag Manager */}
+                <script
+                    async
+                    src={`https://www.googletagmanager.com/gtag/js?id=AW-16820055682`}
+                ></script>
+                <script
+                    dangerouslySetInnerHTML={{
+                        __html: `
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'AW-16820055682');
+                        `,
+                }}
+                />
             </Head>
 
 
