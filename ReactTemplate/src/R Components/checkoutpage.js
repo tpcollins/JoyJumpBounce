@@ -250,7 +250,7 @@ const CheckoutPage = ({ data }) => {
     };
 
     const handleValidateForm = () => {
-        const requiredFields = ["What Time Does Your Event Start?*", "What Time Does Your Event End? ","First Name", "Last Name", "Email", "Grass or Concrete", "Water Hook up Within 100 Feet?", "Power Hook up Within 100 Feet?*", "Street Address", "City", "State", "Zip Code"];
+        const requiredFields = ["First Name", "Last Name", "Email", "Street Address", "City", "State", "Zip Code"];
         for (let field of requiredFields) {
             if (!formValues[field] || formValues[field].trim() === "") {
                 return false;
