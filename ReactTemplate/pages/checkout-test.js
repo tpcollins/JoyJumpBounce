@@ -2,21 +2,24 @@ import { useState, useEffect, useRef } from 'react';
 import { Button, Spinner } from 'react-bootstrap';
 import { Circles } from 'react-loader-spinner';
 // Redux Variables
-import { removeItemFromCart, clearCart } from '../redux/slices/cartslice';
+import { removeItemFromCart, clearCart } from '../src/redux/slices/cartslice';
 import { useSelector, useDispatch } from 'react-redux';
 // Proximity Meter
-import ProximityMeter from '../components/proximitymeter';
+import ProximityMeter from '../src/components/proximitymeter';
 // Accessories
-import AccessoriesGrid from '../components/accessoriesgrid-checkout';
-import { accessoryData } from '../Data/data';
+import AccessoriesGrid from '../src/components/accessoriesgrid-checkout';
+import { accessoryData } from '../src/Data/data';
 // Email js
 import emailjs from 'emailjs-com';
 // Liability Modal
-import LiabilityModal  from '../components/liabilitymodal';
+import LiabilityModal from '../src/components/liabilitymodal';
+
+import { checkoutData } from '../src/Data/data';
 
 import { payments as SquarePayments } from '@square/web-sdk'; // Correct import
 
-const cpt = ({ data }) => {
+const cpt = () => {
+    let data = checkoutData;
     // State to hold form values
     const [formValues, setFormValues] = useState({});
     // State to require form values
