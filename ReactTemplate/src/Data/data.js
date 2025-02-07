@@ -254,6 +254,7 @@ export const checkoutData = {
     apiRoute: '/api/checkout',
     fields: [
         {title: "What Time Does Your Event Start?*", type: "time", message: "*We will show up an hour before this time to set everything up"},
+        {title: "What Time Does Your Event End?", type: "time", message: "*We will show up an hour before this time to set everything up"},
         {title: "First Name", type: "text"},
         {title: "Last Name", type: "text"},
         {title: "Email", type: "text"},

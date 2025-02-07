@@ -250,7 +250,7 @@ const CheckoutPage = ({ data }) => {
     };
 
     const handleValidateForm = () => {
-        const requiredFields = ["First Name", "Last Name", "Email", "Street Address", "City", "State", "Zip Code"];
+        const requiredFields = ["What Time Does Your Event Start?*", "What Time Does Your Event End? ","First Name", "Last Name", "Email", "Grass or Concrete", "Water Hook up Within 100 Feet?", "Power Hook up Within 100 Feet?*", "Street Address", "City", "State", "Zip Code"];
         for (let field of requiredFields) {
             if (!formValues[field] || formValues[field].trim() === "") {
                 return false;
@@ -422,6 +422,7 @@ const CheckoutPage = ({ data }) => {
                 lastName: formValues['Last Name'],
                 email: formValues['Email'],
                 setupTime: formValues['What Time Does Your Event Start?*'],
+                endTime: formValues['What Time Does Your Event Start?*'],
                 turf: formValues['Grass or Concrete'],
                 waterHookup: formValues['Water Hook up Within 100 Feet?'],
                 powerHookup: formValues['Power Hook up Within 100 Feet?*'],
