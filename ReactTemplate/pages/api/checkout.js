@@ -38,6 +38,7 @@ export default async function handler(req, res) {
           'Price':  Number(item.price),       // The price of the item
           'Booking Date': formatDate(item.date),
           'Event Start Time': formatTime(item.setupTime),   // Default value
+          'Event End Time': formatTime(item.endTime),   // Default value
           'Turf': item.turf,           // Default value
           'Water Hookup': item.waterHookup,      // Default value
           'Power Hookup': item.powerHookup,      // Default value
