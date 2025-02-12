@@ -226,7 +226,7 @@ const CheckoutPage = ({ data }) => {
     };
 
     // Function to send receipt email
-    const sendReceiptEmail = (customerName, orderId, totalPrice, toEmail) => {
+    const sendReceiptEmail = (customerName, orderId, finalPrice, toEmail) => {
 
         let message = cartItems.map((item, index) => {
             return `${index + 1}. ${item.quantity || 1}x ${item.title} - $${(item.price * (item.quantity || 1)).toFixed(2)}`;
@@ -238,7 +238,7 @@ const CheckoutPage = ({ data }) => {
             to_name: customerName,  // Matches {{to_name}} in the template
             order_ID: orderId,            // Matches {{date}} in the template
             message: message,      // Matches {{message}} in the template
-            total_price: totalPrice.toFixed(2),
+            total_price: finalPrice.toFixed(2),
             to_email: toEmail,
             reply_to: 'no-reply@joyjumpbounce.com', // Add this line
             from_name: 'Joy Jump Bounce'  // Add this to make it clearer who it's from
@@ -517,7 +517,7 @@ const CheckoutPage = ({ data }) => {
                     const toEmail = `${formValues['Email']}`;
     
                     try {
-                        await sendReceiptEmail(customerName, orderId, totalPrice, toEmail);
+                        await sendReceiptEmail(customerName, orderId, finalPrice, toEmail);
                         // Redirect to the success page after the email is sent
                         window.location.href = '/checkout-success';
                     } catch (error) {
