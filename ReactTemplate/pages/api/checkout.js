@@ -48,7 +48,8 @@ export default async function handler(req, res) {
           'State': item.state,
           'Zip Code': item.zipCode,
           'Total Price': item.totalPrice,
-          'Delivery Charge': item.deliveryCharge
+          'Delivery Charge': item.deliveryCharge,
+          'Code Used': item.codeUsed
         },
       })),
       function (err, records) {
