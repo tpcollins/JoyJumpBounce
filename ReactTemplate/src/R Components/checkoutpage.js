@@ -59,6 +59,32 @@ const CheckoutPage = ({ data }) => {
     //  **** DELETING THE FULLADDRESS VARIABLE CAUSES THE PROXIMITY METER TO BREAK FOR SOME REASON. DO NOT DELETE IT ****
     const fullAddress = `${formValues['Street Address']}, ${formValues['City']}, ${formValues['State']} ${formValues['Zip Code']}`;
 
+    // Discount Code
+    const [userDiscountCode, setUserDiscountCode] = useState('');
+    const [discountError, setDiscountError] = useState('');
+    const [discountSuccess, setDiscountSuccess] = useState('');
+    const [finalPrice, setFinalPrice] = useState(totalPrice); // Starts as total price
+    const validDiscountCode = "GReview25"; // Define the valid discount code    
+
+    const handleDiscountCodeChange = (e) => {
+        const enteredCode = e.target.value;
+        setUserDiscountCode(enteredCode);
+    
+        if (enteredCode === validDiscountCode) {
+            setFinalPrice(totalPrice * 0.75); // Apply 25% discount
+            setDiscountError(''); // Clear any previous error
+            setDiscountSuccess('Code Applied!');
+        } else if (enteredCode.length > 0) {
+            setFinalPrice(totalPrice); // Reset price if code is invalid
+            setDiscountError("This is not a Valid Discount Code");
+        } else {
+            setDiscountError(''); // Clear error if input is empty
+            setDiscountSuccess(''); // Clear error if input is empty
+            setFinalPrice(totalPrice); // Reset price when code is removed
+        }
+    };
+    
+
     // Use Effect for making sure all fields in form are filled in
     useEffect(() => {
         setIsFormValid(handleValidateForm());
@@ -391,6 +417,17 @@ const CheckoutPage = ({ data }) => {
     // };    
 
     const handleCheckout = async () => {
+        let finalPrice = totalPrice;
+
+        // Check if discount code is valid
+        if (userDiscountCode === validDiscountCode) {
+            finalPrice = totalPrice * 0.75; // Apply 25% discount
+            setDiscountError(''); // Clear any previous error
+        } else if (userDiscountCode.length > 0) {
+            setDiscountError("This is not a Valid Discount Code");
+            return; // Stop checkout if the code is invalid
+        }
+
         try {
             // Validate and tokenize the card details only on button click
             if (!card) {
@@ -431,12 +468,13 @@ const CheckoutPage = ({ data }) => {
                 city: formValues['City'],
                 state: formValues['State'],
                 zipCode: formValues['Zip Code'],
+                codeUsed: userDiscountCode === validDiscountCode ? "Yes" : "No"
             }));
     
             // Add an extra row for totals
             updatedCartItems.push({
                 orderId: null,
-                totalPrice: totalPrice,
+                totalPrice: finalPrice,
                 deliveryCharge: deliveryCharge,
             });
     
@@ -637,22 +675,51 @@ const CheckoutPage = ({ data }) => {
 
 
 
-                            case "text":
-                                inputElement = (
-                                    <div>
-                                        <label>{item.title}</label>
-                                        <input
-                                            className="form-control"
-                                            onBlur={(e) => e.target.placeholder = item.placeholder}
-                                            onFocus={(e) => e.target.placeholder = ""}
-                                            placeholder={item.placeholder}
-                                            type="text"
-                                            name={item.title}
-                                            onChange={handleInputChange}
-                                        />
-                                    </div>
-                                );
-                                break;
+                                case "text":
+                                    inputElement = (
+                                        <div>
+                                            <label>{item.title}</label>
+
+                                            {/* Special logic for Discount Code */}
+                                            {item.title === "Discount Code (Optional)" ? (
+                                                <>
+                                                    <input
+                                                        className="form-control"
+                                                        type="text"
+                                                        name={item.title}
+                                                        placeholder={item.placeholder}
+                                                        value={userDiscountCode}
+                                                        onChange={handleDiscountCodeChange} // Validate in real-time
+                                                    />
+                                                    {/* Display an error message in red if the discount code is invalid */}
+                                                    {discountError && (
+                                                        <p style={{ color: 'red', marginTop: '5px' }}>
+                                                            {discountError}
+                                                        </p>
+                                                    )}
+                                                    {discountSuccess && (
+                                                        <p style={{ marginTop: '5px' }}>
+                                                            {discountSuccess}
+                                                        </p>
+                                                    )}
+                                                </>
+                                            ) : (
+                                                // Default text input logic for other fields
+                                                <input
+                                                    className="form-control"
+                                                    onBlur={(e) => e.target.placeholder = item.placeholder}
+                                                    onFocus={(e) => e.target.placeholder = ""}
+                                                    placeholder={item.placeholder}
+                                                    type="text"
+                                                    name={item.title}
+                                                    onChange={handleInputChange}
+                                                />
+                                            )}
+                                        </div>
+                                    );
+                                    break;
+
+                                
 
                             default:
                                 inputElement = <p>Unknown input type</p>;
@@ -703,7 +770,7 @@ const CheckoutPage = ({ data }) => {
                     </div>
 
                     <div className="cart-total">
-                        <p><strong>Total Price:</strong> ${totalPrice.toFixed(2)}</p>
+                        <p><strong>Total Price:</strong> ${finalPrice.toFixed(2)}</p>
                     </div>
 
                     {/* <div id='card-container'></div> */}
