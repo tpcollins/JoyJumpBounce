@@ -180,7 +180,7 @@ export const bcyHseStockData = {
         id: 1,
         imgSrc: "assets/images/inflatables/WaveRiderResized.png",
         title: "Wave Rider",
-        price: 285,
+        price: 2,
         showPrice: "$285",
         pgSection: "waverider",
       },
@@ -266,6 +266,7 @@ export const checkoutData = {
         {title: "City", type: "text", placeholder:"City ........"}, 
         {title: "State", type: "text", placeholder: "State ........"},
         {title: "Zip Code", type: "text", placeholder: "Zip Code ........"},
+        {title: "Discount Code (Optional)", type: "text", placeholder: "Discount Code ........"},
     ]
 }
 
