@@ -459,7 +459,7 @@ const CheckoutPage = ({ data }) => {
                 lastName: formValues['Last Name'],
                 email: formValues['Email'],
                 setupTime: formValues['What Time Does Your Event Start?*'],
-                endTime: formValues['What Time Does Your Event Start?*'],
+                endTime: formValues['What Time Does Your Event End?'],
                 turf: formValues['Grass or Concrete'],
                 waterHookup: formValues['Water Hook up Within 100 Feet?'],
                 powerHookup: formValues['Power Hook up Within 100 Feet?*'],
