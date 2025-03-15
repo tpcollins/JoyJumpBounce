@@ -207,7 +207,7 @@ export const bcyHseStockData = {
         id: 4,
         imgSrc: "assets/images/inflatables/oc-nobg.png",
         title: "Obstacle Course",
-        price: 1,
+        price: 26,
         // price: 225,
         showPrice: "$225",
         pgSection: "obc",
