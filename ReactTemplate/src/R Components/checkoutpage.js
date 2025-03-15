@@ -71,7 +71,7 @@ const CheckoutPage = ({ data }) => {
         setUserDiscountCode(enteredCode);
     
         if (enteredCode === validDiscountCode) {
-            setFinalPrice(totalPrice * 0.75); // Apply 25% discount
+            setFinalPrice(totalPrice - 25); // Apply $25 discount
             setDiscountError(''); // Clear any previous error
             setDiscountSuccess('Code Applied!');
         } else if (enteredCode.length > 0) {
@@ -107,6 +107,10 @@ const CheckoutPage = ({ data }) => {
     useEffect(() => {
         console.log("total price: ", Math.round(totalPrice * 100, 2))
     }, [totalPrice]);
+
+    useEffect(() => {
+        console.log("final price: ", finalPrice)
+    }, [finalPrice]);
 
     // useEffect(() => {
     //     const setupPayments = async () => {
@@ -414,19 +418,19 @@ const CheckoutPage = ({ data }) => {
     //         console.error('Error during checkout:', error);
     //         alert('An error occurred during checkout.');
     //     }
-    // };    
+    // };
 
     const handleCheckout = async () => {
-        let finalPrice = totalPrice;
+        // let finalPrice = totalPrice;
 
-        // Check if discount code is valid
-        if (userDiscountCode === validDiscountCode) {
-            finalPrice = totalPrice * 0.75; // Apply 25% discount
-            setDiscountError(''); // Clear any previous error
-        } else if (userDiscountCode.length > 0) {
-            setDiscountError("This is not a Valid Discount Code");
-            return; // Stop checkout if the code is invalid
-        }
+        // // Check if discount code is valid
+        // if (userDiscountCode === validDiscountCode) {
+        //     finalPrice = totalPrice * 0.75; // Apply 25% discount
+        //     setDiscountError(''); // Clear any previous error
+        // } else if (userDiscountCode.length > 0) {
+        //     setDiscountError("This is not a Valid Discount Code");
+        //     return; // Stop checkout if the code is invalid
+        // }
 
         try {
             // Validate and tokenize the card details only on button click
@@ -488,7 +492,7 @@ const CheckoutPage = ({ data }) => {
                     token: paymentToken, // Use the token from card.tokenize
                     firstName: formValues['First Name'],
                     lastName: formValues['Last Name'],
-                    price: Math.round(totalPrice * 100, 2),
+                    price: Math.round(finalPrice * 100, 2),
                 }),
             });
     
