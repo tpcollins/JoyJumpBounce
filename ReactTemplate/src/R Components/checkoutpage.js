@@ -49,8 +49,8 @@ const CheckoutPage = ({ data }) => {
     const [loadError, setLoadError] = useState(false);
 
     // Calculate total price
-    // let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
-    // totalPrice += deliveryCharge;
+    let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
+    totalPrice += deliveryCharge;
 
     // Date for the accessories grid
     const singleDate = cartItems.length > 0 ? cartItems[0].date : null;
@@ -63,8 +63,8 @@ const CheckoutPage = ({ data }) => {
     const [userDiscountCode, setUserDiscountCode] = useState('');
     const [discountError, setDiscountError] = useState('');
     const [discountSuccess, setDiscountSuccess] = useState('');
-    const [initialPrice, setInitialPrice] = useState((cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0)) + deliveryCharge);
-    const [totalPrice, setTotalPrice] = useState((cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0)) + deliveryCharge);
+    // const [initialPrice, setInitialPrice] = useState((cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0)) + deliveryCharge);
+    // const [totalPrice, setTotalPrice] = useState((cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0)) + deliveryCharge);
     const [finalPrice, setFinalPrice] = useState(totalPrice); // Starts as total price
     const validDiscountCode = "GReview25"; // Define the valid discount code    
 
@@ -117,11 +117,11 @@ const CheckoutPage = ({ data }) => {
         console.log("final price: ", finalPrice)
     }, [finalPrice]);
 
-    useEffect(() => {
-        setTotalPrice(totalPrice + deliveryCharge);
-        setInitialPrice(initialPrice + deliveryCharge);
-        console.log("initial price: ", initialPrice);
-    }, [deliveryCharge]);
+    // useEffect(() => {
+    //     setTotalPrice(totalPrice + deliveryCharge);
+    //     setInitialPrice(initialPrice + deliveryCharge);
+    //     console.log("initial price: ", initialPrice);
+    // }, [deliveryCharge]);
 
     // useEffect(() => {
     //     const setupPayments = async () => {

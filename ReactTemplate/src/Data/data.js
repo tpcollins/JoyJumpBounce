@@ -218,7 +218,7 @@ export const bcyHseStockData = {
         title: "16' Slide",
         type: "radio", // Indicates this item has multiple pricing options
         priceOptions: [
-          { label: "Wet", price: 26 },
+          { label: "Wet", price: 1 },
           { label: "Dry", price: 225 },
         ],
         pgSection: "sis"
@@ -278,7 +278,7 @@ export const checkoutData = {
         {title: "City", type: "text", placeholder:"City ........"}, 
         {title: "State", type: "text", placeholder: "State ........"},
         {title: "Zip Code", type: "text", placeholder: "Zip Code ........"},
-        {title: "Discount Code (Optional)", type: "text", placeholder: "Discount Code ........"},
+        // {title: "Discount Code (Optional)", type: "text", placeholder: "Discount Code ........"},
     ]
 }
 
