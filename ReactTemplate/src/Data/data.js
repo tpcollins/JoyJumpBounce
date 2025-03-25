@@ -218,8 +218,8 @@ export const bcyHseStockData = {
         title: "16' Slide",
         type: "radio", // Indicates this item has multiple pricing options
         priceOptions: [
-          { label: "Wet", price: 1 },
-          { label: "Dry", price: 0.50 },
+          { label: "Wet", price: 285 },
+          { label: "Dry", price: 225 },
         ],
         pgSection: "sis"
       },
