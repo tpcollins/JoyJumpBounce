@@ -7171,7 +7171,7 @@
 }
 
 .react-calendar__month-view__days__day--weekend {
-  color: #d10000 !important;
+  /* color: #d10000 !important; */
 }
 
 .react-calendar__month-view__days__day--neighboringMonth,
