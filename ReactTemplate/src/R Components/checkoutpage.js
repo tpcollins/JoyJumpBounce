@@ -95,7 +95,8 @@ const CheckoutPage = ({ data }) => {
             cartItems.some(
                 (item) =>
                     item.title === "Wave Rider" ||
-                    (item.title === "Tropical Combo Slide" && item.price === 225)
+                    (item.title === "Tropical Combo Slide" && item.price === 225) ||
+                    (item.title === "16' Slide" && item.price ===  285)
             )
         ) {
             setWaterFloat(true);
