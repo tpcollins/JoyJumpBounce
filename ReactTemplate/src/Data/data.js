@@ -44,6 +44,7 @@ export const inventoryData = {
         { src: "assets/images/inflatables/ComboWetSlideWBG.png", title: "Combo Wet Slide", price: "$200 Single Day", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/Tropical Combo.png", pgSection: 'tropcombo'},
         // { src: "assets/images/inflatables/DrySlideWBG.png", title: "17' Dry Slide", price: "$255 Single Day Wet, $175 Single Day Dry", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/DrySlide.png", pgSection: 'dryslide' },
         { src: "assets/images/inflatables/ObstacleCourseWBG.png", title: "30 Foot Obstacle Course", price: "$225 Single Day Dry", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/OCInvText2.png", pgSection: 'obc' },
+        { src: "assets/images/inflatables/16'SlideUpscaled.png", title: "16' Slide", price: "$225 Single Day Dry", description: "kindergarten", font: "", textImg: "assets/images/InvTextImages/16'SlideText.png", pgSection: 'sis' },
     ]
 }
 
@@ -210,6 +211,17 @@ export const bcyHseStockData = {
         price: 225,
         showPrice: "$225",
         pgSection: "obc",
+      },
+      {
+        id: 5,
+        imgSrc: "assets/images/inflatables/ComboWetSlideNoShadow.png",
+        title: "16' Slide",
+        type: "radio", // Indicates this item has multiple pricing options
+        priceOptions: [
+          { label: "Wet", price: 285 },
+          { label: "Dry", price: 225 },
+        ],
+        pgSection: "sis"
       },
     ],
   };
