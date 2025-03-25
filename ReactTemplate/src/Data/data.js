@@ -278,7 +278,7 @@ export const checkoutData = {
         {title: "City", type: "text", placeholder:"City ........"}, 
         {title: "State", type: "text", placeholder: "State ........"},
         {title: "Zip Code", type: "text", placeholder: "Zip Code ........"},
-        // {title: "Discount Code (Optional)", type: "text", placeholder: "Discount Code ........"},
+        {title: "Discount Code (Optional)", type: "text", placeholder: "Discount Code ........"},
     ]
 }
 

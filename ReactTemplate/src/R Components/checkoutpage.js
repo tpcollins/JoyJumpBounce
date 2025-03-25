@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'; 
+import { useState, useEffect, useMemo } from 'react'; 
 import { Button, Spinner } from 'react-bootstrap';
 import { Circles } from 'react-loader-spinner';
 // Redux Variables
@@ -49,8 +49,8 @@ const CheckoutPage = ({ data }) => {
     const [loadError, setLoadError] = useState(false);
 
     // Calculate total price
-    let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
-    totalPrice += deliveryCharge;
+    // let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
+    // totalPrice += deliveryCharge;
 
     // Date for the accessories grid
     const singleDate = cartItems.length > 0 ? cartItems[0].date : null;
@@ -63,8 +63,11 @@ const CheckoutPage = ({ data }) => {
     const [userDiscountCode, setUserDiscountCode] = useState('');
     const [discountError, setDiscountError] = useState('');
     const [discountSuccess, setDiscountSuccess] = useState('');
-    // const [initialPrice, setInitialPrice] = useState((cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0)) + deliveryCharge);
-    // const [totalPrice, setTotalPrice] = useState((cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0)) + deliveryCharge);
+    const [initialPrice, setInitialPrice] = useState((cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0)) + deliveryCharge);
+    const [totalPrice, setTotalPrice] = useState((cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0)) + deliveryCharge);
+    const baseCartTotal = useMemo(() => {
+        return cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
+      }, [cartItems]);      
     const [finalPrice, setFinalPrice] = useState(totalPrice); // Starts as total price
     const validDiscountCode = "GReview25"; // Define the valid discount code    
 
@@ -122,6 +125,17 @@ const CheckoutPage = ({ data }) => {
     //     setInitialPrice(initialPrice + deliveryCharge);
     //     console.log("initial price: ", initialPrice);
     // }, [deliveryCharge]);
+
+    useEffect(() => {
+        const newInitialPrice = baseCartTotal + (deliveryCharge || 0);
+        setInitialPrice(newInitialPrice);
+    
+        if (userDiscountCode === validDiscountCode) {
+            setTotalPrice(newInitialPrice - 25);
+        } else {
+            setTotalPrice(newInitialPrice);
+        }
+    }, [baseCartTotal, deliveryCharge, userDiscountCode]);    
 
     // useEffect(() => {
     //     const setupPayments = async () => {
