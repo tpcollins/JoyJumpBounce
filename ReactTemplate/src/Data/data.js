@@ -223,17 +223,17 @@ export const bcyHseStockData = {
         ],
         pgSection: "sis"
       },
-      {
-        id: 5,
-        imgSrc: "",
-        title: "test item",
-        type: "radio", // Indicates this item has multiple pricing options
-        priceOptions: [
-          { label: "Wet", price: 26 },
-          { label: "Dry", price: 26 },
-        ],
-        pgSection: "sis"
-      },
+    //   {
+    //     id: 5,
+    //     imgSrc: "",
+    //     title: "test item",
+    //     type: "radio", // Indicates this item has multiple pricing options
+    //     priceOptions: [
+    //       { label: "Wet", price: 26 },
+    //       { label: "Dry", price: 26 },
+    //     ],
+    //     pgSection: "sis"
+    //   },
     ],
   };
   
