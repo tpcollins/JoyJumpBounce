@@ -48,10 +48,6 @@ const CheckoutPage = ({ data }) => {
     const [isCardLoading, setIsCardLoading] = useState(true);
     const [loadError, setLoadError] = useState(false);
 
-    // Calculate total price
-    // let totalPrice = cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
-    // totalPrice += deliveryCharge;
-
     // Date for the accessories grid
     const singleDate = cartItems.length > 0 ? cartItems[0].date : null;
 
@@ -67,8 +63,7 @@ const CheckoutPage = ({ data }) => {
     const [totalPrice, setTotalPrice] = useState((cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0)) + deliveryCharge);
     const baseCartTotal = useMemo(() => {
         return cartItems.reduce((sum, item) => sum + parseFloat(item.price) * (item.quantity || 1), 0);
-      }, [cartItems]);      
-    const [finalPrice, setFinalPrice] = useState(totalPrice); // Starts as total price
+      }, [cartItems]);
     const validDiscountCode = "GReview25"; // Define the valid discount code    
 
     const handleDiscountCodeChange = (e) => {
@@ -76,12 +71,10 @@ const CheckoutPage = ({ data }) => {
         setUserDiscountCode(enteredCode);
     
         if (enteredCode === validDiscountCode) {
-            // setFinalPrice(totalPrice - 25); // Apply $25 discount
             setTotalPrice(totalPrice - 25)
             setDiscountError(''); // Clear any previous error
             setDiscountSuccess('Code Applied!');
         } else if (enteredCode.length > 0) {
-            // setFinalPrice(totalPrice); // Reset price if code is invalid
             setTotalPrice(initialPrice)
             setDiscountError("This is not a Valid Discount Code");
         } else {
@@ -115,10 +108,6 @@ const CheckoutPage = ({ data }) => {
     useEffect(() => {
         console.log("total price: ", Math.round(totalPrice * 100, 2));
     }, [totalPrice]);
-
-    useEffect(() => {
-        console.log("final price: ", finalPrice)
-    }, [finalPrice]);
 
     // useEffect(() => {
     //     setTotalPrice(totalPrice + deliveryCharge);
