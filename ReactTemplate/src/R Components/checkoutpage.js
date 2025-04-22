@@ -256,6 +256,7 @@ const CheckoutPage = ({ data }) => {
             to_name: customerName,  // Matches {{to_name}} in the template
             order_ID: orderId,            // Matches {{date}} in the template
             message: message,      // Matches {{message}} in the template
+            delivery_charge: deliveryCharge.toFixed(2),
             total_price: totalPrice.toFixed(2),
             to_email: toEmail,
             reply_to: 'no-reply@joyjumpbounce.com', // Add this line
@@ -755,13 +756,13 @@ const CheckoutPage = ({ data }) => {
                         );
                     })}
 
-                    <ProximityMeter
+                    {/* <ProximityMeter
                         street={formValues['Street Address']}
                         city={formValues['City']}
                         state={formValues['State']}
                         zip={formValues['Zip Code']}
                         onUpdateCharge={handleDeliveryChargeUpdate}
-                    />
+                    /> */}
 
                     <AccessoriesGrid
                         accessoryData={accessoryData}
@@ -786,6 +787,14 @@ const CheckoutPage = ({ data }) => {
                             </div>
                         ))}
                     </div>
+
+                    <ProximityMeter
+                        street={formValues['Street Address']}
+                        city={formValues['City']}
+                        state={formValues['State']}
+                        zip={formValues['Zip Code']}
+                        onUpdateCharge={handleDeliveryChargeUpdate}
+                    />
 
                     <div className="cart-total">
                         <p><strong>Total Price:</strong> ${totalPrice.toFixed(2)}</p>

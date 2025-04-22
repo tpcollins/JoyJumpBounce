@@ -256,11 +256,11 @@ const ProximityMeter = ({ street, city, state, zip, onUpdateCharge }) => {
         <div>
             {milesOver && (
                 <div className="delivery-disclaimer">
-                    <h2 style={{ fontSize: '1.2em' }}>
+                    {/* <h2 style={{ fontSize: '1.2em' }}>
                         * There is a Delivery Charge of $5 for Every Mile Exceeding 15 Miles from our Address
-                    </h2>
+                    </h2> */}
                     <h2 style={{ fontSize: '1.4em' }}>
-                        Delivery Charge: ${deliveryCharge?.toFixed(2)}
+                        Delivery Charge: ${deliveryCharge?.toFixed(2)} ($2 Per Mile)
                     </h2>
                 </div>
             )}
