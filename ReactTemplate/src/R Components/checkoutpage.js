@@ -51,6 +51,12 @@ const CheckoutPage = ({ data }) => {
     // Date for the accessories grid
     const singleDate = cartItems.length > 0 ? cartItems[0].date : null;
 
+    useEffect(() => {
+        if (cartItems.length > 0) {
+          console.log(singleDate);
+        } 
+      }, [cartItems, singleDate]);
+
     // Concatenate address components into one string
     //  **** DELETING THE FULLADDRESS VARIABLE CAUSES THE PROXIMITY METER TO BREAK FOR SOME REASON. DO NOT DELETE IT ****
     const fullAddress = `${formValues['Street Address']}, ${formValues['City']}, ${formValues['State']} ${formValues['Zip Code']}`;
@@ -495,7 +501,7 @@ const CheckoutPage = ({ data }) => {
                 orderId: null,
                 totalPrice: totalPrice,
                 deliveryCharge: deliveryCharge,
-                bookingDate: singleDate
+                date: singleDate
             });
     
             // Process payment
