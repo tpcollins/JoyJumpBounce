@@ -495,6 +495,7 @@ const CheckoutPage = ({ data }) => {
                 orderId: null,
                 totalPrice: totalPrice,
                 deliveryCharge: deliveryCharge,
+                bookingDate: singleDate
             });
     
             // Process payment
