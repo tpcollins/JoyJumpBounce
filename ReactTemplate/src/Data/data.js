@@ -181,7 +181,7 @@ export const bcyHseStockData = {
         id: 1,
         imgSrc: "assets/images/inflatables/WaveRiderResized.png",
         title: "Wave Rider",
-        price: 1,
+        price: 285,
         showPrice: "$285",
         pgSection: "waverider",
       },
@@ -189,7 +189,7 @@ export const bcyHseStockData = {
         id: 5,
         imgSrc: "assets/images/inflatables/16'B.png",
         title: "Palm Plunge",
-        price: 285,
+        price: 1,
         showPrice: "$285",
         pgSection: "sis"
       },
