@@ -4826,6 +4826,10 @@
                 transform: translateX(40%);
             }
 
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                padding-left: 12px;
+            }
+
             /* Button */
             .stock-grid-container .fl-btn.st-12 .inner::before, .fl-btn.st-12 .inner::after{
                 right: -45px;
@@ -7083,6 +7087,10 @@
                 position: relative;
             }
 
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                padding-left: 12px;
+            }
+
         /* Accessories Page */
             .accessories-grid .separator-line {
                 margin-top: 40px;
@@ -7844,6 +7852,10 @@
                 position: relative;
             }
 
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                padding-left: 12px;
+            }
+
         /* Accessories Page */
             .accessories-grid .separator-line {
                 margin-top: 40px;
@@ -8602,6 +8614,10 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
                 position: relative;
             }
 
+            .tf-section.tf-gallery .gallery-container #sis img{
+                display: none;
+            }
+
         /* Accessories Page */
             .accessories-grid .separator-line {
                 margin-top: 40px;
@@ -9350,6 +9366,10 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
                 position: relative;
             }
 
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                padding-left: 12px;
+            }
+
         /* Accessories Page */
             .accessories-grid .separator-line {
                 margin-top: 40px;
@@ -10094,6 +10114,10 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
             .tf-section.tf-gallery .title-heading.st-4{
                 top: -180px;
                 position: relative;
+            }
+
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                padding-left: 15px;
             }
 
         /* Accessories Page */
@@ -11565,6 +11589,10 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
                 transform: translateX(40%);
             }
 
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                padding-left: 14px;
+            }
+
             /* Button */
             .stock-grid-container .fl-btn.st-12 .inner::before, .fl-btn.st-12 .inner::after{
                 right: -45px;
@@ -12346,6 +12374,10 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
             .tf-section.tf-gallery .title-heading.st-4{
                 top: -180px;
                 position: relative;
+            }
+
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                padding-left: 12px;
             }
 
         /* Accessories Page */
@@ -14503,6 +14535,10 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
                 position: relative;
             }
 
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                /* padding-left: 12px; */
+            }
+
             /* Accessories Page */
             .accessories-grid .separator-line {
                 margin-top: 40px;
@@ -15138,6 +15174,10 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
                 position: relative;
             }
 
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                padding-left: 16px;
+            }
+
             /* Accessories Page */
             .accessories-grid .separator-line {
                 margin-top: 40px;
@@ -15771,6 +15811,10 @@ body.safari-browser .slider-checkout .item-slider-1 .box-feature {
             .tf-section.tf-gallery .title-heading.st-4{
                 top: -180px;
                 position: relative;
+            }
+
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                padding-left: 15px;
             }
 
             /* Accessories Page */
@@ -28457,6 +28501,11 @@ li.fx{
                 position: relative;
             }
 
+            
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                padding-left: 16px;
+            }
+
         /* Accessories Page */
             .accessories-grid .separator-line {
                 margin-top: 40px;
@@ -29169,6 +29218,11 @@ li.fx{
             .tf-section.tf-gallery .title-heading.st-4{
                 top: -180px;
                 position: relative;
+            }
+
+            
+            .tf-section.tf-gallery .gallery-container #sis .image{
+                padding-left: 16px;
             }
 
         /* Accessories Page */
